@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans 'Contactez-nous' %} | M2web{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container page-header-content">
+        <h1>{% trans 'Contactez-nous' %}</h1>
+        <p class="lead text-white-50 max-w-700 mx-auto mb-4">{% trans 'Nous sommes à votre écoute pour toute demande d\'information, d\'installation ou de devis personnalisé.' %}</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'core:home' %}">{% trans 'Accueil' %}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{% trans 'Contact' %}</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-lg-5 animate-on-scroll">
+                <h2 class="section-title">{% trans 'Nos Coordonnées' %}</h2>
+                <p class="text-muted mb-4">{% trans 'N\'hésitez pas à nous rendre visite à Fès ou à nous joindre directement par téléphone, WhatsApp ou email.' %}</p>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon-box"><i class="bi bi-telephone-fill"></i></div>
+                    <div class="contact-details">
+                        <h5>{% trans 'Téléphone' %}</h5>
+                        <p><a href="tel:{{ company.phone }}">{{ company.phone }}</a> {% if company.phone_display %}({{ company.phone_display }}){% endif %}</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon-box whatsapp"><i class="bi bi-whatsapp"></i></div>
+                    <div class="contact-details">
+                        <h5>WhatsApp Direct</h5>
+                        <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212662244939' }}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon-box"><i class="bi bi-envelope-fill"></i></div>
+                    <div class="contact-details">
+                        <h5>Email</h5>
+                        <p><a href="mailto:{{ company.email }}">{{ company.email }}</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div class="contact-details">
+                        <h5>{% trans 'Adresse' %}</h5>
+                        <p>{{ company.address|default:"CN, 2 Rue Ibn Al Kayem, Fès 30000, Maroc" }}</p>
+                    </div>
+                </div>
+                
+                <div class="card border-0 rounded-4 p-4 mt-4 shadow-sm bg-white">
+                    <h5 class="fw-bold mb-3 text-plum"><i class="bi bi-clock-history me-2 text-amber"></i>{% trans 'Horaires d\'ouverture' %}</h5>
+                    <ul class="list-unstyled text-muted mb-0">
+                        <li class="py-2 border-bottom d-flex justify-content-between"><span>{% trans 'Lundi - Vendredi :' %}</span> <span class="fw-bold text-dark">{{ company.operating_hours_weekday|default:"08:30 - 18:30" }}</span></li>
+                        <li class="py-2 border-bottom d-flex justify-content-between"><span>{% trans 'Samedi :' %}</span> <span class="fw-bold text-dark">{{ company.operating_hours_saturday|default:"08:30 - 13:30" }}</span></li>
+                        <li class="pt-2 d-flex justify-content-between"><span>{% trans 'Dimanche :' %}</span> <span class="text-danger fw-bold">{{ company.operating_hours_sunday|default:"Fermé" }}</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-7 animate-on-scroll">
+                <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white">
+                    <h3 class="section-title mb-4">{% trans 'Envoyez-nous un message' %}</h3>
+                    
+                    {% if form.errors %}
+                        <div class="alert alert-danger rounded-3 mb-4">
+                            {% trans "Veuillez corriger les erreurs ci-dessous." %}
+                        </div>
+                    {% endif %}
+                    
+                    <form method="post" action="{% url 'contact:contact' %}">
+                        {% csrf_token %}
+                        <!-- Honeypot & Captcha Token -->
+                        <div style="display:none;">
+                            {{ form.website }}
+                            {{ form.captcha_token }}
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Nom complet' %} *</label>
+                                {{ form.name }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Email' %} *</label>
+                                {{ form.email }}
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Téléphone' %} *</label>
+                                {{ form.phone }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Entreprise' %}</label>
+                                {{ form.company_name }}
+                            </div>
+                            
+                            <div class="col-12">
+                                <label class="form-label fw-medium">{% trans 'Sujet' %} *</label>
+                                {{ form.subject }}
+                            </div>
+                            
+                            <div class="col-12">
+                                <label class="form-label fw-medium">{% trans 'Votre Message' %} *</label>
+                                {{ form.message }}
+                            </div>
+                        </div>
+                        
+                        <!-- Captcha -->
+                        <div class="captcha-box bg-light border rounded-3 p-3 mb-4 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-shield-lock-fill text-amber fs-4"></i>
+                                <div>
+                                    <span class="d-block small text-muted">{% trans 'Vérification de sécurité' %}</span>
+                                    <span class="fw-bold fs-5 text-plum">{{ form.captcha_question }}</span>
+                                </div>
+                            </div>
+                            <div style="max-width: 150px;">
+                                {{ form.captcha_answer }}
+                            </div>
+                        </div>
+                        
+                        <div class="text-start">
+                            <button type="submit" class="btn btn-amber btn-lg px-5 py-3 shadow w-100 w-md-auto">
+                                {% trans 'Envoyer le message' %} <i class="bi bi-send ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

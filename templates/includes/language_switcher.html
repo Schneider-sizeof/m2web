@@ -1,0 +1,33 @@
+{% load i18n %}
+<div class="dropdown lang-switcher">
+    {% get_current_language as CURRENT_LANG %}
+    <button class="btn btn-sm text-white dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        {% if CURRENT_LANG == 'fr' %}🇫🇷 FR{% elif CURRENT_LANG == 'ar' %}🇲🇦 AR{% else %}🇬🇧 EN{% endif %}
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow">
+        <li>
+            <form action="{% url 'set_language' %}" method="post" class="m-0">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                <input name="language" type="hidden" value="fr">
+                <button type="submit" class="dropdown-item {% if CURRENT_LANG == 'fr' %}active{% endif %}">🇫🇷 Français</button>
+            </form>
+        </li>
+        <li>
+            <form action="{% url 'set_language' %}" method="post" class="m-0">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                <input name="language" type="hidden" value="ar">
+                <button type="submit" class="dropdown-item {% if CURRENT_LANG == 'ar' %}active{% endif %}">🇲🇦 العربية</button>
+            </form>
+        </li>
+        <li>
+            <form action="{% url 'set_language' %}" method="post" class="m-0">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                <input name="language" type="hidden" value="en">
+                <button type="submit" class="dropdown-item {% if CURRENT_LANG == 'en' %}active{% endif %}">🇬🇧 English</button>
+            </form>
+        </li>
+    </ul>
+</div>

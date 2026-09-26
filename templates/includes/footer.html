@@ -1,0 +1,85 @@
+{% load i18n %}
+<footer class="footer">
+    <div class="container">
+        <div class="row gy-4">
+            <!-- Brand -->
+            <div class="col-lg-3 col-md-6 footer-brand-col">
+                <div class="footer-brand">M<span class="accent">2</span>WEB</div>
+                <p class="footer-desc">{{ company.tagline|default:_("Votre partenaire de confiance pour le suivi GPS et la gestion de flotte au Maroc. Des solutions innovantes pour optimiser vos opérations.") }}</p>
+                <div class="social-icons">
+                    {% if company.facebook_url %}<a href="{{ company.facebook_url }}" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>{% endif %}
+                    {% if company.linkedin_url %}<a href="{{ company.linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>{% endif %}
+                    {% if company.instagram_url %}<a href="{{ company.instagram_url }}" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>{% endif %}
+                    {% if company.youtube_url %}<a href="{{ company.youtube_url }}" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>{% endif %}
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6 footer-col">
+                <h5 class="footer-heading">{% trans 'Liens Rapides' %}</h5>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                    <li><a href="{% url 'core:home' %}" class="footer-link">{% trans 'Accueil' %}</a></li>
+                    <li><a href="{% url 'core:about' %}" class="footer-link">{% trans 'À Propos' %}</a></li>
+                    <li><a href="{% url 'services:list' %}" class="footer-link">{% trans 'Services & Solutions' %}</a></li>
+                    <li><a href="{% url 'wholesale:inquiry' %}" class="footer-link">{% trans 'Gros & B2B' %}</a></li>
+                    <li><a href="{% url 'blog:list' %}" class="footer-link">{% trans 'Actualités' %}</a></li>
+                    <li><a href="{% url 'contact:contact' %}" class="footer-link">{% trans 'Contact' %}</a></li>
+                </ul>
+            </div>
+            
+            <!-- Services Links -->
+            <div class="col-lg-3 col-md-6 footer-col">
+                <h5 class="footer-heading">{% trans 'Nos Solutions' %}</h5>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+                    {% if nav_services %}
+                        {% for s in nav_services %}
+                            <li><a href="{{ s.get_absolute_url }}" class="footer-link">{{ s.title }}</a></li>
+                        {% endfor %}
+                    {% else %}
+                        <li><a href="{% url 'services:list' %}" class="footer-link">{% trans 'Suivi GPS en temps réel' %}</a></li>
+                        <li><a href="{% url 'services:list' %}" class="footer-link">{% trans 'Gestion de flotte' %}</a></li>
+                        <li><a href="{% url 'services:list' %}" class="footer-link">{% trans 'Contrôle de carburant' %}</a></li>
+                        <li><a href="{% url 'services:list' %}" class="footer-link">{% trans 'Surveillance de température' %}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6 footer-col">
+                <h5 class="footer-heading">{% trans 'Contactez-nous' %}</h5>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon"><i class="bi bi-geo-alt"></i></div>
+                    <div class="footer-contact-text">{{ company.address|default:"CN, 2 Rue Ibn Al Kayem, Fès 30000, Maroc" }}</div>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon"><i class="bi bi-telephone"></i></div>
+                    <div class="footer-contact-text"><a href="tel:{{ company.phone|default:'+212662244939' }}">{{ company.phone|default:"+212 6 62 24 49 39" }}</a></div>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon"><i class="bi bi-envelope"></i></div>
+                    <div class="footer-contact-text"><a href="mailto:{{ company.email|default:'m2web@m2web.com' }}">{{ company.email|default:"m2web@m2web.com" }}</a></div>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon"><i class="bi bi-clock"></i></div>
+                    <div class="footer-contact-text">
+                        {% trans 'Lun-Ven' %}: {{ company.operating_hours_weekday|default:"08:30 – 18:30" }}<br>
+                        {% trans 'Sam' %}: {{ company.operating_hours_saturday|default:"08:30 – 13:30" }}<br>
+                        {% trans 'Dim' %}: {{ company.operating_hours_sunday|default:"Fermé" }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; {% now "Y" %} {{ company.company_name|default:"M2web Maroc" }}. {% trans 'Tous droits réservés.' %}</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <a href="{% url 'core:about' %}" class="text-white-50 text-decoration-none me-3">{% trans 'À Propos' %}</a>
+                    <a href="{% url 'contact:contact' %}" class="text-white-50 text-decoration-none">{% trans 'Contact' %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

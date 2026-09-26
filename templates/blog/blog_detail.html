@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{{ post.title }} | M2web Blog{% endblock %}
+
+{% block content %}
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb" class="mb-4">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'core:home' %}" class="text-decoration-none text-muted">{% trans 'Accueil' %}</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'blog:list' %}" class="text-decoration-none text-muted">{% trans 'Blog' %}</a></li>
+                        {% if post.category %}
+                        <li class="breadcrumb-item"><a href="{% url 'blog:category' post.category.slug %}" class="text-decoration-none text-muted">{{ post.category.name }}</a></li>
+                        {% endif %}
+                        <li class="breadcrumb-item active" aria-current="page">{{ post.title|truncatechars:30 }}</li>
+                    </ol>
+                </nav>
+                
+                <!-- Article Header -->
+                <header class="mb-5 text-center">
+                    {% if post.category %}
+                    <span class="badge bg-amber mb-3 px-3 py-2 rounded-pill text-plum fw-bold">{{ post.category.name }}</span>
+                    {% endif %}
+                    <h1 class="fw-bold mb-3 text-plum">{{ post.title }}</h1>
+                    <div class="d-flex align-items-center justify-content-center gap-3 text-muted small">
+                        <span><i class="bi bi-calendar-event me-1"></i> {{ post.created_at|date:"d M Y" }}</span>
+                    </div>
+                </header>
+                
+                <!-- Featured Image -->
+                {% if post.image %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid rounded-4 shadow-sm w-100 mb-5 object-fit-cover" style="max-height: 500px;">
+                {% endif %}
+                
+                <!-- Article Content -->
+                <article class="blog-content lh-lg fs-5 text-dark" style="font-family: 'Inter', sans-serif;">
+                    {{ post.content|safe|linebreaks }}
+                </article>
+                
+                <!-- Share -->
+                <div class="d-flex align-items-center gap-3 mt-5 pt-4 border-top">
+                    <span class="fw-medium text-muted">{% trans 'Partager :' %}</span>
+                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Posts -->
+{% if related_posts %}
+<section class="section-padding bg-light">
+    <div class="container">
+        <h3 class="section-title text-center mb-5">{% trans 'Articles Similaires' %}</h3>
+        <div class="row justify-content-center g-4">
+            {% for related in related_posts|slice:":2" %}
+            <div class="col-md-5">
+                <article class="blog-card">
+                    {% if related.image %}
+                    <img src="{{ related.image.url }}" class="blog-card-img" style="height: 180px;">
+                    {% endif %}
+                    <div class="blog-card-body">
+                        <h5 class="blog-title fw-bold mb-2"><a href="{{ related.get_absolute_url }}">{{ related.title }}</a></h5>
+                        <p class="blog-excerpt text-muted small mb-0">{{ related.excerpt|default:related.content|striptags|truncatewords:15 }}</p>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

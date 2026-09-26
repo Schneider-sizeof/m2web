@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans 'À Propos' %} | {{ company.company_name|default:"M2web" }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container page-header-content">
+        <h1>{% trans 'À Propos de' %} {{ company.company_name|default:"M2web" }}</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'core:home' %}">{% trans 'Accueil' %}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{% trans 'À Propos' %}</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <h2 class="section-title">{{ company.about_story_title|default:_("Notre Histoire & Mission") }}</h2>
+                <p class="lead text-muted mb-4">
+                    {{ company.about_lead|default:_("Basée à Fès, M2web Maroc est une entreprise technologique spécialisée dans les solutions de géolocalisation et la gestion de flotte.") }}
+                </p>
+                <p class="text-muted mb-4">
+                    {{ company.about_text|default:_("Depuis notre création, nous nous sommes engagés à fournir à nos clients des outils fiables, précis et faciles à utiliser pour optimiser leurs opérations logistiques. Notre mission est d'accompagner les entreprises marocaines dans leur transformation numérique en leur offrant une visibilité totale sur leurs actifs mobiles.") }}
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'services:list' %}" class="btn btn-amber">{% trans 'Découvrir nos services' %} <i class="bi bi-arrow-right"></i></a>
+                    <a href="{% url 'contact:contact' %}" class="btn btn-outline-amber">{% trans 'Contactez-nous' %}</a>
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll">
+                <img src="{% static 'images/about-team.jpg' %}" alt="Team M2web" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="min-height: 400px;" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%232D1B3D%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2224%22%20font-family%3D%22Outfit%2C%20sans-serif%22%20fill%3D%22%23F5A623%22%3EM2WEB%20TEAM%20%26%20FACILITIES%3C%2Ftext%3E%3C%2Fsvg%3E';">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center">{% trans 'Nos Valeurs Fondamentales' %}</h2>
+            <p class="section-subtitle text-center">{% trans 'Les principes qui guident chacune de nos actions et innovations.' %}</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4 animate-on-scroll">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h4>{% trans 'Fiabilité' %}</h4>
+                    <p>{% trans "Nos systèmes sont conçus pour fonctionner 24/7 avec une précision irréprochable pour assurer la sécurité de vos données et équipements." %}</p>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+                    <h4>{% trans 'Innovation' %}</h4>
+                    <p>{% trans "Nous intégrons continuellement les dernières avancées technologiques pour offrir des solutions toujours plus performantes." %}</p>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h4>{% trans 'Proximité' %}</h4>
+                    <p>{% trans "Notre équipe locale basée à Fès garantit une réactivité immédiate et un accompagnement sur-mesure pour chacun de vos projets." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

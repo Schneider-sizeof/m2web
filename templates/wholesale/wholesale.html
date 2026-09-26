@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans 'Vente en Gros & Espace B2B' %} | M2web{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container page-header-content">
+        <span class="badge bg-amber text-plum px-3 py-2 rounded-pill fw-bold mb-3 d-inline-block">
+            <i class="bi bi-box-seam-fill me-1"></i> {% trans 'PROGRAMME PARTENAIRES & REVENDEURS' %}
+        </span>
+        <h1>{% trans 'Vente en Gros & Espace B2B' %}</h1>
+        <p class="lead text-white-50 max-w-700 mx-auto mb-4">{% trans 'Accédez à nos tarifs grossistes préférentiels, à un stock permanent à Fès et à un accompagnement technique d\'experts au Maroc.' %}</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'core:home' %}">{% trans 'Accueil' %}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{% trans 'Espace B2B' %}</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- B2B Advantages Grid -->
+<section class="py-5 bg-white border-bottom">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-md-3 col-6">
+                <div class="p-3">
+                    <div class="pillar-icon mx-auto mb-3" style="width: 56px; height: 56px; font-size: 1.5rem;">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h5 class="fw-bold mb-1 fs-6">{% trans 'Marges Dégressives' %}</h5>
+                    <p class="text-muted small mb-0">{% trans 'Tarifs dégressifs dès 10 unités pour maximiser votre rentabilité.' %}</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="p-3">
+                    <div class="pillar-icon mx-auto mb-3" style="width: 56px; height: 56px; font-size: 1.5rem;">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+                    <h5 class="fw-bold mb-1 fs-6">{% trans 'Stock Immédiat à Fès' %}</h5>
+                    <p class="text-muted small mb-0">{% trans 'Disponibilité garantie en magasin et expédition 24h partout au Maroc.' %}</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="p-3">
+                    <div class="pillar-icon mx-auto mb-3" style="width: 56px; height: 56px; font-size: 1.5rem;">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+                    <h5 class="fw-bold mb-1 fs-6">{% trans 'API & Marque Blanche' %}</h5>
+                    <p class="text-muted small mb-0">{% trans 'Intégration serveur fluide et possibilité de plateforme personnalisée.' %}</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="p-3">
+                    <div class="pillar-icon mx-auto mb-3" style="width: 56px; height: 56px; font-size: 1.5rem;">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <h5 class="fw-bold mb-1 fs-6">{% trans 'Support Technique Dédié' %}</h5>
+                    <p class="text-muted small mb-0">{% trans 'Hotline directe pour configurer vos balises et assister vos techniciens.' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wholesale Inquiry Form -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 animate-on-scroll">
+                <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title text-center">{% trans 'Demande de Compte Revendeur' %}</h2>
+                        <p class="section-subtitle text-center mb-0">{% trans 'Remplissez le formulaire ci-dessous pour recevoir notre grille tarifaire grossiste et ouvrir votre compte partenaire.' %}</p>
+                    </div>
+                    
+                    {% if form.errors %}
+                        <div class="alert alert-danger rounded-3 mb-4">
+                            {% trans "Veuillez corriger les erreurs ci-dessous." %}
+                            {{ form.errors }}
+                        </div>
+                    {% endif %}
+                    
+                    <form method="post" action="{% url 'wholesale:inquiry' %}">
+                        {% csrf_token %}
+                        <!-- Honeypot & Captcha Token -->
+                        <div style="display:none;">
+                            {{ form.website }}
+                            {{ form.captcha_token }}
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Nom de l\'entreprise' %} *</label>
+                                {{ form.company_name }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Personne de contact' %} *</label>
+                                {{ form.contact_person }}
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Email professionnel' %} *</label>
+                                {{ form.email }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Téléphone direct' %} *</label>
+                                {{ form.phone }}
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Ville' %}</label>
+                                {{ form.city }}
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">{% trans 'Volume mensuel estimé' %}</label>
+                                {{ form.monthly_volume }}
+                            </div>
+                            
+                            <div class="col-12">
+                                <label class="form-label fw-medium">{% trans 'Types de matériel recherchés' %}</label>
+                                {{ form.hardware_types_needed }}
+                            </div>
+                            
+                            <div class="col-12">
+                                <label class="form-label fw-medium">{% trans 'Message ou besoins spécifiques' %} *</label>
+                                {{ form.message }}
+                            </div>
+                        </div>
+                        
+                        <!-- Captcha -->
+                        <div class="captcha-box bg-light border rounded-3 p-3 mb-4 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-shield-lock-fill text-amber fs-4"></i>
+                                <div>
+                                    <span class="d-block small text-muted">{% trans 'Vérification de sécurité' %}</span>
+                                    <span class="fw-bold fs-5 text-plum">{{ form.captcha_question }}</span>
+                                </div>
+                            </div>
+                            <div style="max-width: 150px;">
+                                {{ form.captcha_answer }}
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-amber btn-lg px-5 py-3 shadow w-100 w-md-auto">
+                                {% trans 'Envoyer la demande B2B' %} <i class="bi bi-send ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="mt-4 pt-3 border-top text-center text-muted small">
+                        {% trans 'Besoin d\'un devis urgent pour un appel d\'offres ? Contactez directement notre responsable B2B sur WhatsApp :' %}
+                        <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212662244939' }}" target="_blank" class="fw-bold text-success ms-1">
+                            <i class="bi bi-whatsapp"></i> {{ company.whatsapp_number|default:"+212 6 62 24 49 39" }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

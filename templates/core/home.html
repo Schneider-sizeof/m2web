@@ -1,0 +1,432 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+<!-- Hero Section (Spectacular Modern Tech) -->
+<section class="hero-section">
+    <div class="container hero-content">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <div class="hero-badge">
+                    <i class="bi bi-star-fill text-warning"></i> {{ company.hero_badge|default:_("N°1 de la Géolocalisation & Télématique au Maroc") }}
+                </div>
+                <h1 class="hero-title">
+                    {{ company.hero_title_line1|default:_("Prenez le Contrôle") }} <br>
+                    <span class="highlight">{{ company.hero_title_highlight|default:_("Total de Votre Flotte") }}</span> <br>
+                    {{ company.hero_title_line2|default:_("en Temps Réel") }}
+                </h1>
+                <p class="hero-subtitle">
+                    {{ company.hero_subtitle|default:_("Fournisseur direct de traceurs GPS 4G & solutions télématiques avancées à Fès et partout au Maroc. Réduisez vos coûts de carburant de 20%, protégez vos véhicules contre le vol et suivez vos actifs 24/7 sur smartphone & PC.") }}
+                </p>
+                
+                <!-- Quick Trust Checks -->
+                <div class="d-flex flex-wrap gap-3 mb-4 text-white-50 small">
+                    <span class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-amber me-1"></i> {{ company.hero_trust_badge_1|default:_("Traceurs 4G Certifiés") }}</span>
+                    <span class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-amber me-1"></i> {{ company.hero_trust_badge_2|default:_("Installation sur Site") }}</span>
+                    <span class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-amber me-1"></i> {{ company.hero_trust_badge_3|default:_("Support 24/7 à Fès") }}</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="{% url 'services:list' %}" class="btn btn-amber">
+                        {% trans 'Nos Solutions GPS' %} <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a href="{% url 'contact:contact' %}" class="btn btn-outline-amber">
+                        <i class="bi bi-calculator"></i> {% trans 'Devis Express Gratuit' %}
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 animate-on-scroll">
+                <!-- Interactive High-Tech Dashboard Mockup -->
+                <div class="hero-dashboard-frame">
+                    <div class="hero-dashboard-header">
+                        <div class="hero-mac-dots">
+                            <span class="hero-mac-dot red"></span>
+                            <span class="hero-mac-dot yellow"></span>
+                            <span class="hero-mac-dot green"></span>
+                        </div>
+                        <div class="hero-dashboard-title">
+                            <i class="bi bi-geo-alt-fill text-amber me-1"></i> M2web Fleet Telematics — Live Tracking
+                        </div>
+                        <div>
+                            <span class="telemetry-live-dot me-1"></span> <span class="small text-success fw-bold">ONLINE</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-dashboard-img-wrap">
+                        <img src="{% static 'images/hero-dashboard.png' %}" alt="M2web Dashboard Live" onerror="this.src='{% static 'images/hero-fleet.jpg' %}';">
+                        <div class="hero-map-overlay"></div>
+                    </div>
+
+                    <!-- Floating Live Telemetry Cards -->
+                    <div class="telemetry-floating-card card-truck d-none d-sm-flex align-items-center gap-3">
+                        <div class="p-2 rounded-3 bg-plum text-amber fs-4">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <div>
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="fw-bold text-white small">Volvo FH16 (Flotte Fès)</span>
+                                <span class="telemetry-live-dot"></span>
+                            </div>
+                            <div class="text-white-50" style="font-size: 0.75rem;">
+                                84 km/h • Transit Fès ➔ Casa • ⛽ 92%
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="telemetry-floating-card card-fuel d-none d-sm-flex align-items-center gap-2">
+                        <div class="text-success fs-5">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <div>
+                            <span class="fw-bold text-white" style="font-size: 0.8rem;">Antivol Activé</span>
+                            <div class="text-white-50" style="font-size: 0.7rem;">Coupure moteur prête</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Bar (Elevated Dark Container, Configurable from Admin) -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3 stat-item">
+                <span class="stat-number"><span class="counter" data-target="{{ company.stat_trackers_count|default:5000 }}">{{ company.stat_trackers_count|default:5000 }}</span><span class="stat-suffix">+</span></span>
+                <p class="stat-label">{{ company.stat_trackers_label|default:_("Trackers Installés") }}</p>
+                <div class="stat-divider d-none d-md-block"></div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <span class="stat-number"><span class="counter" data-target="{{ company.stat_fleets_count|default:350 }}">{{ company.stat_fleets_count|default:350 }}</span><span class="stat-suffix">+</span></span>
+                <p class="stat-label">{{ company.stat_fleets_label|default:_("Flottes Gérées") }}</p>
+                <div class="stat-divider d-none d-md-block"></div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <span class="stat-number"><span class="counter" data-target="99">99</span><span class="stat-suffix">.8%</span></span>
+                <p class="stat-label">{{ company.stat_uptime_label|default:_("Disponibilité Serveurs") }}</p>
+                <div class="stat-divider d-none d-md-block"></div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <span class="stat-number"><span class="counter" data-target="{{ company.stat_experience_count|default:10 }}">{{ company.stat_experience_count|default:10 }}</span><span class="stat-suffix">+</span></span>
+                <p class="stat-label">{{ company.stat_experience_label|default:_("Années d'Expertise à Fès") }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Pillars Section (Dynamic from Admin) -->
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center">{% trans 'Pourquoi Choisir' %} <span class="text-amber">{{ company.company_name|default:"M2web Maroc" }}</span></h2>
+            <p class="section-subtitle text-center">{% trans 'Une expertise éprouvée au service des transporteurs, entreprises et professionnels à Fès et partout au Maroc.' %}</p>
+        </div>
+
+        <div class="row g-4">
+            {% if pillars %}
+                {% for pillar in pillars %}
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="{{ pillar.icon_class|default:'bi bi-broadcast-pin' }}"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 fs-5">{{ pillar.title }}</h4>
+                        <p class="text-muted small mb-0">{{ pillar.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-broadcast-pin"></i></div>
+                        <h4 class="fw-bold mb-3 fs-5">{% trans 'Réseau 4G Multi-Opérateur' %}</h4>
+                        <p class="text-muted small mb-0">{% trans 'Connectivité permanente via cartes SIM M2M multi-opérateurs compatibles Maroc Telecom, Orange et Inwi.' %}</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-phone"></i></div>
+                        <h4 class="fw-bold mb-3 fs-5">{% trans 'Application Mobile & Web' %}</h4>
+                        <p class="text-muted small mb-0">{% trans 'Suivi en temps réel sur smartphone & PC avec notifications push instantanées et alertes intelligentes.' %}</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-fuel-pump"></i></div>
+                        <h4 class="fw-bold mb-3 fs-5">{% trans 'Contrôle Carburant Anti-Vol' %}</h4>
+                        <p class="text-muted small mb-0">{% trans 'Sondes capacitives haute précision pour détecter les siphonnages et analyser les consommations.' %}</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-tools"></i></div>
+                        <h4 class="fw-bold mb-3 fs-5">{% trans 'Installation & Support à Fès' %}</h4>
+                        <p class="text-muted small mb-0">{% trans 'Atelier technique et techniciens certifiés pour équiper vos parcs partout au Maroc avec support direct.' %}</p>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid with Real Photos (Dynamic from Admin) -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center">{% trans 'Nos Solutions de' %} <span class="text-amber">{% trans 'Télématique' %}</span></h2>
+            <p class="section-subtitle text-center">{% trans 'Des technologies de géolocalisation professionnelles adaptées à chaque type de véhicule et d\'activité.' %}</p>
+        </div>
+
+        <div class="row g-4">
+            {% for service in services %}
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="service-card-photo">
+                    <div class="service-photo-wrap">
+                        {% if service.image %}
+                            <img src="{{ service.image.url }}" alt="{{ service.title }}">
+                        {% else %}
+                            <img src="{% static 'images/fleet-telematics.jpg' %}" alt="{{ service.title }}">
+                        {% endif %}
+                        <div class="service-photo-overlay"></div>
+                        <div class="service-icon-badge">
+                            {% if service.icon_class %}
+                                <i class="{{ service.icon_class }}"></i>
+                            {% else %}
+                                <i class="bi bi-geo-alt-fill"></i>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="service-card-content">
+                        <h3 class="fs-5 fw-bold mb-2 text-plum">{{ service.title }}</h3>
+                        <p class="text-muted small mb-4 flex-grow-1">{{ service.description|truncatewords:20 }}</p>
+                        <a href="{{ service.get_absolute_url }}" class="card-link mt-auto fw-bold text-amber text-decoration-none">
+                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center text-muted">{% trans "Aucun service disponible pour le moment." %}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Products Showcase with Real Hardware Photos (Dynamic from Admin) -->
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-5 animate-on-scroll flex-wrap gap-3">
+            <div>
+                <h2 class="section-title mb-0">{% trans 'Traceurs GPS' %} <span class="text-amber">{% trans '& Équipements' %}</span></h2>
+                <p class="section-subtitle mb-0">{% trans 'Du matériel certifié, prêt à l\'emploi pour particuliers et professionnels' %}</p>
+            </div>
+            <a href="{% url 'services:list' %}" class="btn btn-outline-amber">
+                {% trans 'Catalogue Complet' %} <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+        
+        <div class="row g-4">
+            {% for product in products|slice:":6" %}
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="product-photo-card">
+                    <div class="product-photo-wrap">
+                        {% if product.image %}
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                        {% else %}
+                            <div class="placeholder-icon"><i class="bi bi-cpu"></i></div>
+                        {% endif %}
+                        <span class="product-badge">{% trans 'En Stock' %}</span>
+                    </div>
+                    <div class="product-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="product-category">{{ product.get_category_display }}</span>
+                            <span class="product-availability">{% trans 'Garanti 1 an' %}</span>
+                        </div>
+                        <h4 class="product-title fs-5 mb-2">
+                            <a href="{% url 'services:list' %}">{{ product.name }}</a>
+                        </h4>
+                        <p class="product-desc small text-muted mb-3">{{ product.description|truncatewords:14 }}</p>
+                        
+                        <!-- Specs preview -->
+                        <div class="d-flex flex-wrap gap-1 mb-3">
+                            <span class="product-spec-pill">4G LTE</span>
+                            <span class="product-spec-pill">Temps Réel</span>
+                            <span class="product-spec-pill">App iOS/Android</span>
+                        </div>
+
+                        <div class="product-footer pt-3 mt-auto border-top d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-muted small d-block" style="font-size: 0.75rem;">{% trans 'Tarif indicatif' %}</span>
+                                <span class="product-price fs-5 text-plum fw-bold">
+                                    {% if product.price_range %}
+                                        {{ product.price_range }}
+                                    {% else %}
+                                        {% trans 'Sur devis' %}
+                                    {% endif %}
+                                </span>
+                            </div>
+                            <a href="{% url 'contact:contact' %}" class="btn btn-sm btn-amber px-3">
+                                {% trans 'Commander' %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center text-muted">{% trans "Aucun équipement disponible." %}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- B2B Wholesale Banner (Editable from Admin) -->
+<div class="container my-4">
+    <section class="b2b-banner animate-on-scroll">
+        <div class="container b2b-content">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <span class="badge bg-plum text-amber px-3 py-2 rounded-pill fw-bold mb-3 d-inline-block">
+                        <i class="bi bi-briefcase-fill me-1"></i> {{ company.b2b_banner_badge|default:_("ESPACE REVENDEURS & GROSSISTES") }}
+                    </span>
+                    <h2 class="fw-bold mb-3 text-white">{{ company.b2b_banner_title|default:_("Vous êtes installateur, intégrateur ou revendeur ?") }}</h2>
+                    <p class="text-white-50 mb-4 fs-5">
+                        {{ company.b2b_banner_desc|default:_("Bénéficiez de tarifs grossiste préférentiels, d'un stock disponible immédiatement à Fès et d'un support technique d'experts pour développer votre activité au Maroc.") }}
+                    </p>
+                    <div class="d-flex flex-wrap gap-4 text-white small justify-content-center justify-content-lg-start">
+                        <span><i class="bi bi-check-circle-fill text-plum me-1"></i> {% trans 'Marges attractives' %}</span>
+                        <span><i class="bi bi-check-circle-fill text-plum me-1"></i> {% trans 'Stock garanti à Fès' %}</span>
+                        <span><i class="bi bi-check-circle-fill text-plum me-1"></i> {% trans 'Support technique & API' %}</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <a href="{% url 'wholesale:inquiry' %}" class="btn btn-plum btn-lg px-5 py-3 shadow">
+                        {% trans 'Ouvrir un Compte Pro' %} <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Testimonials with Real Client Portraits (Dynamic from Admin) -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center">{% trans 'Ce que disent nos' %} <span class="text-amber">{% trans 'Partenaires' %}</span></h2>
+            <p class="section-subtitle text-center">{% trans 'Des entreprises marocaines qui optimisent quotidiennement leur rentabilité grâce à nos solutions.' %}</p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            {% for testimonial in testimonials|slice:":4" %}
+            <div class="col-lg-6 col-xl-3 col-md-6 animate-on-scroll">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars text-amber mb-3 fs-6">
+                        {% with ''|center:testimonial.rating as range %}
+                        {% for _ in range %}
+                            <i class="bi bi-star-fill"></i>
+                        {% endfor %}
+                        {% endwith %}
+                    </div>
+                    <p class="testimonial-content mb-4 text-muted fst-italic small">"{{ testimonial.content }}"</p>
+                    <div class="testimonial-author d-flex align-items-center mt-auto pt-3 border-top">
+                        {% if testimonial.photo %}
+                            <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.client_name }}" class="testimonial-avatar-img me-3">
+                        {% else %}
+                            <div class="testimonial-author-avatar rounded-circle bg-plum text-white d-flex align-items-center justify-content-center fw-bold me-3" style="width: 50px; height: 50px;">
+                                {{ testimonial.client_name|make_list|first|upper }}
+                            </div>
+                        {% endif %}
+                        <div class="testimonial-author-info">
+                            <h5 class="mb-0 fs-6 fw-bold text-plum">{{ testimonial.client_name }}</h5>
+                            <span class="small text-muted d-block">{{ testimonial.company }}</span>
+                            <span class="small text-amber" style="font-size: 0.72rem;">✓ {% trans 'Client Vérifié' %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center text-muted">{% trans "Aucun témoignage pour le moment." %}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Partners Section (Dynamic from Admin) -->
+<section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+        <h6 class="text-center text-muted fw-bold text-uppercase tracking-wider mb-4 animate-on-scroll" style="letter-spacing: 2px;">
+            {% trans 'Ils nous font confiance au Maroc' %}
+        </h6>
+        <div class="row g-3 justify-content-center align-items-center animate-on-scroll">
+            {% for partner in partners %}
+            <div class="col-6 col-md-3">
+                <div class="partner-card-box">
+                    {% if partner.logo %}
+                        <img src="{{ partner.logo.url }}" alt="{{ partner.name }}">
+                    {% else %}
+                        <span class="fw-bold text-plum fs-5">{{ partner.name }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">TRANSPORT ATLAS</span></div></div>
+            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">MAROC EXPRESS</span></div></div>
+            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">FÈS LOCATION</span></div></div>
+            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">NORD FRIGO</span></div></div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Contact & Headquarter Map Section (Dynamic from Admin) -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 animate-on-scroll">
+                <h2 class="section-title">{% trans 'Rencontrez Notre Équipe' %}</h2>
+                <p class="text-muted mb-4">{% trans 'Notre siège social et atelier technique à Fès sont à votre disposition pour tester nos équipements en direct et analyser vos besoins de flotte.' %}</p>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div class="contact-details">
+                        <h5>{% trans 'Adresse du Siège & Showroom' %}</h5>
+                        <p>{{ company.address|default:"CN, 2 Rue Ibn Al Kayem, Fès 30000, Maroc" }}</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon-box"><i class="bi bi-telephone-fill"></i></div>
+                    <div class="contact-details">
+                        <h5>{% trans 'Ligne Téléphonique Directe' %}</h5>
+                        <p><a href="tel:{{ company.phone }}" class="fw-bold">{{ company.phone }}</a> {% if company.phone_display %}({{ company.phone_display }}){% endif %}</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon-box whatsapp"><i class="bi bi-whatsapp"></i></div>
+                    <div class="contact-details">
+                        <h5>WhatsApp Support Client</h5>
+                        <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212662244939' }}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card">
+                    <div class="contact-icon-box"><i class="bi bi-envelope-fill"></i></div>
+                    <div class="contact-details">
+                        <h5>{% trans 'Email Commercial' %}</h5>
+                        <p><a href="mailto:{{ company.email }}">{{ company.email }}</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-7 animate-on-scroll">
+                <div class="rounded-4 overflow-hidden shadow-lg border" style="height: 520px;">
+                    <iframe src="{{ company.google_maps_embed_url }}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

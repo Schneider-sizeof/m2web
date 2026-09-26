@@ -1,0 +1,73 @@
+{% load i18n %}
+<!-- Enterprise Topbar (Editable from Admin) -->
+<div class="topbar d-none d-lg-block">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-4">
+                <span><i class="bi bi-geo-alt-fill text-amber me-1"></i> {{ company.address|default:"CN, 2 Rue Ibn Al Kayem, Fès" }}</span>
+                <span><i class="bi bi-clock-fill text-amber me-1"></i> {% trans 'Lun-Ven' %}: {{ company.operating_hours_weekday|default:"08:30 – 18:30" }} | {% trans 'Sam' %}: {{ company.operating_hours_saturday|default:"08:30 – 13:30" }}</span>
+                <span><i class="bi bi-shield-check text-amber me-1"></i> {{ company.topbar_warranty|default:_("Garantie & Support Direct") }}</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <a href="tel:{{ company.phone|default:'+212662244939' }}"><i class="bi bi-telephone-fill text-amber me-1"></i> {{ company.phone|default:"+212 6 62 24 49 39" }}</a>
+                <span class="text-white-50">|</span>
+                <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212662244939' }}" target="_blank" class="text-success fw-bold"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a>
+                <span class="topbar-badge">{{ company.topbar_badge|default:_("Fournisseur Agréé") }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Sticky Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="brand-logo-wrapper" href="{% url 'core:home' %}">
+            <div class="brand-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 17L7 7L11 15L14 9L17 17H21" stroke="#F5A623" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="14" cy="9" r="2.5" fill="#FFFFFF"/>
+                </svg>
+            </div>
+            <div class="brand-title-wrap">
+                <span class="brand-title-main">M<span class="accent">2</span>WEB</span>
+                <span class="brand-title-sub">{% trans 'TÉLÉMATIQUE MAROC' %}</span>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.app_name == 'core' and request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'core:home' %}">{% trans 'Accueil' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.app_name == 'core' and request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'core:about' %}">{% trans 'À Propos' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.app_name == 'services' %}active{% endif %}" href="{% url 'services:list' %}">{% trans 'Services & Solutions' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.app_name == 'wholesale' %}active{% endif %}" href="{% url 'wholesale:inquiry' %}">
+                        {% trans 'Gros & B2B' %}<span class="nav-pro-badge">PRO</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.app_name == 'blog' %}active{% endif %}" href="{% url 'blog:list' %}">{% trans 'Actualités' %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.app_name == 'contact' %}active{% endif %}" href="{% url 'contact:contact' %}">{% trans 'Contact' %}</a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3">
+                {% include 'includes/language_switcher.html' %}
+                <a href="{% url 'contact:contact' %}" class="btn btn-amber d-none d-lg-inline-flex">
+                    <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans 'Nos Services & Équipements' %} | M2web{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container page-header-content">
+        <h1>{% trans 'Services & Équipements GPS' %}</h1>
+        <p class="lead text-white-50 max-w-700 mx-auto mb-4">{% trans 'Des solutions technologiques de pointe pour suivre, sécuriser et rentabiliser votre flotte automobile et vos actifs mobiles au Maroc.' %}</p>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'core:home' %}">{% trans 'Accueil' %}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{% trans 'Services & Équipements' %}</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- Services List with Real Photos -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center">{% trans 'Nos Solutions Télématiques' %}</h2>
+            <p class="section-subtitle text-center">{% trans 'Conçues pour les transporteurs, sociétés de logistique, entreprises de location et gestionnaires de parc.' %}</p>
+        </div>
+        
+        <div class="row g-4">
+            {% for service in services %}
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="service-card-photo">
+                    <div class="service-photo-wrap">
+                        {% if service.image %}
+                            <img src="{{ service.image.url }}" alt="{{ service.title }}">
+                        {% else %}
+                            <img src="{% static 'images/fleet-telematics.jpg' %}" alt="{{ service.title }}">
+                        {% endif %}
+                        <div class="service-photo-overlay"></div>
+                        <div class="service-icon-badge">
+                            {% if service.icon_class %}
+                                <i class="{{ service.icon_class }}"></i>
+                            {% else %}
+                                <i class="bi bi-geo-alt-fill"></i>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="service-card-content">
+                        <h3 class="fs-5 fw-bold mb-2 text-plum">{{ service.title }}</h3>
+                        <p class="text-muted small mb-4 flex-grow-1">{{ service.description }}</p>
+                        <a href="{{ service.get_absolute_url }}" class="card-link mt-auto fw-bold text-amber text-decoration-none">
+                            {% trans 'En savoir plus' %} <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center text-muted">{% trans "Aucun service trouvé." %}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Products List with Real Hardware Photos -->
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center">{% trans 'Notre Gamme de Traceurs & Capteurs GPS' %}</h2>
+            <p class="section-subtitle text-center">{% trans 'Du matériel certifié, étanche et éprouvé dans les conditions routières les plus exigeantes.' %}</p>
+        </div>
+        
+        <div class="row g-4">
+            {% for product in products %}
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="product-photo-card">
+                    <div class="product-photo-wrap">
+                        {% if product.image %}
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                        {% else %}
+                            <div class="placeholder-icon"><i class="bi bi-cpu"></i></div>
+                        {% endif %}
+                        <span class="product-badge">{% trans 'En Stock' %}</span>
+                    </div>
+                    <div class="product-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="product-category">{{ product.get_category_display }}</span>
+                            <span class="product-availability">{% trans 'Garantie 1 an' %}</span>
+                        </div>
+                        <h4 class="product-title fs-5 mb-2">{{ product.name }}</h4>
+                        <p class="product-desc small text-muted mb-3 flex-grow-1">{{ product.description }}</p>
+
+                        {% if product.specifications %}
+                        <div class="bg-light p-2 rounded-3 mb-3 small">
+                            <span class="fw-bold text-plum d-block mb-1" style="font-size: 0.75rem;">{% trans 'Spécifications :' %}</span>
+                            <div class="text-muted" style="font-size: 0.8rem;">{{ product.specifications|linebreaksbr }}</div>
+                        </div>
+                        {% endif %}
+
+                        <div class="product-footer pt-3 mt-auto border-top d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="text-muted small d-block" style="font-size: 0.75rem;">{% trans 'Tarif indicatif' %}</span>
+                                <span class="product-price fs-5 text-plum fw-bold">
+                                    {% if product.price_range %}
+                                        {{ product.price_range }}
+                                    {% else %}
+                                        {% trans 'Sur devis' %}
+                                    {% endif %}
+                                </span>
+                            </div>
+                            <a href="{% url 'contact:contact' %}" class="btn btn-amber btn-sm px-3">
+                                {% trans 'Demander un Devis' %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center text-muted">{% trans "Aucun équipement disponible." %}</div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
