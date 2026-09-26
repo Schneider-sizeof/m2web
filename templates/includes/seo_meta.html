@@ -1,7 +1,70 @@
-<meta name="description" content="{% block meta_description %}M2web Maroc - Solutions professionnelles de suivi GPS et de gestion de flotte pour entreprises et particuliers au Maroc.{% endblock %}">
-<meta name="keywords" content="{% block meta_keywords %}GPS tracker, gestion de flotte, M2web, Maroc, Fès, télématique, suivi véhicule{% endblock %}">
-<meta property="og:title" content="{% block og_title %}M2web Maroc | GPS Tracking{% endblock %}">
-<meta property="og:description" content="{% block og_description %}Optimisez votre gestion de flotte avec M2web Maroc.{% endblock %}">
-<meta property="og:type" content="website">
+{% load static i18n %}
+<!-- Core SEO Meta -->
+<meta name="description" content="{% block meta_description %}{{ company.meta_description|default:_('M2web Maroc — Fournisseur N°1 de traceurs GPS 4G et solutions avancées de gestion de flotte à Fès et partout au Maroc. Suivi en temps réel, réduction carburant et support 24/7.') }}{% endblock %}">
+<meta name="keywords" content="{% block meta_keywords %}traceur GPS Maroc, géolocalisation Fès, suivi de flotte Maroc, GPS 4G Maroc, contrôle carburant, M2web Maroc, télématique, gestion véhicules, balise GPS Fès{% endblock %}">
+<meta name="author" content="M2web Maroc">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+<!-- Favicons & App Icons (M2WEB Official Monogram) -->
+<link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+<meta name="theme-color" content="#1E1028">
+<meta name="msapplication-TileColor" content="#1E1028">
+
+<!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+<meta property="og:site_name" content="M2web Maroc">
+<meta property="og:type" content="{% block og_type %}website{% endblock %}">
 <meta property="og:url" content="{{ request.build_absolute_uri }}">
+<meta property="og:title" content="{% block og_title %}{% if page_title %}{{ page_title }} | {% endif %}M2web Maroc — {% trans 'Télématique & Traceurs GPS' %}{% endblock %}">
+<meta property="og:description" content="{% block og_description %}{{ company.hero_subtitle|default:_('Solutions professionnelles de géolocalisation GPS et gestion de flotte à Fès et au Maroc. Traceurs 4G certifiés, réduction de carburant et support direct 24/7.') }}{% endblock %}">
+<meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}{% endblock %}">
+<meta property="og:image:secure_url" content="{% block og_image_secure %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}{% endblock %}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="M2web Maroc — Télématique & Géolocalisation GPS">
+<meta property="og:locale" content="{% if LANGUAGE_CODE == 'ar' %}ar_MA{% elif LANGUAGE_CODE == 'en' %}en_US{% else %}fr_FR{% endif %}">
+
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@m2webmaroc">
+<meta name="twitter:creator" content="@m2webmaroc">
+<meta name="twitter:url" content="{{ request.build_absolute_uri }}">
+<meta name="twitter:title" content="{% block twitter_title %}{% if page_title %}{{ page_title }} | {% endif %}M2web Maroc — {% trans 'Télématique & Traceurs GPS' %}{% endblock %}">
+<meta name="twitter:description" content="{% block twitter_description %}{{ company.hero_subtitle|default:_('Solutions professionnelles de géolocalisation GPS et gestion de flotte à Fès et au Maroc. Traceurs 4G certifiés, réduction de carburant et support direct 24/7.') }}{% endblock %}">
+<meta name="twitter:image" content="{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}{% endblock %}">
+<meta name="twitter:image:alt" content="M2web Maroc — Télématique & Géolocalisation GPS">
+
+<!-- Schema.org JSON-LD Structured Data for Rich Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "M2web Maroc",
+  "image": "{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}",
+  "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo.png' %}",
+  "telephone": "{{ company.phone|default:'+212662244939' }}",
+  "email": "{{ company.email|default:'m2web@m2web.com' }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "CN, 2 Rue Ibn Al Kayem",
+    "addressLocality": "Fès",
+    "postalCode": "30000",
+    "addressCountry": "MA"
+  },
+  "url": "{{ request.scheme }}://{{ request.get_host }}",
+  "priceRange": "$$",
+  "sameAs": [
+    "{{ company.facebook_url|default:'https://facebook.com/m2web.maroc' }}",
+    "{{ company.linkedin_url|default:'https://linkedin.com/company/m2web-maroc' }}",
+    "{{ company.instagram_url|default:'https://instagram.com/m2web_maroc' }}",
+    "{{ company.youtube_url|default:'https://youtube.com/@m2webmaroc' }}"
+  ]
+}
+</script>
+
 {% block extra_meta %}{% endblock %}
