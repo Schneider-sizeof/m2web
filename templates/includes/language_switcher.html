@@ -1,8 +1,14 @@
-{% load i18n %}
+{% load static i18n %}
 <div class="dropdown lang-switcher">
     {% get_current_language as CURRENT_LANG %}
     <button class="btn btn-sm text-white dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        {% if CURRENT_LANG == 'fr' %}🇫🇷 FR{% elif CURRENT_LANG == 'ar' %}🇲🇦 AR{% else %}🇬🇧 EN{% endif %}
+        {% if CURRENT_LANG == 'fr' %}
+            <img src="{% static 'images/flags/fr.svg' %}" width="18" height="12" class="me-1 rounded-1 align-baseline" alt="FR"> FR
+        {% elif CURRENT_LANG == 'ar' %}
+            <img src="{% static 'images/flags/ma.svg' %}" width="18" height="12" class="me-1 rounded-1 align-baseline" alt="AR"> AR
+        {% else %}
+            <img src="{% static 'images/flags/gb.svg' %}" width="18" height="12" class="me-1 rounded-1 align-baseline" alt="EN"> EN
+        {% endif %}
     </button>
     <ul class="dropdown-menu dropdown-menu-end shadow">
         <li>
@@ -10,7 +16,10 @@
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ request.get_full_path }}">
                 <input name="language" type="hidden" value="fr">
-                <button type="submit" class="dropdown-item {% if CURRENT_LANG == 'fr' %}active{% endif %}">🇫🇷 Français</button>
+                <button type="submit" class="dropdown-item d-flex align-items-center {% if CURRENT_LANG == 'fr' %}active{% endif %}">
+                    <img src="{% static 'images/flags/fr.svg' %}" width="20" height="14" class="me-2 rounded-1" alt="FR">
+                    <span>Français</span>
+                </button>
             </form>
         </li>
         <li>
@@ -18,7 +27,10 @@
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ request.get_full_path }}">
                 <input name="language" type="hidden" value="ar">
-                <button type="submit" class="dropdown-item {% if CURRENT_LANG == 'ar' %}active{% endif %}">🇲🇦 العربية</button>
+                <button type="submit" class="dropdown-item d-flex align-items-center {% if CURRENT_LANG == 'ar' %}active{% endif %}">
+                    <img src="{% static 'images/flags/ma.svg' %}" width="20" height="14" class="me-2 rounded-1" alt="AR">
+                    <span>العربية</span>
+                </button>
             </form>
         </li>
         <li>
@@ -26,7 +38,10 @@
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ request.get_full_path }}">
                 <input name="language" type="hidden" value="en">
-                <button type="submit" class="dropdown-item {% if CURRENT_LANG == 'en' %}active{% endif %}">🇬🇧 English</button>
+                <button type="submit" class="dropdown-item d-flex align-items-center {% if CURRENT_LANG == 'en' %}active{% endif %}">
+                    <img src="{% static 'images/flags/gb.svg' %}" width="20" height="14" class="me-2 rounded-1" alt="EN">
+                    <span>English</span>
+                </button>
             </form>
         </li>
     </ul>

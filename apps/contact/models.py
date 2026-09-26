@@ -5,6 +5,7 @@ class ContactMessage(models.Model):
     name = models.CharField(max_length=200, verbose_name=_('Nom'))
     email = models.EmailField(verbose_name=_('Email'))
     phone = models.CharField(max_length=30, blank=True, verbose_name=_('Téléphone'))
+    company_name = models.CharField(max_length=200, blank=True, verbose_name=_('Entreprise'))
     subject = models.CharField(max_length=300, verbose_name=_('Sujet'))
     message = models.TextField(verbose_name=_('Message'))
     is_read = models.BooleanField(default=False, verbose_name=_('Lu'))
@@ -16,4 +17,4 @@ class ContactMessage(models.Model):
         verbose_name_plural = 'Messages'
 
     def __str__(self):
-        return f"{self.name} - {self.subject}"
+        return f"{self.name} - {self.company_name} ({self.subject})" if self.company_name else f"{self.name} - {self.subject}"

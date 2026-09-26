@@ -20,7 +20,7 @@
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$870000$tAi7g9DvcHZNgnN141f2V5$Jw8F5lMukaGBKsIk7IBTF44Qac4l6bDo/Tl/s1AIB5U=",
-    "last_login": null,
+    "last_login": "2026-09-26T22:57:35.416Z",
     "is_superuser": true,
     "username": "m2web",
     "first_name": "",
@@ -31,6 +31,54 @@
     "date_joined": "2026-09-26T22:26:44.424Z",
     "groups": [],
     "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1a668pqc7phdswenpl758qds31cvcm3a",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0NgWwr06N03kF0WpGrapLQn499Nkx70OjOZN0Tatxr3ltc4CYyAcPllTOmZ50PIg-b7otIyb-vE6kjUaZu6LZJf17P9G1RqFUYg1wUfbI8WO-PNYJI4Yq8T9i70aIxFQe44UxaNTosXYnFsh1KkoIfPF7UrN5o:1xAbKp:-GHFQbT5H_rsSEu2bdW5XttvtRViNFtSZ9S3seTcg-8",
+    "expire_date": "2026-10-10T22:57:35.423Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fsu7vfpa2tlc33yh19s49u5ogejt3etn",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0NgWwr06N03kF0WpGrapLQn499Nkx70OjOZN0Tatxr3ltc4CYyAcPllTOmZ50PIg-b7otIyb-vE6kjUaZu6LZJf17P9G1RqFUYg1wUfbI8WO-PNYJI4Yq8T9i70aIxFQe44UxaNTosXYnFsh1KkoIfPF7UrN5o:1xAb5Z:BHBiUr6x7cODQgv_dsmu1bhiHDf3kl7WWX6rZA8FNs0",
+    "expire_date": "2026-10-10T22:41:49.468Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kbtvb5idhu46hsj1svjejtw6rzu5kyh3",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0NgWwr06N03kF0WpGrapLQn499Nkx70OjOZN0Tatxr3ltc4CYyAcPllTOmZ50PIg-b7otIyb-vE6kjUaZu6LZJf17P9G1RqFUYg1wUfbI8WO-PNYJI4Yq8T9i70aIxFQe44UxaNTosXYnFsh1KkoIfPF7UrN5o:1xAb9Z:KgtxeIU5r8mHFehQHdSUPScD1GbtlI7HePy9sJcaVBc",
+    "expire_date": "2026-10-10T22:45:57.195Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vigd87vvhl8wa8c242kseukidd6zafu1",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0NgWwr06N03kF0WpGrapLQn499Nkx70OjOZN0Tatxr3ltc4CYyAcPllTOmZ50PIg-b7otIyb-vE6kjUaZu6LZJf17P9G1RqFUYg1wUfbI8WO-PNYJI4Yq8T9i70aIxFQe44UxaNTosXYnFsh1KkoIfPF7UrN5o:1xAb9m:vJY-lsRr7oCinwwvBh5ls7-0wU6-fWHPnCoXykO09mo",
+    "expire_date": "2026-10-10T22:46:10.120Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wb4t4avcdna9jjn5vf2361y1zp7zo7d8",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0NgWwr06N03kF0WpGrapLQn499Nkx70OjOZN0Tatxr3ltc4CYyAcPllTOmZ50PIg-b7otIyb-vE6kjUaZu6LZJf17P9G1RqFUYg1wUfbI8WO-PNYJI4Yq8T9i70aIxFQe44UxaNTosXYnFsh1KkoIfPF7UrN5o:1xAbIf:2rSUTKuVzF6ed-stg3xFjUs-3p5xPzDjXBI94KM_kxU",
+    "expire_date": "2026-10-10T22:55:21.095Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yyg9xkc8adprz73wcmbf98ykmqm3hvt9",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP-yZ0NgWwr06N03kF0WpGrapLQn499Nkx70OjOZN0Tatxr3ltc4CYyAcPllTOmZ50PIg-b7otIyb-vE6kjUaZu6LZJf17P9G1RqFUYg1wUfbI8WO-PNYJI4Yq8T9i70aIxFQe44UxaNTosXYnFsh1KkoIfPF7UrN5o:1xAb32:UZ3aoe98isdMYRgfiqUGdE02FrAL96w0uRXY3Jxt0Gk",
+    "expire_date": "2026-10-10T22:39:12.154Z"
   }
 },
 {
@@ -759,6 +807,7 @@
     "name": "Karim Test",
     "email": "karim@test.ma",
     "phone": "0662244939",
+    "company_name": "",
     "subject": "Demande de devis 10 véhicules",
     "message": "Bonjour, nous souhaitons équiper 10 camions.",
     "is_read": false,
