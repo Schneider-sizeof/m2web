@@ -49,6 +49,7 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    overflow-x: clip;
 }
 
 *, *::before, *::after {
@@ -60,7 +61,7 @@ body {
     color: var(--text-main);
     background-color: var(--light-color);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: clip;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -111,10 +112,11 @@ img {
 .btn {
     font-family: var(--font-body);
     border-radius: 8px;
-    padding: 12px 28px;
+    padding: 10px 22px;
+    font-size: 0.94rem;
     font-weight: 600;
     transition: var(--transition-bounce);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     border: none;
     position: relative;
     overflow: hidden;
@@ -169,29 +171,29 @@ img {
 
 /* Section Utilities */
 .section-padding {
-    padding: 5rem 0;
+    padding: 3.75rem 0;
 }
 
 .section-title {
-    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-size: clamp(1.65rem, 2.6vw, 2.25rem);
     font-weight: 800;
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     color: var(--primary-color);
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 4px;
+    width: 50px;
+    height: 3.5px;
     background: var(--gradient-amber);
-    margin-top: 15px;
+    margin-top: 12px;
     border-radius: 2px;
 }
 
 .section-title.text-center::after {
-    margin: 15px auto 0;
+    margin: 12px auto 0;
 }
 
 .section-title.text-white {
@@ -200,9 +202,9 @@ img {
 
 .section-subtitle {
     color: var(--text-muted);
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin-bottom: 3rem;
+    font-size: 0.98rem;
+    max-width: 660px;
+    margin-bottom: 2.25rem;
 }
 
 .section-subtitle.text-center {
@@ -220,27 +222,35 @@ img {
 /* ==========================================================================
    3. Navbar (Premium Dark)
    ========================================================================== */
+.header-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .navbar {
+    position: sticky;
+    top: 0;
     background: rgba(30, 16, 40, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    transition: var(--transition-normal);
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(245, 166, 35, 0.1);
+    transition: all 0.3s ease;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(245, 166, 35, 0.12);
     z-index: 1040;
 }
 
 .navbar.scrolled {
-    background: rgba(30, 16, 40, 1);
-    padding: 0.75rem 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgba(245, 166, 35, 0.2);
+    background: rgba(20, 10, 27, 0.98);
+    padding: 0.4rem 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(245, 166, 35, 0.22);
 }
 
 .navbar-brand {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.6rem;
+    font-size: 1.35rem;
     color: var(--accent-white) !important;
     display: flex;
     align-items: center;
@@ -249,7 +259,7 @@ img {
 }
 
 .navbar-brand img {
-    height: 40px;
+    height: 38px;
     width: auto;
 }
 
@@ -257,38 +267,47 @@ img {
     color: var(--secondary-color);
 }
 
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
 .nav-link {
-    color: rgba(255, 255, 255, 0.82) !important;
+    color: rgba(255, 255, 255, 0.84) !important;
     font-weight: 500;
-    font-size: 0.95rem;
-    padding: 0.55rem 0.95rem !important;
+    font-size: 0.88rem;
+    padding: 0.45rem 0.75rem !important;
     position: relative;
     display: inline-flex;
     align-items: center;
-    transition: color 0.25s ease;
+    white-space: nowrap !important;
+    transition: color 0.25s ease, opacity 0.25s ease, transform 0.2s ease;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 3px;
-    bottom: 0px;
+    height: 2.5px;
+    bottom: 2px;
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(90deg, #F5A623, #FFCA65);
     border-radius: 4px;
-    transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+    transition: width 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease;
     opacity: 0;
+    pointer-events: none;
 }
 
 .nav-link:hover {
-    color: #FFFFFF !important;
+    color: var(--secondary-color) !important;
 }
 
 .nav-link:hover::after {
-    width: 45%;
-    opacity: 0.7;
+    width: 75%;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(245, 166, 35, 0.55);
 }
 
 .nav-link.active {
@@ -297,9 +316,38 @@ img {
 }
 
 .nav-link.active::after {
-    width: 75%;
+    width: 80%;
     opacity: 1;
-    box-shadow: 0 2px 10px rgba(245, 166, 35, 0.5);
+    box-shadow: 0 0 12px rgba(245, 166, 35, 0.65);
+}
+
+.nav-link.active:hover {
+    color: #FFC04D !important;
+}
+
+.nav-link.active:hover::after {
+    width: 85%;
+    opacity: 1;
+    box-shadow: 0 0 16px rgba(245, 166, 35, 0.85);
+}
+
+@media (min-width: 992px) {
+    .navbar-nav:hover .nav-link.active:not(:hover)::after {
+        opacity: 0.35;
+        width: 45%;
+    }
+    .navbar-nav:hover .nav-link.active:not(:hover) {
+        color: rgba(255, 255, 255, 0.85) !important;
+    }
+}
+
+.btn-nav-quote {
+    padding: 0.45rem 1.05rem !important;
+    font-size: 0.84rem !important;
+    font-weight: 700 !important;
+    border-radius: 7px !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.2px;
 }
 
 .navbar-toggler {
@@ -365,13 +413,13 @@ img {
    4. Hero Section (Spectacular)
    ========================================================================== */
 .hero-section {
-    min-height: 90vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     background: linear-gradient(145deg, #1E1028 0%, #2D1B3D 50%, #1E1028 100%);
     position: relative;
     overflow: hidden;
-    padding: 8rem 0 4rem;
+    padding: 3.5rem 0 3.5rem;
 }
 
 .hero-section::before {
@@ -417,17 +465,18 @@ img {
 }
 
 .hero-badge {
-    display: inline-block;
-    background-color: rgba(245, 166, 35, 0.15);
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(245, 166, 35, 0.12);
     color: var(--secondary-color);
-    padding: 6px 16px;
+    padding: 5px 14px;
     border-radius: 30px;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(245, 166, 35, 0.3);
+    letter-spacing: 0.8px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(245, 166, 35, 0.28);
     backdrop-filter: blur(4px);
 }
 
@@ -436,11 +485,11 @@ img {
 }
 
 .hero-title {
-    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-size: clamp(1.85rem, 3.2vw, 2.85rem);
     font-weight: 800;
     color: var(--accent-white);
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.1rem;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
 }
@@ -454,33 +503,33 @@ img {
 .hero-title .highlight::after {
     content: '';
     position: absolute;
-    bottom: 5px;
+    bottom: 4px;
     left: 0;
     width: 100%;
-    height: 8px;
+    height: 6px;
     background-color: rgba(245, 166, 35, 0.3);
     z-index: -1;
     border-radius: 4px;
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: clamp(0.92rem, 1.2vw, 1.05rem);
     color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
+    margin-bottom: 1.5rem;
+    max-width: 540px;
     line-height: 1.6;
     font-weight: 400;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 0.85rem;
     flex-wrap: wrap;
 }
 
 .hero-buttons .btn {
-    padding: 14px 32px;
-    font-size: 1.05rem;
+    padding: 10px 22px;
+    font-size: 0.92rem;
 }
 
 .hero-image-wrapper {
@@ -535,7 +584,7 @@ img {
    ========================================================================== */
 .stats-section {
     background-color: var(--primary-color);
-    padding: 4rem 0;
+    padding: 2.75rem 0;
     position: relative;
     z-index: 10;
 }
@@ -552,18 +601,18 @@ img {
 
 .stat-item {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
     position: relative;
 }
 
 .stat-number {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 3vw, 2.75rem);
     font-weight: 800;
     color: var(--secondary-color);
     display: block;
     line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
 }
 
 .stat-suffix {
@@ -575,9 +624,9 @@ img {
 
 .stat-label {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     font-weight: 500;
     margin: 0;
 }
@@ -832,16 +881,16 @@ img {
    ========================================================================== */
 .b2b-banner {
     background: var(--gradient-amber);
-    padding: 5rem 0;
+    padding: 3rem 0;
     position: relative;
     overflow: hidden;
-    border-radius: 24px;
-    margin: 3rem 0;
+    border-radius: 20px;
+    margin: 2.5rem 0;
     box-shadow: var(--shadow-amber);
 }
 
 .b2b-banner-container {
-    padding: 0 15px; /* Container padding adjustment if needed */
+    padding: 0 15px;
 }
 
 .b2b-banner::before {
@@ -881,34 +930,34 @@ img {
 }
 
 .b2b-banner h2 {
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
     font-weight: 800;
     color: var(--accent-white);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .b2b-banner p {
     color: rgba(255, 255, 255, 0.95);
-    font-size: 1.15rem;
-    margin-bottom: 2rem;
+    font-size: 0.98rem;
+    margin-bottom: 1.5rem;
     font-weight: 500;
 }
 
 .b2b-banner .btn {
     background-color: var(--primary-color);
     color: var(--accent-white);
-    padding: 14px 40px;
+    padding: 10px 26px;
     border-radius: 8px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 0.94rem;
     border: none;
 }
 
 .b2b-banner .btn:hover {
     background-color: var(--dark-color);
-    transform: scale(1.05) translateY(-3px);
-    box-shadow: 0 10px 25px rgba(30, 16, 40, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(30, 16, 40, 0.35);
 }
 
 .b2b-image {
@@ -918,7 +967,7 @@ img {
 }
 
 .b2b-image img {
-    max-height: 350px;
+    max-height: 280px;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
 }
 
@@ -927,13 +976,13 @@ img {
    ========================================================================== */
 .testimonial-section {
     background-color: #fff;
-    padding: 6rem 0;
+    padding: 3.75rem 0;
 }
 
 .testimonial-card {
     background-color: var(--light-color);
     border-radius: 16px;
-    padding: 2.5rem;
+    padding: 1.75rem;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.06);
     height: 100%;
@@ -948,12 +997,12 @@ img {
 .testimonial-card::before {
     content: '"';
     font-family: Georgia, serif;
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: var(--secondary-color);
     opacity: 0.15;
     position: absolute;
-    top: 15px;
-    left: 20px;
+    top: 10px;
+    left: 15px;
     line-height: 1;
 }
 
@@ -1223,10 +1272,10 @@ img {
 .btn-submit {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    padding: 14px 40px;
-    border-radius: 10px;
+    padding: 10px 28px;
+    border-radius: 8px;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     transition: var(--transition-normal);
     border: none;
     width: auto;
@@ -1244,11 +1293,11 @@ img {
    ========================================================================== */
 .page-header {
     background: var(--gradient-plum);
-    padding: 6rem 0 4rem;
+    padding: 3.5rem 0 2.5rem;
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 .page-header::before {
@@ -1270,9 +1319,9 @@ img {
 .page-header h1 {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.75rem, 3.5vw, 2.4rem);
     color: var(--accent-white);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     text-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
@@ -1822,37 +1871,52 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 /* ==========================================================================
    19. Responsive Media Queries
    ========================================================================== */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .nav-link {
+        font-size: 0.82rem;
+        padding: 0.4rem 0.5rem !important;
+    }
+    .brand-title-wrap {
+        display: none !important;
+    }
+    .btn-nav-quote {
+        padding: 0.38rem 0.75rem !important;
+        font-size: 0.78rem !important;
+    }
+}
+
 @media (max-width: 1399px) {
-    .b2b-image img { max-height: 300px; }
+    .b2b-image img { max-height: 260px; }
 }
 
 @media (max-width: 1199px) {
-    .hero-title { font-size: clamp(2rem, 4vw, 3rem); }
-    .hero-section { padding-top: 7rem; }
-    .b2b-image img { max-height: 250px; }
+    .hero-title { font-size: clamp(1.75rem, 3.5vw, 2.4rem); }
+    .hero-section { padding: 3rem 0; }
+    .b2b-image img { max-height: 230px; }
 }
 
 @media (max-width: 991px) {
-    .hero-section { min-height: 70vh; }
-    .section-padding { padding: 4rem 0; }
+    .hero-section { min-height: auto; padding: 3rem 0 2.5rem; }
+    .section-padding { padding: 3rem 0; }
     
     .navbar-collapse {
         background-color: var(--primary-color);
-        padding: 1.5rem;
+        padding: 1.25rem;
         border-radius: 0 0 16px 16px;
-        margin-top: 1rem;
+        margin-top: 0.75rem;
         box-shadow: var(--shadow-lg);
-        border: 1px solid rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.08);
     }
     
     .nav-link {
-        padding: 0.75rem 0 !important;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
+        padding: 0.65rem 0 !important;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     
     .nav-link::after { display: none; }
     
-    .btn-submit, .btn-amber { width: 100%; text-align: center; }
+    .btn-submit { width: 100%; text-align: center; }
+    .btn-nav-quote { width: 100%; margin-top: 0.5rem; }
     
     .stat-divider { display: none; }
     
@@ -1863,22 +1927,22 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 @media (max-width: 767px) {
     .hero-section { 
         min-height: auto; 
-        padding: 6rem 0 3rem; 
+        padding: 3.5rem 0 2.5rem; 
         text-align: center;
     }
     
-    .hero-content { margin-bottom: 3rem; }
+    .hero-content { margin-bottom: 2.5rem; }
     
     .hero-buttons { justify-content: center; }
     
     .float-icon-1, .float-icon-2, .float-icon-3 { display: none; }
     
-    .stats-section .row > div { margin-bottom: 2rem; }
+    .stats-section .row > div { margin-bottom: 1.5rem; }
     .stats-section .row > div:last-child { margin-bottom: 0; }
     
-    .section-padding { padding: 3rem 0; }
+    .section-padding { padding: 2.5rem 0; }
     
-    .page-header { padding: 4rem 0 2rem; margin-bottom: 2rem; }
+    .page-header { padding: 3rem 0 2rem; margin-bottom: 2rem; }
     
     .whatsapp-widget {
         width: 50px;
@@ -1918,9 +1982,9 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 .topbar {
     background: #140a1b;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    font-size: 0.84rem;
+    font-size: 0.78rem;
     color: rgba(255, 255, 255, 0.75);
-    padding: 0.45rem 0;
+    padding: 0.35rem 0;
     position: relative;
     z-index: 1050;
 }
@@ -1939,9 +2003,9 @@ html[dir='rtl'] .whatsapp-tooltip::after {
     background: rgba(245, 166, 35, 0.18);
     color: var(--secondary-color);
     font-weight: 700;
-    padding: 2px 9px;
+    padding: 2px 7px;
     border-radius: 4px;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border: 1px solid rgba(245, 166, 35, 0.3);
@@ -1950,12 +2014,12 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 .brand-logo-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
 }
 
 .brand-logo-img {
-    height: 44px;
+    height: 38px;
     width: auto;
     object-fit: contain;
     border-radius: 6px;
@@ -1968,11 +2032,11 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 }
 
 .brand-icon-box {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     background: linear-gradient(135deg, #2D1B3D 0%, #170b20 100%);
     border: 1.5px solid var(--secondary-color);
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1989,7 +2053,7 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 .brand-title-main {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     color: var(--accent-white);
     letter-spacing: 0.5px;
 }
@@ -1999,12 +2063,12 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 }
 
 .brand-title-sub {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     font-weight: 700;
     color: var(--secondary-color);
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
 .nav-pro-badge {
@@ -2025,30 +2089,32 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 .hero-dashboard-frame {
     background: rgba(30, 16, 40, 0.88);
     border: 1px solid rgba(245, 166, 35, 0.35);
-    border-radius: 20px;
-    padding: 12px;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 50px rgba(245, 166, 35, 0.15);
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(245, 166, 35, 0.12);
     backdrop-filter: blur(20px);
     position: relative;
+    max-width: 520px;
+    margin: 0 auto;
 }
 
 .hero-dashboard-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 6px 12px 10px;
+    padding: 5px 10px 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .hero-mac-dots {
     display: flex;
-    gap: 6px;
+    gap: 5px;
 }
 
 .hero-mac-dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
 }
 
@@ -2057,7 +2123,7 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 .hero-mac-dot.green { background: #27c93f; }
 
 .hero-dashboard-title {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -2065,16 +2131,17 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 
 .hero-dashboard-img-wrap {
     position: relative;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
 .hero-dashboard-img-wrap img {
     width: 100%;
-    height: 320px;
+    max-height: 290px;
+    height: auto;
     object-fit: cover;
     display: block;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 .hero-map-overlay {

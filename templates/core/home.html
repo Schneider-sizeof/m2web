@@ -5,14 +5,14 @@
 <!-- Hero Section (Spectacular Modern Tech) -->
 <section class="hero-section">
     <div class="container hero-content">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-4 g-lg-5">
             <div class="col-lg-6 animate-on-scroll">
                 <div class="hero-badge">
                     <i class="bi bi-star-fill text-warning"></i> {{ company.hero_badge|default:_("N°1 de la Géolocalisation & Télématique au Maroc") }}
                 </div>
                 <h1 class="hero-title">
-                    {{ company.hero_title_line1|default:_("Prenez le Contrôle") }} <br>
-                    <span class="highlight">{{ company.hero_title_highlight|default:_("Total de Votre Flotte") }}</span> <br>
+                    {{ company.hero_title_line1|default:_("Prenez le Contrôle") }} <br class="d-none d-sm-inline">
+                    <span class="highlight">{{ company.hero_title_highlight|default:_("Total de Votre Flotte") }}</span> <br class="d-none d-sm-inline">
                     {{ company.hero_title_line2|default:_("en Temps Réel") }}
                 </h1>
                 <p class="hero-subtitle">

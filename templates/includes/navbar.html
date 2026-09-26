@@ -1,7 +1,7 @@
 {% load static i18n %}
 <!-- Enterprise Topbar (Editable from Admin) -->
 <div class="topbar d-none d-lg-block">
-    <div class="container">
+    <div class="container-fluid px-3 px-lg-4 px-xl-5 header-container">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-4">
                 <span><i class="bi bi-geo-alt-fill text-amber me-1"></i> {{ company.address|default:"CN, 2 Rue Ibn Al Kayem, Fès" }}</span>
@@ -20,9 +20,9 @@
 
 <!-- Main Sticky Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container">
+    <div class="container-fluid px-3 px-lg-4 px-xl-5 header-container">
         <a class="brand-logo-wrapper" href="{% url 'core:home' %}">
-            <img src="{% static 'images/logo-navbar.png' %}" alt="M2WEB Maroc" class="brand-logo-img" height="46">
+            <img src="{% static 'images/logo-navbar.png' %}" alt="M2WEB Maroc" class="brand-logo-img" height="38">
             <div class="brand-title-wrap d-none d-sm-flex">
                 <span class="brand-title-sub">{% trans 'TÉLÉMATIQUE MAROC' %}</span>
             </div>
@@ -56,9 +56,9 @@
                 </li>
             </ul>
 
-            <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2 gap-xl-3">
                 {% include 'includes/language_switcher.html' %}
-                <a href="{% url 'contact:contact' %}" class="btn btn-amber d-none d-lg-inline-flex">
+                <a href="{% url 'contact:contact' %}" class="btn btn-amber btn-nav-quote d-none d-lg-inline-flex">
                     <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
                 </a>
             </div>
