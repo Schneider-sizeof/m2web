@@ -5,10 +5,12 @@ class CompanyInfo(models.Model):
     # Brand & Identity
     company_name = models.CharField(max_length=200, default='M2web Maroc')
     tagline = models.TextField(blank=True, default='Solutions Avancées de Géolocalisation & Gestion de Flotte')
-    phone = models.CharField(max_length=30, default='+212 6 62 24 49 39')
-    phone_display = models.CharField(max_length=30, default='06 62 24 49 39', blank=True)
+    phone = models.CharField(max_length=30, default='+212 6 61 76 14 89', verbose_name='Téléphone Mobile')
+    phone_display = models.CharField(max_length=30, default='06 61 76 14 89', blank=True, verbose_name='Mobile (Affichage)')
+    phone_fix = models.CharField(max_length=30, default='+212 5 35 94 02 71', verbose_name='Téléphone Fixe')
+    phone_fix_display = models.CharField(max_length=30, default='05 35 94 02 71', blank=True, verbose_name='Fixe (Affichage)')
     email = models.EmailField(default='m2web@m2web.com')
-    whatsapp_number = models.CharField(max_length=30, default='+212662244939', help_text='Format international sans espaces, ex: +212662244939')
+    whatsapp_number = models.CharField(max_length=30, default='+212661761489', help_text='Format international sans espaces, ex: +212661761489')
     address = models.TextField(default='CN, 2 Rue Ibn Al Kayem, Fès 30000, Maroc')
     city = models.CharField(max_length=100, default='Fès')
     country = models.CharField(max_length=100, default='Maroc')
@@ -53,6 +55,12 @@ class CompanyInfo(models.Model):
     about_story_title = models.CharField(max_length=200, default='Notre Histoire & Mission')
     about_lead = models.TextField(default='Basée à Fès, M2web Maroc est une entreprise technologique spécialisée dans les solutions de géolocalisation et la gestion de flotte.')
     about_text = models.TextField(default="Depuis notre création, nous nous sommes engagés à fournir à nos clients des outils fiables, précis et faciles à utiliser pour optimiser leurs opérations logistiques. Notre mission est d'accompagner les entreprises marocaines dans leur transformation numérique en leur offrant une visibilité totale sur leurs actifs mobiles.")
+
+    # Hero Background Media
+    hero_bg_video = models.FileField(upload_to='hero/', blank=True, null=True, verbose_name='Vidéo de fond Hero (MP4)', help_text='Vidéo de fond pour le hero de la page d\'accueil. Format MP4, max 10MB recommandé.')
+    hero_bg_image = models.ImageField(upload_to='hero/', blank=True, null=True, verbose_name='Image de fond Hero', help_text='Image de fond alternative si pas de vidéo. Taille recommandée: 1920x1080px')
+    hero_bg_overlay_opacity = models.FloatField(default=0.7, verbose_name='Opacité overlay hero', help_text='0.0 = transparent, 1.0 = opaque. Recommandé: 0.6-0.8')
+    page_header_bg = models.ImageField(upload_to='hero/', blank=True, null=True, verbose_name='Image fond en-tête sous-pages', help_text='Image de fond par défaut pour les en-têtes de toutes les sous-pages')
 
     # Social Media
     linkedin_url = models.URLField(blank=True, default='https://linkedin.com/company/m2web-maroc')
@@ -141,3 +149,191 @@ class Partner(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Promotion(models.Model):
+    title = models.CharField(max_length=200, verbose_name="Titre de l'offre")
+    slug = models.SlugField(max_length=200, unique=True, blank=True)
+    badge = models.CharField(max_length=100, default='OFFRE SPÉCIALE', verbose_name="Badge promo (ex: -20%, PROMO FLASH)")
+    discount_label = models.CharField(max_length=50, blank=True, verbose_name="Remise affichée (ex: -20%, -300 DH)")
+    summary = models.TextField(verbose_name="Résumé court")
+    description = models.TextField(blank=True, verbose_name="Description détaillée")
+    features = models.TextField(blank=True, help_text="Avantages inclus, un par ligne", verbose_name="Éléments inclus (1 par ligne)")
+    original_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True, verbose_name="Prix d'origine (DH)")
+    promo_price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Prix promotionnel (DH)")
+    price_unit = models.CharField(max_length=50, default='/ traceur', verbose_name="Unité de prix (ex: / traceur, / pack)")
+    image = models.ImageField(upload_to='promotions/', blank=True, null=True, verbose_name="Image illustrative")
+    valid_until = models.DateField(null=True, blank=True, verbose_name="Date limite de validité")
+    cta_text = models.CharField(max_length=100, default="Profiter de l'offre", verbose_name="Texte du bouton CTA")
+    is_active = models.BooleanField(default=True, verbose_name="Actif")
+    is_featured = models.BooleanField(default=False, verbose_name="Mettre en avant sur l'accueil")
+    order = models.PositiveIntegerField(default=0, verbose_name="Ordre d'affichage")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['order', '-created_at']
+        verbose_name = 'Promotion & Offre'
+        verbose_name_plural = 'Promotions & Offres'
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            from django.utils.text import slugify
+            base_slug = slugify(self.title) or 'promo'
+            slug = base_slug
+            counter = 1
+            while Promotion.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                slug = f"{base_slug}-{counter}"
+                counter += 1
+            self.slug = slug
+        super().save(*args, **kwargs)
+
+    def get_features_list(self):
+        if not self.features:
+            return []
+        return [f.strip() for f in self.features.split('\n') if f.strip()]
+
+    def __str__(self):
+        return f"{self.title} ({self.badge})"
+
+class MobileApp(models.Model):
+    """Singleton model for the GPS Tracking mobile app promotion page."""
+    app_name = models.CharField(max_length=200, default='M2web GPS Tracker')
+    tagline = models.CharField(max_length=300, default='Suivez votre flotte en temps réel depuis votre smartphone')
+    hero_title = models.CharField(max_length=200, default='Application Mobile GPS')
+    hero_subtitle = models.TextField(default="Téléchargez notre application de suivi GPS et gardez un œil sur vos véhicules 24/7, où que vous soyez.")
+    description = models.TextField(default="Notre application mobile M2web GPS Tracker vous offre un contrôle total sur votre flotte depuis votre smartphone Android. Interface intuitive, notifications en temps réel, et rapports détaillés à portée de main.")
+    
+    # Download links
+    android_url = models.URLField(blank=True, default='https://play.google.com/store/apps/details?id=com.m2web.gps', verbose_name='Lien Google Play Store')
+    android_available = models.BooleanField(default=True, verbose_name='Disponible sur Android')
+    ios_url = models.URLField(blank=True, verbose_name='Lien App Store (iOS)')
+    ios_available = models.BooleanField(default=False, verbose_name='Disponible sur iOS')
+    ios_coming_soon = models.BooleanField(default=True, verbose_name='iOS bientôt disponible')
+    
+    # Media
+    hero_image = models.ImageField(upload_to='app/', blank=True, null=True, verbose_name='Image principale (mockup téléphone)', help_text='Image de mockup du téléphone avec l\'app. Taille recommandée: 600x800px')
+    promo_video_url = models.URLField(blank=True, verbose_name='URL vidéo promotionnelle (YouTube)')
+    
+    # Features section title
+    features_title = models.CharField(max_length=200, default='Fonctionnalités Clés', verbose_name='Titre section fonctionnalités')
+    features_subtitle = models.TextField(default='Tout ce dont vous avez besoin pour gérer votre flotte depuis votre poche.', verbose_name='Sous-titre fonctionnalités')
+    
+    # CTA section
+    cta_title = models.CharField(max_length=200, default='Prêt à Prendre le Contrôle ?', verbose_name='Titre CTA')
+    cta_subtitle = models.TextField(default="Téléchargez l'application gratuitement et commencez à suivre vos véhicules en quelques minutes.", verbose_name='Sous-titre CTA')
+    
+    is_active = models.BooleanField(default=True, verbose_name='Page active')
+    
+    class Meta:
+        verbose_name = 'Application Mobile'
+        verbose_name_plural = 'Application Mobile'
+    
+    def save(self, *args, **kwargs):
+        self.pk = 1
+        super().save(*args, **kwargs)
+    
+    def delete(self, *args, **kwargs):
+        pass
+    
+    @classmethod
+    def get_instance(cls):
+        obj, created = cls.objects.get_or_create(pk=1, defaults={'app_name': 'M2web GPS Tracker'})
+        return obj
+    
+    def __str__(self):
+        return self.app_name
+
+
+class AppFeature(models.Model):
+    """Individual feature of the mobile app."""
+    title = models.CharField(max_length=200, verbose_name='Titre')
+    description = models.TextField(verbose_name='Description')
+    icon_class = models.CharField(max_length=100, default='bi bi-geo-alt-fill', help_text='Classe Bootstrap Icons', verbose_name='Icône')
+    order = models.PositiveIntegerField(default=0, verbose_name="Ordre")
+    is_active = models.BooleanField(default=True, verbose_name='Actif')
+    
+    class Meta:
+        ordering = ['order']
+        verbose_name = 'Fonctionnalité App'
+        verbose_name_plural = 'Fonctionnalités App'
+    
+    def __str__(self):
+        return self.title
+
+
+class AppScreenshot(models.Model):
+    """Screenshot/mockup of the mobile app."""
+    image = models.ImageField(upload_to='app/screenshots/', verbose_name='Capture d\'écran')
+    caption = models.CharField(max_length=200, blank=True, verbose_name='Légende')
+    order = models.PositiveIntegerField(default=0, verbose_name="Ordre")
+    is_active = models.BooleanField(default=True, verbose_name='Actif')
+    
+    class Meta:
+        ordering = ['order']
+        verbose_name = 'Capture d\'écran App'
+        verbose_name_plural = 'Captures d\'écran App'
+    
+    def __str__(self):
+        return self.caption or f'Screenshot {self.pk}'
+
+
+class AppPlan(models.Model):
+    """Pricing/membership plan for the mobile app."""
+    PERIOD_CHOICES = [
+        ('month', 'Par mois'),
+        ('year', 'Par an'),
+        ('once', 'Paiement unique'),
+        ('free', 'Gratuit'),
+    ]
+    name = models.CharField(max_length=200, verbose_name='Nom du forfait')
+    badge = models.CharField(max_length=100, blank=True, verbose_name='Badge (ex: POPULAIRE, RECOMMANDÉ)')
+    description = models.TextField(blank=True, verbose_name='Description courte')
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0, verbose_name='Prix (DH)')
+    period = models.CharField(max_length=10, choices=PERIOD_CHOICES, default='month', verbose_name='Période')
+    features = models.TextField(help_text='Un avantage par ligne', verbose_name='Avantages inclus')
+    max_vehicles = models.CharField(max_length=100, default='1 véhicule', verbose_name='Nombre de véhicules')
+    cta_text = models.CharField(max_length=100, default='Choisir ce forfait', verbose_name='Texte du bouton')
+    is_featured = models.BooleanField(default=False, verbose_name='Mis en avant')
+    is_active = models.BooleanField(default=True, verbose_name='Actif')
+    order = models.PositiveIntegerField(default=0, verbose_name="Ordre")
+    
+    class Meta:
+        ordering = ['order']
+        verbose_name = 'Forfait App'
+        verbose_name_plural = 'Forfaits App'
+    
+    def get_features_list(self):
+        if not self.features:
+            return []
+        return [f.strip() for f in self.features.split('\n') if f.strip()]
+    
+    def __str__(self):
+        return f"{self.name} - {self.price} DH/{self.get_period_display()}"
+
+
+class AppInquiry(models.Model):
+    """Inquiry/request from users interested in the mobile app."""
+    INTEREST_CHOICES = [
+        ('free', 'Essai gratuit'),
+        ('basic', 'Forfait Essentiel'),
+        ('pro', 'Forfait Pro'),
+        ('enterprise', 'Forfait Entreprise'),
+        ('info', 'Demande d\'information'),
+    ]
+    name = models.CharField(max_length=200, verbose_name='Nom & Prénom')
+    email = models.EmailField(verbose_name='Email')
+    phone = models.CharField(max_length=30, verbose_name='Téléphone')
+    company = models.CharField(max_length=200, blank=True, verbose_name='Entreprise')
+    plan_interest = models.CharField(max_length=20, choices=INTEREST_CHOICES, default='info', verbose_name='Forfait souhaité')
+    fleet_size = models.CharField(max_length=100, blank=True, verbose_name='Nombre de véhicules')
+    message = models.TextField(blank=True, verbose_name='Message')
+    is_processed = models.BooleanField(default=False, verbose_name='Traité')
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Date de demande')
+    
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'Demande App Mobile'
+        verbose_name_plural = 'Demandes App Mobile'
+    
+    def __str__(self):
+        return f"{self.name} - {self.get_plan_interest_display()}"

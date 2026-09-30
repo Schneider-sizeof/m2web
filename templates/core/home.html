@@ -4,6 +4,21 @@
 {% block content %}
 <!-- Hero Section (Spectacular Modern Tech) -->
 <section class="hero-section">
+    <!-- Hero Background Video/Image -->
+    {% if company.hero_bg_video %}
+    <div class="hero-bg-media">
+        <video autoplay muted loop playsinline poster="{% if company.hero_bg_image %}{{ company.hero_bg_image.url }}{% endif %}">
+            <source src="{{ company.hero_bg_video.url }}" type="video/mp4">
+        </video>
+    </div>
+    {% elif company.hero_bg_image %}
+    <div class="hero-bg-media">
+        <img src="{{ company.hero_bg_image.url }}" alt="" loading="eager">
+    </div>
+    {% endif %}
+    {% if company.hero_bg_video or company.hero_bg_image %}
+    <div class="hero-bg-overlay" style="--hero-overlay: {{ company.hero_bg_overlay_opacity|default:'0.7' }};"></div>
+    {% endif %}
     <div class="container hero-content">
         <div class="row align-items-center g-4 g-lg-5">
             <div class="col-lg-6 animate-on-scroll">
@@ -37,7 +52,7 @@
             </div>
 
             <div class="col-lg-6 animate-on-scroll">
-                <!-- Interactive High-Tech Dashboard Mockup -->
+                <!-- Hero Slider Carousel -->
                 <div class="hero-dashboard-frame">
                     <div class="hero-dashboard-header">
                         <div class="hero-mac-dots">
@@ -54,7 +69,30 @@
                     </div>
 
                     <div class="hero-dashboard-img-wrap">
-                        <img src="{% static 'images/hero-dashboard.png' %}" alt="M2web Dashboard Live" onerror="this.src='{% static 'images/hero-fleet.jpg' %}';">
+                        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{% static 'images/hero-dashboard.png' %}" alt="M2web Dashboard Live" class="d-block w-100" onerror="this.src='{% static 'images/hero-fleet.jpg' %}';">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'images/hero-fleet.jpg' %}" alt="{% trans 'Suivi de flotte en temps réel' %}" class="d-block w-100" onerror="this.src='{% static 'images/hero-dashboard.png' %}';">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'images/hero-reports.jpg' %}" alt="{% trans 'Rapports et statistiques GPS' %}" class="d-block w-100" onerror="this.src='{% static 'images/hero-dashboard.png' %}';">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
                         <div class="hero-map-overlay"></div>
                     </div>
 
@@ -281,6 +319,57 @@
     </div>
 </section>
 
+<!-- Promotions Section -->
+{% if promotions %}
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center"><i class="bi bi-fire text-danger"></i> {% trans 'Offres & Promotions' %} <span class="text-amber">{% trans 'Exclusives' %}</span></h2>
+            <p class="section-subtitle text-center">{% trans 'Profitez de nos offres spéciales sur les traceurs GPS et équipements de géolocalisation.' %}</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            {% for promo in promotions %}
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="promo-card">
+                    <div class="promo-badge">{{ promo.badge }}</div>
+                    {% if promo.image %}
+                    <div class="promo-image-wrap">
+                        <img src="{{ promo.image.url }}" alt="{{ promo.title }}">
+                    </div>
+                    {% endif %}
+                    <div class="promo-body">
+                        <h4 class="fw-bold text-plum mb-2">{{ promo.title }}</h4>
+                        <p class="text-muted small mb-3">{{ promo.summary }}</p>
+                        {% if promo.features %}
+                        <ul class="promo-features list-unstyled mb-3">
+                            {% for feature in promo.get_features_list %}
+                            <li><i class="bi bi-check-circle-fill text-amber me-2"></i>{{ feature }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        <div class="promo-pricing mb-3">
+                            {% if promo.original_price %}
+                            <span class="promo-original-price">{{ promo.original_price }} DH</span>
+                            {% endif %}
+                            <span class="promo-price">{{ promo.promo_price }} DH</span>
+                            <span class="text-muted small">{{ promo.price_unit }}</span>
+                        </div>
+                        {% if promo.valid_until %}
+                        <p class="promo-validity text-danger small"><i class="bi bi-clock me-1"></i>{% trans 'Valable jusqu\'au' %} {{ promo.valid_until|date:'d/m/Y' }}</p>
+                        {% endif %}
+                        <a href="{% url 'contact:contact' %}" class="btn btn-amber w-100">{{ promo.cta_text }} <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-4">
+            <a href="{% url 'core:promotions' %}" class="btn btn-outline-amber">{% trans 'Voir toutes les offres' %} <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
 <!-- B2B Wholesale Banner (Editable from Admin) -->
 <div class="container my-4">
     <section class="b2b-banner animate-on-scroll">
@@ -408,7 +497,7 @@
                     <div class="contact-icon-box whatsapp"><i class="bi bi-whatsapp"></i></div>
                     <div class="contact-details">
                         <h5>WhatsApp Support Client</h5>
-                        <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212662244939' }}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
+                        <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
                     </div>
                 </div>
                 

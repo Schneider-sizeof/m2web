@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %}{% trans 'Devenir Revendeur' %} | M2web Maroc{% endblock %}
+{% block content %}
+<section class="page-header py-5 bg-plum text-white text-center">
+    {% if company.page_header_bg %}
+    <div class="page-header-bg">
+        <img src="{{ company.page_header_bg.url }}" alt="" loading="eager">
+    </div>
+    <div class="page-header-overlay"></div>
+    {% endif %}
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">{% trans 'Devenir Revendeur M2web' %}</h1>
+        <p class="lead mb-0">{% trans 'Développez votre activité en proposant nos solutions de géolocalisation GPS professionnelles.' %}</p>
+    </div>
+</section>
+
+<section class="section-padding py-5">
+    <div class="container">
+        <div class="row mb-5 text-center">
+            <div class="col-12">
+                <h2 class="text-plum fw-bold mb-4">{% trans 'Les Avantages du Programme Revendeur' %}</h2>
+            </div>
+        </div>
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-graph-up-arrow display-4 text-amber mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Marges Attractives' %}</h4>
+                        <p class="card-text">{% trans "Bénéficiez de remises allant jusqu'à 35% sur le matériel et les abonnements." %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-box-seam display-4 text-amber mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Stock Disponible' %}</h4>
+                        <p class="card-text">{% trans 'Matériel toujours disponible dans notre dépôt à Fès, expédition rapide partout au Maroc.' %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-headset display-4 text-amber mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Support & Formation' %}</h4>
+                        <p class="card-text">{% trans 'Formation technique gratuite, assistance à l\'installation et support client prioritaire.' %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-palette display-4 text-amber mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Marque Blanche' %}</h4>
+                        <p class="card-text">{% trans 'Possibilité de personnaliser la plateforme avec votre propre logo, domaine et couleurs.' %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-megaphone display-4 text-amber mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Support Marketing' %}</h4>
+                        <p class="card-text">{% trans 'Brochures, fiches techniques et supports de communication fournis pour vous aider à vendre.' %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-person-badge display-4 text-amber mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Gestionnaire Dédié' %}</h4>
+                        <p class="card-text">{% trans 'Un responsable de compte unique pour répondre à toutes vos demandes commerciales et techniques.' %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partnership Tiers -->
+        <div class="row mb-5 text-center mt-5">
+            <div class="col-12">
+                <h2 class="text-plum fw-bold mb-4">{% trans 'Niveaux de Partenariat' %}</h2>
+            </div>
+        </div>
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card h-100 border-plum shadow animate-on-scroll">
+                    <div class="card-header bg-plum text-white text-center py-3">
+                        <h3 class="mb-0 h5">{% trans 'Découverte' %}</h3>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <ul class="list-unstyled text-start mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Idéal pour démarrer' %}</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Petite quantité (1-10 unités)' %}</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Remise de base' %}</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Formation technique incluse' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-amber shadow animate-on-scroll position-relative">
+                    <div class="position-absolute top-0 start-50 translate-middle badge bg-amber text-plum rounded-pill px-3 py-2">
+                        {% trans 'Le plus populaire' %}
+                    </div>
+                    <div class="card-header bg-amber text-plum text-center py-3 mt-2 border-0">
+                        <h3 class="mb-0 h5 fw-bold">{% trans 'Pro' %}</h3>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <ul class="list-unstyled text-start mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-plum me-2"></i>{% trans 'Pour les professionnels' %}</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-plum me-2"></i>{% trans 'Volume régulier (10-50 unités/mois)' %}</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-plum me-2"></i>{% trans 'Remise supérieure' %}</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-plum me-2"></i>{% trans 'Option Marque Blanche possible' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-plum shadow animate-on-scroll">
+                    <div class="card-header bg-plum text-white text-center py-3">
+                        <h3 class="mb-0 h5">{% trans 'Distributeur' %}</h3>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <ul class="list-unstyled text-start mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Pour les grands comptes' %}</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Fort volume (+50 unités/mois)' %}</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Remise maximale (jusqu\'à 35%)' %}</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Marque Blanche gratuite' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-lg border-0 animate-on-scroll">
+                    <div class="card-body p-5">
+                        <h3 class="text-center text-plum fw-bold mb-4">{% trans 'Demande d\'Ouverture de Compte Revendeur' %}</h3>
+                        
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <form method="post" action="{% url 'wholesale:reseller' %}">
+                            {% csrf_token %}
+                            <div class="d-none">
+                                {{ form.website }}
+                            </div>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="{{ form.company_name.id_for_label }}" class="form-label">{% trans 'Nom de la Société' %}</label>
+                                    {{ form.company_name }}
+                                    {% if form.company_name.errors %}<div class="text-danger small">{{ form.company_name.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.contact_person.id_for_label }}" class="form-label">{% trans 'Personne de Contact' %}</label>
+                                    {{ form.contact_person }}
+                                    {% if form.contact_person.errors %}<div class="text-danger small">{{ form.contact_person.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.email.id_for_label }}" class="form-label">{% trans 'Email' %}</label>
+                                    {{ form.email }}
+                                    {% if form.email.errors %}<div class="text-danger small">{{ form.email.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.phone.id_for_label }}" class="form-label">{% trans 'Téléphone / WhatsApp' %}</label>
+                                    {{ form.phone }}
+                                    {% if form.phone.errors %}<div class="text-danger small">{{ form.phone.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.city.id_for_label }}" class="form-label">{% trans 'Ville' %}</label>
+                                    {{ form.city }}
+                                    {% if form.city.errors %}<div class="text-danger small">{{ form.city.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.activity_type.id_for_label }}" class="form-label">{% trans 'Secteur d\'Activité' %}</label>
+                                    {{ form.activity_type }}
+                                    {% if form.activity_type.errors %}<div class="text-danger small">{{ form.activity_type.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.expected_volume.id_for_label }}" class="form-label">{% trans 'Volume Mensuel Estimé' %}</label>
+                                    {{ form.expected_volume }}
+                                    {% if form.expected_volume.errors %}<div class="text-danger small">{{ form.expected_volume.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check mt-md-4">
+                                        {{ form.has_installed_before }}
+                                        <label class="form-check-label" for="{{ form.has_installed_before.id_for_label }}">
+                                            {% trans 'Avez-vous déjà installé des traceurs GPS ?' %}
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        {{ form.interested_in_whitelabel }}
+                                        <label class="form-check-label" for="{{ form.interested_in_whitelabel.id_for_label }}">
+                                            {% trans 'Intéressé par la plateforme en Marque Blanche ?' %}
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="{{ form.message.id_for_label }}" class="form-label">{% trans 'Message ou Questions Complémentaires' %}</label>
+                                    {{ form.message }}
+                                    {% if form.message.errors %}<div class="text-danger small">{{ form.message.errors.0 }}</div>{% endif %}
+                                </div>
+                                
+                                <div class="col-12 mt-3">
+                                    {{ form.captcha_token }}
+                                    <label for="{{ form.captcha_answer.id_for_label }}" class="form-label">{% trans 'Vérification anti-spam' %} : <span class="fw-bold fs-5 text-plum">{{ form.captcha_question }}</span></label>
+                                    {{ form.captcha_answer }}
+                                    {% if form.captcha_answer.errors %}<div class="text-danger small">{{ form.captcha_answer.errors.0 }}</div>{% endif %}
+                                </div>
+                                
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-amber btn-lg px-5">{% trans 'Envoyer ma demande' %}</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="mb-2">{% trans 'Vous préférez en discuter de vive voix ?' %}</p>
+            <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" class="btn btn-outline-plum" target="_blank">
+                <i class="bi bi-whatsapp me-2"></i>{% trans 'Contactez-nous sur WhatsApp' %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

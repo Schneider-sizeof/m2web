@@ -24,6 +24,10 @@
                     <li><a href="{% url 'core:about' %}" class="footer-link">{% trans 'À Propos' %}</a></li>
                     <li><a href="{% url 'services:list' %}" class="footer-link">{% trans 'Services & Solutions' %}</a></li>
                     <li><a href="{% url 'wholesale:inquiry' %}" class="footer-link">{% trans 'Gros & B2B' %}</a></li>
+                    <li><a href="{% url 'wholesale:reseller' %}" class="footer-link">{% trans 'Devenir Revendeur' %}</a></li>
+                    <li><a href="{% url 'wholesale:platform' %}" class="footer-link">{% trans 'Plateforme & Serveur GPS' %}</a></li>
+                    <li><a href="{% url 'core:promotions' %}" class="footer-link">{% trans 'Promotions' %}</a></li>
+                    <li><a href="{% url 'core:mobile_app' %}" class="footer-link">{% trans 'Application Mobile' %}</a></li>
                     <li><a href="{% url 'blog:list' %}" class="footer-link">{% trans 'Actualités' %}</a></li>
                     <li><a href="{% url 'contact:contact' %}" class="footer-link">{% trans 'Contact' %}</a></li>
                 </ul>
@@ -55,7 +59,11 @@
                 </div>
                 <div class="footer-contact-item">
                     <div class="footer-contact-icon"><i class="bi bi-telephone"></i></div>
-                    <div class="footer-contact-text"><a href="tel:{{ company.phone|default:'+212662244939' }}">{{ company.phone|default:"+212 6 62 24 49 39" }}</a></div>
+                    <div class="footer-contact-text"><a href="tel:{{ company.phone|default:'+212661761489' }}">{{ company.phone|default:"+212 6 61 76 14 89" }}</a></div>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="footer-contact-icon"><i class="bi bi-telephone"></i></div>
+                    <div class="footer-contact-text"><a href="tel:{{ company.phone_fix|default:'+212535940271' }}">{{ company.phone_fix|default:"+212 5 35 94 02 71" }}</a></div>
                 </div>
                 <div class="footer-contact-item">
                     <div class="footer-contact-icon"><i class="bi bi-envelope"></i></div>

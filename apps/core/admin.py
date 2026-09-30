@@ -1,6 +1,6 @@
 from django.contrib import admin
 from modeltranslation.admin import TranslationAdmin
-from .models import CompanyInfo, WhyChooseUsPillar, Testimonial, Partner
+from .models import CompanyInfo, WhyChooseUsPillar, Testimonial, Partner, Promotion, MobileApp, AppFeature, AppScreenshot, AppPlan, AppInquiry
 
 admin.site.site_header = 'M2web Maroc — Administration'
 admin.site.site_title = 'M2web Admin'
@@ -11,8 +11,8 @@ class CompanyInfoAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Identité & Coordonnées Principales', {
             'fields': (
-                'company_name', 'tagline', 'phone', 'phone_display', 'whatsapp_number', 
-                'email', 'address', 'city', 'country', 'google_maps_url', 'google_maps_embed_url'
+                'company_name', 'tagline', 'phone', 'phone_display', 'phone_fix', 'phone_fix_display',
+                'whatsapp_number', 'email', 'address', 'city', 'country', 'google_maps_url', 'google_maps_embed_url'
             )
         }),
         ('Barre Supérieure & En-tête (Topbar)', {
@@ -25,6 +25,10 @@ class CompanyInfoAdmin(admin.ModelAdmin):
                 'hero_badge', 'hero_title_line1', 'hero_title_highlight', 'hero_title_line2', 
                 'hero_subtitle', 'hero_trust_badge_1', 'hero_trust_badge_2', 'hero_trust_badge_3'
             )
+        }),
+        ('Médias de Fond (Hero & En-têtes)', {
+            'description': 'Vidéo/image de fond pour le hero de la page d\'accueil et les en-têtes des sous-pages',
+            'fields': ('hero_bg_video', 'hero_bg_image', 'hero_bg_overlay_opacity', 'page_header_bg')
         }),
         ('Statistiques Chiffrées Clés', {
             'description': 'Chiffres animés présentés sous la bannière d\'accueil',
@@ -63,7 +67,7 @@ class CompanyInfoAdmin(admin.ModelAdmin):
         return False
 
 @admin.register(WhyChooseUsPillar)
-class WhyChooseUsPillarAdmin(admin.ModelAdmin):
+class WhyChooseUsPillarAdmin(TranslationAdmin):
     list_display = ['order', 'title', 'icon_class', 'is_active']
     list_editable = ['title', 'icon_class', 'is_active']
     list_display_links = ['order']
@@ -71,7 +75,7 @@ class WhyChooseUsPillarAdmin(admin.ModelAdmin):
     ordering = ['order']
 
 @admin.register(Testimonial)
-class TestimonialAdmin(admin.ModelAdmin):
+class TestimonialAdmin(TranslationAdmin):
     list_display = ['client_name', 'company', 'role', 'rating', 'is_active', 'order']
     list_filter = ['is_active', 'rating']
     list_editable = ['is_active', 'order']
@@ -82,3 +86,76 @@ class PartnerAdmin(admin.ModelAdmin):
     list_display = ['name', 'website_url', 'is_active', 'order']
     list_editable = ['is_active', 'order']
     search_fields = ['name']
+
+@admin.register(Promotion)
+class PromotionAdmin(TranslationAdmin):
+    list_display = ['title', 'badge', 'discount_label', 'promo_price', 'original_price', 'valid_until', 'is_active', 'is_featured', 'order']
+    list_filter = ['is_active', 'is_featured', 'badge']
+    list_editable = ['is_active', 'is_featured', 'order']
+    search_fields = ['title', 'summary', 'description']
+    prepopulated_fields = {'slug': ('title',)}
+    ordering = ['order', '-created_at']
+
+class AppFeatureInline(admin.TabularInline):
+    model = AppFeature
+    extra = 1
+    fields = ['title', 'description', 'icon_class', 'order', 'is_active']
+
+class AppScreenshotInline(admin.TabularInline):
+    model = AppScreenshot
+    extra = 1
+    fields = ['image', 'caption', 'order', 'is_active']
+
+@admin.register(MobileApp)
+class MobileAppAdmin(TranslationAdmin):
+    fieldsets = (
+        ('Identité de l\'Application', {
+            'fields': ('app_name', 'tagline', 'hero_title', 'hero_subtitle', 'description', 'is_active')
+        }),
+        ('Liens de Téléchargement', {
+            'fields': ('android_url', 'android_available', 'ios_url', 'ios_available', 'ios_coming_soon')
+        }),
+        ('Médias', {
+            'fields': ('hero_image', 'promo_video_url')
+        }),
+        ('Section Fonctionnalités', {
+            'fields': ('features_title', 'features_subtitle')
+        }),
+        ('Section Appel à l\'Action', {
+            'fields': ('cta_title', 'cta_subtitle')
+        }),
+    )
+    
+    def has_add_permission(self, request):
+        if MobileApp.objects.exists():
+            return False
+        return True
+    
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+@admin.register(AppFeature)
+class AppFeatureAdmin(TranslationAdmin):
+    list_display = ['title', 'icon_class', 'order', 'is_active']
+    list_editable = ['order', 'is_active']
+    search_fields = ['title', 'description']
+
+@admin.register(AppScreenshot)
+class AppScreenshotAdmin(TranslationAdmin):
+    list_display = ['caption', 'order', 'is_active']
+    list_editable = ['order', 'is_active']
+
+@admin.register(AppPlan)
+class AppPlanAdmin(TranslationAdmin):
+    list_display = ['name', 'price', 'period', 'max_vehicles', 'is_featured', 'is_active', 'order']
+    list_editable = ['price', 'is_featured', 'is_active', 'order']
+    list_filter = ['is_active', 'is_featured', 'period']
+
+@admin.register(AppInquiry)
+class AppInquiryAdmin(admin.ModelAdmin):
+    list_display = ['name', 'email', 'phone', 'company', 'plan_interest', 'fleet_size', 'is_processed', 'created_at']
+    list_filter = ['is_processed', 'plan_interest', 'created_at']
+    list_editable = ['is_processed']
+    search_fields = ['name', 'email', 'phone', 'company']
+    readonly_fields = ['created_at']
+    date_hierarchy = 'created_at'

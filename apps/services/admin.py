@@ -1,8 +1,9 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 from .models import Service, Product
 
 @admin.register(Service)
-class ServiceAdmin(admin.ModelAdmin):
+class ServiceAdmin(TranslationAdmin):
     list_display = ['title', 'icon_class', 'is_featured', 'order']
     list_filter = ['is_featured']
     list_editable = ['is_featured', 'order']
@@ -10,7 +11,7 @@ class ServiceAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(TranslationAdmin):
     list_display = ['name', 'category', 'price_range', 'is_available', 'is_featured', 'order']
     list_filter = ['category', 'is_available', 'is_featured']
     list_editable = ['price_range', 'is_available', 'is_featured', 'order']

@@ -6,6 +6,12 @@
 {% block content %}
 <!-- Page Header -->
 <section class="page-header">
+    {% if company.page_header_bg %}
+    <div class="page-header-bg">
+        <img src="{{ company.page_header_bg.url }}" alt="" loading="eager">
+    </div>
+    <div class="page-header-overlay"></div>
+    {% endif %}
     <div class="container page-header-content">
         <h1>{% trans 'Blog & Actualités' %}</h1>
         <p class="lead text-white-50 max-w-700 mx-auto mb-4">{% trans 'Restez informés des dernières tendances en télématique, sécurité et gestion de flotte au Maroc.' %}</p>

@@ -1,5 +1,5 @@
 from modeltranslation.translator import translator, TranslationOptions
-from .models import CompanyInfo, Testimonial, WhyChooseUsPillar
+from .models import CompanyInfo, Testimonial, WhyChooseUsPillar, Promotion, MobileApp, AppFeature, AppScreenshot, AppPlan
 
 class CompanyInfoTranslationOptions(TranslationOptions):
     fields = (
@@ -36,6 +36,26 @@ class WhyChooseUsPillarTranslationOptions(TranslationOptions):
 class TestimonialTranslationOptions(TranslationOptions):
     fields = ('content', 'role')
 
+class PromotionTranslationOptions(TranslationOptions):
+    fields = ('title', 'badge', 'discount_label', 'summary', 'description', 'features', 'price_unit', 'cta_text')
+
+class MobileAppTranslationOptions(TranslationOptions):
+    fields = ('tagline', 'hero_title', 'hero_subtitle', 'description', 'features_title', 'features_subtitle', 'cta_title', 'cta_subtitle')
+
+class AppFeatureTranslationOptions(TranslationOptions):
+    fields = ('title', 'description')
+
+class AppScreenshotTranslationOptions(TranslationOptions):
+    fields = ('caption',)
+
+class AppPlanTranslationOptions(TranslationOptions):
+    fields = ('name', 'badge', 'description', 'features', 'max_vehicles', 'cta_text')
+
 translator.register(CompanyInfo, CompanyInfoTranslationOptions)
 translator.register(WhyChooseUsPillar, WhyChooseUsPillarTranslationOptions)
 translator.register(Testimonial, TestimonialTranslationOptions)
+translator.register(Promotion, PromotionTranslationOptions)
+translator.register(MobileApp, MobileAppTranslationOptions)
+translator.register(AppFeature, AppFeatureTranslationOptions)
+translator.register(AppScreenshot, AppScreenshotTranslationOptions)
+translator.register(AppPlan, AppPlanTranslationOptions)

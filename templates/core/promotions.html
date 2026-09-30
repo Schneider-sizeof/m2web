@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{{ page_title }} - {{ company.name }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header py-5 bg-plum text-white text-center">
+    {% if company.page_header_bg %}
+    <div class="page-header-bg">
+        <img src="{{ company.page_header_bg.url }}" alt="" loading="eager">
+    </div>
+    <div class="page-header-overlay"></div>
+    {% endif %}
+    <div class="container">
+        <h1 class="display-4 fw-bold animate-on-scroll">
+            <i class="bi bi-fire text-danger me-2"></i>{% trans 'Nos Promotions & Offres' %}
+        </h1>
+        <p class="lead animate-on-scroll text-white-50">
+            {% trans 'Découvrez nos offres exclusives sur les traceurs GPS et solutions de gestion de flotte.' %}
+        </p>
+    </div>
+</div>
+
+<!-- Promotions Grid -->
+<section class="section-padding bg-light">
+    <div class="container">
+        {% if promotions %}
+        <div class="row g-4 justify-content-center">
+            {% for promo in promotions %}
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="promo-card card h-100 shadow-sm border-0 position-relative">
+                    {% if promo.badge %}
+                    <div class="promo-badge position-absolute top-0 end-0 bg-danger text-white px-3 py-1 fw-bold rounded-start-pill z-1 mt-3">
+                        {{ promo.badge }}
+                    </div>
+                    {% endif %}
+                    
+                    {% if promo.image %}
+                    <div class="promo-image-wrap">
+                        <img src="{{ promo.image.url }}" alt="{{ promo.title }}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    </div>
+                    {% endif %}
+                    
+                    <div class="card-body promo-body d-flex flex-column">
+                        <h4 class="fw-bold text-plum mb-2">{{ promo.title }}</h4>
+                        <p class="text-muted small mb-3">{{ promo.summary }}</p>
+                        
+                        {% if promo.features %}
+                        <ul class="promo-features list-unstyled mb-3 flex-grow-1">
+                            {% for feature in promo.get_features_list %}
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{{ feature }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                        
+                        <div class="promo-pricing mb-3 bg-light p-3 rounded text-center">
+                            {% if promo.original_price %}
+                            <div class="text-decoration-line-through text-muted small mb-1">{{ promo.original_price }} DH</div>
+                            {% endif %}
+                            <div class="promo-price fs-2 fw-bold text-danger">{{ promo.promo_price }} DH</div>
+                            {% if promo.price_unit %}
+                            <div class="text-muted small">{{ promo.price_unit }}</div>
+                            {% endif %}
+                        </div>
+                        
+                        {% if promo.valid_until %}
+                        <p class="promo-validity text-danger small text-center mb-3">
+                            <i class="bi bi-clock me-1"></i>{% trans 'Valable jusqu\'au' %} {{ promo.valid_until|date:'d/m/Y' }}
+                        </p>
+                        {% endif %}
+                        
+                        <a href="{% url 'contact:contact' %}" class="btn btn-amber w-100 mt-auto">
+                            {{ promo.cta_text|default:_("Profiter de l'offre") }} <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-5">
+            <i class="bi bi-info-circle display-4 text-muted mb-3 d-block"></i>
+            <h3 class="text-plum">{% trans "Aucune promotion en cours" %}</h3>
+            <p class="text-muted">{% trans "Revenez bientôt pour découvrir nos nouvelles offres exceptionnelles." %}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

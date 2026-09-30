@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %}{{ app.hero_title|default:"Application Mobile GPS" }} | M2web Maroc{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="page-header" style="padding: 4rem 0 3rem; margin-bottom: 0;">
+    {% if company.page_header_bg %}
+    <div class="page-header-bg">
+        <img src="{{ company.page_header_bg.url }}" alt="" loading="eager">
+    </div>
+    <div class="page-header-overlay"></div>
+    {% endif %}
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-white animate-on-scroll">
+                <span class="badge bg-amber text-plum fw-bold px-3 py-2 mb-3 rounded-pill">
+                    <i class="bi bi-phone me-1"></i> {% trans 'Application Mobile' %}
+                </span>
+                <h1 class="display-5 fw-bold mb-3">{{ app.hero_title }}</h1>
+                <p class="lead mb-4 text-white-50">{{ app.hero_subtitle }}</p>
+                <p class="mb-4">{{ app.description }}</p>
+                
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    {% if app.android_available %}
+                    <a href="{{ app.android_url }}" target="_blank" class="btn btn-amber btn-lg d-flex align-items-center gap-2">
+                        <i class="bi bi-google-play fs-4"></i>
+                        <div class="text-start">
+                            <small class="d-block" style="font-size:0.65rem;line-height:1;">{% trans 'Télécharger sur' %}</small>
+                            <span class="fw-bold">Google Play</span>
+                        </div>
+                    </a>
+                    {% endif %}
+                    {% if app.ios_available %}
+                    <a href="{{ app.ios_url }}" target="_blank" class="btn btn-outline-light btn-lg d-flex align-items-center gap-2">
+                        <i class="bi bi-apple fs-4"></i>
+                        <div class="text-start">
+                            <small class="d-block" style="font-size:0.65rem;line-height:1;">{% trans 'Télécharger sur' %}</small>
+                            <span class="fw-bold">App Store</span>
+                        </div>
+                    </a>
+                    {% elif app.ios_coming_soon %}
+                    <div class="btn btn-outline-light btn-lg d-flex align-items-center gap-2 disabled" style="opacity:0.7;">
+                        <i class="bi bi-apple fs-4"></i>
+                        <div class="text-start">
+                            <small class="d-block" style="font-size:0.65rem;line-height:1;">iOS</small>
+                            <span class="fw-bold">{% trans 'Bientôt disponible' %}</span>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div class="d-flex flex-wrap gap-4">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-patch-check-fill text-amber"></i>
+                        <small class="text-white-50">{% trans '100% Marocain' %}</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-check text-amber"></i>
+                        <small class="text-white-50">{% trans 'Données Sécurisées' %}</small>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-headset text-amber"></i>
+                        <small class="text-white-50">{% trans 'Support Local' %}</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 text-center animate-on-scroll">
+                <div class="app-phone-mockup mx-auto">
+                    {% if app.hero_image %}
+                    <img src="{{ app.hero_image.url }}" alt="{{ app.app_name }}" class="img-fluid" style="max-height: 500px; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
+                    {% else %}
+                    <div class="app-phone-placeholder">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="text-center p-4">
+                                    <i class="bi bi-geo-alt-fill text-amber" style="font-size: 3rem;"></i>
+                                    <h4 class="text-white mt-3 fw-bold">{{ app.app_name }}</h4>
+                                    <p class="text-white-50 small">{{ app.tagline }}</p>
+                                    <div class="mt-4">
+                                        <div class="bg-dark bg-opacity-50 rounded-3 p-3 mb-2 text-start">
+                                            <div class="d-flex justify-content-between">
+                                                <small class="text-white"><i class="bi bi-truck text-amber me-2"></i>Volvo FH16</small>
+                                                <span class="badge bg-success" style="font-size:0.6rem;">EN LIGNE</span>
+                                            </div>
+                                            <small class="text-white-50" style="font-size:0.7rem;">Fès → Casablanca • 84 km/h</small>
+                                        </div>
+                                        <div class="bg-dark bg-opacity-50 rounded-3 p-3 mb-2 text-start">
+                                            <div class="d-flex justify-content-between">
+                                                <small class="text-white"><i class="bi bi-car-front text-amber me-2"></i>Dacia Logan</small>
+                                                <span class="badge bg-warning text-dark" style="font-size:0.6rem;">ARRÊT</span>
+                                            </div>
+                                            <small class="text-white-50" style="font-size:0.7rem;">Hay Riad, Rabat • 12 min</small>
+                                        </div>
+                                        <div class="bg-dark bg-opacity-50 rounded-3 p-3 text-start">
+                                            <div class="d-flex justify-content-between">
+                                                <small class="text-white"><i class="bi bi-bicycle text-amber me-2"></i>Moto Livraison</small>
+                                                <span class="badge bg-success" style="font-size:0.6rem;">EN LIGNE</span>
+                                            </div>
+                                            <small class="text-white-50" style="font-size:0.7rem;">Médina, Fès • 32 km/h</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center">{{ app.features_title|default:"Fonctionnalités Clés" }}</h2>
+            <p class="section-subtitle text-center">{{ app.features_subtitle }}</p>
+        </div>
+        <div class="row g-4">
+            {% for feature in features %}
+            <div class="col-lg-3 col-md-6 animate-on-scroll">
+                <div class="tier-card text-center h-100 p-4">
+                    <div class="tier-icon bg-plum text-amber mx-auto mb-3">
+                        <i class="{{ feature.icon_class }}"></i>
+                    </div>
+                    <h5 class="fw-bold text-plum mb-2">{{ feature.title }}</h5>
+                    <p class="text-muted small mb-0">{{ feature.description }}</p>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                <p class="text-muted">{% trans 'Fonctionnalités bientôt disponibles.' %}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Screenshots Section -->
+{% if screenshots %}
+<section class="section-padding" style="background: linear-gradient(135deg, #1a0a2e 0%, #2d1a3f 100%);">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center text-white">{% trans "Découvrez l'Interface" %}</h2>
+            <p class="text-white-50 text-center">{% trans "Une interface claire, rapide et intuitive conçue pour les professionnels marocains." %}</p>
+        </div>
+        <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                {% for screenshot in screenshots %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="text-center">
+                        <img src="{{ screenshot.image.url }}" alt="{{ screenshot.caption }}" class="img-fluid mx-auto d-block" style="max-height: 500px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+                        {% if screenshot.caption %}
+                        <p class="text-white-50 mt-3">{{ screenshot.caption }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Pricing Section -->
+{% if plans %}
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center">{% trans 'Forfaits & Tarifs' %}</h2>
+            <p class="section-subtitle text-center">{% trans 'Choisissez le forfait adapté à la taille de votre flotte.' %}</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            {% for plan in plans %}
+            <div class="col-lg-3 col-md-6 animate-on-scroll">
+                <div class="tier-card {% if plan.is_featured %}featured{% endif %} h-100">
+                    {% if plan.badge %}
+                    <span class="badge bg-amber text-plum fw-bold px-3 py-1 rounded-pill mb-3" style="font-size:0.7rem;">{{ plan.badge }}</span>
+                    {% endif %}
+                    <h4 class="fw-bold text-plum mb-2">{{ plan.name }}</h4>
+                    {% if plan.description %}
+                    <p class="text-muted small mb-3">{{ plan.description }}</p>
+                    {% endif %}
+                    
+                    <div class="mb-3">
+                        {% if plan.period == 'free' %}
+                        <span class="display-6 fw-bold text-plum">{% trans 'Gratuit' %}</span>
+                        {% elif plan.price == 0 %}
+                        <span class="h4 fw-bold text-plum">{% trans 'Sur mesure' %}</span>
+                        {% else %}
+                        <span class="display-6 fw-bold text-plum">{{ plan.price|floatformat:0 }}</span>
+                        <span class="text-muted">DH/{{ plan.get_period_display }}</span>
+                        {% endif %}
+                    </div>
+                    
+                    <p class="small text-amber fw-bold mb-3"><i class="bi bi-truck me-1"></i>{{ plan.max_vehicles }}</p>
+                    
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                        {% for feature in plan.get_features_list %}
+                        <li class="mb-2 small"><i class="bi bi-check-circle-fill text-amber me-2"></i>{{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                    
+                    <a href="{% url 'contact:contact' %}" class="btn {% if plan.is_featured %}btn-amber{% else %}btn-outline-plum{% endif %} w-100 mt-auto">
+                        {{ plan.cta_text }}
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- iOS Coming Soon -->
+{% if app.ios_coming_soon %}
+<section class="py-4" style="background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-apple text-white" style="font-size: 2.5rem;"></i>
+                    <div>
+                        <h5 class="text-white fw-bold mb-1">{% trans 'Version iOS bientôt disponible' %}</h5>
+                        <p class="text-white-50 mb-0 small">{% trans "Nous travaillons activement sur la version iPhone. Inscrivez-vous pour être notifié dès sa sortie." %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <a href="{% url 'contact:contact' %}" class="btn btn-outline-light">
+                    <i class="bi bi-bell me-1"></i> {% trans 'Me notifier' %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA Section -->
+<section class="section-padding bg-plum">
+    <div class="container text-center">
+        <div class="animate-on-scroll">
+            <h2 class="display-6 fw-bold text-white mb-3">{{ app.cta_title }}</h2>
+            <p class="lead text-white-50 mb-4">{{ app.cta_subtitle }}</p>
+            
+            <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
+                {% if app.android_available %}
+                <a href="{{ app.android_url }}" target="_blank" class="btn btn-amber btn-lg">
+                    <i class="bi bi-google-play me-2"></i> {% trans 'Télécharger sur Google Play' %}
+                </a>
+                {% endif %}
+                <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-whatsapp me-2"></i> {% trans 'Demander une Démo' %}
+                </a>
+            </div>
+            
+            <p class="text-white-50 small">
+                <i class="bi bi-shield-check me-1"></i> {% trans 'Application professionnelle • Support en français et arabe • Assistance technique dédiée' %}
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

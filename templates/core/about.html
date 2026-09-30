@@ -6,6 +6,12 @@
 {% block content %}
 <!-- Page Header -->
 <section class="page-header">
+    {% if company.page_header_bg %}
+    <div class="page-header-bg">
+        <img src="{{ company.page_header_bg.url }}" alt="" loading="eager">
+    </div>
+    <div class="page-header-overlay"></div>
+    {% endif %}
     <div class="container page-header-content">
         <h1>{% trans 'À Propos de' %} {{ company.company_name|default:"M2web" }}</h1>
         <nav aria-label="breadcrumb">

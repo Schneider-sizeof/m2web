@@ -1,0 +1,27 @@
+{% load static i18n %}
+<!-- Page Header with Background -->
+<section class="page-header">
+    {% if company.page_header_bg %}
+    <div class="page-header-bg">
+        <img src="{{ company.page_header_bg.url }}" alt="" loading="eager">
+    </div>
+    <div class="page-header-overlay"></div>
+    {% endif %}
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <nav aria-label="breadcrumb" class="mb-2">
+                    <ol class="breadcrumb mb-0" style="font-size: 0.85rem;">
+                        <li class="breadcrumb-item"><a href="{% url 'core:home' %}"><i class="bi bi-house-fill"></i> {% trans 'Accueil' %}</a></li>
+                        {% block breadcrumb_items %}{% endblock %}
+                    </ol>
+                </nav>
+                <h1 class="display-6 fw-bold mb-2">{% block page_title %}{% endblock %}</h1>
+                {% block page_subtitle %}<p class="lead mb-0" style="color: rgba(255,255,255,0.75);">{% block page_desc %}{% endblock %}</p>{% endblock %}
+            </div>
+            <div class="col-lg-4 text-lg-end d-none d-lg-block">
+                {% block page_header_extra %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,283 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: m2web\n"
+"POT-Creation-Date: 2026-09-30 00:00+0000\n"
+"PO-Revision-Date: 2026-09-30 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Accueil"
+msgstr "Accueil"
+
+msgid "À Propos"
+msgstr "À Propos"
+
+msgid "Services & Solutions"
+msgstr "Services & Solutions"
+
+msgid "Gros & B2B"
+msgstr "Gros & B2B"
+
+msgid "Vente en Gros"
+msgstr "Vente en Gros"
+
+msgid "Devenir Revendeur"
+msgstr "Devenir Revendeur"
+
+msgid "Plateforme & Serveur GPS"
+msgstr "Plateforme & Serveur GPS"
+
+msgid "Promotions"
+msgstr "Promotions"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Demander un Devis"
+msgstr "Demander un Devis"
+
+msgid "Lun-Ven"
+msgstr "Lun-Ven"
+
+msgid "Sam"
+msgstr "Sam"
+
+msgid "Dim"
+msgstr "Dim"
+
+msgid "Garantie & Support Direct"
+msgstr "Garantie & Support Direct"
+
+msgid "Fournisseur Agréé"
+msgstr "Fournisseur Agréé"
+
+msgid "TÉLÉMATIQUE MAROC"
+msgstr "TÉLÉMATIQUE MAROC"
+
+msgid "Prenez le Contrôle"
+msgstr "Prenez le Contrôle"
+
+msgid "Total de Votre Flotte"
+msgstr "Total de Votre Flotte"
+
+msgid "en Temps Réel"
+msgstr "en Temps Réel"
+
+msgid "Traceurs 4G Certifiés"
+msgstr "Traceurs 4G Certifiés"
+
+msgid "Installation sur Site"
+msgstr "Installation sur Site"
+
+msgid "Support 24/7 à Fès"
+msgstr "Support 24/7 à Fès"
+
+msgid "Nos Solutions GPS"
+msgstr "Nos Solutions GPS"
+
+msgid "Devis Express Gratuit"
+msgstr "Devis Express Gratuit"
+
+msgid "Trackers Installés"
+msgstr "Trackers Installés"
+
+msgid "Flottes Gérées"
+msgstr "Flottes Gérées"
+
+msgid "Disponibilité Serveurs"
+msgstr "Disponibilité Serveurs"
+
+msgid "Pourquoi Choisir"
+msgstr "Pourquoi Choisir"
+
+msgid "Nos Solutions de"
+msgstr "Nos Solutions de"
+
+msgid "Télématique"
+msgstr "Télématique"
+
+msgid "Découvrir la solution"
+msgstr "Découvrir la solution"
+
+msgid "Traceurs GPS"
+msgstr "Traceurs GPS"
+
+msgid "& Équipements"
+msgstr "& Équipements"
+
+msgid "Catalogue Complet"
+msgstr "Catalogue Complet"
+
+msgid "En Stock"
+msgstr "En Stock"
+
+msgid "Garanti 1 an"
+msgstr "Garanti 1 an"
+
+msgid "Tarif indicatif"
+msgstr "Tarif indicatif"
+
+msgid "Sur devis"
+msgstr "Sur devis"
+
+msgid "Commander"
+msgstr "Commander"
+
+msgid "ESPACE REVENDEURS & GROSSISTES"
+msgstr "ESPACE REVENDEURS & GROSSISTES"
+
+msgid "Ouvrir un Compte Pro"
+msgstr "Ouvrir un Compte Pro"
+
+msgid "Ce que disent nos"
+msgstr "Ce que disent nos"
+
+msgid "Partenaires"
+msgstr "Partenaires"
+
+msgid "Client Vérifié"
+msgstr "Client Vérifié"
+
+msgid "Ils nous font confiance au Maroc"
+msgstr "Ils nous font confiance au Maroc"
+
+msgid "Rencontrez Notre Équipe"
+msgstr "Rencontrez Notre Équipe"
+
+msgid "Adresse du Siège & Showroom"
+msgstr "Adresse du Siège & Showroom"
+
+msgid "Ligne Téléphonique Directe"
+msgstr "Ligne Téléphonique Directe"
+
+msgid "Email Commercial"
+msgstr "Email Commercial"
+
+msgid "Liens Rapides"
+msgstr "Liens Rapides"
+
+msgid "Nos Solutions"
+msgstr "Nos Solutions"
+
+msgid "Contactez-nous"
+msgstr "Contactez-nous"
+
+msgid "Tous droits réservés."
+msgstr "Tous droits réservés."
+
+msgid "Actualités"
+msgstr "Actualités"
+
+msgid "Suivi GPS en temps réel"
+msgstr "Suivi GPS en temps réel"
+
+msgid "Gestion de flotte"
+msgstr "Gestion de flotte"
+
+msgid "Contrôle de carburant"
+msgstr "Contrôle de carburant"
+
+msgid "Surveillance de température"
+msgstr "Surveillance de température"
+
+msgid "Contactez-nous sur WhatsApp"
+msgstr "Contactez-nous sur WhatsApp"
+
+msgid "Discutez avec nous"
+msgstr "Discutez avec nous"
+
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+msgid "Offres & Promotions"
+msgstr "Offres & Promotions"
+
+msgid "Exclusives"
+msgstr "Exclusives"
+
+msgid "Voir toutes les offres"
+msgstr "Voir toutes les offres"
+
+msgid "Valable jusqu'au"
+msgstr "Valable jusqu'au"
+
+msgid "Votre message a été envoyé avec succès."
+msgstr "Votre message a été envoyé avec succès."
+
+msgid "Votre demande a été envoyée avec succès."
+msgstr "Votre demande a été envoyée avec succès."
+
+msgid "Votre candidature a été envoyée avec succès."
+msgstr "Votre candidature a été envoyée avec succès."
+
+msgid "Vérification anti-spam"
+msgstr "Vérification anti-spam"
+
+msgid "Réponse incorrecte. Veuillez réessayer."
+msgstr "Réponse incorrecte. Veuillez réessayer."
+
+msgid "Session de vérification expirée."
+msgstr "Session de vérification expirée."
+
+msgid "Demande Envoyée"
+msgstr "Demande Envoyée"
+
+msgid "Demande envoyée avec succès !"
+msgstr "Demande envoyée avec succès !"
+
+msgid "Retour à l'accueil"
+msgstr "Retour à l'accueil"
+
+msgid "Téléphone"
+msgstr "Téléphone"
+
+msgid "Envoyer la demande B2B"
+msgstr "Envoyer la demande B2B"
+
+msgid "Envoyer ma demande"
+msgstr "Envoyer ma demande"
+
+msgid "Profiter de l'offre"
+msgstr "Profiter de l'offre"
+
+msgid "Les Avantages du Programme Revendeur"
+msgstr "Les Avantages du Programme Revendeur"
+
+msgid "Marges Attractives"
+msgstr "Marges Attractives"
+
+msgid "Stock Disponible"
+msgstr "Stock Disponible"
+
+msgid "Support & Formation"
+msgstr "Support & Formation"
+
+msgid "Marque Blanche"
+msgstr "Marque Blanche"
+
+msgid "Support Marketing"
+msgstr "Support Marketing"
+
+msgid "Gestionnaire Dédié"
+msgstr "Gestionnaire Dédié"
+
+msgid "Niveaux de Partenariat"
+msgstr "Niveaux de Partenariat"
+
+msgid "Découverte"
+msgstr "Découverte"
+
+msgid "Le plus populaire"
+msgstr "Le plus populaire"
+
+msgid "Pro"
+msgstr "Pro"
+
+msgid "Distributeur"
+msgstr "Distributeur"
+
+msgid "Demande d'Ouverture de Compte Revendeur"
+msgstr "Demande d'Ouverture de Compte Revendeur"

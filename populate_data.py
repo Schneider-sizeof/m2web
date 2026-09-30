@@ -42,9 +42,9 @@ def main():
     company = CompanyInfo.get_instance()
     company.company_name = 'M2web Maroc'
     company.tagline = 'Solutions Avancées de Géolocalisation & Gestion de Flotte par GPS à Fès et partout au Maroc'
-    company.phone = '+212 6 62 24 49 39'
+    company.phone = '+212 6 61 76 14 89'
     company.email = 'm2web@m2web.com'
-    company.whatsapp_number = '+212662244939'
+    company.whatsapp_number = '+212661761489'
     company.address = 'CN, 2 Rue Ibn Al Kayem'
     company.city = 'Fès'
     company.country = 'Maroc'

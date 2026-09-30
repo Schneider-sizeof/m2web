@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %}{% trans 'Plateforme & Serveur GPS' %} | M2web Maroc{% endblock %}
+{% block content %}
+<section class="page-header py-5 bg-plum text-white text-center">
+    {% if company.page_header_bg %}
+    <div class="page-header-bg">
+        <img src="{{ company.page_header_bg.url }}" alt="" loading="eager">
+    </div>
+    <div class="page-header-overlay"></div>
+    {% endif %}
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">{% trans 'Plateforme & Serveur GPS M2web' %}</h1>
+        <p class="lead mb-0">{% trans 'Une solution logicielle complète, évolutive et personnalisable pour la gestion de flotte et le tracking GPS.' %}</p>
+    </div>
+</section>
+
+<section class="section-padding py-5">
+    <div class="container">
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 animate-on-scroll">
+                <h2 class="text-plum fw-bold mb-4">{% trans 'Une Plateforme Puissante et Polyvalente' %}</h2>
+                <p class="lead mb-4">{% trans 'Notre système a été développé pour répondre aux exigences des professionnels de la télématique, avec une architecture robuste capable de gérer des milliers de véhicules simultanément.' %}</p>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-geo-alt-fill text-amber fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">{% trans 'Suivi en Temps Réel' %}</h5>
+                            <p class="mb-0 text-muted">{% trans 'Position GPS précise sur carte, actualisation instantanée.' %}</p>
+                        </div>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-file-earmark-bar-graph-fill text-amber fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">{% trans 'Rapports & Statistiques Avancés' %}</h5>
+                            <p class="mb-0 text-muted">{% trans 'Vitesse, arrêts, kilométrage, consommation de carburant.' %}</p>
+                        </div>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-speedometer2 text-amber fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">{% trans 'Tableau de Bord de Flotte' %}</h5>
+                            <p class="mb-0 text-muted">{% trans 'Vue d\'ensemble pour la gestion quotidienne de votre parc.' %}</p>
+                        </div>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-bell-fill text-amber fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">{% trans 'Alertes & Géofencing' %}</h5>
+                            <p class="mb-0 text-muted">{% trans 'Notifications par SMS/Email pour les zones, vitesses, et entretiens.' %}</p>
+                        </div>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-car-front-fill text-amber fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">{% trans 'Comportement de Conduite' %}</h5>
+                            <p class="mb-0 text-muted">{% trans 'Analyse des accélérations, freinages brusques et virages dangereux.' %}</p>
+                        </div>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-droplet-fill text-amber fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">{% trans 'Capteurs de Carburant & Température' %}</h5>
+                            <p class="mb-0 text-muted">{% trans 'Intégration native des sondes de niveau de carburant et capteurs de température.' %}</p>
+                        </div>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-phone-fill text-amber fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">{% trans 'Applications Mobiles iOS & Android' %}</h5>
+                            <p class="mb-0 text-muted">{% trans 'Gérez votre flotte en déplacement depuis votre smartphone.' %}</p>
+                        </div>
+                    </li>
+                    <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-code-slash text-amber fs-4 me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">{% trans 'API & Intégrations ERP' %}</h5>
+                            <p class="mb-0 text-muted">{% trans 'Connectez facilement nos données avec vos logiciels métiers.' %}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-center animate-on-scroll">
+                <div class="bg-light p-4 rounded shadow-sm border">
+                    <i class="bi bi-laptop display-1 text-plum mb-3"></i>
+                    <h4 class="text-plum">{% trans 'Interface Intuitive' %}</h4>
+                    <p class="text-muted">{% trans 'Une interface moderne, rapide et responsive conçue pour les professionnels.' %}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5 text-center mt-5">
+            <div class="col-12">
+                <h2 class="text-plum fw-bold mb-4">{% trans 'Options d\'Acquisition' %}</h2>
+                <p class="lead">{% trans 'Nous proposons plusieurs modèles adaptés à vos besoins et votre budget.' %}</p>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-cloud-arrow-up display-4 text-amber mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Location SaaS' %}</h4>
+                        <p class="card-text text-muted mb-4">{% trans 'La solution la plus simple. Abonnement mensuel ou annuel par véhicule.' %}</p>
+                        <ul class="list-unstyled text-start small">
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Hébergement inclus' %}</li>
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Mises à jour incluses' %}</li>
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Support technique' %}</li>
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Sans engagement de durée' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-server display-4 text-amber mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Achat Serveur' %}</h4>
+                        <p class="card-text text-muted mb-4">{% trans 'Licence on-premise hébergée sur vos propres serveurs.' %}</p>
+                        <ul class="list-unstyled text-start small">
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Paiement unique (licence)' %}</li>
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Contrôle total des données' %}</li>
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Illimité en véhicules' %}</li>
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Contrat de maintenance optionnel' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 border-amber shadow animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-building display-4 text-plum mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Marque Blanche' %}</h4>
+                        <p class="card-text text-muted mb-4">{% trans 'La plateforme entièrement personnalisée à votre image.' %}</p>
+                        <ul class="list-unstyled text-start small">
+                            <li><i class="bi bi-check2 text-plum me-2"></i>{% trans 'Votre logo & couleurs' %}</li>
+                            <li><i class="bi bi-check2 text-plum me-2"></i>{% trans 'Votre nom de domaine' %}</li>
+                            <li><i class="bi bi-check2 text-plum me-2"></i>{% trans 'App mobile à votre nom' %}</li>
+                            <li><i class="bi bi-check2 text-plum me-2"></i>{% trans 'Idéal pour les revendeurs' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 border-0 shadow-sm animate-on-scroll">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-code-square display-4 text-amber mb-3"></i>
+                        <h4 class="card-title text-plum fw-bold">{% trans 'Développement sur Mesure' %}</h4>
+                        <p class="card-text text-muted mb-4">{% trans 'Fonctionnalités et intégrations spécifiques à votre métier.' %}</p>
+                        <ul class="list-unstyled text-start small">
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Intégration ERP / CRM' %}</li>
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Rapports personnalisés' %}</li>
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'Nouveaux capteurs' %}</li>
+                            <li><i class="bi bi-check2 text-amber me-2"></i>{% trans 'API sur mesure' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-lg border-0 animate-on-scroll">
+                    <div class="card-body p-5">
+                        <h3 class="text-center text-plum fw-bold mb-4">{% trans 'Demande de Renseignements Plateforme' %}</h3>
+                        
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <form method="post" action="{% url 'wholesale:platform' %}">
+                            {% csrf_token %}
+                            <div class="d-none">
+                                {{ form.website }}
+                            </div>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="{{ form.company_name.id_for_label }}" class="form-label">{% trans 'Nom de la Société' %}</label>
+                                    {{ form.company_name }}
+                                    {% if form.company_name.errors %}<div class="text-danger small">{{ form.company_name.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.contact_name.id_for_label }}" class="form-label">{% trans 'Personne de Contact' %}</label>
+                                    {{ form.contact_name }}
+                                    {% if form.contact_name.errors %}<div class="text-danger small">{{ form.contact_name.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.email.id_for_label }}" class="form-label">{% trans 'Email' %}</label>
+                                    {{ form.email }}
+                                    {% if form.email.errors %}<div class="text-danger small">{{ form.email.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.phone.id_for_label }}" class="form-label">{% trans 'Téléphone' %}</label>
+                                    {{ form.phone }}
+                                    {% if form.phone.errors %}<div class="text-danger small">{{ form.phone.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.city.id_for_label }}" class="form-label">{% trans 'Ville' %}</label>
+                                    {{ form.city }}
+                                    {% if form.city.errors %}<div class="text-danger small">{{ form.city.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="{{ form.fleet_size.id_for_label }}" class="form-label">{% trans 'Taille de la Flotte' %}</label>
+                                    {{ form.fleet_size }}
+                                    {% if form.fleet_size.errors %}<div class="text-danger small">{{ form.fleet_size.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="{{ form.acquisition_mode.id_for_label }}" class="form-label">{% trans 'Mode d\'Acquisition Souhaité' %}</label>
+                                    {{ form.acquisition_mode }}
+                                    {% if form.acquisition_mode.errors %}<div class="text-danger small">{{ form.acquisition_mode.errors.0 }}</div>{% endif %}
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check mt-2">
+                                        {{ form.needs_reports }}
+                                        <label class="form-check-label" for="{{ form.needs_reports.id_for_label }}">
+                                            {% trans 'Besoin de rapports avancés ?' %}
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check mt-2">
+                                        {{ form.needs_fuel_sensor }}
+                                        <label class="form-check-label" for="{{ form.needs_fuel_sensor.id_for_label }}">
+                                            {% trans 'Besoin de sondes de carburant ?' %}
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="{{ form.message.id_for_label }}" class="form-label">{% trans 'Détails du Projet' %}</label>
+                                    {{ form.message }}
+                                    {% if form.message.errors %}<div class="text-danger small">{{ form.message.errors.0 }}</div>{% endif %}
+                                </div>
+                                
+                                <div class="col-12 mt-3">
+                                    {{ form.captcha_token }}
+                                    <label for="{{ form.captcha_answer.id_for_label }}" class="form-label">{% trans 'Vérification anti-spam' %} : <span class="fw-bold fs-5 text-plum">{{ form.captcha_question }}</span></label>
+                                    {{ form.captcha_answer }}
+                                    {% if form.captcha_answer.errors %}<div class="text-danger small">{{ form.captcha_answer.errors.0 }}</div>{% endif %}
+                                </div>
+                                
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-amber btn-lg px-5">{% trans 'Envoyer ma demande' %}</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="mb-2">{% trans 'Besoin d\'un conseil immédiat ?' %}</p>
+            <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" class="btn btn-outline-plum" target="_blank">
+                <i class="bi bi-whatsapp me-2"></i>{% trans 'Discutez avec nos experts sur WhatsApp' %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

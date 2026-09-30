@@ -32,7 +32,7 @@ def contact_view(request):
                     message=f'Bonjour {msg.name},\n\n'
                             f'Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais.\n\n'
                             f'Cordialement,\nL\'équipe M2web Maroc\n'
-                            f'+212 6 62 24 49 39',
+                            f'+212 6 61 76 14 89',
                     from_email=settings.DEFAULT_FROM_EMAIL,
                     recipient_list=[msg.email],
                     fail_silently=True,

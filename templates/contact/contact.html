@@ -6,6 +6,12 @@
 {% block content %}
 <!-- Page Header -->
 <section class="page-header">
+    {% if company.page_header_bg %}
+    <div class="page-header-bg">
+        <img src="{{ company.page_header_bg.url }}" alt="" loading="eager">
+    </div>
+    <div class="page-header-overlay"></div>
+    {% endif %}
     <div class="container page-header-content">
         <h1>{% trans 'Contactez-nous' %}</h1>
         <p class="lead text-white-50 max-w-700 mx-auto mb-4">{% trans 'Nous sommes à votre écoute pour toute demande d\'information, d\'installation ou de devis personnalisé.' %}</p>
@@ -38,7 +44,7 @@
                     <div class="contact-icon-box whatsapp"><i class="bi bi-whatsapp"></i></div>
                     <div class="contact-details">
                         <h5>WhatsApp Direct</h5>
-                        <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212662244939' }}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
+                        <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
                     </div>
                 </div>
                 

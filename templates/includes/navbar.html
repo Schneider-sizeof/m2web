@@ -3,16 +3,20 @@
 <div class="topbar d-none d-lg-block">
     <div class="container-fluid px-3 px-lg-4 px-xl-5 header-container">
         <div class="d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center gap-4">
-                <span><i class="bi bi-geo-alt-fill text-amber me-1"></i> {{ company.address|default:"CN, 2 Rue Ibn Al Kayem, Fès" }}</span>
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="bi bi-geo-alt-fill text-amber me-1"></i> {{ company.city|default:"Fès" }}, {{ company.country|default:"Maroc" }}</span>
+                <span class="text-white-50">|</span>
                 <span><i class="bi bi-clock-fill text-amber me-1"></i> {% trans 'Lun-Ven' %}: {{ company.operating_hours_weekday|default:"08:30 – 18:30" }} | {% trans 'Sam' %}: {{ company.operating_hours_saturday|default:"08:30 – 13:30" }}</span>
+                <span class="text-white-50">|</span>
                 <span><i class="bi bi-shield-check text-amber me-1"></i> {{ company.topbar_warranty|default:_("Garantie & Support Direct") }}</span>
             </div>
-            <div class="d-flex align-items-center gap-3">
-                <a href="tel:{{ company.phone|default:'+212662244939' }}"><i class="bi bi-telephone-fill text-amber me-1"></i> {{ company.phone|default:"+212 6 62 24 49 39" }}</a>
-                <span class="text-white-50">|</span>
-                <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212662244939' }}" target="_blank" class="text-success fw-bold"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a>
-                <span class="topbar-badge">{{ company.topbar_badge|default:_("Fournisseur Agréé") }}</span>
+            <div class="d-flex align-items-center gap-2">
+                <a href="tel:{{ company.phone|default:'+212661761489' }}"><i class="bi bi-telephone-fill text-amber me-1"></i>{{ company.phone_display|default:"+212 6 61 76 14 89" }}</a>
+                <span class="text-white-50">·</span>
+                <a href="tel:{{ company.phone_fix|default:'+212535940271' }}"><i class="bi bi-telephone-fill text-amber me-1"></i>{{ company.phone_fix_display|default:"+212 5 35 94 02 71" }}</a>
+                <span class="text-white-50">·</span>
+                <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="text-success fw-bold"><i class="bi bi-whatsapp me-1"></i>WhatsApp</a>
+                <span class="topbar-badge ms-1">{{ company.topbar_badge|default:_("Fournisseur Agréé") }}</span>
             </div>
         </div>
     </div>
@@ -23,9 +27,6 @@
     <div class="container-fluid px-3 px-lg-4 px-xl-5 header-container">
         <a class="brand-logo-wrapper" href="{% url 'core:home' %}">
             <img src="{% static 'images/logo-navbar.png' %}" alt="M2WEB Maroc" class="brand-logo-img" height="38">
-            <div class="brand-title-wrap d-none d-sm-flex">
-                <span class="brand-title-sub">{% trans 'TÉLÉMATIQUE MAROC' %}</span>
-            </div>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
@@ -43,13 +44,23 @@
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.app_name == 'services' %}active{% endif %}" href="{% url 'services:list' %}">{% trans 'Services & Solutions' %}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.resolver_match.app_name == 'wholesale' %}active{% endif %}" href="{% url 'wholesale:inquiry' %}">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {% if request.resolver_match.app_name == 'wholesale' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {% trans 'Gros & B2B' %}<span class="nav-pro-badge">PRO</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'wholesale:inquiry' %}"><i class="bi bi-boxes me-2"></i>{% trans 'Vente en Gros' %}</a></li>
+                        <li><a class="dropdown-item" href="{% url 'wholesale:reseller' %}"><i class="bi bi-people me-2"></i>{% trans 'Devenir Revendeur' %}</a></li>
+                        <li><a class="dropdown-item" href="{% url 'wholesale:platform' %}"><i class="bi bi-hdd-stack me-2"></i>{% trans 'Plateforme & Serveur GPS' %}</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'mobile_app' %}active{% endif %}" href="{% url 'core:mobile_app' %}">
+                        <i class="bi bi-phone me-1"></i>{% trans 'Application' %}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.resolver_match.app_name == 'blog' %}active{% endif %}" href="{% url 'blog:list' %}">{% trans 'Actualités' %}</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'promotions' %}active{% endif %}" href="{% url 'core:promotions' %}">{% trans 'Promotions' %}<span class="nav-pro-badge bg-danger">NEW</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.app_name == 'contact' %}active{% endif %}" href="{% url 'contact:contact' %}">{% trans 'Contact' %}</a>

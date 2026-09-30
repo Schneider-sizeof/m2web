@@ -1,0 +1,95 @@
+{% load i18n %}
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="cookie-consent" style="display: none;">
+    <div class="cookie-consent-inner">
+        <div class="cookie-consent-text">
+            <i class="bi bi-shield-lock-fill text-amber me-2"></i>
+            <span>
+                {% trans "Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre utilisation des cookies." %}
+            </span>
+        </div>
+        <div class="cookie-consent-actions">
+            <button id="cookieAccept" class="btn btn-amber btn-sm">
+                <i class="bi bi-check-lg me-1"></i>{% trans "Accepter" %}
+            </button>
+            <button id="cookieDecline" class="btn btn-outline-light btn-sm">
+                {% trans "Refuser" %}
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(30, 16, 40, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(245, 166, 35, 0.2);
+    padding: 1rem 0;
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+.cookie-consent-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.cookie-consent-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 280px;
+}
+
+.cookie-consent-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+    .cookie-consent-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cookie-consent-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>
+
+<script>
+(function() {
+    var consent = localStorage.getItem('m2web_cookie_consent');
+    if (!consent) {
+        document.getElementById('cookieConsent').style.display = 'block';
+    }
+    document.getElementById('cookieAccept').addEventListener('click', function() {
+        localStorage.setItem('m2web_cookie_consent', 'accepted');
+        document.getElementById('cookieConsent').style.display = 'none';
+    });
+    document.getElementById('cookieDecline').addEventListener('click', function() {
+        localStorage.setItem('m2web_cookie_consent', 'declined');
+        document.getElementById('cookieConsent').style.display = 'none';
+    });
+})();
+</script>

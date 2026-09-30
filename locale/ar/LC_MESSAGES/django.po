@@ -1,0 +1,1326 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: m2web\n"
+"POT-Creation-Date: 2026-09-30 00:00+0000\n"
+"PO-Revision-Date: 2026-09-30 00:00+0000\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Accueil"
+msgstr "الرئيسية"
+
+msgid "À Propos"
+msgstr "من نحن"
+
+msgid "Services & Solutions"
+msgstr "الخدمات والحلول"
+
+msgid "Gros & B2B"
+msgstr "البيع بالجملة"
+
+msgid "Vente en Gros"
+msgstr "البيع بالجملة"
+
+msgid "Devenir Revendeur"
+msgstr "أصبح موزعاً"
+
+msgid "Plateforme & Serveur GPS"
+msgstr "منصة وخادم GPS"
+
+msgid "Promotions"
+msgstr "العروض"
+
+msgid "Contact"
+msgstr "اتصل بنا"
+
+msgid "Demander un Devis"
+msgstr "طلب عرض سعر"
+
+msgid "Lun-Ven"
+msgstr "الإثنين-الجمعة"
+
+msgid "Sam"
+msgstr "السبت"
+
+msgid "Dim"
+msgstr "الأحد"
+
+msgid "Garantie & Support Direct"
+msgstr "ضمان ودعم مباشر"
+
+msgid "Fournisseur Agréé"
+msgstr "مورد معتمد"
+
+msgid "TÉLÉMATIQUE MAROC"
+msgstr "تيليماتيك المغرب"
+
+msgid "Prenez le Contrôle"
+msgstr "تحكّم بالكامل"
+
+msgid "Total de Votre Flotte"
+msgstr "في أسطول مركباتك"
+
+msgid "en Temps Réel"
+msgstr "في الوقت الحقيقي"
+
+msgid "Traceurs 4G Certifiés"
+msgstr "أجهزة تتبع 4G معتمدة"
+
+msgid "Installation sur Site"
+msgstr "تركيب في الموقع"
+
+msgid "Support 24/7 à Fès"
+msgstr "دعم 24/7 في فاس"
+
+msgid "Nos Solutions GPS"
+msgstr "حلولنا لنظام GPS"
+
+msgid "Devis Express Gratuit"
+msgstr "عرض سعر مجاني وسريع"
+
+msgid "Trackers Installés"
+msgstr "أجهزة تتبع مُركّبة"
+
+msgid "Flottes Gérées"
+msgstr "أساطيل مُدارة"
+
+msgid "Disponibilité Serveurs"
+msgstr "توفر الخوادم"
+
+msgid "Pourquoi Choisir"
+msgstr "لماذا تختار"
+
+msgid "Nos Solutions de"
+msgstr "حلولنا لـ"
+
+msgid "Télématique"
+msgstr "تيليماتيك"
+
+msgid "Découvrir la solution"
+msgstr "اكتشف الحل"
+
+msgid "Traceurs GPS"
+msgstr "أجهزة تتبع GPS"
+
+msgid "& Équipements"
+msgstr "والمعدات"
+
+msgid "Catalogue Complet"
+msgstr "الكتالوج الكامل"
+
+msgid "En Stock"
+msgstr "متوفر في المخزن"
+
+msgid "Garanti 1 an"
+msgstr "ضمان لمدة سنة واحدة"
+
+msgid "Tarif indicatif"
+msgstr "سعر تقريبي"
+
+msgid "Sur devis"
+msgstr "بناءً على عرض السعر"
+
+msgid "Commander"
+msgstr "طلب"
+
+msgid "ESPACE REVENDEURS & GROSSISTES"
+msgstr "مساحة الموزعين وتجار الجملة"
+
+msgid "Ouvrir un Compte Pro"
+msgstr "فتح حساب احترافي"
+
+msgid "Ce que disent nos"
+msgstr "ما يقوله"
+
+msgid "Partenaires"
+msgstr "شركاؤنا"
+
+msgid "Client Vérifié"
+msgstr "عميل موثق"
+
+msgid "Ils nous font confiance au Maroc"
+msgstr "يثقون بنا في المغرب"
+
+msgid "Rencontrez Notre Équipe"
+msgstr "تعرف على فريقنا"
+
+msgid "Adresse du Siège & Showroom"
+msgstr "عنوان المقر وصالة العرض"
+
+msgid "Ligne Téléphonique Directe"
+msgstr "رقم الهاتف المباشر"
+
+msgid "Email Commercial"
+msgstr "البريد الإلكتروني التجاري"
+
+msgid "Liens Rapides"
+msgstr "روابط سريعة"
+
+msgid "Nos Solutions"
+msgstr "حلولنا"
+
+msgid "Contactez-nous"
+msgstr "اتصل بنا"
+
+msgid "Tous droits réservés."
+msgstr "جميع الحقوق محفوظة."
+
+msgid "Actualités"
+msgstr "الأخبار"
+
+msgid "Suivi GPS en temps réel"
+msgstr "تتبع GPS في الوقت الحقيقي"
+
+msgid "Gestion de flotte"
+msgstr "إدارة الأسطول"
+
+msgid "Contrôle de carburant"
+msgstr "مراقبة الوقود"
+
+msgid "Surveillance de température"
+msgstr "مراقبة درجة الحرارة"
+
+msgid "Contactez-nous sur WhatsApp"
+msgstr "تواصل معنا عبر واتساب"
+
+msgid "Discutez avec nous"
+msgstr "تحدث معنا"
+
+msgid "Toggle navigation"
+msgstr "تبديل التنقل"
+
+msgid "Offres & Promotions"
+msgstr "العروض والتخفيضات"
+
+msgid "Exclusives"
+msgstr "الحصرية"
+
+msgid "Voir toutes les offres"
+msgstr "عرض جميع العروض"
+
+msgid "Valable jusqu'au"
+msgstr "صالح حتى"
+
+msgid "Votre message a été envoyé avec succès."
+msgstr "تم إرسال رسالتك بنجاح."
+
+msgid "Votre demande a été envoyée avec succès."
+msgstr "تم إرسال طلبك بنجاح."
+
+msgid "Votre candidature a été envoyée avec succès."
+msgstr "تم إرسال طلبك بنجاح."
+
+msgid "Vérification anti-spam"
+msgstr "التحقق من مكافحة البريد العشوائي"
+
+msgid "Réponse incorrecte. Veuillez réessayer."
+msgstr "إجابة غير صحيحة. يرجى المحاولة مرة أخرى."
+
+msgid "Session de vérification expirée."
+msgstr "انتهت صلاحية جلسة التحقق."
+
+msgid "Demande Envoyée"
+msgstr "تم إرسال الطلب"
+
+msgid "Demande envoyée avec succès !"
+msgstr "تم إرسال الطلب بنجاح!"
+
+msgid "Retour à l'accueil"
+msgstr "العودة إلى الرئيسية"
+
+msgid "Téléphone"
+msgstr "الهاتف"
+
+msgid "Envoyer la demande B2B"
+msgstr "إرسال طلب B2B"
+
+msgid "Envoyer ma demande"
+msgstr "إرسال طلبي"
+
+msgid "Profiter de l'offre"
+msgstr "استفد من العرض"
+
+msgid "Les Avantages du Programme Revendeur"
+msgstr "مزايا برنامج الموزعين"
+
+msgid "Marges Attractives"
+msgstr "هوامش ربح جذابة"
+
+msgid "Stock Disponible"
+msgstr "مخزون متوفر"
+
+msgid "Support & Formation"
+msgstr "دعم وتدريب"
+
+msgid "Marque Blanche"
+msgstr "علامة بيضاء"
+
+msgid "Support Marketing"
+msgstr "دعم تسويقي"
+
+msgid "Gestionnaire Dédié"
+msgstr "مدير مخصص"
+
+msgid "Niveaux de Partenariat"
+msgstr "مستويات الشراكة"
+
+msgid "Découverte"
+msgstr "استكشاف"
+
+msgid "Le plus populaire"
+msgstr "الأكثر شهرة"
+
+msgid "Pro"
+msgstr "احترافي"
+
+msgid "Distributeur"
+msgstr "موزع"
+
+msgid "Demande d'Ouverture de Compte Revendeur"
+msgstr "طلب فتح حساب موزع"
+
+msgid "1 à 10 véhicules"
+msgstr "1 إلى 10 مركبات"
+
+msgid "11 à 50 véhicules"
+msgstr "11 إلى 50 مركبة"
+
+msgid "15 – 50 traceurs / mois (Pack Pro Installateur)"
+msgstr "15 إلى 50 جهاز تتبع/شهر (باقة المحترف)"
+
+msgid "5 – 15 traceurs / mois (Pack Découverte)"
+msgstr "5 إلى 15 جهاز تتبع/شهر (باقة الاكتشاف)"
+
+msgid "50+ traceurs / mois (Distributeur Régional)"
+msgstr "+50 جهاز تتبع/شهر (موزع إقليمي)"
+
+msgid "51 à 200 véhicules"
+msgstr "51 إلى 200 مركبة"
+
+msgid "API & Intégrations ERP"
+msgstr "API وتكامل ERP"
+
+msgid "API & Marque Blanche"
+msgstr "API والعلامة البيضاء"
+
+msgid "API sur mesure"
+msgstr "API مخصص"
+
+msgid "Accès Temporairement Verrouillé"
+msgstr "الوصول مقفل مؤقتاً"
+
+msgid "Accès Verrouillé"
+msgstr "الوصول مقفل"
+
+msgid ""
+"Accédez à nos tarifs grossistes préférentiels, à un stock permanent à Fès et"
+" à un accompagnement technique d'experts au Maroc."
+msgstr "احصل على أسعار الجملة التفضيلية ومخزون دائم في فاس ودعم تقني متخصص."
+
+msgid "Achat Serveur"
+msgstr "شراء خادم"
+
+msgid "Achat de Serveur / Licence Définitive On-Premise"
+msgstr "شراء خادم / ترخيص دائم محلي"
+
+msgid "Adresse"
+msgstr "العنوان"
+
+msgid "Adresse email"
+msgstr "البريد الإلكتروني"
+
+msgid "Alertes & Géofencing"
+msgstr "تنبيهات وسياج جغرافي"
+
+msgid "Analyse des accélérations, freinages brusques et virages dangereux."
+msgstr "تحليل التسارع والفرملة المفاجئة والمنعطفات الخطيرة."
+
+msgid "App mobile à votre nom"
+msgstr "تطبيق هاتف باسمك"
+
+msgid "Application Mobile & Web"
+msgstr "تطبيق الهاتف والويب"
+
+msgid "Applications Mobiles iOS & Android"
+msgstr "تطبيقات iOS و Android"
+
+msgid "Articles Similaires"
+msgstr "مقالات مشابهة"
+
+msgid ""
+"Atelier technique et techniciens certifiés pour équiper vos parcs partout au"
+" Maroc avec support direct."
+msgstr "ورشة تقنية وفنيين معتمدين لتجهيز أساطيلكم عبر المغرب."
+
+msgid "Aucun article trouvé dans cette catégorie."
+msgstr "لم يتم العثور على مقالات في هذه الفئة."
+
+msgid "Aucun service disponible pour le moment."
+msgstr "لا توجد خدمات متاحة حالياً."
+
+msgid "Aucun service trouvé."
+msgstr "لم يتم العثور على خدمات."
+
+msgid "Aucun témoignage pour le moment."
+msgstr "لا توجد شهادات حالياً."
+
+msgid "Aucun équipement disponible."
+msgstr "لا توجد معدات متاحة."
+
+msgid "Aucune promotion en cours"
+msgstr "لا توجد عروض حالياً"
+
+msgid "Auteur"
+msgstr "الكاتب"
+
+msgid "Autre professionnel"
+msgstr "مهني آخر"
+
+msgid "Avez-vous déjà installé des traceurs GPS ?"
+msgstr "هل سبق لك تركيب أجهزة تتبع GPS؟"
+
+msgid "Besoin d'un conseil immédiat ?"
+msgstr "هل تحتاج نصيحة فورية؟"
+
+msgid ""
+"Besoin d'un devis urgent pour un appel d'offres ? Contactez directement "
+"notre responsable B2B sur WhatsApp :"
+msgstr "هل تحتاج عرض سعر عاجل لمناقصة؟ اتصل بمسؤول B2B مباشرة عبر واتساب:"
+
+msgid "Besoin de contrôle carburant / sondes"
+msgstr "بحاجة لمراقبة الوقود / مستشعرات"
+
+msgid "Besoin de rapports avancés & statistiques"
+msgstr "بحاجة لتقارير وإحصائيات متقدمة"
+
+msgid "Besoin de rapports avancés ?"
+msgstr "بحاجة لتقارير متقدمة؟"
+
+msgid "Besoin de sondes de carburant ?"
+msgstr "هل تحتاج مستشعرات وقود؟"
+
+msgid "Blog"
+msgstr "المدونة"
+
+msgid "Blog & Actualités"
+msgstr "المدونة والأخبار"
+
+msgid ""
+"Brochures, fiches techniques et supports de communication fournis pour vous "
+"aider à vendre."
+msgstr "كتيبات وبطاقات تقنية ووسائل اتصال مقدمة لمساعدتك في البيع."
+
+msgid ""
+"Bénéficiez de remises allant jusqu'à 35% sur le matériel et les abonnements."
+msgstr "استفد من خصومات تصل إلى 35% على المعدات والاشتراكات."
+
+msgid "Capteurs de Carburant & Température"
+msgstr "مستشعرات الوقود والحرارة"
+
+msgid "Cartes SIM M2M incluses"
+msgstr "بطاقات SIM M2M مشمولة"
+
+msgid "Catégorie"
+msgstr "الفئة"
+
+msgid "Catégories"
+msgstr "الفئات"
+
+msgid "Comportement de Conduite"
+msgstr "سلوك القيادة"
+
+msgid "Connectez facilement nos données avec vos logiciels métiers."
+msgstr "اربط بياناتنا بسهولة مع برامجك المهنية."
+
+msgid ""
+"Connectivité permanente via cartes SIM M2M multi-opérateurs compatibles "
+"Maroc Telecom, Orange et Inwi."
+msgstr "اتصال دائم عبر بطاقات SIM M2M متعددة المشغلين."
+
+msgid "Contrat de maintenance optionnel"
+msgstr "عقد صيانة اختياري"
+
+msgid "Contrôle Carburant Anti-Vol"
+msgstr "مراقبة الوقود ومكافحة السرقة"
+
+msgid "Contrôle total des données"
+msgstr "تحكم كامل في البيانات"
+
+msgid ""
+"Conçues pour les transporteurs, sociétés de logistique, entreprises de "
+"location et gestionnaires de parc."
+msgstr ""
+"مصممة للناقلين وشركات اللوجستيك وتأجير المركبات ومديري الأساطيل في المغرب."
+
+msgid "Date d'envoi"
+msgstr "تاريخ الإرسال"
+
+msgid "Date de candidature"
+msgstr "تاريخ التقديم"
+
+msgid "Date de création"
+msgstr "تاريخ الإنشاء"
+
+msgid "Date de demande"
+msgstr "تاريخ الطلب"
+
+msgid "Date de publication"
+msgstr "تاريخ النشر"
+
+msgid "Demande de Compte Revendeur"
+msgstr "طلب حساب موزع"
+
+msgid "Demande de Renseignements Plateforme"
+msgstr "استفسار عن المنصة"
+
+msgid "Demander une Étude & Devis"
+msgstr "اطلب دراسة وعرض سعر"
+
+msgid "Dernière modification"
+msgstr "آخر تعديل"
+
+msgid ""
+"Des entreprises marocaines qui optimisent quotidiennement leur rentabilité "
+"grâce à nos solutions."
+msgstr "شركات مغربية تحسّن ربحيتها يومياً بفضل حلولنا."
+
+msgid ""
+"Des solutions technologiques de pointe pour suivre, sécuriser et "
+"rentabiliser votre flotte automobile et vos actifs mobiles au Maroc."
+msgstr ""
+"حلول تكنولوجية متطورة لتتبع وتأمين وتحسين أداء أسطول مركباتك عبر المغرب."
+
+msgid ""
+"Des technologies de géolocalisation professionnelles adaptées à chaque type "
+"de véhicule et d'activité."
+msgstr "تقنيات تحديد المواقع المهنية المناسبة لكل نوع مركبة ونشاط."
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "Devenir Revendeur M2web"
+msgstr "كن موزع M2web"
+
+msgid "Dimanche :"
+msgstr "الأحد:"
+
+msgid "Discutez avec nos experts sur WhatsApp"
+msgstr "تحدث مع خبرائنا عبر واتساب"
+
+msgid "Disponibilité garantie en magasin et expédition 24h partout au Maroc."
+msgstr "توفر مضمون في المتجر وشحن 24 ساعة عبر المغرب."
+
+msgid ""
+"Du matériel certifié, prêt à l'emploi pour particuliers et professionnels"
+msgstr "معدات معتمدة وجاهزة للاستخدام للأفراد والمهنيين"
+
+msgid ""
+"Du matériel certifié, étanche et éprouvé dans les conditions routières les "
+"plus exigeantes."
+msgstr "معدات معتمدة ومقاومة للماء ومُختبرة في أصعب ظروف الطرق."
+
+msgid ""
+"Découvrez nos offres exclusives sur les traceurs GPS et solutions de gestion"
+" de flotte."
+msgstr "اكتشف عروضنا الحصرية على أجهزة تتبع GPS وحلول إدارة الأساطيل."
+
+msgid "Découvrir nos services"
+msgstr "اكتشف خدماتنا"
+
+msgid ""
+"Décrivez votre zone d'intervention, votre équipement ou vos besoins "
+"spécifiques..."
+msgstr "صف منطقة عملك ومعداتك واحتياجاتك الخاصة."
+
+msgid "Déploiement Express"
+msgstr "نشر سريع"
+
+msgid "Détaillez votre projet..."
+msgstr "فصّل مشروعك..."
+
+msgid "Détails du Projet"
+msgstr "تفاصيل المشروع"
+
+msgid "Détails du projet / Questions"
+msgstr "تفاصيل المشروع / أسئلة"
+
+msgid "Développement / Intégration sur-mesure (API / ERP / Télématique)"
+msgstr "تطوير / تكامل مخصص (API / ERP / تيليماتيك)"
+
+msgid "Développement sur Mesure"
+msgstr "تطوير مخصص"
+
+msgid ""
+"Développez votre activité en proposant nos solutions de géolocalisation GPS "
+"professionnelles."
+msgstr "طوّر نشاطك التجاري بتقديم حلولنا الاحترافية لتحديد المواقع GPS."
+
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Email professionnel"
+msgstr "البريد المهني"
+
+msgid "En savoir plus"
+msgstr "اقرأ المزيد"
+
+msgid "Entreprise"
+msgstr "الشركة"
+
+msgid "Envoyer le message"
+msgstr "إرسال الرسالة"
+
+msgid "Envoyez-nous un message"
+msgstr "أرسل لنا رسالة"
+
+msgid "Espace B2B"
+msgstr "فضاء B2B"
+
+msgid "Ex: Atlas Logistique SARL"
+msgstr "Ex: Atlas Logistique SARL"
+
+msgid "Ex: Atlas Transport & Logistique"
+msgstr "Ex: Atlas Transport & Logistique"
+
+msgid "Ex: Auto Élec Express SARL"
+msgstr "Ex: Auto Élec Express SARL"
+
+msgid "Ex: Traceurs OBD 4G, traceurs filaires avec relais coupure..."
+msgstr "مثال: أجهزة تتبع OBD 4G، أجهزة سلكية مع مرحل قطع..."
+
+msgid "Extrait"
+msgstr "مقتطف"
+
+msgid "Fiabilité"
+msgstr "الموثوقية"
+
+msgid "Fonctionnalités & Avantages Inclus :"
+msgstr "الميزات والفوائد المشمولة:"
+
+msgid "Fonctionnalités et intégrations spécifiques à votre métier."
+msgstr "ميزات وتكاملات مخصصة لنشاطك المهني."
+
+msgid ""
+"Formation technique gratuite, assistance à l'installation et support client "
+"prioritaire."
+msgstr "تدريب تقني مجاني، مساعدة في التركيب ودعم عملاء أولوي."
+
+msgid "Formation technique incluse"
+msgstr "تدريب تقني مشمول"
+
+msgid "Formation utilisateurs offerte"
+msgstr "تدريب مجاني للمستخدمين"
+
+msgid "Formule souhaitée"
+msgstr "الخطة المرغوبة"
+
+msgid "Fort volume (+50 unités/mois)"
+msgstr "حجم كبير (+50 وحدة/شهر)"
+
+msgid "Fès, Casablanca, Tanger, Marrakech..."
+msgstr "فاس، الدار البيضاء، طنجة، مراكش..."
+
+msgid "Fès, Casablanca, Tanger..."
+msgstr "فاس، الدار البيضاء، طنجة..."
+
+msgid "GPS Tracking & Fleet Management"
+msgstr "تتبع GPS وإدارة الأساطيل"
+
+msgid "Garantie 1 an"
+msgstr "ضمان سنة واحدة"
+
+msgid "Grossiste / Distributeur commercial"
+msgstr "تاجر جملة / موزع تجاري"
+
+msgid "Géo-clôtures & Alertes"
+msgstr "سياج جغرافي وتنبيهات"
+
+msgid "Gérez votre flotte en déplacement depuis votre smartphone."
+msgstr "أدر أسطولك أثناء التنقل من هاتفك الذكي."
+
+msgid "Historique & Rapports"
+msgstr "السجل والتقارير"
+
+msgid "Horaires d'ouverture"
+msgstr "أوقات العمل"
+
+msgid ""
+"Hotline directe pour configurer vos balises et assister vos techniciens."
+msgstr "خط ساخن مباشر لتكوين أجهزتك ومساعدة فنييك."
+
+msgid "Hébergement inclus"
+msgstr "الاستضافة مشمولة"
+
+msgid "Idéal pour démarrer"
+msgstr "مثالي للبدء"
+
+msgid "Idéal pour les revendeurs"
+msgstr "مثالي للموزعين"
+
+msgid "Illimité en véhicules"
+msgstr "عدد غير محدود من المركبات"
+
+msgid "Image mise en avant"
+msgstr "صورة مميزة"
+
+msgid "Innovation"
+msgstr "الابتكار"
+
+msgid "Installation & Support à Fès"
+msgstr "تركيب ودعم في فاس"
+
+msgid "Installation certifiée sans perte de garantie constructeur."
+msgstr "تركيب معتمد بدون فقدان ضمان الشركة المصنعة."
+
+msgid "Interface Intuitive"
+msgstr "واجهة سهلة الاستخدام"
+
+msgid "Intégration ERP / CRM"
+msgstr "تكامل ERP / CRM"
+
+msgid ""
+"Intégration native des sondes de niveau de carburant et capteurs de "
+"température."
+msgstr "تكامل أصلي لمستشعرات الوقود ومستشعرات الحرارة."
+
+msgid "Intégration serveur fluide et possibilité de plateforme personnalisée."
+msgstr "تكامل خادم سلس وإمكانية منصة مخصصة."
+
+msgid "Intéressé par la plateforme en Marque Blanche ?"
+msgstr "مهتم بمنصة العلامة البيضاء؟"
+
+msgid "Intéressé par une plateforme en Marque Blanche"
+msgstr "مهتم بمنصة العلامة البيضاء"
+
+msgid "La plateforme entièrement personnalisée à votre image."
+msgstr "المنصة مخصصة بالكامل حسب علامتك التجارية."
+
+msgid "La solution la plus simple. Abonnement mensuel ou annuel par véhicule."
+msgstr "الحل الأبسط. اشتراك شهري أو سنوي لكل مركبة."
+
+msgid "Les principes qui guident chacune de nos actions et innovations."
+msgstr "المبادئ التي توجه كل أعمالنا وابتكاراتنا."
+
+msgid "Licence on-premise hébergée sur vos propres serveurs."
+msgstr "ترخيص محلي مستضاف على خوادمك الخاصة."
+
+msgid "Lire la suite"
+msgstr "تابع القراءة"
+
+msgid "Localisation Temps Réel"
+msgstr "تحديد الموقع في الوقت الحقيقي"
+
+msgid "Location / Abonnement SaaS (Par véhicule / mois ou an)"
+msgstr "اشتراك SaaS (لكل مركبة / شهري أو سنوي)"
+
+msgid "Location SaaS"
+msgstr "اشتراك SaaS"
+
+msgid "Loueur de véhicules / Agence de transport"
+msgstr "مؤجر مركبات / وكالة نقل"
+
+msgid "Lu"
+msgstr "مقروء"
+
+msgid "Lundi - Vendredi :"
+msgstr "الإثنين - الجمعة:"
+
+msgid "Marges Dégressives"
+msgstr "خصومات تدريجية"
+
+msgid "Marges attractives"
+msgstr "هوامش ربح جذابة"
+
+msgid "Marque Blanche gratuite"
+msgstr "علامة بيضاء مجانية"
+
+msgid "Matériel garanti 1 an"
+msgstr "معدات مضمونة لمدة سنة"
+
+msgid ""
+"Matériel toujours disponible dans notre dépôt à Fès, expédition rapide "
+"partout au Maroc."
+msgstr "معدات متوفرة دائماً في مستودعنا بفاس، شحن سريع عبر المغرب."
+
+msgid ""
+"Merci pour votre intérêt. Notre équipe commerciale B2B analysera votre "
+"demande et vous contactera dans les plus brefs délais."
+msgstr ""
+"شكراً لاهتمامك. سيقوم فريق المبيعات B2B بمراجعة طلبك والاتصال بك في أقرب "
+"وقت."
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Message / Besoins particuliers"
+msgstr "الرسالة / احتياجات خاصة"
+
+msgid "Message Envoyé"
+msgstr "تم إرسال الرسالة"
+
+msgid "Message envoyé avec succès !"
+msgstr "تم إرسال الرسالة بنجاح!"
+
+msgid "Message ou Questions Complémentaires"
+msgstr "رسالة أو أسئلة إضافية"
+
+msgid "Message ou besoins spécifiques"
+msgstr "رسالة أو احتياجات خاصة"
+
+msgid "Mises à jour incluses"
+msgstr "التحديثات مشمولة"
+
+msgid "Mode d'Acquisition Souhaité"
+msgstr "طريقة الاقتناء المطلوبة"
+
+msgid "Méta description"
+msgstr "وصف ميتا"
+
+msgid ""
+"N'hésitez pas à nous rendre visite à Fès ou à nous joindre directement par "
+"téléphone, WhatsApp ou email."
+msgstr ""
+"لا تتردد في زيارتنا في فاس أو الاتصال بنا عبر الهاتف أو واتساب أو البريد."
+
+msgid "Nom"
+msgstr "الاسم"
+
+msgid "Nom & Prénom"
+msgstr "الاسم الكامل"
+
+msgid "Nom & Prénom du responsable"
+msgstr "اسم المسؤول الكامل"
+
+msgid "Nom complet"
+msgstr "الاسم الكامل"
+
+msgid "Nom de l'entreprise"
+msgstr "اسم الشركة"
+
+msgid "Nom de l'entreprise / Atelier"
+msgstr "اسم الشركة / الورشة"
+
+msgid "Nom de l'entreprise / Organisation"
+msgstr "اسم الشركة / المنظمة"
+
+msgid "Nom de la Société"
+msgstr "اسم الشركة"
+
+msgid "Nom de votre société (optionnel)"
+msgstr "اسم شركتك (اختياري)"
+
+msgid "Nom du responsable"
+msgstr "اسم المسؤول"
+
+msgid "Nom du responsable flotte / DSI"
+msgstr "اسم المسؤول"
+
+msgid "Nos Coordonnées"
+msgstr "معلومات الاتصال"
+
+msgid "Nos Promotions & Offres"
+msgstr "عروضنا وتخفيضاتنا"
+
+msgid "Nos Services & Équipements"
+msgstr "خدماتنا ومعداتنا"
+
+msgid "Nos Solutions Télématiques"
+msgstr "حلولنا للتيليماتيك"
+
+msgid "Nos Valeurs Fondamentales"
+msgstr "قيمنا الأساسية"
+
+msgid ""
+"Nos ingénieurs et techniciens vous accompagnent dans l'analyse de vos "
+"besoins pour équiper votre flotte au meilleur coût."
+msgstr ""
+"مهندسونا وفنيونا يرافقونكم في تحليل احتياجاتكم لتجهيز أسطولكم بأفضل تكلفة."
+
+msgid ""
+"Nos systèmes sont conçus pour fonctionner 24/7 avec une précision "
+"irréprochable pour assurer la sécurité de vos données et équipements."
+msgstr "أنظمتنا مصممة للعمل 24/7 بدقة لا تشوبها شائبة لضمان أمان بياناتكم."
+
+msgid ""
+"Notifications instantanées par SMS et push en cas d'entrée ou sortie de "
+"zone."
+msgstr "إشعارات فورية عبر SMS عند الدخول أو الخروج من المنطقة."
+
+msgid "Notifications par SMS/Email pour les zones, vitesses, et entretiens."
+msgstr "إشعارات SMS/بريد إلكتروني للمناطق والسرعات والصيانة."
+
+msgid "Notre Gamme de Traceurs & Capteurs GPS"
+msgstr "مجموعتنا من أجهزة التتبع ومستشعرات GPS"
+
+msgid ""
+"Notre siège social et atelier technique à Fès sont à votre disposition pour "
+"tester nos équipements en direct et analyser vos besoins de flotte."
+msgstr ""
+"مقرنا وورشتنا التقنية في فاس تحت تصرفكم لاختبار معداتنا وتحليل احتياجاتكم."
+
+msgid ""
+"Notre système a été développé pour répondre aux exigences des professionnels"
+" de la télématique, avec une architecture robuste capable de gérer des "
+"milliers de véhicules simultanément."
+msgstr ""
+"نظامنا مصمم لتلبية متطلبات محترفي التيليماتيك، بهندسة قوية قادرة على إدارة "
+"آلاف المركبات."
+
+msgid ""
+"Notre équipe locale basée à Fès garantit une réactivité immédiate et un "
+"accompagnement sur-mesure pour chacun de vos projets."
+msgstr "فريقنا المحلي في فاس يضمن استجابة فورية ومرافقة مخصصة لكل مشروعاتك."
+
+msgid ""
+"Nous avons bien reçu votre message. Notre équipe vous répondra dans les plus"
+" brefs délais."
+msgstr "لقد استلمنا رسالتك. سيرد فريقنا في أقرب وقت."
+
+msgid ""
+"Nous intégrons continuellement les dernières avancées technologiques pour "
+"offrir des solutions toujours plus performantes."
+msgstr "ندمج باستمرار أحدث التطورات التكنولوجية لتقديم حلول أكثر أداءً."
+
+msgid ""
+"Nous proposons plusieurs modèles adaptés à vos besoins et votre budget."
+msgstr "نقدم عدة نماذج مناسبة لاحتياجاتك وميزانيتك."
+
+msgid ""
+"Nous sommes à votre écoute pour toute demande d'information, d'installation "
+"ou de devis personnalisé."
+msgstr "نحن هنا لمساعدتك في أي طلب معلومات أو تركيب أو عرض سعر مخصص."
+
+msgid "Nouveaux capteurs"
+msgstr "مستشعرات جديدة"
+
+msgid "Objet de votre demande"
+msgstr "موضوع طلبك"
+
+msgid "Option Marque Blanche possible"
+msgstr "خيار العلامة البيضاء متاح"
+
+msgid "Options d'Acquisition"
+msgstr "خيارات الاقتناء"
+
+msgid "PROGRAMME PARTENAIRES & REVENDEURS"
+msgstr "برنامج الشركاء والموزعين"
+
+msgid "Paiement unique (licence)"
+msgstr "دفعة واحدة (ترخيص)"
+
+msgid "Partager :"
+msgstr "مشاركة:"
+
+msgid "Personne de Contact"
+msgstr "جهة الاتصال"
+
+msgid "Personne de contact"
+msgstr "جهة الاتصال"
+
+msgid "Petite quantité (1-10 unités)"
+msgstr "كمية صغيرة (1-10 وحدات)"
+
+msgid "Plateforme & Serveur GPS M2web"
+msgstr "منصة وخادم GPS M2web"
+
+msgid "Plateforme Serveur en Marque Blanche Complète (Logo + Domaine + App)"
+msgstr "منصة خادم بعلامة بيضاء كاملة (شعار + نطاق + تطبيق)"
+
+msgid "Plus de 200 véhicules"
+msgstr "أكثر من 200 مركبة"
+
+msgid "Position GPS précise sur carte, actualisation instantanée."
+msgstr "موقع GPS دقيق على الخريطة، تحديث فوري."
+
+msgid ""
+"Possibilité de personnaliser la plateforme avec votre propre logo, domaine "
+"et couleurs."
+msgstr "إمكانية تخصيص المنصة بشعارك ونطاقك وألوانك."
+
+msgid "Pour les grands comptes"
+msgstr "للحسابات الكبيرة"
+
+msgid "Pour les professionnels"
+msgstr "للمحترفين"
+
+msgid ""
+"Profitez de nos offres spéciales sur les traceurs GPS et équipements de "
+"géolocalisation."
+msgstr "استفيدوا من عروضنا الخاصة على أجهزة تتبع GPS ومعدات تحديد المواقع."
+
+msgid "Projet Serveur Dédié / Marque Blanche"
+msgstr "مشروع خادم مخصص / علامة بيضاء"
+
+msgid "Proximité"
+msgstr "القرب"
+
+msgid ""
+"Précisez vos besoins : type de véhicules, besoin d'API ERP, marque blanche, "
+"nombre d'utilisateurs..."
+msgstr ""
+"حدد احتياجاتك: أنواع المركبات، API ERP، علامة بيضاء، عدد المستخدمين..."
+
+msgid "Présentation de la Solution"
+msgstr "عرض الحل"
+
+msgid "Présentation de vos activités et besoins..."
+msgstr "قدم أنشطتك واحتياجاتك..."
+
+msgid "Publié"
+msgstr "منشور"
+
+msgid ""
+"Rafraîchissement toutes les 10 secondes avec précision GPS submétrique."
+msgstr "تحديث كل 10 ثوان بدقة GPS تحت المتر."
+
+msgid "Rapports & Statistiques Avancés"
+msgstr "تقارير وإحصائيات متقدمة"
+
+msgid "Rapports et statistiques GPS"
+msgstr "تقارير وإحصائيات GPS"
+
+msgid "Rapports personnalisés"
+msgstr "تقارير مخصصة"
+
+msgid "Reconstitution fidèle des trajets, arrêts et kilométrage sur 12 mois."
+msgstr "إعادة بناء دقيقة للرحلات والتوقفات والمسافة على 12 شهراً."
+
+msgid "Remise de base"
+msgstr "خصم أساسي"
+
+msgid "Remise maximale (jusqu'à 35%)"
+msgstr "خصم أقصى (حتى 35%)"
+
+msgid "Remise supérieure"
+msgstr "خصم أعلى"
+
+msgid ""
+"Remplissez le formulaire ci-dessous pour recevoir notre grille tarifaire "
+"grossiste et ouvrir votre compte partenaire."
+msgstr "املأ النموذج أدناه لتلقي قائمة أسعار الجملة وفتح حساب شريك."
+
+msgid ""
+"Restez informés des dernières tendances en télématique, sécurité et gestion "
+"de flotte au Maroc."
+msgstr ""
+"ابقوا على اطلاع بآخر اتجاهات التيليماتيك والأمن وإدارة الأساطيل في المغرب."
+
+msgid "Retour en haut"
+msgstr "العودة للأعلى"
+
+msgid "Revendeur informatique & télécom"
+msgstr "موزع معلوماتية واتصالات"
+
+msgid "Revenez bientôt pour découvrir nos nouvelles offres exceptionnelles."
+msgstr "عودوا قريباً لاكتشاف عروضنا الاستثنائية الجديدة."
+
+msgid "Réseau 4G Multi-Opérateur"
+msgstr "شبكة 4G متعددة المشغلين"
+
+msgid "Samedi :"
+msgstr "السبت:"
+
+msgid "Sans engagement de durée"
+msgstr "بدون التزام بالمدة"
+
+msgid "Secteur d'Activité"
+msgstr "قطاع النشاط"
+
+msgid "Secteur d'activité"
+msgstr "قطاع النشاط"
+
+msgid "Services"
+msgstr "الخدمات"
+
+msgid "Services & Équipements"
+msgstr "الخدمات والمعدات"
+
+msgid "Services & Équipements GPS"
+msgstr "خدمات ومعدات GPS"
+
+msgid "Session de vérification expirée. Veuillez réessayer."
+msgstr "انتهت صلاحية جلسة التحقق. يرجى المحاولة مرة أخرى."
+
+msgid "Short summary for listing pages"
+msgstr "ملخص قصير لصفحات القوائم"
+
+msgid "Société de sécurité / Gardiennage"
+msgstr "شركة أمن / حراسة"
+
+msgid ""
+"Sondes capacitives haute précision pour détecter les siphonnages et analyser"
+" les consommations."
+msgstr "مستشعرات سعوية عالية الدقة لكشف سرقة الوقود وتحليل الاستهلاك."
+
+msgid "Spam detected."
+msgstr "تم اكتشاف رسالة مزعجة."
+
+msgid "Spécifications :"
+msgstr "المواصفات:"
+
+msgid "Stock Immédiat à Fès"
+msgstr "مخزون فوري في فاس"
+
+msgid "Stock garanti à Fès"
+msgstr "مخزون مضمون في فاس"
+
+msgid "Suivi de flotte en temps réel"
+msgstr "تتبع الأسطول في الوقت الحقيقي"
+
+msgid "Suivi en Temps Réel"
+msgstr "تتبع في الوقت الحقيقي"
+
+msgid ""
+"Suivi en temps réel sur smartphone & PC avec notifications push instantanées"
+" et alertes intelligentes."
+msgstr "تتبع في الوقت الحقيقي على الهاتف والحاسوب مع إشعارات فورية."
+
+msgid "Sujet"
+msgstr "الموضوع"
+
+msgid "Support & Atelier à Fès"
+msgstr "دعم وورشة في فاس"
+
+msgid "Support Technique Dédié"
+msgstr "دعم تقني مخصص"
+
+msgid "Support technique"
+msgstr "دعم تقني"
+
+msgid "Support technique & API"
+msgstr "دعم تقني و API"
+
+msgid "Tableau de Bord de Flotte"
+msgstr "لوحة تحكم الأسطول"
+
+msgid "Taille de la Flotte"
+msgstr "حجم الأسطول"
+
+msgid "Taille de la flotte"
+msgstr "حجم الأسطول"
+
+msgid "Tarifs dégressifs dès 10 unités pour maximiser votre rentabilité."
+msgstr "خصومات تدريجية من 10 وحدات لتحقيق أقصى ربحية."
+
+msgid "Titre"
+msgstr "العنوان"
+
+msgid "Toutes les catégories"
+msgstr "جميع الفئات"
+
+msgid "Traité"
+msgstr "تمت المعالجة"
+
+msgid ""
+"Trop de tentatives échouées. Par mesure de sécurité, votre accès a été "
+"bloqué temporairement."
+msgstr "عدد كبير من المحاولات الفاشلة. لأسباب أمنية، تم حظر وصولك مؤقتاً."
+
+msgid "Types d'équipements souhaités"
+msgstr "أنواع المعدات المطلوبة"
+
+msgid "Types de matériel recherchés"
+msgstr "أنواع المعدات المطلوبة"
+
+msgid "Types of GPS trackers needed"
+msgstr "أنواع أجهزة تتبع GPS المطلوبة"
+
+msgid "Télématique & Traceurs GPS"
+msgstr "تيليماتيك وأجهزة تتبع GPS"
+
+msgid "Téléphone / WhatsApp"
+msgstr "الهاتف / واتساب"
+
+msgid "Téléphone direct"
+msgstr "هاتف مباشر"
+
+msgid ""
+"Un responsable de compte unique pour répondre à toutes vos demandes "
+"commerciales et techniques."
+msgstr "مسؤول حساب واحد لتلبية جميع طلباتك التجارية والتقنية."
+
+msgid "Une Plateforme Puissante et Polyvalente"
+msgstr "منصة قوية ومتعددة الاستخدامات"
+
+msgid ""
+"Une expertise éprouvée au service des transporteurs, entreprises et "
+"professionnels à Fès et partout au Maroc."
+msgstr "خبرة مثبتة في خدمة الناقلين والشركات والمحترفين في فاس وعبر المغرب."
+
+msgid ""
+"Une interface moderne, rapide et responsive conçue pour les professionnels."
+msgstr "واجهة حديثة وسريعة ومتجاوبة مصممة للمحترفين."
+
+msgid ""
+"Une solution logicielle complète, évolutive et personnalisable pour la "
+"gestion de flotte et le tracking GPS."
+msgstr "حل برمجي كامل وقابل للتطوير والتخصيص لإدارة الأساطيل وتتبع GPS."
+
+msgid "Vente en Gros & Espace B2B"
+msgstr "البيع بالجملة وفضاء B2B"
+
+msgid "Veuillez corriger les erreurs ci-dessous."
+msgstr "يرجى تصحيح الأخطاء أدناه."
+
+msgid "Ville"
+msgstr "المدينة"
+
+msgid "Ville d'activité"
+msgstr "مدينة النشاط"
+
+msgid "Vitesse, arrêts, kilométrage, consommation de carburant."
+msgstr "السرعة، التوقفات، المسافة، استهلاك الوقود."
+
+msgid "Volume Mensuel Estimé"
+msgstr "الحجم الشهري المقدر"
+
+msgid "Volume mensuel"
+msgstr "الحجم الشهري"
+
+msgid "Volume mensuel estimé"
+msgstr "الحجم الشهري المقدر"
+
+msgid "Volume régulier (10-50 unités/mois)"
+msgstr "حجم منتظم (10-50 وحدة/شهر)"
+
+msgid "Votre Message"
+msgstr "رسالتك"
+
+msgid ""
+"Votre candidature a été envoyée avec succès. Nous vous contacterons sous "
+"48h."
+msgstr "تم إرسال ترشيحك بنجاح. سنتصل بك خلال 48 ساعة."
+
+msgid ""
+"Votre demande a été envoyée avec succès. Nous vous contacterons sous 24h."
+msgstr "تم إرسال طلبك بنجاح. سنتصل بك خلال 24 ساعة."
+
+msgid ""
+"Votre demande a été envoyée avec succès. Un expert vous contactera "
+"prochainement."
+msgstr "تم إرسال طلبك بنجاح. سيتواصل معك خبير قريباً."
+
+msgid "Votre logo & couleurs"
+msgstr "شعارك وألوانك"
+
+msgid ""
+"Votre message a été envoyé avec succès. Nous vous répondrons rapidement."
+msgstr "تم إرسال رسالتك بنجاح. سنرد عليك في أقرب وقت."
+
+msgid "Votre nom complet"
+msgstr "اسمك الكامل"
+
+msgid "Votre nom de domaine"
+msgstr "اسم نطاقك"
+
+msgid "Vous préférez en discuter de vive voix ?"
+msgstr "تفضل المناقشة شخصياً؟"
+
+msgid "Vue d'ensemble pour la gestion quotidienne de votre parc."
+msgstr "نظرة شاملة لإدارة أسطولك اليومية."
+
+msgid "Vérification de sécurité"
+msgstr "التحقق الأمني"
+
+msgid "Vérification invalide. Veuillez réessayer."
+msgstr "تحقق غير صالح. يرجى المحاولة مرة أخرى."
+
+msgid "WhatsApp Direct"
+msgstr "واتساب مباشر"
+
+msgid "À Fès & partout au Maroc"
+msgstr "في فاس وعبر المغرب"
+
+msgid "À Propos de"
+msgstr "حول"
+
+msgid "Électricien auto / Installateur"
+msgstr "كهربائي سيارات / مُركّب"
+
+msgid "100% Marocain"
+msgstr "100% مغربي"
+
+msgid "Application"
+msgstr "التطبيق"
+
+msgid "Application Mobile"
+msgstr "التطبيق المحمول"
+
+msgid ""
+"Application gratuite • Aucune carte bancaire requise • Support en français "
+"et arabe"
+msgstr "تطبيق مجاني • لا حاجة لبطاقة بنكية • دعم بالفرنسية والعربية"
+
+msgid "Bientôt disponible"
+msgstr "قريباً"
+
+msgid "Choisissez le forfait adapté à la taille de votre flotte."
+msgstr "اختر الباقة المناسبة لحجم أسطولك."
+
+msgid "Demander une Démo"
+msgstr "طلب عرض تجريبي"
+
+msgid "Données Sécurisées"
+msgstr "بيانات آمنة"
+
+msgid "Découvrez l'Interface"
+msgstr "اكتشف الواجهة"
+
+msgid "Fonctionnalités bientôt disponibles."
+msgstr "الميزات ستتوفر قريباً."
+
+msgid "Forfaits & Tarifs"
+msgstr "الباقات والأسعار"
+
+msgid "Gratuit"
+msgstr "مجاني"
+
+msgid "Me notifier"
+msgstr "أعلمني"
+
+msgid ""
+"Nous travaillons activement sur la version iPhone. Inscrivez-vous pour être "
+"notifié dès sa sortie."
+msgstr "نعمل بنشاط على نسخة iPhone. سجّل ليتم إخطارك عند إطلاقها."
+
+msgid "Support Local"
+msgstr "دعم محلي"
+
+msgid "Sur mesure"
+msgstr "حسب الطلب"
+
+msgid "Télécharger sur"
+msgstr "تحميل على"
+
+msgid "Télécharger sur Google Play"
+msgstr "تحميل على Google Play"
+
+msgid ""
+"Une interface claire, rapide et intuitive conçue pour les professionnels "
+"marocains."
+msgstr "واجهة واضحة وسريعة وبديهية مصممة للمحترفين المغاربة."
+
+msgid "Version iOS bientôt disponible"
+msgstr "نسخة iOS قريباً"
+
+msgid ""
+"Ce site utilise des cookies pour améliorer votre expérience. En continuant, "
+"vous acceptez notre utilisation des cookies."
+msgstr ""
+"يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك. بالاستمرار، فإنك توافق"
+" على استخدامنا لملفات تعريف الارتباط."
+
+msgid "Accepter"
+msgstr "قبول"
+
+msgid "Refuser"
+msgstr "رفض"
+
+msgid ""
+"Application professionnelle • Support en français et arabe • Assistance "
+"technique dédiée"
+msgstr "تطبيق احترافي • دعم بالفرنسية والعربية • مساعدة تقنية مخصصة"
