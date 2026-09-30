@@ -290,13 +290,13 @@ msgid "11 à 50 véhicules"
 msgstr "11 to 50 vehicles"
 
 msgid "15 – 50 traceurs / mois (Pack Pro Installateur)"
-msgstr "15 to 50 trackers/month (Pro Installer Pack)"
+msgstr "15 – 50 trackers / month (Pro Installer Pack)"
 
 msgid "5 – 15 traceurs / mois (Pack Découverte)"
-msgstr "5 to 15 trackers/month (Discovery Pack)"
+msgstr "5 – 15 trackers / month (Discovery Pack)"
 
 msgid "50+ traceurs / mois (Distributeur Régional)"
-msgstr "50+ trackers/month (Regional Distributor)"
+msgstr "50+ trackers / month (Regional Distributor)"
 
 msgid "51 à 200 véhicules"
 msgstr "51 to 200 vehicles"
@@ -339,10 +339,10 @@ msgid "Alertes & Géofencing"
 msgstr "Alerts & Geofencing"
 
 msgid "Analyse des accélérations, freinages brusques et virages dangereux."
-msgstr "Analysis of acceleration, harsh braking and dangerous turns."
+msgstr "Analysis of acceleration, harsh braking, and sharp turns."
 
 msgid "App mobile à votre nom"
-msgstr "Mobile app under your name"
+msgstr "Mobile app in your brand name"
 
 msgid "Application Mobile & Web"
 msgstr "Mobile & Web App"
@@ -407,7 +407,7 @@ msgid "Besoin de rapports avancés ?"
 msgstr "Need advanced reports?"
 
 msgid "Besoin de sondes de carburant ?"
-msgstr "Need fuel probes?"
+msgstr "Need fuel sensors?"
 
 msgid "Blog"
 msgstr "Blog"
@@ -1019,7 +1019,7 @@ msgid ""
 msgstr "Refresh every 10 seconds with sub-meter GPS accuracy."
 
 msgid "Rapports & Statistiques Avancés"
-msgstr "Advanced Reports & Statistics"
+msgstr "Advanced Reports & Analytics"
 
 msgid "Rapports et statistiques GPS"
 msgstr "GPS reports and statistics"
@@ -1388,3 +1388,88 @@ msgid ""
 msgstr ""
 "Professional app • Support in French and Arabic • Dedicated technical "
 "assistance"
+
+msgid "Promotions & Offres Spéciales"
+msgstr "Promotions & Special Deals"
+
+msgid "Nos Promotions & Offres Exclusives"
+msgstr "Our Exclusive Deals & Promotions"
+
+msgid ""
+"Découvrez nos offres spéciales sur les traceurs GPS 4G, sondes de carburant "
+"et solutions de gestion de flotte au Maroc."
+msgstr ""
+"Discover our special deals on 4G GPS trackers, fuel sensors and fleet "
+"management solutions in Morocco."
+
+msgid "Garantie 1 An Directe"
+msgstr "1-Year Direct Warranty"
+
+msgid "Livraison 24h Maroc"
+msgstr "24h Delivery in Morocco"
+
+msgid "Support Dédié à Fès"
+msgstr "Dedicated Support in Fez"
+
+msgid "Bonjour, je suis intéressé par l’offre promotionnelle :"
+msgstr "Hello, I am interested in the promotional offer:"
+
+msgid "Demander un devis"
+msgstr "Request a Quote"
+
+msgid "Nouvelles Promotions Bientôt Disponibles"
+msgstr "New Promotions Coming Soon"
+
+msgid ""
+"Nos offres exclusives sont en cours de mise à jour. Contactez notre équipe "
+"commerciale pour obtenir un devis sur mesure ou des tarifs préférentiels "
+"pour votre flotte."
+msgstr ""
+"Our exclusive offers are currently being updated. Contact our sales team for"
+" a custom quote or preferential rates for your fleet."
+
+msgid "Flottes & Entreprises"
+msgstr "Fleets & Businesses"
+
+msgid "Besoin d'un volume important ou d'un pack sur mesure ?"
+msgstr "Need a large volume or a custom package?"
+
+msgid ""
+"Nous proposons des tarifs dégressifs et des conditions personnalisées pour "
+"les parcs de plus de 5 véhicules, installateurs et revendeurs."
+msgstr ""
+"We offer sliding scale pricing and tailored conditions for fleets of 5+ "
+"vehicles, installers, and resellers."
+
+msgid "Espace B2B & Revendeur"
+msgstr "B2B & Reseller Space"
+
+msgid "Antivol Activé"
+msgstr "Anti-Theft Active"
+
+msgid "Coupure moteur prête"
+msgstr "Engine Cutoff Ready"
+
+msgid "Temps Réel"
+msgstr "Real Time"
+
+msgid "WhatsApp Support Client"
+msgstr "WhatsApp Customer Support"
+
+msgid "EN LIGNE"
+msgstr "ONLINE"
+
+msgid "ARRÊT"
+msgstr "STOPPED"
+
+msgid "10 – 50 unités/mois"
+msgstr "10 – 50 units/month"
+
+msgid "50 – 200 unités/mois"
+msgstr "50 – 200 units/month"
+
+msgid "200+ unités/mois"
+msgstr "200+ units/month"
+
+msgid "Contact WhatsApp"
+msgstr "WhatsApp Contact"

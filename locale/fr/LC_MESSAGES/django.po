@@ -1,12 +1,13 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: m2web\n"
 "POT-Creation-Date: 2026-09-30 00:00+0000\n"
 "PO-Revision-Date: 2026-09-30 00:00+0000\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Accueil"
@@ -281,3 +282,188 @@ msgstr "Distributeur"
 
 msgid "Demande d'Ouverture de Compte Revendeur"
 msgstr "Demande d'Ouverture de Compte Revendeur"
+
+msgid "Promotions & Offres Spéciales"
+msgstr "Promotions & Offres Spéciales"
+
+msgid "Nos Promotions & Offres Exclusives"
+msgstr "Nos Promotions & Offres Exclusives"
+
+msgid ""
+"Découvrez nos offres spéciales sur les traceurs GPS 4G, sondes de carburant "
+"et solutions de gestion de flotte au Maroc."
+msgstr ""
+"Découvrez nos offres spéciales sur les traceurs GPS 4G, sondes de carburant "
+"et solutions de gestion de flotte au Maroc."
+
+msgid "Garantie 1 An Directe"
+msgstr "Garantie 1 An Directe"
+
+msgid "Livraison 24h Maroc"
+msgstr "Livraison 24h Maroc"
+
+msgid "Support Dédié à Fès"
+msgstr "Support Dédié à Fès"
+
+msgid "Bonjour, je suis intéressé par l’offre promotionnelle :"
+msgstr "Bonjour, je suis intéressé par l’offre promotionnelle :"
+
+msgid "Demander un devis"
+msgstr "Demander un devis"
+
+msgid "Nouvelles Promotions Bientôt Disponibles"
+msgstr "Nouvelles Promotions Bientôt Disponibles"
+
+msgid ""
+"Nos offres exclusives sont en cours de mise à jour. Contactez notre équipe "
+"commerciale pour obtenir un devis sur mesure ou des tarifs préférentiels "
+"pour votre flotte."
+msgstr ""
+"Nos offres exclusives sont en cours de mise à jour. Contactez notre équipe "
+"commerciale pour obtenir un devis sur mesure ou des tarifs préférentiels "
+"pour votre flotte."
+
+msgid "Flottes & Entreprises"
+msgstr "Flottes & Entreprises"
+
+msgid "Besoin d'un volume important ou d'un pack sur mesure ?"
+msgstr "Besoin d'un volume important ou d'un pack sur mesure ?"
+
+msgid ""
+"Nous proposons des tarifs dégressifs et des conditions personnalisées pour "
+"les parcs de plus de 5 véhicules, installateurs et revendeurs."
+msgstr ""
+"Nous proposons des tarifs dégressifs et des conditions personnalisées pour "
+"les parcs de plus de 5 véhicules, installateurs et revendeurs."
+
+msgid "Espace B2B & Revendeur"
+msgstr "Espace B2B & Revendeur"
+
+msgid "Antivol Activé"
+msgstr "Antivol Activé"
+
+msgid "Coupure moteur prête"
+msgstr "Coupure moteur prête"
+
+msgid "Temps Réel"
+msgstr "Temps Réel"
+
+msgid "WhatsApp Support Client"
+msgstr "WhatsApp Support Client"
+
+msgid "EN LIGNE"
+msgstr "EN LIGNE"
+
+msgid "ARRÊT"
+msgstr "ARRÊT"
+
+msgid "10 – 50 unités/mois"
+msgstr "10 – 50 unités/mois"
+
+msgid "50 – 200 unités/mois"
+msgstr "50 – 200 unités/mois"
+
+msgid "200+ unités/mois"
+msgstr "200+ unités/mois"
+
+msgid "5 – 15 traceurs / mois (Pack Découverte)"
+msgstr "5 – 15 traceurs / mois (Pack Découverte)"
+
+msgid "15 – 50 traceurs / mois (Pack Pro Installateur)"
+msgstr "15 – 50 traceurs / mois (Pack Pro Installateur)"
+
+msgid "50+ traceurs / mois (Distributeur Régional)"
+msgstr "50+ traceurs / mois (Distributeur Régional)"
+
+msgid "Projet Serveur Dédié / Marque Blanche"
+msgstr "Projet Serveur Dédié / Marque Blanche"
+
+msgid "Besoin de rapports avancés ?"
+msgstr "Besoin de rapports avancés ?"
+
+msgid "Besoin de sondes de carburant ?"
+msgstr "Besoin de sondes de carburant ?"
+
+msgid "Besoin d'un conseil immédiat ?"
+msgstr "Besoin d'un conseil immédiat ?"
+
+msgid "Discutez avec nos experts sur WhatsApp"
+msgstr "Discutez avec nos experts sur WhatsApp"
+
+msgid "Applications Mobiles iOS & Android"
+msgstr "Applications Mobiles iOS & Android"
+
+msgid "API & Intégrations ERP"
+msgstr "API & Intégrations ERP"
+
+msgid "Interface Intuitive"
+msgstr "Interface Intuitive"
+
+msgid "Achat Serveur"
+msgstr "Achat Serveur"
+
+msgid "Développement sur Mesure"
+msgstr "Développement sur Mesure"
+
+msgid "Votre logo & couleurs"
+msgstr "Votre logo & couleurs"
+
+msgid "Votre nom de domaine"
+msgstr "Votre nom de domaine"
+
+msgid "App mobile à votre nom"
+msgstr "App mobile à votre nom"
+
+msgid "Idéal pour les revendeurs"
+msgstr "Idéal pour les revendeurs"
+
+msgid "Intégration ERP / CRM"
+msgstr "Intégration ERP / CRM"
+
+msgid "Nouveaux capteurs"
+msgstr "Nouveaux capteurs"
+
+msgid "API sur mesure"
+msgstr "API sur mesure"
+
+msgid "Paiement unique (licence)"
+msgstr "Paiement unique (licence)"
+
+msgid "Contrôle total des données"
+msgstr "Contrôle total des données"
+
+msgid "Illimité en véhicules"
+msgstr "Illimité en véhicules"
+
+msgid "Contrat de maintenance optionnel"
+msgstr "Contrat de maintenance optionnel"
+
+msgid "Sans engagement de durée"
+msgstr "Sans engagement de durée"
+
+msgid "Hébergement inclus"
+msgstr "Hébergement inclus"
+
+msgid "Mises à jour incluses"
+msgstr "Mises à jour incluses"
+
+msgid "Tableau de Bord de Flotte"
+msgstr "Tableau de Bord de Flotte"
+
+msgid "Alertes & Géofencing"
+msgstr "Alertes & Géofencing"
+
+msgid "Notifications par SMS/Email pour les zones, vitesses, et entretiens."
+msgstr "Notifications par SMS/Email pour les zones, vitesses, et entretiens."
+
+msgid "Comportement de Conduite"
+msgstr "Comportement de Conduite"
+
+msgid "Analyse des accélérations, freinages brusques et virages dangereux."
+msgstr "Analyse des accélérations, freinages brusques et virages dangereux."
+
+msgid "Capteurs de Carburant & Température"
+msgstr "Capteurs de Carburant & Température"
+
+msgid "Rapports & Statistiques Avancés"
+msgstr "Rapports & Statistiques Avancés"

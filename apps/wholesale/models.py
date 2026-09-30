@@ -3,9 +3,9 @@ from django.utils.translation import gettext_lazy as _
 
 class WholesaleInquiry(models.Model):
     VOLUME_CHOICES = [
-        ('10-50', '10 – 50 unités/mois'),
-        ('50-200', '50 – 200 unités/mois'),
-        ('200+', '200+ unités/mois')
+        ('10-50', _('10 – 50 unités/mois')),
+        ('50-200', _('50 – 200 unités/mois')),
+        ('200+', _('200+ unités/mois')),
     ]
     
     company_name = models.CharField(max_length=200, verbose_name=_('Nom de l\'entreprise'))

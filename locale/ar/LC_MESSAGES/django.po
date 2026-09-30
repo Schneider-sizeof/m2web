@@ -71,7 +71,7 @@ msgid "Traceurs 4G Certifiés"
 msgstr "أجهزة تتبع 4G معتمدة"
 
 msgid "Installation sur Site"
-msgstr "تركيب في الموقع"
+msgstr "تركيب في عين المكان"
 
 msgid "Support 24/7 à Fès"
 msgstr "دعم 24/7 في فاس"
@@ -290,25 +290,25 @@ msgid "11 à 50 véhicules"
 msgstr "11 إلى 50 مركبة"
 
 msgid "15 – 50 traceurs / mois (Pack Pro Installateur)"
-msgstr "15 إلى 50 جهاز تتبع/شهر (باقة المحترف)"
+msgstr "15 – 50 جهاز تتبع / شهر (باقة المحترف)"
 
 msgid "5 – 15 traceurs / mois (Pack Découverte)"
-msgstr "5 إلى 15 جهاز تتبع/شهر (باقة الاكتشاف)"
+msgstr "5 – 15 جهاز تتبع / شهر (باقة الاكتشاف)"
 
 msgid "50+ traceurs / mois (Distributeur Régional)"
-msgstr "+50 جهاز تتبع/شهر (موزع إقليمي)"
+msgstr "+50 جهاز تتبع / شهر (موزع إقليمي)"
 
 msgid "51 à 200 véhicules"
 msgstr "51 إلى 200 مركبة"
 
 msgid "API & Intégrations ERP"
-msgstr "API وتكامل ERP"
+msgstr "واجهات برمجة التطبيقات والتكامل مع ERP"
 
 msgid "API & Marque Blanche"
 msgstr "API والعلامة البيضاء"
 
 msgid "API sur mesure"
-msgstr "API مخصص"
+msgstr "واجهة API مخصصة"
 
 msgid "Accès Temporairement Verrouillé"
 msgstr "الوصول مقفل مؤقتاً"
@@ -334,19 +334,19 @@ msgid "Adresse email"
 msgstr "البريد الإلكتروني"
 
 msgid "Alertes & Géofencing"
-msgstr "تنبيهات وسياج جغرافي"
+msgstr "تنبيهات والمناطق الجغرافية"
 
 msgid "Analyse des accélérations, freinages brusques et virages dangereux."
 msgstr "تحليل التسارع والفرملة المفاجئة والمنعطفات الخطيرة."
 
 msgid "App mobile à votre nom"
-msgstr "تطبيق هاتف باسمك"
+msgstr "تطبيق هاتف باسم علامتك"
 
 msgid "Application Mobile & Web"
 msgstr "تطبيق الهاتف والويب"
 
 msgid "Applications Mobiles iOS & Android"
-msgstr "تطبيقات iOS و Android"
+msgstr "تطبيقات الهاتف iOS وأندرويد"
 
 msgid "Articles Similaires"
 msgstr "مقالات مشابهة"
@@ -384,7 +384,7 @@ msgid "Avez-vous déjà installé des traceurs GPS ?"
 msgstr "هل سبق لك تركيب أجهزة تتبع GPS؟"
 
 msgid "Besoin d'un conseil immédiat ?"
-msgstr "هل تحتاج نصيحة فورية؟"
+msgstr "هل تحتاج إلى استشارة فورية؟"
 
 msgid ""
 "Besoin d'un devis urgent pour un appel d'offres ? Contactez directement "
@@ -398,10 +398,10 @@ msgid "Besoin de rapports avancés & statistiques"
 msgstr "بحاجة لتقارير وإحصائيات متقدمة"
 
 msgid "Besoin de rapports avancés ?"
-msgstr "بحاجة لتقارير متقدمة؟"
+msgstr "هل تحتاج إلى تقارير متقدمة؟"
 
 msgid "Besoin de sondes de carburant ?"
-msgstr "هل تحتاج مستشعرات وقود؟"
+msgstr "هل تحتاج إلى مستشعرات وقود؟"
 
 msgid "Blog"
 msgstr "المدونة"
@@ -552,7 +552,7 @@ msgid "Développement / Intégration sur-mesure (API / ERP / Télématique)"
 msgstr "تطوير / تكامل مخصص (API / ERP / تيليماتيك)"
 
 msgid "Développement sur Mesure"
-msgstr "تطوير مخصص"
+msgstr "تطوير حسب الطلب"
 
 msgid ""
 "Développez votre activité en proposant nos solutions de géolocalisation GPS "
@@ -653,7 +653,7 @@ msgid ""
 msgstr "خط ساخن مباشر لتكوين أجهزتك ومساعدة فنييك."
 
 msgid "Hébergement inclus"
-msgstr "الاستضافة مشمولة"
+msgstr "استضافة مشمولة"
 
 msgid "Idéal pour démarrer"
 msgstr "مثالي للبدء"
@@ -677,10 +677,10 @@ msgid "Installation certifiée sans perte de garantie constructeur."
 msgstr "تركيب معتمد بدون فقدان ضمان الشركة المصنعة."
 
 msgid "Interface Intuitive"
-msgstr "واجهة سهلة الاستخدام"
+msgstr "واجهة بديهية وسهلة الاستخدام"
 
 msgid "Intégration ERP / CRM"
-msgstr "تكامل ERP / CRM"
+msgstr "تكامل مع ERP / CRM"
 
 msgid ""
 "Intégration native des sondes de niveau de carburant et capteurs de "
@@ -772,7 +772,7 @@ msgid "Message ou besoins spécifiques"
 msgstr "رسالة أو احتياجات خاصة"
 
 msgid "Mises à jour incluses"
-msgstr "التحديثات مشمولة"
+msgstr "تحديثات مشمولة"
 
 msgid "Mode d'Acquisition Souhaité"
 msgstr "طريقة الاقتناء المطلوبة"
@@ -851,7 +851,7 @@ msgid ""
 msgstr "إشعارات فورية عبر SMS عند الدخول أو الخروج من المنطقة."
 
 msgid "Notifications par SMS/Email pour les zones, vitesses, et entretiens."
-msgstr "إشعارات SMS/بريد إلكتروني للمناطق والسرعات والصيانة."
+msgstr "إشعارات عبر SMS والبريد للمناطق والسرعة والصيانة."
 
 msgid "Notre Gamme de Traceurs & Capteurs GPS"
 msgstr "مجموعتنا من أجهزة التتبع ومستشعرات GPS"
@@ -910,7 +910,7 @@ msgid "PROGRAMME PARTENAIRES & REVENDEURS"
 msgstr "برنامج الشركاء والموزعين"
 
 msgid "Paiement unique (licence)"
-msgstr "دفعة واحدة (ترخيص)"
+msgstr "دفعة واحدة (ترخيص دائم)"
 
 msgid "Partager :"
 msgstr "مشاركة:"
@@ -1205,7 +1205,7 @@ msgid ""
 msgstr "تم إرسال طلبك بنجاح. سيتواصل معك خبير قريباً."
 
 msgid "Votre logo & couleurs"
-msgstr "شعارك وألوانك"
+msgstr "شعارك وألوانك الخاصة"
 
 msgid ""
 "Votre message a été envoyé avec succès. Nous vous répondrons rapidement."
@@ -1215,7 +1215,7 @@ msgid "Votre nom complet"
 msgstr "اسمك الكامل"
 
 msgid "Votre nom de domaine"
-msgstr "اسم نطاقك"
+msgstr "اسم نطاقك الخاص"
 
 msgid "Vous préférez en discuter de vive voix ?"
 msgstr "تفضل المناقشة شخصياً؟"
@@ -1324,3 +1324,88 @@ msgid ""
 "Application professionnelle • Support en français et arabe • Assistance "
 "technique dédiée"
 msgstr "تطبيق احترافي • دعم بالفرنسية والعربية • مساعدة تقنية مخصصة"
+
+msgid "Promotions & Offres Spéciales"
+msgstr "العروض والتخفيضات الخاصة"
+
+msgid "Nos Promotions & Offres Exclusives"
+msgstr "عروضنا وتخفيضاتنا الحصرية"
+
+msgid ""
+"Découvrez nos offres spéciales sur les traceurs GPS 4G, sondes de carburant "
+"et solutions de gestion de flotte au Maroc."
+msgstr ""
+"اكتشف عروضنا الخاصة على أجهزة تتبع GPS 4G ومستشعرات الوقود وحلول إدارة "
+"الأساطيل بالمغرب."
+
+msgid "Garantie 1 An Directe"
+msgstr "ضمان مباشر لمدة سنة"
+
+msgid "Livraison 24h Maroc"
+msgstr "توصيل خلال 24 ساعة بالمغرب"
+
+msgid "Support Dédié à Fès"
+msgstr "دعم فني مخصص بفاس"
+
+msgid "Bonjour, je suis intéressé par l’offre promotionnelle :"
+msgstr "مرحباً، أنا مهتم بهذا العرض الترويجي:"
+
+msgid "Demander un devis"
+msgstr "طلب عرض سعر"
+
+msgid "Nouvelles Promotions Bientôt Disponibles"
+msgstr "عروض ترويجية جديدة قريباً"
+
+msgid ""
+"Nos offres exclusives sont en cours de mise à jour. Contactez notre équipe "
+"commerciale pour obtenir un devis sur mesure ou des tarifs préférentiels "
+"pour votre flotte."
+msgstr ""
+"يتم حالياً تحديث عروضنا الحصرية. تواصل مع فريق المبيعات للحصول على عرض سعر "
+"مخصص أو أسعار تفضيلية لأسطولك."
+
+msgid "Flottes & Entreprises"
+msgstr "الأساطيل والشركات"
+
+msgid "Besoin d'un volume important ou d'un pack sur mesure ?"
+msgstr "هل تحتاج إلى كميات كبيرة أو باقة مخصصة؟"
+
+msgid ""
+"Nous proposons des tarifs dégressifs et des conditions personnalisées pour "
+"les parcs de plus de 5 véhicules, installateurs et revendeurs."
+msgstr ""
+"نقدم أسعاراً تفضيلية وتخفيضات تدريجية للأساطيل المكونة من أكثر من 5 مركبات "
+"والموزعين والمهنيين."
+
+msgid "Espace B2B & Revendeur"
+msgstr "فضاء البيع بالجملة والموزعين"
+
+msgid "Antivol Activé"
+msgstr "الحماية من السرقة مفعلة"
+
+msgid "Coupure moteur prête"
+msgstr "خاصية قطع المحرك جاهزة"
+
+msgid "Temps Réel"
+msgstr "الوقت الفعلي"
+
+msgid "WhatsApp Support Client"
+msgstr "دعم العملاء عبر واتساب"
+
+msgid "EN LIGNE"
+msgstr "متصل"
+
+msgid "ARRÊT"
+msgstr "متوقف"
+
+msgid "10 – 50 unités/mois"
+msgstr "10 – 50 وحدة/شهر"
+
+msgid "50 – 200 unités/mois"
+msgstr "50 – 200 وحدة/شهر"
+
+msgid "200+ unités/mois"
+msgstr "+200 وحدة/شهر"
+
+msgid "Contact WhatsApp"
+msgstr "تواصل عبر واتساب"
