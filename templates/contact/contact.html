@@ -14,7 +14,7 @@
     {% endif %}
     <div class="container page-header-content">
         <h1>{% trans 'Contactez-nous' %}</h1>
-        <p class="lead text-white-50 max-w-700 mx-auto mb-4">{% trans 'Nous sommes à votre écoute pour toute demande d\'information, d\'installation ou de devis personnalisé.' %}</p>
+        <p class="lead text-white-50 max-w-700 mx-auto mb-4">{% trans "Nous sommes à votre écoute pour toute demande d'information, d'installation ou de devis personnalisé." %}</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{% url 'core:home' %}">{% trans 'Accueil' %}</a></li>
@@ -30,7 +30,7 @@
             <!-- Contact Info -->
             <div class="col-lg-5 animate-on-scroll">
                 <h2 class="section-title">{% trans 'Nos Coordonnées' %}</h2>
-                <p class="text-muted mb-4">{% trans 'N\'hésitez pas à nous rendre visite à Fès ou à nous joindre directement par téléphone, WhatsApp ou email.' %}</p>
+                <p class="text-muted mb-4">{% trans "N'hésitez pas à nous rendre visite à Fès ou à nous joindre directement par téléphone, WhatsApp ou email." %}</p>
                 
                 <div class="contact-info-card">
                     <div class="contact-icon-box"><i class="bi bi-telephone-fill"></i></div>
@@ -43,7 +43,7 @@
                 <div class="contact-info-card">
                     <div class="contact-icon-box whatsapp"><i class="bi bi-whatsapp"></i></div>
                     <div class="contact-details">
-                        <h5>WhatsApp Direct</h5>
+                        <h5>{% trans 'WhatsApp Direct' %}</h5>
                         <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                 <div class="contact-info-card">
                     <div class="contact-icon-box"><i class="bi bi-envelope-fill"></i></div>
                     <div class="contact-details">
-                        <h5>Email</h5>
+                        <h5>{% trans 'Email' %}</h5>
                         <p><a href="mailto:{{ company.email }}">{{ company.email }}</a></p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                 </div>
                 
                 <div class="card border-0 rounded-4 p-4 mt-4 shadow-sm bg-white">
-                    <h5 class="fw-bold mb-3 text-plum"><i class="bi bi-clock-history me-2 text-amber"></i>{% trans 'Horaires d\'ouverture' %}</h5>
+                    <h5 class="fw-bold mb-3 text-plum"><i class="bi bi-clock-history me-2 text-amber"></i>{% trans "Horaires d'ouverture" %}</h5>
                     <ul class="list-unstyled text-muted mb-0">
                         <li class="py-2 border-bottom d-flex justify-content-between"><span>{% trans 'Lundi - Vendredi :' %}</span> <span class="fw-bold text-dark">{{ company.operating_hours_weekday|default:"08:30 - 18:30" }}</span></li>
                         <li class="py-2 border-bottom d-flex justify-content-between"><span>{% trans 'Samedi :' %}</span> <span class="fw-bold text-dark">{{ company.operating_hours_saturday|default:"08:30 - 13:30" }}</span></li>

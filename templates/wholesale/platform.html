@@ -40,7 +40,7 @@
                         <i class="bi bi-speedometer2 text-amber fs-4 me-3 mt-1"></i>
                         <div>
                             <h5 class="fw-bold mb-1">{% trans 'Tableau de Bord de Flotte' %}</h5>
-                            <p class="mb-0 text-muted">{% trans 'Vue d\'ensemble pour la gestion quotidienne de votre parc.' %}</p>
+                            <p class="mb-0 text-muted">{% trans "Vue d'ensemble pour la gestion quotidienne de votre parc." %}</p>
                         </div>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
@@ -91,7 +91,7 @@
 
         <div class="row mb-5 text-center mt-5">
             <div class="col-12">
-                <h2 class="text-plum fw-bold mb-4">{% trans 'Options d\'Acquisition' %}</h2>
+                <h2 class="text-plum fw-bold mb-4">{% trans "Options d'Acquisition" %}</h2>
                 <p class="lead">{% trans 'Nous proposons plusieurs modèles adaptés à vos besoins et votre budget.' %}</p>
             </div>
         </div>
@@ -212,7 +212,7 @@
                                     {% if form.fleet_size.errors %}<div class="text-danger small">{{ form.fleet_size.errors.0 }}</div>{% endif %}
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="{{ form.acquisition_mode.id_for_label }}" class="form-label">{% trans 'Mode d\'Acquisition Souhaité' %}</label>
+                                    <label for="{{ form.acquisition_mode.id_for_label }}" class="form-label">{% trans "Mode d'Acquisition Souhaité" %}</label>
                                     {{ form.acquisition_mode }}
                                     {% if form.acquisition_mode.errors %}<div class="text-danger small">{{ form.acquisition_mode.errors.0 }}</div>{% endif %}
                                 </div>
@@ -256,7 +256,7 @@
         </div>
 
         <div class="text-center mt-5">
-            <p class="mb-2">{% trans 'Besoin d\'un conseil immédiat ?' %}</p>
+            <p class="mb-2">{% trans "Besoin d'un conseil immédiat ?" %}</p>
             <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" class="btn btn-outline-plum" target="_blank">
                 <i class="bi bi-whatsapp me-2"></i>{% trans 'Discutez avec nos experts sur WhatsApp' %}
             </a>

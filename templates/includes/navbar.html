@@ -46,7 +46,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {% if request.resolver_match.app_name == 'wholesale' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {% trans 'Gros & B2B' %}<span class="nav-pro-badge">PRO</span>
+                        {% trans 'Gros & B2B' %}<span class="nav-pro-badge">{% trans 'PRO' %}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{% url 'wholesale:inquiry' %}"><i class="bi bi-boxes me-2"></i>{% trans 'Vente en Gros' %}</a></li>
@@ -60,7 +60,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.resolver_match.url_name == 'promotions' %}active{% endif %}" href="{% url 'core:promotions' %}">{% trans 'Promotions' %}<span class="nav-pro-badge bg-danger">NEW</span></a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'promotions' %}active{% endif %}" href="{% url 'core:promotions' %}">{% trans 'Promotions' %}<span class="nav-pro-badge bg-danger">{% trans 'NEW' %}</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.app_name == 'contact' %}active{% endif %}" href="{% url 'contact:contact' %}">{% trans 'Contact' %}</a>

@@ -74,7 +74,7 @@
                     <div class="footer-contact-text">
                         {% trans 'Lun-Ven' %}: {{ company.operating_hours_weekday|default:"08:30 – 18:30" }}<br>
                         {% trans 'Sam' %}: {{ company.operating_hours_saturday|default:"08:30 – 13:30" }}<br>
-                        {% trans 'Dim' %}: {{ company.operating_hours_sunday|default:"Fermé" }}
+                        {% trans 'Dim' %}: {{ company.operating_hours_sunday|default:_("Fermé") }}
                     </div>
                 </div>
             </div>

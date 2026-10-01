@@ -46,7 +46,7 @@
                     <div class="card-body text-center p-4">
                         <i class="bi bi-headset display-4 text-amber mb-3"></i>
                         <h4 class="card-title text-plum fw-bold">{% trans 'Support & Formation' %}</h4>
-                        <p class="card-text">{% trans 'Formation technique gratuite, assistance à l\'installation et support client prioritaire.' %}</p>
+                        <p class="card-text">{% trans "Formation technique gratuite, assistance à l'installation et support client prioritaire." %}</p>
                     </div>
                 </div>
             </div>
@@ -82,65 +82,105 @@
         <!-- Partnership Tiers -->
         <div class="row mb-5 text-center mt-5">
             <div class="col-12">
-                <h2 class="text-plum fw-bold mb-4">{% trans 'Niveaux de Partenariat' %}</h2>
+                <span class="badge bg-amber text-plum fw-bold px-3 py-1 rounded-pill mb-2">{% trans 'Grille Tarifaire Grossiste' %}</span>
+                <h2 class="text-plum fw-bold mb-2">{% trans 'Niveaux de Partenariat & Marges' %}</h2>
+                <p class="section-subtitle text-center">{% trans "Des remises dégressives et des avantages exclusifs selon votre volume d'achat mensuel." %}</p>
             </div>
         </div>
-        <div class="row g-4 mb-5">
-            <div class="col-md-4">
-                <div class="card h-100 border-plum shadow animate-on-scroll">
-                    <div class="card-header bg-plum text-white text-center py-3">
-                        <h3 class="mb-0 h5">{% trans 'Découverte' %}</h3>
+        <div class="row g-4 mb-5 justify-content-center">
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="tier-card h-100">
+                    <div>
+                        <span class="badge bg-light text-plum border fw-bold px-3 py-1 rounded-pill mb-3" style="font-size:0.7rem;">{% trans 'DÉMARRAGE' %}</span>
                     </div>
-                    <div class="card-body text-center p-4">
-                        <ul class="list-unstyled text-start mb-4">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Idéal pour démarrer' %}</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Petite quantité (1-10 unités)' %}</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Remise de base' %}</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Formation technique incluse' %}</li>
-                        </ul>
+                    <h4 class="fw-bold text-plum mb-1">{% trans 'Pack Découverte' %}</h4>
+                    <p class="text-muted small mb-3">{% trans 'Pour les nouveaux installateurs et électriciens auto qui débutent.' %}</p>
+                    
+                    <div class="mb-3 bg-light-soft p-3 rounded-3 border text-center">
+                        <div class="small text-muted mb-1">{% trans "Volume d'achat" %}</div>
+                        <span class="h4 fw-bold text-plum">1 – 10</span>
+                        <span class="text-muted small">{% trans 'unités / mois' %}</span>
+                        <div class="fw-bold text-amber mt-1" style="font-size:0.85rem;"><i class="bi bi-tag-fill me-1"></i>{% trans 'Remise grossiste ~15%' %}</div>
                     </div>
+                    
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Idéal pour tester le matériel' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Sans engagement de durée' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Schémas de câblage et formation inclus' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Support technique WhatsApp direct' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Accès à la plateforme de tracking' %}</span></li>
+                    </ul>
+                    
+                    <a href="#resellerFormSection" class="btn btn-outline-plum w-100 mt-auto">
+                        {% trans 'Devenir Revendeur Découverte' %}
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-amber shadow animate-on-scroll position-relative">
-                    <div class="position-absolute top-0 start-50 translate-middle badge bg-amber text-plum rounded-pill px-3 py-2">
-                        {% trans 'Le plus populaire' %}
+
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="tier-card featured h-100">
+                    <div>
+                        <span class="badge bg-amber text-plum fw-bold px-3 py-1 rounded-pill mb-3" style="font-size:0.7rem;">{% trans 'LE PLUS POPULAIRE' %}</span>
                     </div>
-                    <div class="card-header bg-amber text-plum text-center py-3 mt-2 border-0">
-                        <h3 class="mb-0 h5 fw-bold">{% trans 'Pro' %}</h3>
+                    <h4 class="fw-bold text-plum mb-1">{% trans 'Pro Installateur' %}</h4>
+                    <p class="text-muted small mb-3">{% trans 'Pour les professionnels actifs avec des installations régulières.' %}</p>
+                    
+                    <div class="mb-3 bg-light-soft p-3 rounded-3 border text-center">
+                        <div class="small text-muted mb-1">{% trans "Volume d'achat" %}</div>
+                        <span class="h4 fw-bold text-plum">10 – 50</span>
+                        <span class="text-muted small">{% trans 'unités / mois' %}</span>
+                        <div class="fw-bold text-amber mt-1" style="font-size:0.85rem;"><i class="bi bi-tag-fill me-1"></i>{% trans 'Remise grossiste ~25%' %}</div>
                     </div>
-                    <div class="card-body text-center p-4">
-                        <ul class="list-unstyled text-start mb-4">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-plum me-2"></i>{% trans 'Pour les professionnels' %}</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-plum me-2"></i>{% trans 'Volume régulier (10-50 unités/mois)' %}</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-plum me-2"></i>{% trans 'Remise supérieure' %}</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-plum me-2"></i>{% trans 'Option Marque Blanche possible' %}</li>
-                        </ul>
-                    </div>
+                    
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Tarifs grossistes très avantageux' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Stock prioritaire garanti disponible à Fès' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Option Marque Blanche plateforme' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Supports marketing et fiches fournis' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Gestionnaire de compte dédié' %}</span></li>
+                    </ul>
+                    
+                    <a href="#resellerFormSection" class="btn btn-amber w-100 mt-auto">
+                        {% trans 'Rejoindre le Réseau Pro' %}
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-plum shadow animate-on-scroll">
-                    <div class="card-header bg-plum text-white text-center py-3">
-                        <h3 class="mb-0 h5">{% trans 'Distributeur' %}</h3>
+
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="tier-card h-100">
+                    <div>
+                        <span class="badge bg-plum text-white fw-bold px-3 py-1 rounded-pill mb-3" style="font-size:0.7rem;">{% trans 'EXCLUSIF' %}</span>
                     </div>
-                    <div class="card-body text-center p-4">
-                        <ul class="list-unstyled text-start mb-4">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Pour les grands comptes' %}</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Fort volume (+50 unités/mois)' %}</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Remise maximale (jusqu\'à 35%)' %}</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-amber me-2"></i>{% trans 'Marque Blanche gratuite' %}</li>
-                        </ul>
+                    <h4 class="fw-bold text-plum mb-1">{% trans 'Distributeur Régional' %}</h4>
+                    <p class="text-muted small mb-3">{% trans 'Pour les grossistes, entreprises de sécurité et distributeurs régionaux.' %}</p>
+                    
+                    <div class="mb-3 bg-light-soft p-3 rounded-3 border text-center">
+                        <div class="small text-muted mb-1">{% trans "Volume d'achat" %}</div>
+                        <span class="h4 fw-bold text-plum">+50</span>
+                        <span class="text-muted small">{% trans 'unités / mois' %}</span>
+                        <div class="fw-bold text-amber mt-1" style="font-size:0.85rem;"><i class="bi bi-tag-fill me-1"></i>{% trans "Remise maximale jusqu'à 35%" %}</div>
                     </div>
+                    
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Meilleure grille tarifaire au Maroc' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Plateforme & App Marque Blanche offertes' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Exclusivité régionale selon secteur' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Serveur dédié & intégrations API ERP' %}</span></li>
+                        <li class="mb-2 small d-flex align-items-start"><i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i><span>{% trans 'Conditions de paiement flexibles' %}</span></li>
+                    </ul>
+                    
+                    <a href="#resellerFormSection" class="btn btn-outline-plum w-100 mt-auto">
+                        {% trans 'Postuler comme Distributeur' %}
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-5" id="resellerFormSection">
             <div class="col-lg-8 mx-auto">
                 <div class="card shadow-lg border-0 animate-on-scroll">
                     <div class="card-body p-5">
-                        <h3 class="text-center text-plum fw-bold mb-4">{% trans 'Demande d\'Ouverture de Compte Revendeur' %}</h3>
+                        <h3 class="text-center text-plum fw-bold mb-4">{% trans "Demande d'Ouverture de Compte Revendeur" %}</h3>
                         
                         {% if messages %}
                             {% for message in messages %}
@@ -184,7 +224,7 @@
                                     {% if form.city.errors %}<div class="text-danger small">{{ form.city.errors.0 }}</div>{% endif %}
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="{{ form.activity_type.id_for_label }}" class="form-label">{% trans 'Secteur d\'Activité' %}</label>
+                                    <label for="{{ form.activity_type.id_for_label }}" class="form-label">{% trans "Secteur d'Activité" %}</label>
                                     {{ form.activity_type }}
                                     {% if form.activity_type.errors %}<div class="text-danger small">{{ form.activity_type.errors.0 }}</div>{% endif %}
                                 </div>

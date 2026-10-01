@@ -1,12 +1,11 @@
 import random
 from django.shortcuts import render, redirect
-from django.core.mail import send_mail
-from django.conf import settings
 from django.contrib import messages
 from django.utils.translation import gettext as _
 from .forms import WholesaleInquiryForm, ResellerInquiryForm, PlatformInquiryForm
 from apps.core.models import CompanyInfo
 from apps.services.models import Product
+from apps.core.emails import send_inquiry_emails
 
 def wholesale_view(request):
     products = Product.objects.filter(is_available=True)
@@ -16,35 +15,20 @@ def wholesale_view(request):
         form = WholesaleInquiryForm(request.POST)
         if form.is_valid():
             inquiry = form.save()
-            try:
-                send_mail(
-                    subject=f'[M2web B2B] Nouvelle demande de {inquiry.company_name}',
-                    message=f'Nouvelle demande B2B reçue:\n\n'
-                            f'Entreprise: {inquiry.company_name}\n'
-                            f'Contact: {inquiry.contact_person}\n'
-                            f'Email: {inquiry.email}\n'
-                            f'Téléphone: {inquiry.phone}\n'
-                            f'Ville: {inquiry.city}\n'
-                            f'Volume mensuel: {inquiry.get_monthly_volume_display()}\n'
-                            f'Types demandés: {inquiry.hardware_types_needed}\n'
-                            f'Message: {inquiry.message}',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[company.email if company and company.email else 'm2web@m2web.com'],
-                    fail_silently=True,
-                )
-                send_mail(
-                    subject='M2web Maroc — Demande B2B bien reçue',
-                    message=f'Bonjour {inquiry.contact_person},\n\n'
-                            f'Nous avons bien reçu votre demande de devis en gros.\n'
-                            f'Notre équipe commerciale vous contactera sous 24h.\n\n'
-                            f'Cordialement,\nL\'équipe M2web Maroc\n'
-                            f'+212 6 61 76 14 89',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[inquiry.email],
-                    fail_silently=True,
-                )
-            except Exception:
-                pass
+            details = {
+                'Entreprise': inquiry.company_name,
+                'Ville': inquiry.city,
+                'Volume mensuel': inquiry.get_monthly_volume_display(),
+                'Types demandés': inquiry.hardware_types_needed,
+                'Message': inquiry.message or 'N/A',
+            }
+            send_inquiry_emails(
+                inquiry_type="Demande de Devis Vente en Gros / B2B",
+                details=details,
+                user_email=inquiry.email,
+                user_name=inquiry.contact_person,
+                user_phone=inquiry.phone
+            )
             messages.success(request, _('Votre demande a été envoyée avec succès. Nous vous contacterons sous 24h.'))
             return redirect('wholesale:success')
     else:
@@ -70,37 +54,22 @@ def reseller_view(request):
         form = ResellerInquiryForm(request.POST)
         if form.is_valid():
             inquiry = form.save()
-            try:
-                send_mail(
-                    subject=f'[M2web Revendeur] Nouvelle candidature de {inquiry.company_name}',
-                    message=f'Nouvelle candidature revendeur:\n\n'
-                            f'Entreprise: {inquiry.company_name}\n'
-                            f'Contact: {inquiry.contact_person}\n'
-                            f'Email: {inquiry.email}\n'
-                            f'Téléphone: {inquiry.phone}\n'
-                            f'Ville: {inquiry.city}\n'
-                            f'Secteur: {inquiry.get_activity_type_display()}\n'
-                            f'Volume estimé: {inquiry.get_expected_volume_display()}\n'
-                            f'Expérience installation: {"Oui" if inquiry.has_installed_before else "Non"}\n'
-                            f'Intéressé marque blanche: {"Oui" if inquiry.interested_in_whitelabel else "Non"}\n'
-                            f'Message: {inquiry.message}',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[company.email if company and company.email else 'm2web@m2web.com'],
-                    fail_silently=True,
-                )
-                send_mail(
-                    subject='M2web Maroc — Candidature Revendeur bien reçue',
-                    message=f'Bonjour {inquiry.contact_person},\n\n'
-                            f'Nous avons bien reçu votre candidature pour devenir revendeur M2web.\n'
-                            f'Notre équipe commerciale analysera votre profil et vous contactera sous 48h.\n\n'
-                            f'Cordialement,\nL\'équipe M2web Maroc\n'
-                            f'+212 6 61 76 14 89',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[inquiry.email],
-                    fail_silently=True,
-                )
-            except Exception:
-                pass
+            details = {
+                'Entreprise / Atelier': inquiry.company_name,
+                'Ville d\'activité': inquiry.city,
+                'Secteur': inquiry.get_activity_type_display(),
+                'Volume estimé': inquiry.get_expected_volume_display(),
+                'Expérience installation': "Oui" if inquiry.has_installed_before else "Non",
+                'Intéressé marque blanche': "Oui" if inquiry.interested_in_whitelabel else "Non",
+                'Message': inquiry.message or 'N/A',
+            }
+            send_inquiry_emails(
+                inquiry_type="Candidature Programme Revendeur M2web",
+                details=details,
+                user_email=inquiry.email,
+                user_name=inquiry.contact_person,
+                user_phone=inquiry.phone
+            )
             messages.success(request, _('Votre candidature a été envoyée avec succès. Nous vous contacterons sous 48h.'))
             return redirect('wholesale:success')
     else:
@@ -118,37 +87,22 @@ def platform_view(request):
         form = PlatformInquiryForm(request.POST)
         if form.is_valid():
             inquiry = form.save()
-            try:
-                send_mail(
-                    subject=f'[M2web Plateforme] Demande de {inquiry.company_name}',
-                    message=f'Nouvelle demande plateforme GPS:\n\n'
-                            f'Entreprise: {inquiry.company_name}\n'
-                            f'Contact: {inquiry.contact_name}\n'
-                            f'Email: {inquiry.email}\n'
-                            f'Téléphone: {inquiry.phone}\n'
-                            f'Ville: {inquiry.city}\n'
-                            f'Formule: {inquiry.get_acquisition_mode_display()}\n'
-                            f'Taille flotte: {inquiry.get_fleet_size_display()}\n'
-                            f'Rapports avancés: {"Oui" if inquiry.needs_reports else "Non"}\n'
-                            f'Contrôle carburant: {"Oui" if inquiry.needs_fuel_sensor else "Non"}\n'
-                            f'Message: {inquiry.message}',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[company.email if company and company.email else 'm2web@m2web.com'],
-                    fail_silently=True,
-                )
-                send_mail(
-                    subject='M2web Maroc — Demande Plateforme GPS bien reçue',
-                    message=f'Bonjour {inquiry.contact_name},\n\n'
-                            f'Nous avons bien reçu votre demande concernant notre plateforme GPS.\n'
-                            f'Un expert technique vous contactera pour une démonstration personnalisée.\n\n'
-                            f'Cordialement,\nL\'équipe M2web Maroc\n'
-                            f'+212 6 61 76 14 89',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[inquiry.email],
-                    fail_silently=True,
-                )
-            except Exception:
-                pass
+            details = {
+                'Entreprise / Organisation': inquiry.company_name,
+                'Ville': inquiry.city,
+                'Formule d\'acquisition': inquiry.get_acquisition_mode_display(),
+                'Taille de la flotte': inquiry.get_fleet_size_display(),
+                'Besoin rapports avancés': "Oui" if inquiry.needs_reports else "Non",
+                'Besoin contrôle carburant': "Oui" if inquiry.needs_fuel_sensor else "Non",
+                'Message / Détails': inquiry.message or 'N/A',
+            }
+            send_inquiry_emails(
+                inquiry_type="Demande Plateforme & Serveur GPS M2web",
+                details=details,
+                user_email=inquiry.email,
+                user_name=inquiry.contact_name,
+                user_phone=inquiry.phone
+            )
             messages.success(request, _('Votre demande a été envoyée avec succès. Un expert vous contactera prochainement.'))
             return redirect('wholesale:success')
     else:

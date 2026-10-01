@@ -11,7 +11,8 @@ DATABASES = {
     }
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+if not EMAIL_HOST_PASSWORD:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # CSP in report-only mode for dev
 CONTENT_SECURITY_POLICY_REPORT_ONLY = CONTENT_SECURITY_POLICY

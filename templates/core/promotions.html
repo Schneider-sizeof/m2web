@@ -60,38 +60,32 @@
         <div class="row g-4 justify-content-center">
             {% for promo in promotions %}
             <div class="col-lg-4 col-md-6 animate-on-scroll">
-                <div class="tier-card {% if promo.is_featured %}featured{% endif %} h-100 p-0 overflow-hidden">
-                    {% if promo.badge %}
-                    <div class="position-absolute top-0 start-0 m-3 z-2">
-                        <span class="badge bg-danger text-white fw-bold px-3 py-2 rounded-pill shadow-sm">
+                <div class="tier-card {% if promo.is_featured %}featured{% endif %} h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        {% if promo.badge %}
+                        <span class="badge bg-danger text-white fw-bold px-3 py-1 rounded-pill" style="font-size:0.75rem;">
                             <i class="bi bi-fire me-1"></i>{{ promo.badge }}
                         </span>
-                    </div>
-                    {% endif %}
-                    
-                    {% if promo.discount_label %}
-                    <div class="position-absolute top-0 end-0 m-3 z-2">
-                        <span class="badge bg-amber text-plum fw-bold px-3 py-2 rounded-pill shadow-sm">
+                        {% else %}
+                        <span></span>
+                        {% endif %}
+                        {% if promo.discount_label %}
+                        <span class="badge bg-amber text-plum fw-bold px-2 py-1 rounded-pill" style="font-size:0.75rem;">
                             {{ promo.discount_label }}
                         </span>
+                        {% endif %}
                     </div>
-                    {% endif %}
 
                     {% if promo.image %}
-                    <div class="promo-image-wrap position-relative">
-                        <img src="{{ promo.image.url }}" alt="{{ promo.title }}" class="w-100" style="height: 180px; object-fit: cover;">
-                    </div>
-                    {% else %}
-                    <div class="promo-image-wrap position-relative bg-plum d-flex align-items-center justify-content-center" style="height: 140px;">
-                        <i class="bi bi-geo-alt-fill text-amber display-4"></i>
+                    <div class="promo-image-wrap rounded-3 mb-3 overflow-hidden">
+                        <img src="{{ promo.image.url }}" alt="{{ promo.title }}" class="w-100" style="height: 160px; object-fit: cover;">
                     </div>
                     {% endif %}
                     
-                    <div class="p-4 d-flex flex-column flex-grow-1">
-                        <h4 class="fw-bold text-plum mb-2">{{ promo.title }}</h4>
-                        {% if promo.summary %}
-                        <p class="text-muted small mb-3">{{ promo.summary }}</p>
-                        {% endif %}
+                    <h4 class="fw-bold text-plum mb-2">{{ promo.title }}</h4>
+                    {% if promo.summary %}
+                    <p class="text-muted small mb-3">{{ promo.summary }}</p>
+                    {% endif %}
                         
                         <!-- Price Block -->
                         <div class="bg-light-soft p-3 rounded-3 mb-3 text-center border">
@@ -120,7 +114,7 @@
                         
                         {% if promo.valid_until %}
                         <div class="alert alert-warning py-1 px-2 text-center small mb-3 text-dark">
-                            <i class="bi bi-clock-history me-1 text-danger"></i> {% trans 'Valable jusqu\'au' %} <strong>{{ promo.valid_until|date:'d/m/Y' }}</strong>
+                            <i class="bi bi-clock-history me-1 text-danger"></i> {% trans "Valable jusqu'au" %} <strong>{{ promo.valid_until|date:'d/m/Y' }}</strong>
                         </div>
                         {% endif %}
 
@@ -163,7 +157,7 @@
         <div class="row align-items-center g-4">
             <div class="col-lg-8 animate-on-scroll">
                 <span class="badge bg-amber text-plum fw-bold px-3 py-1 rounded-pill mb-2">{% trans 'Flottes & Entreprises' %}</span>
-                <h2 class="display-6 fw-bold mb-2">{% trans 'Besoin d\'un volume important ou d\'un pack sur mesure ?' %}</h2>
+                <h2 class="display-6 fw-bold mb-2">{% trans "Besoin d'un volume important ou d'un pack sur mesure ?" %}</h2>
                 <p class="text-white-50 lead mb-0">{% trans 'Nous proposons des tarifs dégressifs et des conditions personnalisées pour les parcs de plus de 5 véhicules, installateurs et revendeurs.' %}</p>
             </div>
             <div class="col-lg-4 text-lg-end animate-on-scroll">

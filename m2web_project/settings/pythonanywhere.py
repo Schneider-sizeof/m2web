@@ -28,8 +28,11 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# Email backend (console by default for free tier accounts without outbound SMTP)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Email backend (Gmail SMTP is supported on PythonAnywhere whitelist)
+if EMAIL_HOST_PASSWORD:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # CSRF Trusted Origins for PythonAnywhere HTTPS
 CSRF_TRUSTED_ORIGINS = [

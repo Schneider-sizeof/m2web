@@ -217,10 +217,16 @@ LOGIN_URL = 'admin:login'
 
 SITE_NAME = 'M2web Maroc'
 
-# Email Config (placeholders)
-EMAIL_HOST = os.getenv('EMAIL_HOST', '')
+# Email Configuration (Gmail SMTP)
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
 EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
-DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', '')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'm2webmaroc23@gmail.com')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'M2web Maroc <m2webmaroc23@gmail.com>')
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+
+if EMAIL_HOST_PASSWORD:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

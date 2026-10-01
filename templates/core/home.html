@@ -61,10 +61,10 @@
                             <span class="hero-mac-dot green"></span>
                         </div>
                         <div class="hero-dashboard-title">
-                            <i class="bi bi-geo-alt-fill text-amber me-1"></i> M2web Fleet Telematics — Live Tracking
+                            <i class="bi bi-geo-alt-fill text-amber me-1"></i> {% trans 'M2web Fleet Telematics — Suivi en Direct' %}
                         </div>
                         <div>
-                            <span class="telemetry-live-dot me-1"></span> <span class="small text-success fw-bold">ONLINE</span>
+                            <span class="telemetry-live-dot me-1"></span> <span class="small text-success fw-bold">{% trans 'EN LIGNE' %}</span>
                         </div>
                     </div>
 
@@ -77,13 +77,19 @@
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="{% static 'images/hero-dashboard.png' %}" alt="M2web Dashboard Live" class="d-block w-100" onerror="this.src='{% static 'images/hero-fleet.jpg' %}';">
+                                    <a href="{% url 'wholesale:platform' %}" class="d-block" title="{% trans 'Découvrir la Plateforme & Serveur GPS' %}">
+                                        <img src="{% static 'images/hero-dashboard.png' %}" alt="{% trans 'Plateforme & Serveur GPS M2web' %}" class="d-block w-100" onerror="this.src='{% static 'images/hero-fleet.jpg' %}';">
+                                    </a>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{% static 'images/hero-fleet.jpg' %}" alt="{% trans 'Suivi de flotte en temps réel' %}" class="d-block w-100" onerror="this.src='{% static 'images/hero-dashboard.png' %}';">
+                                    <a href="{% url 'services:list' %}" class="d-block" title="{% trans 'Découvrir nos Solutions & Services GPS' %}">
+                                        <img src="{% static 'images/hero-fleet.jpg' %}" alt="{% trans 'Suivi de flotte en temps réel' %}" class="d-block w-100" onerror="this.src='{% static 'images/hero-dashboard.png' %}';">
+                                    </a>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{% static 'images/hero-reports.jpg' %}" alt="{% trans 'Rapports et statistiques GPS' %}" class="d-block w-100" onerror="this.src='{% static 'images/hero-dashboard.png' %}';">
+                                    <a href="{% url 'core:mobile_app' %}" class="d-block" title="{% trans 'Découvrir l’Application Mobile GPS' %}">
+                                        <img src="{% static 'images/hero-reports.jpg' %}" alt="{% trans 'Application Mobile GPS & Rapports' %}" class="d-block w-100" onerror="this.src='{% static 'images/hero-dashboard.png' %}';">
+                                    </a>
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -103,11 +109,11 @@
                         </div>
                         <div>
                             <div class="d-flex align-items-center gap-2">
-                                <span class="fw-bold text-white small">Volvo FH16 (Flotte Fès)</span>
+                                <span class="fw-bold text-white small">{% trans 'Volvo FH16 (Flotte Fès)' %}</span>
                                 <span class="telemetry-live-dot"></span>
                             </div>
                             <div class="text-white-50" style="font-size: 0.75rem;">
-                                84 km/h • Transit Fès ➔ Casa • ⛽ 92%
+                                {% trans '84 km/h • Transit Fès ➔ Casa • ⛽ 92%' %}
                             </div>
                         </div>
                     </div>
@@ -214,7 +220,7 @@
     <div class="container">
         <div class="text-center mb-5 animate-on-scroll">
             <h2 class="section-title text-center">{% trans 'Nos Solutions de' %} <span class="text-amber">{% trans 'Télématique' %}</span></h2>
-            <p class="section-subtitle text-center">{% trans 'Des technologies de géolocalisation professionnelles adaptées à chaque type de véhicule et d\'activité.' %}</p>
+            <p class="section-subtitle text-center">{% trans "Des technologies de géolocalisation professionnelles adaptées à chaque type de véhicule et d'activité." %}</p>
         </div>
 
         <div class="row g-4">
@@ -258,7 +264,7 @@
         <div class="d-flex justify-content-between align-items-end mb-5 animate-on-scroll flex-wrap gap-3">
             <div>
                 <h2 class="section-title mb-0">{% trans 'Traceurs GPS' %} <span class="text-amber">{% trans '& Équipements' %}</span></h2>
-                <p class="section-subtitle mb-0">{% trans 'Du matériel certifié, prêt à l\'emploi pour particuliers et professionnels' %}</p>
+                <p class="section-subtitle mb-0">{% trans "Du matériel certifié, prêt à l'emploi pour particuliers et professionnels" %}</p>
             </div>
             <a href="{% url 'services:list' %}" class="btn btn-outline-amber">
                 {% trans 'Catalogue Complet' %} <i class="bi bi-arrow-right"></i>
@@ -290,8 +296,8 @@
                         <!-- Specs preview -->
                         <div class="d-flex flex-wrap gap-1 mb-3">
                             <span class="product-spec-pill">4G LTE</span>
-                            <span class="product-spec-pill">Temps Réel</span>
-                            <span class="product-spec-pill">App iOS/Android</span>
+                            <span class="product-spec-pill">{% trans 'Temps Réel' %}</span>
+                            <span class="product-spec-pill">{% trans 'App iOS/Android' %}</span>
                         </div>
 
                         <div class="product-footer pt-3 mt-auto border-top d-flex justify-content-between align-items-center">
@@ -330,35 +336,61 @@
         <div class="row g-4 justify-content-center">
             {% for promo in promotions %}
             <div class="col-lg-4 col-md-6 animate-on-scroll">
-                <div class="promo-card">
-                    <div class="promo-badge">{{ promo.badge }}</div>
-                    {% if promo.image %}
-                    <div class="promo-image-wrap">
-                        <img src="{{ promo.image.url }}" alt="{{ promo.title }}">
+                <div class="tier-card {% if promo.is_featured %}featured{% endif %} h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        {% if promo.badge %}
+                        <span class="badge bg-danger text-white fw-bold px-3 py-1 rounded-pill" style="font-size:0.75rem;">
+                            <i class="bi bi-fire me-1"></i>{{ promo.badge }}
+                        </span>
+                        {% else %}
+                        <span></span>
+                        {% endif %}
+                        {% if promo.discount_label %}
+                        <span class="badge bg-amber text-plum fw-bold px-2 py-1 rounded-pill" style="font-size:0.75rem;">
+                            {{ promo.discount_label }}
+                        </span>
+                        {% endif %}
+                    </div>
+                    
+                    <h4 class="fw-bold text-plum mb-2">{{ promo.title }}</h4>
+                    {% if promo.summary %}
+                    <p class="text-muted small mb-3">{{ promo.summary }}</p>
+                    {% endif %}
+                    
+                    {% if promo.features %}
+                    <ul class="list-unstyled mb-4 flex-grow-1 small">
+                        {% for feature in promo.get_features_list %}
+                        <li class="mb-2 d-flex align-items-start">
+                            <i class="bi bi-check-circle-fill text-amber me-2 mt-1"></i>
+                            <span>{{ feature }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                    
+                    <!-- Price Block -->
+                    <div class="bg-light-soft p-3 rounded-3 mb-3 text-center border">
+                        {% if promo.original_price %}
+                        <div class="text-decoration-line-through text-muted small mb-1">{{ promo.original_price|floatformat:0 }} DH</div>
+                        {% endif %}
+                        <div class="d-flex align-items-baseline justify-content-center gap-1">
+                            <span class="display-6 fw-bold text-plum">{{ promo.promo_price|floatformat:0 }}</span>
+                            <span class="fw-bold text-amber">DH</span>
+                            {% if promo.price_unit %}
+                            <span class="text-muted small">/ {{ promo.price_unit|cut:'/'|cut:' ' }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    {% if promo.valid_until %}
+                    <div class="text-danger small text-center mb-3">
+                        <i class="bi bi-clock-history me-1"></i>{% trans "Valable jusqu'au" %} <strong>{{ promo.valid_until|date:'d/m/Y' }}</strong>
                     </div>
                     {% endif %}
-                    <div class="promo-body">
-                        <h4 class="fw-bold text-plum mb-2">{{ promo.title }}</h4>
-                        <p class="text-muted small mb-3">{{ promo.summary }}</p>
-                        {% if promo.features %}
-                        <ul class="promo-features list-unstyled mb-3">
-                            {% for feature in promo.get_features_list %}
-                            <li><i class="bi bi-check-circle-fill text-amber me-2"></i>{{ feature }}</li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                        <div class="promo-pricing mb-3">
-                            {% if promo.original_price %}
-                            <span class="promo-original-price">{{ promo.original_price }} DH</span>
-                            {% endif %}
-                            <span class="promo-price">{{ promo.promo_price }} DH</span>
-                            <span class="text-muted small">{{ promo.price_unit }}</span>
-                        </div>
-                        {% if promo.valid_until %}
-                        <p class="promo-validity text-danger small"><i class="bi bi-clock me-1"></i>{% trans 'Valable jusqu\'au' %} {{ promo.valid_until|date:'d/m/Y' }}</p>
-                        {% endif %}
-                        <a href="{% url 'contact:contact' %}" class="btn btn-amber w-100">{{ promo.cta_text }} <i class="bi bi-arrow-right ms-1"></i></a>
-                    </div>
+                    
+                    <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}?text={% filter urlencode %}{% trans 'Bonjour, je suis intéressé par l’offre promotionnelle :' %} {{ promo.title }}{% endfilter %}" target="_blank" class="btn btn-amber w-100 mt-auto">
+                        {{ promo.cta_text|default:_("Profiter de l'offre") }} <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
                 </div>
             </div>
             {% endfor %}
@@ -496,7 +528,7 @@
                 <div class="contact-info-card">
                     <div class="contact-icon-box whatsapp"><i class="bi bi-whatsapp"></i></div>
                     <div class="contact-details">
-                        <h5>WhatsApp Support Client</h5>
+                        <h5>{% trans 'WhatsApp Support Client' %}</h5>
                         <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
                     </div>
                 </div>

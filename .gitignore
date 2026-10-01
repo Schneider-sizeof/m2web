@@ -28,3 +28,6 @@ desktop.ini
 
 # Logs
 *.log
+
+# 2FA QR code secrets
+media/2fa_qr_*.png

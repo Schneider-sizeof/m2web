@@ -6,39 +6,26 @@ from django.utils.translation import gettext as _
 from .forms import ContactForm
 from apps.core.models import CompanyInfo
 
+from apps.core.emails import send_inquiry_emails
+
 def contact_view(request):
     company = CompanyInfo.get_instance()
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             msg = form.save()
-            try:
-                # Notification to company
-                send_mail(
-                    subject=f'[M2web Contact] {msg.subject}',
-                    message=f'Nouveau message de contact:\n\n'
-                            f'Nom: {msg.name}\n'
-                            f'Email: {msg.email}\n'
-                            f'Téléphone: {msg.phone}\n'
-                            f'Sujet: {msg.subject}\n\n'
-                            f'Message:\n{msg.message}',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[company.email if company and company.email else 'm2web@m2web.com'],
-                    fail_silently=True,
-                )
-                # Confirmation to sender
-                send_mail(
-                    subject='M2web Maroc — Message bien reçu',
-                    message=f'Bonjour {msg.name},\n\n'
-                            f'Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais.\n\n'
-                            f'Cordialement,\nL\'équipe M2web Maroc\n'
-                            f'+212 6 61 76 14 89',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[msg.email],
-                    fail_silently=True,
-                )
-            except Exception:
-                pass
+            details = {
+                'Entreprise': getattr(msg, 'company_name', '') or 'Particulier',
+                'Sujet': msg.subject,
+                'Message': msg.message,
+            }
+            send_inquiry_emails(
+                inquiry_type=f"Message de Contact ({msg.subject})",
+                details=details,
+                user_email=msg.email,
+                user_name=msg.name,
+                user_phone=msg.phone
+            )
             messages.success(request, _('Votre message a été envoyé avec succès. Nous vous répondrons rapidement.'))
             return redirect('contact:success')
     else:

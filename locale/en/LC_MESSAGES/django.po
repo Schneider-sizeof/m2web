@@ -1069,7 +1069,7 @@ msgid "Samedi :"
 msgstr "Saturday:"
 
 msgid "Sans engagement de durée"
-msgstr "No commitment"
+msgstr "No time commitment"
 
 msgid "Secteur d'Activité"
 msgstr "Business Sector"
@@ -1473,3 +1473,199 @@ msgstr "200+ units/month"
 
 msgid "Contact WhatsApp"
 msgstr "WhatsApp Contact"
+
+msgid "Grille Tarifaire Grossiste"
+msgstr "Wholesale Pricing Tier"
+
+msgid "Niveaux de Partenariat & Marges"
+msgstr "Partnership Levels & Margins"
+
+msgid ""
+"Des remises dégressives et des avantages exclusifs selon votre volume "
+"d'achat mensuel."
+msgstr ""
+"Sliding scale discounts and exclusive benefits tailored to your monthly "
+"order volume."
+
+msgid "DÉMARRAGE"
+msgstr "STARTER"
+
+msgid "Pack Découverte"
+msgstr "Discovery Pack"
+
+msgid "Pour les nouveaux installateurs et électriciens auto qui débutent."
+msgstr "For new installers and auto electricians getting started."
+
+msgid "Volume d'achat"
+msgstr "Purchase Volume"
+
+msgid "unités / mois"
+msgstr "units / month"
+
+msgid "Remise grossiste ~15%"
+msgstr "Wholesale discount ~15%"
+
+msgid "Idéal pour tester le matériel"
+msgstr "Ideal for testing hardware"
+
+msgid "Schémas de câblage et formation inclus"
+msgstr "Wiring diagrams & training included"
+
+msgid "Support technique WhatsApp direct"
+msgstr "Direct WhatsApp tech support"
+
+msgid "Accès à la plateforme de tracking"
+msgstr "Access to tracking platform"
+
+msgid "Devenir Revendeur Découverte"
+msgstr "Become a Discovery Reseller"
+
+msgid "LE PLUS POPULAIRE"
+msgstr "MOST POPULAR"
+
+msgid "Pro Installateur"
+msgstr "Pro Installer"
+
+msgid "Pour les professionnels actifs avec des installations régulières."
+msgstr "For active professionals with regular installations."
+
+msgid "Remise grossiste ~25%"
+msgstr "Wholesale discount ~25%"
+
+msgid "Tarifs grossistes très avantageux"
+msgstr "Highly advantageous wholesale rates"
+
+msgid "Stock prioritaire garanti disponible à Fès"
+msgstr "Guaranteed priority stock available in Fez"
+
+msgid "Option Marque Blanche plateforme"
+msgstr "White Label platform option"
+
+msgid "Supports marketing et fiches fournis"
+msgstr "Marketing materials & datasheets provided"
+
+msgid "Gestionnaire de compte dédié"
+msgstr "Dedicated account manager"
+
+msgid "Rejoindre le Réseau Pro"
+msgstr "Join the Pro Network"
+
+msgid "EXCLUSIF"
+msgstr "EXCLUSIVE"
+
+msgid "Distributeur Régional"
+msgstr "Regional Distributor"
+
+msgid ""
+"Pour les grossistes, entreprises de sécurité et distributeurs régionaux."
+msgstr "For wholesalers, security firms, and regional distributors."
+
+msgid "Remise maximale jusqu'à 35%"
+msgstr "Maximum discount up to 35%"
+
+msgid "Meilleure grille tarifaire au Maroc"
+msgstr "Best pricing tier in Morocco"
+
+msgid "Plateforme & App Marque Blanche offertes"
+msgstr "Free White Label Platform & App"
+
+msgid "Exclusivité régionale selon secteur"
+msgstr "Regional exclusivity by territory"
+
+msgid "Serveur dédié & intégrations API ERP"
+msgstr "Dedicated server & ERP API integrations"
+
+msgid "Conditions de paiement flexibles"
+msgstr "Flexible payment terms"
+
+msgid "Postuler comme Distributeur"
+msgstr "Apply as Distributor"
+
+msgid "Découvrir la Plateforme & Serveur GPS"
+msgstr "Discover GPS Platform & Server"
+
+msgid "Découvrir nos Solutions & Services GPS"
+msgstr "Discover our GPS Solutions & Services"
+
+msgid "Découvrir l’Application Mobile GPS"
+msgstr "Discover GPS Mobile App"
+
+msgid "Application Mobile GPS & Rapports"
+msgstr "GPS Mobile App & Reports"
+
+msgid "84 km/h • Transit Fès ➔ Casa • ⛽ 92%"
+msgstr "84 km/h • Transit Fez ➔ Casa • ⛽ 92%"
+
+msgid "App iOS/Android"
+msgstr "iOS & Android App"
+
+msgid "Dacia Logan"
+msgstr "Dacia Logan"
+
+msgid "Fès → Casablanca • 84 km/h"
+msgstr "Fez → Casablanca • 84 km/h"
+
+msgid "Hay Riad, Rabat • 12 min"
+msgstr "Hay Riad, Rabat • 12 min"
+
+msgid "M2web Fleet Telematics — Suivi en Direct"
+msgstr "M2web Fleet Telematics — Live Tracking"
+
+msgid "Moto Livraison"
+msgstr "Delivery Motorbike"
+
+msgid "Médina, Fès • 32 km/h"
+msgstr "Medina, Fez • 32 km/h"
+
+msgid "NEW"
+msgstr "NEW"
+
+msgid "PRO"
+msgstr "PRO"
+
+msgid "Volvo FH16"
+msgstr "Volvo FH16"
+
+msgid "Volvo FH16 (Flotte Fès)"
+msgstr "Volvo FH16 (Fez Fleet)"
+
+msgid "Traceur OBD-II"
+msgstr "OBD-II Tracker"
+
+msgid "Traceur Filaire (Hardwired)"
+msgstr "Hardwired Tracker"
+
+msgid "Traceur Magnétique Autonome"
+msgstr "Standalone Magnetic Tracker"
+
+msgid "Traceur Personnel / Portatif"
+msgstr "Personal / Portable Tracker"
+
+msgid "Capteur & Accessoire"
+msgstr "Sensor & Accessory"
+
+msgid "Fermé"
+msgstr "Closed"
+
+msgid ""
+"Bénéficiez de remises allant jusqu'à 35%% sur le matériel et les "
+"abonnements."
+msgstr "Benefit from discounts up to 35%% on hardware and subscriptions."
+
+msgid "Remise maximale (jusqu'à 35%%)"
+msgstr "Maximum discount (up to 35%%)"
+
+msgid "100%% Marocain"
+msgstr "100%% Moroccan"
+
+msgid "Remise grossiste ~15%%"
+msgstr "Wholesale discount ~15%%"
+
+msgid "Remise grossiste ~25%%"
+msgstr "Wholesale discount ~25%%"
+
+msgid "Remise maximale jusqu'à 35%%"
+msgstr "Maximum discount up to 35%%"
+
+msgid "84 km/h • Transit Fès ➔ Casa • ⛽ 92%%"
+msgstr "84 km/h • Transit Fez ➔ Casa • ⛽ 92%%"

@@ -254,9 +254,9 @@
             }
         };
 
-        // 10. Mobile menu auto-close on link click
+        // 10. Mobile menu auto-close on link click (exclude dropdown toggles)
         const initMobileMenuClose = () => {
-            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle), .navbar-nav .dropdown-item');
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.querySelector('.navbar-collapse');
             
@@ -266,6 +266,14 @@
                 link.addEventListener('click', () => {
                     if (window.getComputedStyle(navbarToggler).display !== 'none' && 
                         navbarCollapse.classList.contains('show')) {
+                        // Use Bootstrap collapse API if available or click toggler
+                        if (window.bootstrap && bootstrap.Collapse) {
+                            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                            if (bsCollapse) {
+                                bsCollapse.hide();
+                                return;
+                            }
+                        }
                         navbarToggler.click(); // Trigger close
                     }
                 });

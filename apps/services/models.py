@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
 
 class Service(models.Model):
@@ -30,11 +31,11 @@ class Service(models.Model):
 
 class Product(models.Model):
     CATEGORY_CHOICES = [
-        ('obd', 'OBD-II Tracker'),
-        ('hardwired', 'Hardwired Tracker'),
-        ('magnetic', 'Magnetic / Portable'),
-        ('personal', 'Personal / Asset Tracker'),
-        ('sensor', 'Sensor / Accessory')
+        ('obd', _('Traceur OBD-II')),
+        ('hardwired', _('Traceur Filaire (Hardwired)')),
+        ('magnetic', _('Traceur Magnétique Autonome')),
+        ('personal', _('Traceur Personnel / Portatif')),
+        ('sensor', _('Capteur & Accessoire')),
     ]
     name = models.CharField(max_length=200)
     slug = models.SlugField(unique=True, allow_unicode=True)

@@ -925,7 +925,7 @@ msgid "Petite quantité (1-10 unités)"
 msgstr "كمية صغيرة (1-10 وحدات)"
 
 msgid "Plateforme & Serveur GPS M2web"
-msgstr "منصة وخادم GPS M2web"
+msgstr "منصة وخادم GPS من M2web"
 
 msgid "Plateforme Serveur en Marque Blanche Complète (Logo + Domaine + App)"
 msgstr "منصة خادم بعلامة بيضاء كاملة (شعار + نطاق + تطبيق)"
@@ -1409,3 +1409,197 @@ msgstr "+200 وحدة/شهر"
 
 msgid "Contact WhatsApp"
 msgstr "تواصل عبر واتساب"
+
+msgid "Grille Tarifaire Grossiste"
+msgstr "جدول أسعار الجملة"
+
+msgid "Niveaux de Partenariat & Marges"
+msgstr "مستويات الشراكة وهوامش الربح"
+
+msgid ""
+"Des remises dégressives et des avantages exclusifs selon votre volume "
+"d'achat mensuel."
+msgstr "تخفيضات تدريجية ومزايا حصرية حسب حجم مشترياتكم الشهرية."
+
+msgid "DÉMARRAGE"
+msgstr "الانطلاق"
+
+msgid "Pack Découverte"
+msgstr "باقة الاكتشاف"
+
+msgid "Pour les nouveaux installateurs et électriciens auto qui débutent."
+msgstr "لفنيي التركيب وكهربائيي السيارات المبتدئين."
+
+msgid "Volume d'achat"
+msgstr "حجم المشتريات"
+
+msgid "unités / mois"
+msgstr "وحدة / شهر"
+
+msgid "Remise grossiste ~15%"
+msgstr "خصم جملة ~15%"
+
+msgid "Idéal pour tester le matériel"
+msgstr "مثالي لاختبار الأجهزة"
+
+msgid "Schémas de câblage et formation inclus"
+msgstr "مخططات التوصيل والتدريب مشمولان"
+
+msgid "Support technique WhatsApp direct"
+msgstr "دعم فني مباشر عبر واتساب"
+
+msgid "Accès à la plateforme de tracking"
+msgstr "ولوج لمنصة التتبع"
+
+msgid "Devenir Revendeur Découverte"
+msgstr "كن موزعاً في باقة الاكتشاف"
+
+msgid "LE PLUS POPULAIRE"
+msgstr "الأكثر طلباً"
+
+msgid "Pro Installateur"
+msgstr "المحترف فني التركيب"
+
+msgid "Pour les professionnels actifs avec des installations régulières."
+msgstr "للمهنيين النشطين وأصحاب التركيبات المنتظمة."
+
+msgid "Remise grossiste ~25%"
+msgstr "خصم جملة ~25%"
+
+msgid "Tarifs grossistes très avantageux"
+msgstr "أسعار جملة تفضيلية ومغرية"
+
+msgid "Stock prioritaire garanti disponible à Fès"
+msgstr "مخزون ذو أولوية مضمون متوفر بفاس"
+
+msgid "Option Marque Blanche plateforme"
+msgstr "خيار منصة بعلامتك البيضاء"
+
+msgid "Supports marketing et fiches fournis"
+msgstr "توفير المنشورات والكتالوجات التسويقية"
+
+msgid "Gestionnaire de compte dédié"
+msgstr "مدير حساب مخصص"
+
+msgid "Rejoindre le Réseau Pro"
+msgstr "الانضمام لشبكة المحترفين"
+
+msgid "EXCLUSIF"
+msgstr "حصري"
+
+msgid "Distributeur Régional"
+msgstr "موزع إقليمي"
+
+msgid ""
+"Pour les grossistes, entreprises de sécurité et distributeurs régionaux."
+msgstr "لتجار الجملة، شركات الحراسة والموزعين الإقليميين."
+
+msgid "Remise maximale jusqu'à 35%"
+msgstr "أقصى نسبة خصم تصل إلى 35%"
+
+msgid "Meilleure grille tarifaire au Maroc"
+msgstr "أفضل جدول أسعار في المغرب"
+
+msgid "Plateforme & App Marque Blanche offertes"
+msgstr "منصة وتطبيق مجاناً بعلامتك التجارية"
+
+msgid "Exclusivité régionale selon secteur"
+msgstr "حصرية إقليمية حسب المنطقة"
+
+msgid "Serveur dédié & intégrations API ERP"
+msgstr "خادم مخصص وتكامل API مع ERP"
+
+msgid "Conditions de paiement flexibles"
+msgstr "تسهيلات وشروط دفع مرنة"
+
+msgid "Postuler comme Distributeur"
+msgstr "التقديم كموزع إقليمي"
+
+msgid "Découvrir la Plateforme & Serveur GPS"
+msgstr "اكتشف منصة وخادم GPS"
+
+msgid "Découvrir nos Solutions & Services GPS"
+msgstr "اكتشف حلولنا وخدماتنا في تتبع GPS"
+
+msgid "Découvrir l’Application Mobile GPS"
+msgstr "اكتشف تطبيق الهاتف لتتبع GPS"
+
+msgid "Application Mobile GPS & Rapports"
+msgstr "تطبيق الهاتف لتتبع GPS والتقارير"
+
+msgid "84 km/h • Transit Fès ➔ Casa • ⛽ 92%"
+msgstr "84 كم/س • طريق فاس ➔ الدار البيضاء • ⛽ 92%"
+
+msgid "App iOS/Android"
+msgstr "تطبيق iOS وأندرويد"
+
+msgid "Dacia Logan"
+msgstr "داسيا لوغان"
+
+msgid "Fès → Casablanca • 84 km/h"
+msgstr "فاس ← الدار البيضاء • 84 كم/س"
+
+msgid "Hay Riad, Rabat • 12 min"
+msgstr "حي الرياض، الرباط • 12 دقيقة"
+
+msgid "M2web Fleet Telematics — Suivi en Direct"
+msgstr "M2web تليماتيك الأساطيل — التتبع المباشر"
+
+msgid "Moto Livraison"
+msgstr "دراجة التوصيل"
+
+msgid "Médina, Fès • 32 km/h"
+msgstr "المدينة القديمة، فاس • 32 كم/س"
+
+msgid "NEW"
+msgstr "جديد"
+
+msgid "PRO"
+msgstr "احترافي"
+
+msgid "Volvo FH16"
+msgstr "فولفو FH16"
+
+msgid "Volvo FH16 (Flotte Fès)"
+msgstr "فولفو FH16 (أسطول فاس)"
+
+msgid "Traceur OBD-II"
+msgstr "جهاز تتبع OBD-II"
+
+msgid "Traceur Filaire (Hardwired)"
+msgstr "جهاز تتبع سلكي"
+
+msgid "Traceur Magnétique Autonome"
+msgstr "جهاز تتبع مغناطيسي مستقل"
+
+msgid "Traceur Personnel / Portatif"
+msgstr "جهاز تتبع شخصي / محمول"
+
+msgid "Capteur & Accessoire"
+msgstr "مستشعر وملحقات"
+
+msgid "Fermé"
+msgstr "مغلق"
+
+msgid ""
+"Bénéficiez de remises allant jusqu'à 35%% sur le matériel et les "
+"abonnements."
+msgstr "استفد من خصومات تصل إلى 35%% على المعدات والاشتراكات."
+
+msgid "Remise maximale (jusqu'à 35%%)"
+msgstr "خصم أقصى (حتى 35%%)"
+
+msgid "100%% Marocain"
+msgstr "100%% مغربي"
+
+msgid "Remise grossiste ~15%%"
+msgstr "خصم جملة ~15%%"
+
+msgid "Remise grossiste ~25%%"
+msgstr "خصم جملة ~25%%"
+
+msgid "Remise maximale jusqu'à 35%%"
+msgstr "أقصى نسبة خصم تصل إلى 35%%"
+
+msgid "84 km/h • Transit Fès ➔ Casa • ⛽ 92%%"
+msgstr "84 كم/س • طريق فاس ➔ الدار البيضاء • ⛽ 92%%"

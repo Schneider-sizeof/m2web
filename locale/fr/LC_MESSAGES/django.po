@@ -467,3 +467,192 @@ msgstr "Capteurs de Carburant & Température"
 
 msgid "Rapports & Statistiques Avancés"
 msgstr "Rapports & Statistiques Avancés"
+
+msgid "Grille Tarifaire Grossiste"
+msgstr "Grille Tarifaire Grossiste"
+
+msgid "Niveaux de Partenariat & Marges"
+msgstr "Niveaux de Partenariat & Marges"
+
+msgid ""
+"Des remises dégressives et des avantages exclusifs selon votre volume "
+"d'achat mensuel."
+msgstr ""
+"Des remises dégressives et des avantages exclusifs selon votre volume "
+"d'achat mensuel."
+
+msgid "DÉMARRAGE"
+msgstr "DÉMARRAGE"
+
+msgid "Pack Découverte"
+msgstr "Pack Découverte"
+
+msgid "Pour les nouveaux installateurs et électriciens auto qui débutent."
+msgstr "Pour les nouveaux installateurs et électriciens auto qui débutent."
+
+msgid "Volume d'achat"
+msgstr "Volume d'achat"
+
+msgid "unités / mois"
+msgstr "unités / mois"
+
+msgid "Remise grossiste ~15%"
+msgstr "Remise grossiste ~15%"
+
+msgid "Idéal pour tester le matériel"
+msgstr "Idéal pour tester le matériel"
+
+msgid "Schémas de câblage et formation inclus"
+msgstr "Schémas de câblage et formation inclus"
+
+msgid "Support technique WhatsApp direct"
+msgstr "Support technique WhatsApp direct"
+
+msgid "Accès à la plateforme de tracking"
+msgstr "Accès à la plateforme de tracking"
+
+msgid "Devenir Revendeur Découverte"
+msgstr "Devenir Revendeur Découverte"
+
+msgid "LE PLUS POPULAIRE"
+msgstr "LE PLUS POPULAIRE"
+
+msgid "Pro Installateur"
+msgstr "Pro Installateur"
+
+msgid "Pour les professionnels actifs avec des installations régulières."
+msgstr "Pour les professionnels actifs avec des installations régulières."
+
+msgid "Remise grossiste ~25%"
+msgstr "Remise grossiste ~25%"
+
+msgid "Tarifs grossistes très avantageux"
+msgstr "Tarifs grossistes très avantageux"
+
+msgid "Stock prioritaire garanti disponible à Fès"
+msgstr "Stock prioritaire garanti disponible à Fès"
+
+msgid "Option Marque Blanche plateforme"
+msgstr "Option Marque Blanche plateforme"
+
+msgid "Supports marketing et fiches fournis"
+msgstr "Supports marketing et fiches fournis"
+
+msgid "Gestionnaire de compte dédié"
+msgstr "Gestionnaire de compte dédié"
+
+msgid "Rejoindre le Réseau Pro"
+msgstr "Rejoindre le Réseau Pro"
+
+msgid "EXCLUSIF"
+msgstr "EXCLUSIF"
+
+msgid "Distributeur Régional"
+msgstr "Distributeur Régional"
+
+msgid ""
+"Pour les grossistes, entreprises de sécurité et distributeurs régionaux."
+msgstr ""
+"Pour les grossistes, entreprises de sécurité et distributeurs régionaux."
+
+msgid "Remise maximale jusqu'à 35%"
+msgstr "Remise maximale jusqu'à 35%"
+
+msgid "Meilleure grille tarifaire au Maroc"
+msgstr "Meilleure grille tarifaire au Maroc"
+
+msgid "Plateforme & App Marque Blanche offertes"
+msgstr "Plateforme & App Marque Blanche offertes"
+
+msgid "Exclusivité régionale selon secteur"
+msgstr "Exclusivité régionale selon secteur"
+
+msgid "Serveur dédié & intégrations API ERP"
+msgstr "Serveur dédié & intégrations API ERP"
+
+msgid "Conditions de paiement flexibles"
+msgstr "Conditions de paiement flexibles"
+
+msgid "Postuler comme Distributeur"
+msgstr "Postuler comme Distributeur"
+
+msgid "Découvrir la Plateforme & Serveur GPS"
+msgstr "Découvrir la Plateforme & Serveur GPS"
+
+msgid "Plateforme & Serveur GPS M2web"
+msgstr "Plateforme & Serveur GPS M2web"
+
+msgid "Découvrir nos Solutions & Services GPS"
+msgstr "Découvrir nos Solutions & Services GPS"
+
+msgid "Découvrir l’Application Mobile GPS"
+msgstr "Découvrir l’Application Mobile GPS"
+
+msgid "Application Mobile GPS & Rapports"
+msgstr "Application Mobile GPS & Rapports"
+
+msgid "84 km/h • Transit Fès ➔ Casa • ⛽ 92%"
+msgstr "84 km/h • Transit Fès ➔ Casa • ⛽ 92%"
+
+msgid "App iOS/Android"
+msgstr "App iOS/Android"
+
+msgid "Dacia Logan"
+msgstr "Dacia Logan"
+
+msgid "Fès → Casablanca • 84 km/h"
+msgstr "Fès → Casablanca • 84 km/h"
+
+msgid "Hay Riad, Rabat • 12 min"
+msgstr "Hay Riad, Rabat • 12 min"
+
+msgid "M2web Fleet Telematics — Suivi en Direct"
+msgstr "M2web Fleet Telematics — Suivi en Direct"
+
+msgid "Moto Livraison"
+msgstr "Moto Livraison"
+
+msgid "Médina, Fès • 32 km/h"
+msgstr "Médina, Fès • 32 km/h"
+
+msgid "NEW"
+msgstr "NOUVEAU"
+
+msgid "PRO"
+msgstr "PRO"
+
+msgid "Volvo FH16"
+msgstr "Volvo FH16"
+
+msgid "Volvo FH16 (Flotte Fès)"
+msgstr "Volvo FH16 (Flotte Fès)"
+
+msgid "Traceur OBD-II"
+msgstr "Traceur OBD-II"
+
+msgid "Traceur Filaire (Hardwired)"
+msgstr "Traceur Filaire (Hardwired)"
+
+msgid "Traceur Magnétique Autonome"
+msgstr "Traceur Magnétique Autonome"
+
+msgid "Traceur Personnel / Portatif"
+msgstr "Traceur Personnel / Portatif"
+
+msgid "Capteur & Accessoire"
+msgstr "Capteur & Accessoire"
+
+msgid "Fermé"
+msgstr "Fermé"
+
+msgid "Remise grossiste ~15%%"
+msgstr "Remise grossiste ~15%%"
+
+msgid "Remise grossiste ~25%%"
+msgstr "Remise grossiste ~25%%"
+
+msgid "Remise maximale jusqu'à 35%%"
+msgstr "Remise maximale jusqu'à 35%%"
+
+msgid "84 km/h • Transit Fès ➔ Casa • ⛽ 92%%"
+msgstr "84 km/h • Transit Fès ➔ Casa • ⛽ 92%%"

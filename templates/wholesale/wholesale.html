@@ -17,7 +17,7 @@
             <i class="bi bi-box-seam-fill me-1"></i> {% trans 'PROGRAMME PARTENAIRES & REVENDEURS' %}
         </span>
         <h1>{% trans 'Vente en Gros & Espace B2B' %}</h1>
-        <p class="lead text-white-50 max-w-700 mx-auto mb-4">{% trans 'Accédez à nos tarifs grossistes préférentiels, à un stock permanent à Fès et à un accompagnement technique d\'experts au Maroc.' %}</p>
+        <p class="lead text-white-50 max-w-700 mx-auto mb-4">{% trans "Accédez à nos tarifs grossistes préférentiels, à un stock permanent à Fès et à un accompagnement technique d'experts au Maroc." %}</p>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{% url 'core:home' %}">{% trans 'Accueil' %}</a></li>
@@ -99,7 +99,7 @@
 
                         <div class="row g-3 mb-4">
                             <div class="col-md-6">
-                                <label class="form-label fw-medium">{% trans 'Nom de l\'entreprise' %} *</label>
+                                <label class="form-label fw-medium">{% trans "Nom de l'entreprise" %} *</label>
                                 {{ form.company_name }}
                             </div>
                             <div class="col-md-6">
@@ -158,7 +158,7 @@
                     </form>
 
                     <div class="mt-4 pt-3 border-top text-center text-muted small">
-                        {% trans 'Besoin d\'un devis urgent pour un appel d\'offres ? Contactez directement notre responsable B2B sur WhatsApp :' %}
+                        {% trans "Besoin d'un devis urgent pour un appel d'offres ? Contactez directement notre responsable B2B sur WhatsApp :" %}
                         <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="fw-bold text-success ms-1">
                             <i class="bi bi-whatsapp"></i> {{ company.whatsapp_number|default:"+212 6 61 76 14 89" }}
                         </a>
