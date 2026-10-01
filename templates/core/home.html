@@ -377,7 +377,7 @@
                             <span class="display-6 fw-bold text-plum">{{ promo.promo_price|floatformat:0 }}</span>
                             <span class="fw-bold text-amber">DH</span>
                             {% if promo.price_unit %}
-                            <span class="text-muted small">/ {{ promo.price_unit|cut:'/'|cut:' ' }}</span>
+                            <span class="text-muted small">/ {{ promo.price_unit|cut:'/' }}</span>
                             {% endif %}
                         </div>
                     </div>
