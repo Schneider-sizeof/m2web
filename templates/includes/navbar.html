@@ -1,7 +1,7 @@
 {% load static i18n %}
 <!-- Enterprise Topbar (Editable from Admin) -->
 <div class="topbar d-none d-lg-block">
-    <div class="container-fluid px-3 px-lg-4 px-xl-5 header-container">
+    <div class="container-fluid px-3 px-lg-4 px-xl-4 header-container">
         <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center gap-3">
                 <span><i class="bi bi-geo-alt-fill text-amber me-1"></i> {{ company.city|default:"Fès" }}, {{ company.country|default:"Maroc" }}</span>
@@ -24,7 +24,7 @@
 
 <!-- Main Sticky Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container-fluid px-3 px-lg-4 px-xl-5 header-container">
+    <div class="container-fluid px-3 px-lg-4 px-xl-4 header-container">
         <a class="brand-logo-wrapper" href="{% url 'core:home' %}">
             <img src="{% static 'images/logo-navbar.png' %}" alt="M2WEB Maroc" class="brand-logo-img" height="38">
         </a>
@@ -34,7 +34,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-xl-auto ms-lg-auto me-lg-2 me-xl-0 mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.app_name == 'core' and request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'core:home' %}">{% trans 'Accueil' %}</a>
                 </li>
@@ -67,9 +67,16 @@
                 </li>
             </ul>
 
-            <div class="d-flex align-items-center gap-2 gap-xl-3">
+            <div class="d-flex align-items-center gap-2 flex-shrink-0">
                 {% include 'includes/language_switcher.html' %}
-                <a href="{% url 'contact:contact' %}" class="btn btn-amber btn-nav-quote d-none d-lg-inline-flex">
+                <a href="{% url 'contact:contact' %}" class="btn btn-amber btn-nav-quote d-none d-lg-inline-flex flex-shrink-0">
+                    <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
+                </a>
+            </div>
+
+            <!-- Mobile Quote Button (d-lg-none) -->
+            <div class="d-lg-none mt-2">
+                <a href="{% url 'contact:contact' %}" class="btn btn-amber w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm">
                     <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
                 </a>
             </div>

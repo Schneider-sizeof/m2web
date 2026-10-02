@@ -1603,3 +1603,6 @@ msgstr "أقصى نسبة خصم تصل إلى 35%%"
 
 msgid "84 km/h • Transit Fès ➔ Casa • ⛽ 92%%"
 msgstr "84 كم/س • طريق فاس ➔ الدار البيضاء • ⛽ 92%%"
+
+msgid "Consommation 45L • Carburant 39%"
+msgstr "استهلاك 45 لتر • وقود 39%"

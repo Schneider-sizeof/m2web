@@ -656,3 +656,6 @@ msgstr "Remise maximale jusqu'à 35%%"
 
 msgid "84 km/h • Transit Fès ➔ Casa • ⛽ 92%%"
 msgstr "84 km/h • Transit Fès ➔ Casa • ⛽ 92%%"
+
+msgid "Consommation 45L • Carburant 39%"
+msgstr "Consommation 45L • Carburant 39%"

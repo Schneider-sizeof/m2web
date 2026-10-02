@@ -11,6 +11,12 @@ new_translations = [
         'fr': '84 km/h • Transit Fès ➔ Casa • ⛽ 92%'
     },
     {
+        'msgid': 'Consommation 45L • Carburant 39%',
+        'en': 'Consumption 45L • Fuel 39%',
+        'ar': 'استهلاك 45 لتر • وقود 39%',
+        'fr': 'Consommation 45L • Carburant 39%'
+    },
+    {
         'msgid': 'App iOS/Android',
         'en': 'iOS & Android App',
         'ar': 'تطبيق iOS وأندرويد',
@@ -144,4 +150,6 @@ for lang in ['en', 'ar', 'fr']:
             added_count += 1
     
     po.save()
-    print(f"[{lang}] Added: {added_count}, Updated: {updated_count}, Total: {len(po)}")
+    mo_path = f'locale/{lang}/LC_MESSAGES/django.mo'
+    po.save_as_mofile(mo_path)
+    print(f"[{lang}] Added: {added_count}, Updated: {updated_count}, Total: {len(po)} -> saved MO")

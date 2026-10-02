@@ -140,37 +140,184 @@
     </div>
 </section>
 
-<!-- Screenshots Section -->
-{% if screenshots %}
-<section class="section-padding" style="background: linear-gradient(135deg, #1a0a2e 0%, #2d1a3f 100%);">
-    <div class="container">
+<!-- Screenshots Section with Realistic Smartphone Mockup -->
+<section class="section-padding position-relative overflow-hidden" style="background: linear-gradient(135deg, #140822 0%, #241235 50%, #140822 100%);">
+    <!-- Ambient gold/plum backlight glow -->
+    <div class="position-absolute top-50 start-50 translate-middle" style="width: 480px; height: 480px; background: radial-gradient(circle, rgba(245,166,35,0.09) 0%, rgba(45,27,61,0.2) 50%, transparent 70%); pointer-events: none;"></div>
+
+    <div class="container position-relative">
         <div class="text-center mb-5 animate-on-scroll">
+            <span class="badge bg-amber text-plum fw-bold px-3 py-2 rounded-pill mb-2 d-inline-block">
+                <i class="bi bi-phone-fill me-1"></i> {% trans "Aperçu en Direct" %}
+            </span>
             <h2 class="section-title text-center text-white">{% trans "Découvrez l'Interface" %}</h2>
-            <p class="text-white-50 text-center">{% trans "Une interface claire, rapide et intuitive conçue pour les professionnels marocains." %}</p>
+            <p class="text-white-50 text-center max-w-600 mx-auto">{% trans "Une interface claire, rapide et intuitive conçue pour les professionnels marocains." %}</p>
         </div>
-        <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                {% for screenshot in screenshots %}
-                <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <div class="text-center">
-                        <img src="{{ screenshot.image.url }}" alt="{{ screenshot.caption }}" class="img-fluid mx-auto d-block" style="max-height: 500px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
-                        {% if screenshot.caption %}
-                        <p class="text-white-50 mt-3">{{ screenshot.caption }}</p>
-                        {% endif %}
+
+        <div class="phone-slider-showcase mx-auto animate-on-scroll">
+            <!-- Realistic Smartphone Hardware Frame -->
+            <div class="realistic-phone-frame">
+                <!-- Hardware buttons -->
+                <div class="phone-btn phone-btn-volume-up"></div>
+                <div class="phone-btn phone-btn-volume-down"></div>
+                <div class="phone-btn phone-btn-power"></div>
+
+                <!-- Dynamic Island / Camera & Speaker -->
+                <div class="phone-island">
+                    <div class="phone-camera-lens"></div>
+                    <div class="phone-speaker-slit"></div>
+                </div>
+
+                <!-- Glass Sheen Overlay -->
+                <div class="phone-glass-glare"></div>
+
+                <!-- Screen Display with Carousel -->
+                <div class="phone-screen-display">
+                    <div id="screenshotCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel" data-bs-interval="3500">
+                        <div class="carousel-inner h-100">
+                            {% if screenshots %}
+                                {% for screenshot in screenshots %}
+                                <div class="carousel-item h-100 {% if forloop.first %}active{% endif %}">
+                                    <img src="{{ screenshot.image.url }}" alt="{{ screenshot.caption|default:app.app_name }}" class="phone-screenshot-img">
+                                </div>
+                                {% endfor %}
+                            {% else %}
+                                <!-- Built-in Realistic App Screens if no custom screenshots in database yet -->
+                                <div class="carousel-item h-100 active">
+                                    <div class="h-100 d-flex flex-column justify-content-between p-3 text-white" style="background: linear-gradient(180deg, #1c0e2a 0%, #100619 100%);">
+                                        <div class="pt-4 text-center">
+                                            <div class="badge bg-amber text-plum px-3 py-1 rounded-pill fw-bold mb-2">GPS EN DIRECT</div>
+                                            <h6 class="fw-bold mb-1">Carte & Flotte Temps Réel</h6>
+                                            <small class="text-white-50">Fès • Casablanca • Tanger</small>
+                                        </div>
+                                        <div class="my-auto py-3">
+                                            <div class="bg-dark bg-opacity-75 rounded-3 p-3 mb-2 border border-white border-opacity-10 text-start">
+                                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                                    <span class="fw-bold small text-white"><i class="bi bi-truck text-amber me-2"></i>Volvo FH16</span>
+                                                    <span class="badge bg-success" style="font-size:0.6rem;">84 km/h</span>
+                                                </div>
+                                                <small class="text-white-50 d-block" style="font-size: 0.72rem;">Autoroute A2 • Vers Rabat</small>
+                                                <div class="progress mt-2" style="height: 4px;">
+                                                    <div class="progress-bar bg-warning" style="width: 78%;"></div>
+                                                </div>
+                                                <div class="d-flex justify-content-between mt-1 text-white-50" style="font-size:0.65rem;">
+                                                    <span>⛽ Réservoir: 78%</span>
+                                                    <span>📉 Conso: 31L/100</span>
+                                                </div>
+                                            </div>
+                                            <div class="bg-dark bg-opacity-75 rounded-3 p-3 border border-white border-opacity-10 text-start">
+                                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                                    <span class="fw-bold small text-white"><i class="bi bi-car-front text-amber me-2"></i>Dacia Duster</span>
+                                                    <span class="badge bg-info text-dark" style="font-size:0.6rem;">Contact ON</span>
+                                                </div>
+                                                <small class="text-white-50 d-block" style="font-size: 0.72rem;">Zone Industrielle Dokkarat, Fès</small>
+                                            </div>
+                                        </div>
+                                        <div class="pb-3 text-center">
+                                            <small class="text-amber" style="font-size: 0.7rem;"><i class="bi bi-shield-check me-1"></i>Antivol & Coupure Moteur Prêts</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <div class="h-100 d-flex flex-column justify-content-between p-3 text-white" style="background: linear-gradient(180deg, #160a22 0%, #0d0515 100%);">
+                                        <div class="pt-4 text-center">
+                                            <div class="badge bg-danger px-3 py-1 rounded-pill fw-bold mb-2">SONDE CARBURANT</div>
+                                            <h6 class="fw-bold mb-1">Contrôle Carburant Précis</h6>
+                                            <small class="text-white-50">Précision capacitive à 99%</small>
+                                        </div>
+                                        <div class="my-auto py-3 text-center">
+                                            <div class="p-3 bg-dark bg-opacity-75 rounded-4 border border-white border-opacity-10">
+                                                <div class="display-5 fw-bold text-amber mb-1">342 L</div>
+                                                <small class="text-white-50">Niveau actuel du réservoir</small>
+                                                <div class="alert alert-success py-1 px-2 my-3 small text-start d-flex align-items-center gap-2">
+                                                    <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                                                    <div>
+                                                        <strong class="d-block">Plein validé : +180L</strong>
+                                                        <span class="text-muted" style="font-size:0.7rem;">Station Afriquia Fès Sud • 10:14</span>
+                                                    </div>
+                                                </div>
+                                                <div class="text-white-50 small text-start" style="font-size:0.72rem;">
+                                                    <i class="bi bi-bell-fill text-warning me-1"></i>Alerte vol siphonage activée
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pb-3 text-center">
+                                            <small class="text-white-50" style="font-size: 0.7rem;">Mise à jour toutes les 10 secondes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <div class="h-100 d-flex flex-column justify-content-between p-3 text-white" style="background: linear-gradient(180deg, #1b0d2b 0%, #0c0414 100%);">
+                                        <div class="pt-4 text-center">
+                                            <div class="badge bg-success px-3 py-1 rounded-pill fw-bold mb-2">RAPPORTS & ÉCO-CONDUITE</div>
+                                            <h6 class="fw-bold mb-1">Score Chauffeurs & Trajets</h6>
+                                            <small class="text-white-50">Historique 12 mois complet</small>
+                                        </div>
+                                        <div class="my-auto py-3">
+                                            <div class="bg-dark bg-opacity-75 rounded-3 p-3 mb-2 border border-white border-opacity-10 text-start">
+                                                <div class="d-flex justify-content-between">
+                                                    <span class="small fw-bold">Kilométrage Aujourd'hui</span>
+                                                    <span class="text-amber fw-bold small">412 km</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between mt-2">
+                                                    <span class="small fw-bold">Vitesse Maximale</span>
+                                                    <span class="text-white small">94 km/h</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between mt-2">
+                                                    <span class="small fw-bold">Temps de Conduite</span>
+                                                    <span class="text-white small">5h 22min</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between mt-2">
+                                                    <span class="small fw-bold">Arrêts & Pauses</span>
+                                                    <span class="text-white small">3 arrêts (45min)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pb-3 text-center">
+                                            <small class="text-amber" style="font-size: 0.7rem;"><i class="bi bi-file-earmark-pdf me-1"></i>Rapports PDF & Excel exportables</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
-                {% endfor %}
+
+                <!-- Home Indicator Bar -->
+                <div class="phone-home-indicator"></div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+
+            <!-- External Slider Controls & Dots -->
+            <div class="phone-slider-controls d-flex align-items-center justify-content-center gap-3 mt-4">
+                <button class="btn btn-outline-amber rounded-circle p-2 slider-nav-btn" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev" aria-label="{% trans 'Précédent' %}">
+                    <i class="bi bi-chevron-left fs-5"></i>
+                </button>
+                
+                <div class="carousel-indicators-custom d-flex gap-2">
+                    {% if screenshots %}
+                        {% for screenshot in screenshots %}
+                        <button type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="{{ forloop.counter0 }}" class="indicator-dot {% if forloop.first %}active{% endif %}" aria-label="Slide {{ forloop.counter }}"></button>
+                        {% endfor %}
+                    {% else %}
+                        <button type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="0" class="indicator-dot active" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="1" class="indicator-dot" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#screenshotCarousel" data-bs-slide-to="2" class="indicator-dot" aria-label="Slide 3"></button>
+                    {% endif %}
+                </div>
+
+                <button class="btn btn-outline-amber rounded-circle p-2 slider-nav-btn" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="next" aria-label="{% trans 'Suivant' %}">
+                    <i class="bi bi-chevron-right fs-5"></i>
+                </button>
+            </div>
+
+            <div class="text-center mt-3">
+                <p class="text-white-50 small mb-0">
+                    <i class="bi bi-check-circle-fill text-amber me-1"></i>{% trans "Compatible iOS 13+ & Android 8+ • Notifications Push en temps réel" %}
+                </p>
+            </div>
         </div>
     </div>
 </section>
-{% endif %}
 
 <!-- Pricing Section -->
 {% if plans %}
@@ -271,4 +418,24 @@
     </div>
 </section>
 
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var carousel = document.getElementById('screenshotCarousel');
+    if (carousel) {
+        var dots = document.querySelectorAll('.carousel-indicators-custom .indicator-dot');
+        carousel.addEventListener('slide.bs.carousel', function(e) {
+            dots.forEach(function(dot, idx) {
+                if (idx === e.to) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+    }
+});
+</script>
 {% endblock %}
