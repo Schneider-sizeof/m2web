@@ -375,6 +375,48 @@ new_translations = [
         'en': 'Comprehensive analysis and detailed report export',
         'ar': 'تحليلات شاملة وتصدير تقارير مفصلة',
         'fr': 'Analyses complètes et export de rapports détaillés'
+    },
+    {
+        'msgid': 'DH',
+        'en': 'DH',
+        'ar': 'درهم',
+        'fr': 'DH'
+    },
+    {
+        'msgid': 'DH / mois',
+        'en': 'DH / month',
+        'ar': 'درهم / شهر',
+        'fr': 'DH / mois'
+    },
+    {
+        'msgid': 'DH / an',
+        'en': 'DH / year',
+        'ar': 'درهم / سنة',
+        'fr': 'DH / an'
+    },
+    {
+        'msgid': 'DH (paiement unique)',
+        'en': 'DH (one-time payment)',
+        'ar': 'درهم (دفعة واحدة)',
+        'fr': 'DH (paiement unique)'
+    },
+    {
+        'msgid': 'Par mois',
+        'en': 'Per month',
+        'ar': 'شهرياً',
+        'fr': 'Par mois'
+    },
+    {
+        'msgid': 'Par an',
+        'en': 'Per year',
+        'ar': 'سنوياً',
+        'fr': 'Par an'
+    },
+    {
+        'msgid': 'Paiement unique',
+        'en': 'One-time payment',
+        'ar': 'دفعة واحدة',
+        'fr': 'Paiement unique'
     }
 ]
 

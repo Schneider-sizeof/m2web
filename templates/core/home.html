@@ -371,11 +371,11 @@
                     <!-- Price Block -->
                     <div class="bg-light-soft p-3 rounded-3 mb-3 text-center border">
                         {% if promo.original_price %}
-                        <div class="text-decoration-line-through text-muted small mb-1">{{ promo.original_price|floatformat:0 }} DH</div>
+                        <div class="text-decoration-line-through text-muted small mb-1">{{ promo.original_price|floatformat:0 }} {% trans 'DH' %}</div>
                         {% endif %}
                         <div class="d-flex align-items-baseline justify-content-center gap-1">
                             <span class="display-6 fw-bold text-plum">{{ promo.promo_price|floatformat:0 }}</span>
-                            <span class="fw-bold text-amber">DH</span>
+                            <span class="fw-bold text-amber">{% trans 'DH' %}</span>
                             {% if promo.price_unit %}
                             <span class="text-muted small">/ {{ promo.price_unit|cut:'/' }}</span>
                             {% endif %}

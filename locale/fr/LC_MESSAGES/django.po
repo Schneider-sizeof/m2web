@@ -1522,3 +1522,24 @@ msgstr "Rapports PDF & Excel exportables"
 
 msgid "Analyses complètes et export de rapports détaillés"
 msgstr "Analyses complètes et export de rapports détaillés"
+
+msgid "DH"
+msgstr "DH"
+
+msgid "DH / mois"
+msgstr "DH / mois"
+
+msgid "DH / an"
+msgstr "DH / an"
+
+msgid "DH (paiement unique)"
+msgstr "DH (paiement unique)"
+
+msgid "Par mois"
+msgstr "Par mois"
+
+msgid "Par an"
+msgstr "Par an"
+
+msgid "Paiement unique"
+msgstr "Paiement unique"

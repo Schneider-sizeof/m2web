@@ -352,7 +352,7 @@
                         <span class="h4 fw-bold text-plum">{% trans 'Sur mesure' %}</span>
                         {% else %}
                         <span class="display-6 fw-bold text-plum">{{ plan.price|floatformat:0 }}</span>
-                        <span class="text-muted">DH/{{ plan.get_period_display }}</span>
+                        <span class="text-muted">{% if plan.period == 'month' %}{% trans 'DH / mois' %}{% elif plan.period == 'year' %}{% trans 'DH / an' %}{% elif plan.period == 'once' %}{% trans 'DH (paiement unique)' %}{% else %}{% trans 'DH' %}{% endif %}</span>
                         {% endif %}
                     </div>
                     

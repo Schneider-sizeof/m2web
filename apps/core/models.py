@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.utils.translation import gettext_lazy as _
 
 class CompanyInfo(models.Model):
     # Brand & Identity
@@ -280,10 +281,10 @@ class AppScreenshot(models.Model):
 class AppPlan(models.Model):
     """Pricing/membership plan for the mobile app."""
     PERIOD_CHOICES = [
-        ('month', 'Par mois'),
-        ('year', 'Par an'),
-        ('once', 'Paiement unique'),
-        ('free', 'Gratuit'),
+        ('month', _('Par mois')),
+        ('year', _('Par an')),
+        ('once', _('Paiement unique')),
+        ('free', _('Gratuit')),
     ]
     name = models.CharField(max_length=200, verbose_name='Nom du forfait')
     badge = models.CharField(max_length=100, blank=True, verbose_name='Badge (ex: POPULAIRE, RECOMMANDÉ)')

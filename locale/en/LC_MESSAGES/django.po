@@ -1805,3 +1805,24 @@ msgstr "Exportable PDF & Excel reports"
 
 msgid "Analyses complètes et export de rapports détaillés"
 msgstr "Comprehensive analysis and detailed report export"
+
+msgid "DH"
+msgstr "DH"
+
+msgid "DH / mois"
+msgstr "DH / month"
+
+msgid "DH / an"
+msgstr "DH / year"
+
+msgid "DH (paiement unique)"
+msgstr "DH (one-time payment)"
+
+msgid "Par mois"
+msgstr "Per month"
+
+msgid "Par an"
+msgstr "Per year"
+
+msgid "Paiement unique"
+msgstr "One-time payment"

@@ -1737,3 +1737,24 @@ msgstr "تقارير قابلة للتصدير بصيغة PDF و Excel"
 
 msgid "Analyses complètes et export de rapports détaillés"
 msgstr "تحليلات شاملة وتصدير تقارير مفصلة"
+
+msgid "DH"
+msgstr "درهم"
+
+msgid "DH / mois"
+msgstr "درهم / شهر"
+
+msgid "DH / an"
+msgstr "درهم / سنة"
+
+msgid "DH (paiement unique)"
+msgstr "درهم (دفعة واحدة)"
+
+msgid "Par mois"
+msgstr "شهرياً"
+
+msgid "Par an"
+msgstr "سنوياً"
+
+msgid "Paiement unique"
+msgstr "دفعة واحدة"
