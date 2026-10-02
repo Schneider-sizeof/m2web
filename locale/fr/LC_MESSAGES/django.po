@@ -1543,3 +1543,28 @@ msgstr "Par an"
 
 msgid "Paiement unique"
 msgstr "Paiement unique"
+
+msgid "Vidéo Démo"
+msgstr "Vidéo Démo"
+
+msgid "Voir la vidéo"
+msgstr "Voir la vidéo"
+
+msgid "Démonstration Vidéo"
+msgstr "Démonstration Vidéo"
+
+msgid "Découvrez l'Application en Action"
+msgstr "Découvrez l'Application en Action"
+
+msgid ""
+"Regardez notre vidéo de présentation pour voir le suivi en temps réel et les"
+" fonctionnalités clés."
+msgstr ""
+"Regardez notre vidéo de présentation pour voir le suivi en temps réel et les"
+" fonctionnalités clés."
+
+msgid "Vidéo de présentation M2web GPS"
+msgstr "Vidéo de présentation M2web GPS"
+
+msgid "Voir la Démo Vidéo"
+msgstr "Voir la Démo Vidéo"

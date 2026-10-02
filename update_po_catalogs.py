@@ -417,6 +417,48 @@ new_translations = [
         'en': 'One-time payment',
         'ar': 'دفعة واحدة',
         'fr': 'Paiement unique'
+    },
+    {
+        'msgid': 'Vidéo Démo',
+        'en': 'Demo Video',
+        'ar': 'فيديو توضيحي',
+        'fr': 'Vidéo Démo'
+    },
+    {
+        'msgid': 'Voir la vidéo',
+        'en': 'Watch Video',
+        'ar': 'مشاهدة الفيديو',
+        'fr': 'Voir la vidéo'
+    },
+    {
+        'msgid': 'Démonstration Vidéo',
+        'en': 'Video Demonstration',
+        'ar': 'عرض توضيحي بالفيديو',
+        'fr': 'Démonstration Vidéo'
+    },
+    {
+        'msgid': "Découvrez l'Application en Action",
+        'en': 'Discover the App in Action',
+        'ar': 'اكتشف التطبيق أثناء العمل',
+        'fr': "Découvrez l'Application en Action"
+    },
+    {
+        'msgid': 'Regardez notre vidéo de présentation pour voir le suivi en temps réel et les fonctionnalités clés.',
+        'en': 'Watch our presentation video to see real-time tracking and key features.',
+        'ar': 'شاهد فيديو العرض التقديمي للاطلاع على التتبع في الوقت الفعلي والميزات الأساسية.',
+        'fr': 'Regardez notre vidéo de présentation pour voir le suivi en temps réel et les fonctionnalités clés.'
+    },
+    {
+        'msgid': 'Vidéo de présentation M2web GPS',
+        'en': 'M2web GPS presentation video',
+        'ar': 'فيديو تقديمي لتطبيق M2web GPS',
+        'fr': 'Vidéo de présentation M2web GPS'
+    },
+    {
+        'msgid': 'Voir la Démo Vidéo',
+        'en': 'Watch Demo Video',
+        'ar': 'مشاهدة العرض التوضيحي',
+        'fr': 'Voir la Démo Vidéo'
     }
 ]
 

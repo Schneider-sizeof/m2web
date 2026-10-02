@@ -48,6 +48,15 @@
                         </div>
                     </div>
                     {% endif %}
+                    {% if app.promo_video_url %}
+                    <a href="#promoVideoSection" class="btn btn-outline-light btn-lg d-flex align-items-center gap-2">
+                        <i class="bi bi-play-circle-fill text-amber fs-4"></i>
+                        <div class="text-start">
+                            <small class="d-block" style="font-size:0.65rem;line-height:1;">{% trans 'Vidéo Démo' %}</small>
+                            <span class="fw-bold">{% trans 'Voir la vidéo' %}</span>
+                        </div>
+                    </a>
+                    {% endif %}
                 </div>
                 
                 <div class="d-flex flex-wrap gap-4">
@@ -146,6 +155,28 @@
         </div>
     </div>
 </section>
+
+<!-- Promotional Video Section -->
+{% if app.promo_video_url %}
+<section id="promoVideoSection" class="section-padding bg-light-soft border-top border-bottom">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <span class="badge bg-amber text-plum fw-bold px-3 py-2 rounded-pill mb-2 d-inline-block">
+                <i class="bi bi-play-btn-fill me-1"></i> {% trans 'Démonstration Vidéo' %}
+            </span>
+            <h2 class="section-title text-center">{% trans "Découvrez l'Application en Action" %}</h2>
+            <p class="section-subtitle text-center">{% trans "Regardez notre vidéo de présentation pour voir le suivi en temps réel et les fonctionnalités clés." %}</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8 animate-on-scroll">
+                <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden border border-2 border-warning" style="box-shadow: 0 20px 60px rgba(45, 27, 61, 0.25) !important;">
+                    <iframe src="{{ app.get_promo_video_embed_url }}" title="{% trans 'Vidéo de présentation M2web GPS' %}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 0;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
 
 <!-- Screenshots Section -->
 <section class="section-padding" style="background: linear-gradient(135deg, #1a0a2e 0%, #2d1a3f 100%);">
@@ -410,6 +441,11 @@
                 {% if app.android_available %}
                 <a href="{{ app.android_url }}" target="_blank" class="btn btn-amber btn-lg">
                     <i class="bi bi-google-play me-2"></i> {% trans 'Télécharger sur Google Play' %}
+                </a>
+                {% endif %}
+                {% if app.promo_video_url %}
+                <a href="#promoVideoSection" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-play-circle me-2"></i> {% trans 'Voir la Démo Vidéo' %}
                 </a>
                 {% endif %}
                 <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="btn btn-outline-light btn-lg">

@@ -241,8 +241,33 @@ class MobileApp(models.Model):
         obj, created = cls.objects.get_or_create(pk=1, defaults={'app_name': 'M2web GPS Tracker'})
         return obj
     
+    def get_promo_video_embed_url(self):
+        """Converts YouTube or other video URLs into an embeddable iframe URL."""
+        if not self.promo_video_url:
+            return ''
+        url = self.promo_video_url.strip()
+        if 'youtu.be/' in url:
+            video_id = url.split('youtu.be/')[1].split('?')[0].split('&')[0]
+            return f"https://www.youtube.com/embed/{video_id}"
+        if 'youtube.com/watch' in url:
+            import urllib.parse
+            parsed = urllib.parse.urlparse(url)
+            params = urllib.parse.parse_qs(parsed.query)
+            if 'v' in params and params['v']:
+                return f"https://www.youtube.com/embed/{params['v'][0]}"
+        if 'youtube.com/shorts/' in url:
+            video_id = url.split('youtube.com/shorts/')[1].split('?')[0].split('&')[0]
+            return f"https://www.youtube.com/embed/{video_id}"
+        if 'youtube.com/embed/' in url:
+            return url
+        if 'vimeo.com/' in url and 'player.vimeo.com' not in url:
+            video_id = url.split('vimeo.com/')[1].split('?')[0].split('&')[0]
+            return f"https://player.vimeo.com/video/{video_id}"
+        return url
+
     def __str__(self):
         return self.app_name
+
 
 
 class AppFeature(models.Model):

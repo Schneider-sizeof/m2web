@@ -1758,3 +1758,28 @@ msgstr "سنوياً"
 
 msgid "Paiement unique"
 msgstr "دفعة واحدة"
+
+msgid "Vidéo Démo"
+msgstr "فيديو توضيحي"
+
+msgid "Voir la vidéo"
+msgstr "مشاهدة الفيديو"
+
+msgid "Démonstration Vidéo"
+msgstr "عرض توضيحي بالفيديو"
+
+msgid "Découvrez l'Application en Action"
+msgstr "اكتشف التطبيق أثناء العمل"
+
+msgid ""
+"Regardez notre vidéo de présentation pour voir le suivi en temps réel et les"
+" fonctionnalités clés."
+msgstr ""
+"شاهد فيديو العرض التقديمي للاطلاع على التتبع في الوقت الفعلي والميزات "
+"الأساسية."
+
+msgid "Vidéo de présentation M2web GPS"
+msgstr "فيديو تقديمي لتطبيق M2web GPS"
+
+msgid "Voir la Démo Vidéo"
+msgstr "مشاهدة العرض التوضيحي"
