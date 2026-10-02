@@ -1647,3 +1647,93 @@ msgstr "يرجى تصحيح الأخطاء أدناه."
 
 msgid "Forgotten your password or username?"
 msgstr "هل نسيت كلمة المرور أو اسم المستخدم؟"
+
+msgid "GPS EN DIRECT"
+msgstr "تتبع مباشر GPS"
+
+msgid "Carte & Flotte Temps Réel"
+msgstr "خريطة وتتبع الأسطول المباشر"
+
+msgid "Fès • Casablanca • Tanger"
+msgstr "فاس • الدار البيضاء • طنجة"
+
+msgid "Autoroute A2 • Vers Rabat"
+msgstr "الطريق السيار A2 • باتجاه الرباط"
+
+msgid "Réservoir: 78%"
+msgstr "الخزان: 78%"
+
+msgid "Conso: 31L/100"
+msgstr "الاستهلاك: 31 لتر/100"
+
+msgid "Dacia Duster"
+msgstr "داسيا داستر"
+
+msgid "Contact ON"
+msgstr "المحرك مشتغل"
+
+msgid "Zone Industrielle Dokkarat, Fès"
+msgstr "الحي الصناعي الدكارات، فاس"
+
+msgid "Antivol & Coupure Moteur Prêts"
+msgstr "نظام مضاد للسرقة وقطع المحرك جاهز"
+
+msgid "Suivi cartographique haute précision en temps réel"
+msgstr "تتبع خرائطي عالي الدقة في الوقت الفعلي"
+
+msgid "SONDE CARBURANT"
+msgstr "مستشعر الوقود"
+
+msgid "Contrôle Carburant Précis"
+msgstr "مراقبة دقيقة للوقود"
+
+msgid "Précision capacitive à 99%"
+msgstr "دقة سعوية تصل إلى 99%"
+
+msgid "Niveau actuel du réservoir"
+msgstr "المستوى الحالي للخزان"
+
+msgid "Plein validé : +180L"
+msgstr "تعبئة مؤكدة: +180 لتر"
+
+msgid "Station Afriquia Fès Sud • 10:14"
+msgstr "محطة أفريقيا فاس الجنوب • 10:14"
+
+msgid "Alerte vol & siphonage activée"
+msgstr "تنبيه سرقة وشفط الوقود مفعّل"
+
+msgid "Mise à jour toutes les 10 secondes"
+msgstr "تحديث كل 10 ثوانٍ"
+
+msgid "Détection immédiate des pleins et siphonnages"
+msgstr "كشف فوري لتعبئة وشفط الوقود"
+
+msgid "RAPPORTS & ÉCO-CONDUITE"
+msgstr "تقارير والقيادة الاقتصادية"
+
+msgid "Score Chauffeurs & Trajets"
+msgstr "تقييم السائقين والرحلات"
+
+msgid "Historique 12 mois complet"
+msgstr "سجل كامل لمدة 12 شهراً"
+
+msgid "Kilométrage Aujourd'hui"
+msgstr "المسافة المقطوعة اليوم"
+
+msgid "Vitesse Maximale"
+msgstr "السرعة القصوى"
+
+msgid "Temps de Conduite"
+msgstr "وقت السياقة"
+
+msgid "Arrêts & Pauses"
+msgstr "التوقفات والاستراحات"
+
+msgid "3 arrêts (45min)"
+msgstr "3 توقفات (45 دقيقة)"
+
+msgid "Rapports PDF & Excel exportables"
+msgstr "تقارير قابلة للتصدير بصيغة PDF و Excel"
+
+msgid "Analyses complètes et export de rapports détaillés"
+msgstr "تحليلات شاملة وتصدير تقارير مفصلة"

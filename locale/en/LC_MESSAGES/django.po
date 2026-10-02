@@ -1715,3 +1715,93 @@ msgstr "Please correct the errors below."
 
 msgid "Forgotten your password or username?"
 msgstr "Forgotten your password or username?"
+
+msgid "GPS EN DIRECT"
+msgstr "LIVE GPS"
+
+msgid "Carte & Flotte Temps Réel"
+msgstr "Real-Time Map & Fleet"
+
+msgid "Fès • Casablanca • Tanger"
+msgstr "Fez • Casablanca • Tangier"
+
+msgid "Autoroute A2 • Vers Rabat"
+msgstr "Highway A2 • Towards Rabat"
+
+msgid "Réservoir: 78%"
+msgstr "Tank: 78%"
+
+msgid "Conso: 31L/100"
+msgstr "Consumption: 31L/100"
+
+msgid "Dacia Duster"
+msgstr "Dacia Duster"
+
+msgid "Contact ON"
+msgstr "Ignition ON"
+
+msgid "Zone Industrielle Dokkarat, Fès"
+msgstr "Dokkarat Industrial Zone, Fez"
+
+msgid "Antivol & Coupure Moteur Prêts"
+msgstr "Anti-theft & Engine Cut-off Ready"
+
+msgid "Suivi cartographique haute précision en temps réel"
+msgstr "High-precision real-time map tracking"
+
+msgid "SONDE CARBURANT"
+msgstr "FUEL SENSOR"
+
+msgid "Contrôle Carburant Précis"
+msgstr "Precise Fuel Monitoring"
+
+msgid "Précision capacitive à 99%"
+msgstr "99% capacitive accuracy"
+
+msgid "Niveau actuel du réservoir"
+msgstr "Current fuel tank level"
+
+msgid "Plein validé : +180L"
+msgstr "Refuel validated: +180L"
+
+msgid "Station Afriquia Fès Sud • 10:14"
+msgstr "Afriquia Station Fez South • 10:14"
+
+msgid "Alerte vol & siphonage activée"
+msgstr "Fuel theft & siphoning alert active"
+
+msgid "Mise à jour toutes les 10 secondes"
+msgstr "Updated every 10 seconds"
+
+msgid "Détection immédiate des pleins et siphonnages"
+msgstr "Immediate detection of refuels and theft"
+
+msgid "RAPPORTS & ÉCO-CONDUITE"
+msgstr "REPORTS & ECO-DRIVING"
+
+msgid "Score Chauffeurs & Trajets"
+msgstr "Driver Score & Trips"
+
+msgid "Historique 12 mois complet"
+msgstr "Full 12-month history"
+
+msgid "Kilométrage Aujourd'hui"
+msgstr "Mileage Today"
+
+msgid "Vitesse Maximale"
+msgstr "Top Speed"
+
+msgid "Temps de Conduite"
+msgstr "Driving Time"
+
+msgid "Arrêts & Pauses"
+msgstr "Stops & Breaks"
+
+msgid "3 arrêts (45min)"
+msgstr "3 stops (45min)"
+
+msgid "Rapports PDF & Excel exportables"
+msgstr "Exportable PDF & Excel reports"
+
+msgid "Analyses complètes et export de rapports détaillés"
+msgstr "Comprehensive analysis and detailed report export"

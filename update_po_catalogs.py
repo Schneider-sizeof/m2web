@@ -195,6 +195,186 @@ new_translations = [
         'en': 'Forgotten your password or username?',
         'ar': 'هل نسيت كلمة المرور أو اسم المستخدم؟',
         'fr': 'Mot de passe ou identifiant oublié ?'
+    },
+    {
+        'msgid': 'GPS EN DIRECT',
+        'en': 'LIVE GPS',
+        'ar': 'تتبع مباشر GPS',
+        'fr': 'GPS EN DIRECT'
+    },
+    {
+        'msgid': 'Carte & Flotte Temps Réel',
+        'en': 'Real-Time Map & Fleet',
+        'ar': 'خريطة وتتبع الأسطول المباشر',
+        'fr': 'Carte & Flotte Temps Réel'
+    },
+    {
+        'msgid': 'Fès • Casablanca • Tanger',
+        'en': 'Fez • Casablanca • Tangier',
+        'ar': 'فاس • الدار البيضاء • طنجة',
+        'fr': 'Fès • Casablanca • Tanger'
+    },
+    {
+        'msgid': 'Autoroute A2 • Vers Rabat',
+        'en': 'Highway A2 • Towards Rabat',
+        'ar': 'الطريق السيار A2 • باتجاه الرباط',
+        'fr': 'Autoroute A2 • Vers Rabat'
+    },
+    {
+        'msgid': 'Réservoir: 78%',
+        'en': 'Tank: 78%',
+        'ar': 'الخزان: 78%',
+        'fr': 'Réservoir: 78%'
+    },
+    {
+        'msgid': 'Conso: 31L/100',
+        'en': 'Consumption: 31L/100',
+        'ar': 'الاستهلاك: 31 لتر/100',
+        'fr': 'Conso: 31L/100'
+    },
+    {
+        'msgid': 'Dacia Duster',
+        'en': 'Dacia Duster',
+        'ar': 'داسيا داستر',
+        'fr': 'Dacia Duster'
+    },
+    {
+        'msgid': 'Contact ON',
+        'en': 'Ignition ON',
+        'ar': 'المحرك مشتغل',
+        'fr': 'Contact ON'
+    },
+    {
+        'msgid': 'Zone Industrielle Dokkarat, Fès',
+        'en': 'Dokkarat Industrial Zone, Fez',
+        'ar': 'الحي الصناعي الدكارات، فاس',
+        'fr': 'Zone Industrielle Dokkarat, Fès'
+    },
+    {
+        'msgid': 'Antivol & Coupure Moteur Prêts',
+        'en': 'Anti-theft & Engine Cut-off Ready',
+        'ar': 'نظام مضاد للسرقة وقطع المحرك جاهز',
+        'fr': 'Antivol & Coupure Moteur Prêts'
+    },
+    {
+        'msgid': 'Suivi cartographique haute précision en temps réel',
+        'en': 'High-precision real-time map tracking',
+        'ar': 'تتبع خرائطي عالي الدقة في الوقت الفعلي',
+        'fr': 'Suivi cartographique haute précision en temps réel'
+    },
+    {
+        'msgid': 'SONDE CARBURANT',
+        'en': 'FUEL SENSOR',
+        'ar': 'مستشعر الوقود',
+        'fr': 'SONDE CARBURANT'
+    },
+    {
+        'msgid': 'Contrôle Carburant Précis',
+        'en': 'Precise Fuel Monitoring',
+        'ar': 'مراقبة دقيقة للوقود',
+        'fr': 'Contrôle Carburant Précis'
+    },
+    {
+        'msgid': 'Précision capacitive à 99%',
+        'en': '99% capacitive accuracy',
+        'ar': 'دقة سعوية تصل إلى 99%',
+        'fr': 'Précision capacitive à 99%'
+    },
+    {
+        'msgid': 'Niveau actuel du réservoir',
+        'en': 'Current fuel tank level',
+        'ar': 'المستوى الحالي للخزان',
+        'fr': 'Niveau actuel du réservoir'
+    },
+    {
+        'msgid': 'Plein validé : +180L',
+        'en': 'Refuel validated: +180L',
+        'ar': 'تعبئة مؤكدة: +180 لتر',
+        'fr': 'Plein validé : +180L'
+    },
+    {
+        'msgid': 'Station Afriquia Fès Sud • 10:14',
+        'en': 'Afriquia Station Fez South • 10:14',
+        'ar': 'محطة أفريقيا فاس الجنوب • 10:14',
+        'fr': 'Station Afriquia Fès Sud • 10:14'
+    },
+    {
+        'msgid': 'Alerte vol & siphonage activée',
+        'en': 'Fuel theft & siphoning alert active',
+        'ar': 'تنبيه سرقة وشفط الوقود مفعّل',
+        'fr': 'Alerte vol & siphonage activée'
+    },
+    {
+        'msgid': 'Mise à jour toutes les 10 secondes',
+        'en': 'Updated every 10 seconds',
+        'ar': 'تحديث كل 10 ثوانٍ',
+        'fr': 'Mise à jour toutes les 10 secondes'
+    },
+    {
+        'msgid': 'Détection immédiate des pleins et siphonnages',
+        'en': 'Immediate detection of refuels and theft',
+        'ar': 'كشف فوري لتعبئة وشفط الوقود',
+        'fr': 'Détection immédiate des pleins et siphonnages'
+    },
+    {
+        'msgid': 'RAPPORTS & ÉCO-CONDUITE',
+        'en': 'REPORTS & ECO-DRIVING',
+        'ar': 'تقارير والقيادة الاقتصادية',
+        'fr': 'RAPPORTS & ÉCO-CONDUITE'
+    },
+    {
+        'msgid': 'Score Chauffeurs & Trajets',
+        'en': 'Driver Score & Trips',
+        'ar': 'تقييم السائقين والرحلات',
+        'fr': 'Score Chauffeurs & Trajets'
+    },
+    {
+        'msgid': 'Historique 12 mois complet',
+        'en': 'Full 12-month history',
+        'ar': 'سجل كامل لمدة 12 شهراً',
+        'fr': 'Historique 12 mois complet'
+    },
+    {
+        'msgid': "Kilométrage Aujourd'hui",
+        'en': 'Mileage Today',
+        'ar': 'المسافة المقطوعة اليوم',
+        'fr': "Kilométrage Aujourd'hui"
+    },
+    {
+        'msgid': 'Vitesse Maximale',
+        'en': 'Top Speed',
+        'ar': 'السرعة القصوى',
+        'fr': 'Vitesse Maximale'
+    },
+    {
+        'msgid': 'Temps de Conduite',
+        'en': 'Driving Time',
+        'ar': 'وقت السياقة',
+        'fr': 'Temps de Conduite'
+    },
+    {
+        'msgid': 'Arrêts & Pauses',
+        'en': 'Stops & Breaks',
+        'ar': 'التوقفات والاستراحات',
+        'fr': 'Arrêts & Pauses'
+    },
+    {
+        'msgid': '3 arrêts (45min)',
+        'en': '3 stops (45min)',
+        'ar': '3 توقفات (45 دقيقة)',
+        'fr': '3 arrêts (45min)'
+    },
+    {
+        'msgid': 'Rapports PDF & Excel exportables',
+        'en': 'Exportable PDF & Excel reports',
+        'ar': 'تقارير قابلة للتصدير بصيغة PDF و Excel',
+        'fr': 'Rapports PDF & Excel exportables'
+    },
+    {
+        'msgid': 'Analyses complètes et export de rapports détaillés',
+        'en': 'Comprehensive analysis and detailed report export',
+        'ar': 'تحليلات شاملة وتصدير تقارير مفصلة',
+        'fr': 'Analyses complètes et export de rapports détaillés'
     }
 ]
 

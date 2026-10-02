@@ -1432,3 +1432,93 @@ msgid ""
 msgstr ""
 "Besoin d'un devis urgent pour un appel d'offres ? Contactez directement "
 "notre responsable B2B sur WhatsApp :"
+
+msgid "GPS EN DIRECT"
+msgstr "GPS EN DIRECT"
+
+msgid "Carte & Flotte Temps Réel"
+msgstr "Carte & Flotte Temps Réel"
+
+msgid "Fès • Casablanca • Tanger"
+msgstr "Fès • Casablanca • Tanger"
+
+msgid "Autoroute A2 • Vers Rabat"
+msgstr "Autoroute A2 • Vers Rabat"
+
+msgid "Réservoir: 78%"
+msgstr "Réservoir: 78%"
+
+msgid "Conso: 31L/100"
+msgstr "Conso: 31L/100"
+
+msgid "Dacia Duster"
+msgstr "Dacia Duster"
+
+msgid "Contact ON"
+msgstr "Contact ON"
+
+msgid "Zone Industrielle Dokkarat, Fès"
+msgstr "Zone Industrielle Dokkarat, Fès"
+
+msgid "Antivol & Coupure Moteur Prêts"
+msgstr "Antivol & Coupure Moteur Prêts"
+
+msgid "Suivi cartographique haute précision en temps réel"
+msgstr "Suivi cartographique haute précision en temps réel"
+
+msgid "SONDE CARBURANT"
+msgstr "SONDE CARBURANT"
+
+msgid "Contrôle Carburant Précis"
+msgstr "Contrôle Carburant Précis"
+
+msgid "Précision capacitive à 99%"
+msgstr "Précision capacitive à 99%"
+
+msgid "Niveau actuel du réservoir"
+msgstr "Niveau actuel du réservoir"
+
+msgid "Plein validé : +180L"
+msgstr "Plein validé : +180L"
+
+msgid "Station Afriquia Fès Sud • 10:14"
+msgstr "Station Afriquia Fès Sud • 10:14"
+
+msgid "Alerte vol & siphonage activée"
+msgstr "Alerte vol & siphonage activée"
+
+msgid "Mise à jour toutes les 10 secondes"
+msgstr "Mise à jour toutes les 10 secondes"
+
+msgid "Détection immédiate des pleins et siphonnages"
+msgstr "Détection immédiate des pleins et siphonnages"
+
+msgid "RAPPORTS & ÉCO-CONDUITE"
+msgstr "RAPPORTS & ÉCO-CONDUITE"
+
+msgid "Score Chauffeurs & Trajets"
+msgstr "Score Chauffeurs & Trajets"
+
+msgid "Historique 12 mois complet"
+msgstr "Historique 12 mois complet"
+
+msgid "Kilométrage Aujourd'hui"
+msgstr "Kilométrage Aujourd'hui"
+
+msgid "Vitesse Maximale"
+msgstr "Vitesse Maximale"
+
+msgid "Temps de Conduite"
+msgstr "Temps de Conduite"
+
+msgid "Arrêts & Pauses"
+msgstr "Arrêts & Pauses"
+
+msgid "3 arrêts (45min)"
+msgstr "3 arrêts (45min)"
+
+msgid "Rapports PDF & Excel exportables"
+msgstr "Rapports PDF & Excel exportables"
+
+msgid "Analyses complètes et export de rapports détaillés"
+msgstr "Analyses complètes et export de rapports détaillés"
