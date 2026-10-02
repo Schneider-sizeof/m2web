@@ -1606,3 +1606,44 @@ msgstr "84 كم/س • طريق فاس ➔ الدار البيضاء • ⛽ 92%
 
 msgid "Consommation 45L • Carburant 39%"
 msgstr "استهلاك 45 لتر • وقود 39%"
+
+msgid "Suivant"
+msgstr "التالي"
+
+msgid "Précédent"
+msgstr "السابق"
+
+msgid "Langue"
+msgstr "اللغة"
+
+msgid "Aperçu en Direct"
+msgstr "معاينة حية"
+
+msgid "Compatible iOS 13+ & Android 8+ • Notifications Push en temps réel"
+msgstr "متوافق مع iOS 13+ وأندرويد 8+ • إشعارات فورية في الوقت الفعلي"
+
+msgid "Jeton OTP :"
+msgstr "رمز OTP :"
+
+msgid ""
+"Laissez vide si la double authentification (2FA) n'a pas encore été "
+"configurée pour votre compte."
+msgstr "اتركه فارغاً إذا لم يتم إعداد المصادقة الثنائية (2FA) لحسابك بعد."
+
+msgid "Log in"
+msgstr "تسجيل الدخول"
+
+msgid "OTP Device:"
+msgstr "جهاز OTP :"
+
+msgid "Get OTP Challenge"
+msgstr "الحصول على تحدي OTP"
+
+msgid "Please correct the error below."
+msgstr "يرجى تصحيح الخطأ أدناه."
+
+msgid "Please correct the errors below."
+msgstr "يرجى تصحيح الأخطاء أدناه."
+
+msgid "Forgotten your password or username?"
+msgstr "هل نسيت كلمة المرور أو اسم المستخدم؟"

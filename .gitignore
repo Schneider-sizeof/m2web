@@ -31,3 +31,6 @@ desktop.ini
 
 # 2FA QR code secrets
 media/2fa_qr_*.png
+
+# Scratch directory
+scratch/

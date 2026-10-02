@@ -119,12 +119,86 @@ new_translations = [
         'fr': 'Fermé'
     },
     {
-        'msgid': 'Temps Réel',
-        'en': 'Real Time',
-        'ar': 'الوقت الفعلي',
-        'fr': 'Temps Réel'
+        'msgid': 'Suivant',
+        'en': 'Next',
+        'ar': 'التالي',
+        'fr': 'Suivant'
+    },
+    {
+        'msgid': 'Précédent',
+        'en': 'Previous',
+        'ar': 'السابق',
+        'fr': 'Précédent'
+    },
+    {
+        'msgid': 'Langue',
+        'en': 'Language',
+        'ar': 'اللغة',
+        'fr': 'Langue'
+    },
+    {
+        'msgid': 'Aperçu en Direct',
+        'en': 'Live Preview',
+        'ar': 'معاينة حية',
+        'fr': 'Aperçu en Direct'
+    },
+    {
+        'msgid': 'Compatible iOS 13+ & Android 8+ • Notifications Push en temps réel',
+        'en': 'Compatible with iOS 13+ & Android 8+ • Real-time push notifications',
+        'ar': 'متوافق مع iOS 13+ وأندرويد 8+ • إشعارات فورية في الوقت الفعلي',
+        'fr': 'Compatible iOS 13+ & Android 8+ • Notifications Push en temps réel'
+    },
+    {
+        'msgid': 'Jeton OTP :',
+        'en': 'OTP Token:',
+        'ar': 'رمز OTP :',
+        'fr': 'Jeton OTP :'
+    },
+    {
+        'msgid': "Laissez vide si la double authentification (2FA) n'a pas encore été configurée pour votre compte.",
+        'en': 'Leave blank if two-factor authentication (2FA) is not yet configured for your account.',
+        'ar': 'اتركه فارغاً إذا لم يتم إعداد المصادقة الثنائية (2FA) لحسابك بعد.',
+        'fr': "Laissez vide si la double authentification (2FA) n'a pas encore été configurée pour votre compte."
+    },
+    {
+        'msgid': 'Log in',
+        'en': 'Log in',
+        'ar': 'تسجيل الدخول',
+        'fr': 'Se connecter'
+    },
+    {
+        'msgid': 'OTP Device:',
+        'en': 'OTP Device:',
+        'ar': 'جهاز OTP :',
+        'fr': 'Appareil OTP :'
+    },
+    {
+        'msgid': 'Get OTP Challenge',
+        'en': 'Get OTP Challenge',
+        'ar': 'الحصول على تحدي OTP',
+        'fr': 'Obtenir le défi OTP'
+    },
+    {
+        'msgid': 'Please correct the error below.',
+        'en': 'Please correct the error below.',
+        'ar': 'يرجى تصحيح الخطأ أدناه.',
+        'fr': 'Veuillez corriger l’erreur ci-dessous.'
+    },
+    {
+        'msgid': 'Please correct the errors below.',
+        'en': 'Please correct the errors below.',
+        'ar': 'يرجى تصحيح الأخطاء أدناه.',
+        'fr': 'Veuillez corriger les erreurs ci-dessous.'
+    },
+    {
+        'msgid': 'Forgotten your password or username?',
+        'en': 'Forgotten your password or username?',
+        'ar': 'هل نسيت كلمة المرور أو اسم المستخدم؟',
+        'fr': 'Mot de passe ou identifiant oublié ?'
     }
 ]
+
+import os, re
 
 for lang in ['en', 'ar', 'fr']:
     po_path = f'locale/{lang}/LC_MESSAGES/django.po'
@@ -147,7 +221,20 @@ for lang in ['en', 'ar', 'fr']:
                 msgstr=translation,
             )
             po.append(entry)
+            existing_ids[msgid] = entry
             added_count += 1
+            
+    if lang == 'fr':
+        for root, dirs, files in os.walk('templates'):
+            for f in files:
+                if f.endswith('.html'):
+                    with open(os.path.join(root, f), 'r', encoding='utf-8') as fh:
+                        matches = re.findall(r'{%\s*trans\s+[\'"](.*?)[\'"]\s*%}', fh.read())
+                        for m in matches:
+                            if m not in existing_ids:
+                                po.append(polib.POEntry(msgid=m, msgstr=m))
+                                existing_ids[m] = m
+                                added_count += 1
     
     po.save()
     mo_path = f'locale/{lang}/LC_MESSAGES/django.mo'

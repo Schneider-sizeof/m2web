@@ -1672,3 +1672,46 @@ msgstr "84 km/h • Transit Fez ➔ Casa • ⛽ 92%%"
 
 msgid "Consommation 45L • Carburant 39%"
 msgstr "Consumption 45L • Fuel 39%"
+
+msgid "Suivant"
+msgstr "Next"
+
+msgid "Précédent"
+msgstr "Previous"
+
+msgid "Langue"
+msgstr "Language"
+
+msgid "Aperçu en Direct"
+msgstr "Live Preview"
+
+msgid "Compatible iOS 13+ & Android 8+ • Notifications Push en temps réel"
+msgstr "Compatible with iOS 13+ & Android 8+ • Real-time push notifications"
+
+msgid "Jeton OTP :"
+msgstr "OTP Token:"
+
+msgid ""
+"Laissez vide si la double authentification (2FA) n'a pas encore été "
+"configurée pour votre compte."
+msgstr ""
+"Leave blank if two-factor authentication (2FA) is not yet configured for "
+"your account."
+
+msgid "Log in"
+msgstr "Log in"
+
+msgid "OTP Device:"
+msgstr "OTP Device:"
+
+msgid "Get OTP Challenge"
+msgstr "Get OTP Challenge"
+
+msgid "Please correct the error below."
+msgstr "Please correct the error below."
+
+msgid "Please correct the errors below."
+msgstr "Please correct the errors below."
+
+msgid "Forgotten your password or username?"
+msgstr "Forgotten your password or username?"

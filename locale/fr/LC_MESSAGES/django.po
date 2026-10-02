@@ -659,3 +659,776 @@ msgstr "84 km/h • Transit Fès ➔ Casa • ⛽ 92%%"
 
 msgid "Consommation 45L • Carburant 39%"
 msgstr "Consommation 45L • Carburant 39%"
+
+msgid "Suivant"
+msgstr "Suivant"
+
+msgid "Précédent"
+msgstr "Précédent"
+
+msgid "Langue"
+msgstr "Langue"
+
+msgid "Aperçu en Direct"
+msgstr "Aperçu en Direct"
+
+msgid "Compatible iOS 13+ & Android 8+ • Notifications Push en temps réel"
+msgstr "Compatible iOS 13+ & Android 8+ • Notifications Push en temps réel"
+
+msgid "Jeton OTP :"
+msgstr "Jeton OTP :"
+
+msgid ""
+"Laissez vide si la double authentification (2FA) n'a pas encore été "
+"configurée pour votre compte."
+msgstr ""
+"Laissez vide si la double authentification (2FA) n'a pas encore été "
+"configurée pour votre compte."
+
+msgid "Log in"
+msgstr "Se connecter"
+
+msgid "OTP Device:"
+msgstr "Appareil OTP :"
+
+msgid "Get OTP Challenge"
+msgstr "Obtenir le défi OTP"
+
+msgid "Please correct the error below."
+msgstr "Veuillez corriger l’erreur ci-dessous."
+
+msgid "Please correct the errors below."
+msgstr "Veuillez corriger les erreurs ci-dessous."
+
+msgid "Forgotten your password or username?"
+msgstr "Mot de passe ou identifiant oublié ?"
+
+msgid "GPS Tracking & Fleet Management"
+msgstr "GPS Tracking & Fleet Management"
+
+msgid "Retour en haut"
+msgstr "Retour en haut"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "Partager :"
+msgstr "Partager :"
+
+msgid "Articles Similaires"
+msgstr "Articles Similaires"
+
+msgid "Blog & Actualités"
+msgstr "Blog & Actualités"
+
+msgid ""
+"Restez informés des dernières tendances en télématique, sécurité et gestion "
+"de flotte au Maroc."
+msgstr ""
+"Restez informés des dernières tendances en télématique, sécurité et gestion "
+"de flotte au Maroc."
+
+msgid "Catégories"
+msgstr "Catégories"
+
+msgid "Toutes les catégories"
+msgstr "Toutes les catégories"
+
+msgid "Lire la suite"
+msgstr "Lire la suite"
+
+msgid "Aucun article trouvé dans cette catégorie."
+msgstr "Aucun article trouvé dans cette catégorie."
+
+msgid ""
+"Nous sommes à votre écoute pour toute demande d'information, d'installation "
+"ou de devis personnalisé."
+msgstr ""
+"Nous sommes à votre écoute pour toute demande d'information, d'installation "
+"ou de devis personnalisé."
+
+msgid "Nos Coordonnées"
+msgstr "Nos Coordonnées"
+
+msgid ""
+"N'hésitez pas à nous rendre visite à Fès ou à nous joindre directement par "
+"téléphone, WhatsApp ou email."
+msgstr ""
+"N'hésitez pas à nous rendre visite à Fès ou à nous joindre directement par "
+"téléphone, WhatsApp ou email."
+
+msgid "WhatsApp Direct"
+msgstr "WhatsApp Direct"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Adresse"
+msgstr "Adresse"
+
+msgid "Horaires d'ouverture"
+msgstr "Horaires d'ouverture"
+
+msgid "Lundi - Vendredi :"
+msgstr "Lundi - Vendredi :"
+
+msgid "Samedi :"
+msgstr "Samedi :"
+
+msgid "Dimanche :"
+msgstr "Dimanche :"
+
+msgid "Envoyez-nous un message"
+msgstr "Envoyez-nous un message"
+
+msgid "Veuillez corriger les erreurs ci-dessous."
+msgstr "Veuillez corriger les erreurs ci-dessous."
+
+msgid "Nom complet"
+msgstr "Nom complet"
+
+msgid "Entreprise"
+msgstr "Entreprise"
+
+msgid "Sujet"
+msgstr "Sujet"
+
+msgid "Votre Message"
+msgstr "Votre Message"
+
+msgid "Vérification de sécurité"
+msgstr "Vérification de sécurité"
+
+msgid "Envoyer le message"
+msgstr "Envoyer le message"
+
+msgid "Message Envoyé"
+msgstr "Message Envoyé"
+
+msgid "Message envoyé avec succès !"
+msgstr "Message envoyé avec succès !"
+
+msgid ""
+"Nous avons bien reçu votre message. Notre équipe vous répondra dans les plus"
+" brefs délais."
+msgstr ""
+"Nous avons bien reçu votre message. Notre équipe vous répondra dans les plus"
+" brefs délais."
+
+msgid "À Propos de"
+msgstr "À Propos de"
+
+msgid "Découvrir nos services"
+msgstr "Découvrir nos services"
+
+msgid "Nos Valeurs Fondamentales"
+msgstr "Nos Valeurs Fondamentales"
+
+msgid "Les principes qui guident chacune de nos actions et innovations."
+msgstr "Les principes qui guident chacune de nos actions et innovations."
+
+msgid "Fiabilité"
+msgstr "Fiabilité"
+
+msgid ""
+"Nos systèmes sont conçus pour fonctionner 24/7 avec une précision "
+"irréprochable pour assurer la sécurité de vos données et équipements."
+msgstr ""
+"Nos systèmes sont conçus pour fonctionner 24/7 avec une précision "
+"irréprochable pour assurer la sécurité de vos données et équipements."
+
+msgid "Innovation"
+msgstr "Innovation"
+
+msgid ""
+"Nous intégrons continuellement les dernières avancées technologiques pour "
+"offrir des solutions toujours plus performantes."
+msgstr ""
+"Nous intégrons continuellement les dernières avancées technologiques pour "
+"offrir des solutions toujours plus performantes."
+
+msgid "Proximité"
+msgstr "Proximité"
+
+msgid ""
+"Notre équipe locale basée à Fès garantit une réactivité immédiate et un "
+"accompagnement sur-mesure pour chacun de vos projets."
+msgstr ""
+"Notre équipe locale basée à Fès garantit une réactivité immédiate et un "
+"accompagnement sur-mesure pour chacun de vos projets."
+
+msgid "Suivi de flotte en temps réel"
+msgstr "Suivi de flotte en temps réel"
+
+msgid ""
+"Une expertise éprouvée au service des transporteurs, entreprises et "
+"professionnels à Fès et partout au Maroc."
+msgstr ""
+"Une expertise éprouvée au service des transporteurs, entreprises et "
+"professionnels à Fès et partout au Maroc."
+
+msgid "Réseau 4G Multi-Opérateur"
+msgstr "Réseau 4G Multi-Opérateur"
+
+msgid ""
+"Connectivité permanente via cartes SIM M2M multi-opérateurs compatibles "
+"Maroc Telecom, Orange et Inwi."
+msgstr ""
+"Connectivité permanente via cartes SIM M2M multi-opérateurs compatibles "
+"Maroc Telecom, Orange et Inwi."
+
+msgid "Application Mobile & Web"
+msgstr "Application Mobile & Web"
+
+msgid ""
+"Suivi en temps réel sur smartphone & PC avec notifications push instantanées"
+" et alertes intelligentes."
+msgstr ""
+"Suivi en temps réel sur smartphone & PC avec notifications push instantanées"
+" et alertes intelligentes."
+
+msgid "Contrôle Carburant Anti-Vol"
+msgstr "Contrôle Carburant Anti-Vol"
+
+msgid ""
+"Sondes capacitives haute précision pour détecter les siphonnages et analyser"
+" les consommations."
+msgstr ""
+"Sondes capacitives haute précision pour détecter les siphonnages et analyser"
+" les consommations."
+
+msgid "Installation & Support à Fès"
+msgstr "Installation & Support à Fès"
+
+msgid ""
+"Atelier technique et techniciens certifiés pour équiper vos parcs partout au"
+" Maroc avec support direct."
+msgstr ""
+"Atelier technique et techniciens certifiés pour équiper vos parcs partout au"
+" Maroc avec support direct."
+
+msgid ""
+"Des technologies de géolocalisation professionnelles adaptées à chaque type "
+"de véhicule et d'activité."
+msgstr ""
+"Des technologies de géolocalisation professionnelles adaptées à chaque type "
+"de véhicule et d'activité."
+
+msgid "Aucun service disponible pour le moment."
+msgstr "Aucun service disponible pour le moment."
+
+msgid ""
+"Du matériel certifié, prêt à l'emploi pour particuliers et professionnels"
+msgstr ""
+"Du matériel certifié, prêt à l'emploi pour particuliers et professionnels"
+
+msgid "Aucun équipement disponible."
+msgstr "Aucun équipement disponible."
+
+msgid ""
+"Profitez de nos offres spéciales sur les traceurs GPS et équipements de "
+"géolocalisation."
+msgstr ""
+"Profitez de nos offres spéciales sur les traceurs GPS et équipements de "
+"géolocalisation."
+
+msgid "Marges attractives"
+msgstr "Marges attractives"
+
+msgid "Stock garanti à Fès"
+msgstr "Stock garanti à Fès"
+
+msgid "Support technique & API"
+msgstr "Support technique & API"
+
+msgid ""
+"Des entreprises marocaines qui optimisent quotidiennement leur rentabilité "
+"grâce à nos solutions."
+msgstr ""
+"Des entreprises marocaines qui optimisent quotidiennement leur rentabilité "
+"grâce à nos solutions."
+
+msgid "Aucun témoignage pour le moment."
+msgstr "Aucun témoignage pour le moment."
+
+msgid ""
+"Notre siège social et atelier technique à Fès sont à votre disposition pour "
+"tester nos équipements en direct et analyser vos besoins de flotte."
+msgstr ""
+"Notre siège social et atelier technique à Fès sont à votre disposition pour "
+"tester nos équipements en direct et analyser vos besoins de flotte."
+
+msgid "Application Mobile"
+msgstr "Application Mobile"
+
+msgid "Télécharger sur"
+msgstr "Télécharger sur"
+
+msgid "Bientôt disponible"
+msgstr "Bientôt disponible"
+
+msgid "100% Marocain"
+msgstr "100% Marocain"
+
+msgid "Données Sécurisées"
+msgstr "Données Sécurisées"
+
+msgid "Support Local"
+msgstr "Support Local"
+
+msgid "Fonctionnalités bientôt disponibles."
+msgstr "Fonctionnalités bientôt disponibles."
+
+msgid "Découvrez l'Interface"
+msgstr "Découvrez l'Interface"
+
+msgid ""
+"Une interface claire, rapide et intuitive conçue pour les professionnels "
+"marocains."
+msgstr ""
+"Une interface claire, rapide et intuitive conçue pour les professionnels "
+"marocains."
+
+msgid "Forfaits & Tarifs"
+msgstr "Forfaits & Tarifs"
+
+msgid "Choisissez le forfait adapté à la taille de votre flotte."
+msgstr "Choisissez le forfait adapté à la taille de votre flotte."
+
+msgid "Gratuit"
+msgstr "Gratuit"
+
+msgid "Sur mesure"
+msgstr "Sur mesure"
+
+msgid "Version iOS bientôt disponible"
+msgstr "Version iOS bientôt disponible"
+
+msgid ""
+"Nous travaillons activement sur la version iPhone. Inscrivez-vous pour être "
+"notifié dès sa sortie."
+msgstr ""
+"Nous travaillons activement sur la version iPhone. Inscrivez-vous pour être "
+"notifié dès sa sortie."
+
+msgid "Me notifier"
+msgstr "Me notifier"
+
+msgid "Télécharger sur Google Play"
+msgstr "Télécharger sur Google Play"
+
+msgid "Demander une Démo"
+msgstr "Demander une Démo"
+
+msgid ""
+"Application professionnelle • Support en français et arabe • Assistance "
+"technique dédiée"
+msgstr ""
+"Application professionnelle • Support en français et arabe • Assistance "
+"technique dédiée"
+
+msgid "Contact WhatsApp"
+msgstr "Contact WhatsApp"
+
+msgid ""
+"Ce site utilise des cookies pour améliorer votre expérience. En continuant, "
+"vous acceptez notre utilisation des cookies."
+msgstr ""
+"Ce site utilise des cookies pour améliorer votre expérience. En continuant, "
+"vous acceptez notre utilisation des cookies."
+
+msgid "Accepter"
+msgstr "Accepter"
+
+msgid "Refuser"
+msgstr "Refuser"
+
+msgid "Accès Verrouillé"
+msgstr "Accès Verrouillé"
+
+msgid "Accès Temporairement Verrouillé"
+msgstr "Accès Temporairement Verrouillé"
+
+msgid ""
+"Trop de tentatives échouées. Par mesure de sécurité, votre accès a été "
+"bloqué temporairement."
+msgstr ""
+"Trop de tentatives échouées. Par mesure de sécurité, votre accès a été "
+"bloqué temporairement."
+
+msgid "Application"
+msgstr "Application"
+
+msgid "Télématique & Traceurs GPS"
+msgstr "Télématique & Traceurs GPS"
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Présentation de la Solution"
+msgstr "Présentation de la Solution"
+
+msgid "Fonctionnalités & Avantages Inclus :"
+msgstr "Fonctionnalités & Avantages Inclus :"
+
+msgid "Localisation Temps Réel"
+msgstr "Localisation Temps Réel"
+
+msgid ""
+"Rafraîchissement toutes les 10 secondes avec précision GPS submétrique."
+msgstr ""
+"Rafraîchissement toutes les 10 secondes avec précision GPS submétrique."
+
+msgid "Historique & Rapports"
+msgstr "Historique & Rapports"
+
+msgid "Reconstitution fidèle des trajets, arrêts et kilométrage sur 12 mois."
+msgstr "Reconstitution fidèle des trajets, arrêts et kilométrage sur 12 mois."
+
+msgid "Géo-clôtures & Alertes"
+msgstr "Géo-clôtures & Alertes"
+
+msgid ""
+"Notifications instantanées par SMS et push en cas d'entrée ou sortie de "
+"zone."
+msgstr ""
+"Notifications instantanées par SMS et push en cas d'entrée ou sortie de "
+"zone."
+
+msgid "Support & Atelier à Fès"
+msgstr "Support & Atelier à Fès"
+
+msgid "Installation certifiée sans perte de garantie constructeur."
+msgstr "Installation certifiée sans perte de garantie constructeur."
+
+msgid "Déploiement Express"
+msgstr "Déploiement Express"
+
+msgid "À Fès & partout au Maroc"
+msgstr "À Fès & partout au Maroc"
+
+msgid ""
+"Nos ingénieurs et techniciens vous accompagnent dans l'analyse de vos "
+"besoins pour équiper votre flotte au meilleur coût."
+msgstr ""
+"Nos ingénieurs et techniciens vous accompagnent dans l'analyse de vos "
+"besoins pour équiper votre flotte au meilleur coût."
+
+msgid "Demander une Étude & Devis"
+msgstr "Demander une Étude & Devis"
+
+msgid "Matériel garanti 1 an"
+msgstr "Matériel garanti 1 an"
+
+msgid "Cartes SIM M2M incluses"
+msgstr "Cartes SIM M2M incluses"
+
+msgid "Formation utilisateurs offerte"
+msgstr "Formation utilisateurs offerte"
+
+msgid "Nos Services & Équipements"
+msgstr "Nos Services & Équipements"
+
+msgid "Services & Équipements GPS"
+msgstr "Services & Équipements GPS"
+
+msgid ""
+"Des solutions technologiques de pointe pour suivre, sécuriser et "
+"rentabiliser votre flotte automobile et vos actifs mobiles au Maroc."
+msgstr ""
+"Des solutions technologiques de pointe pour suivre, sécuriser et "
+"rentabiliser votre flotte automobile et vos actifs mobiles au Maroc."
+
+msgid "Services & Équipements"
+msgstr "Services & Équipements"
+
+msgid "Nos Solutions Télématiques"
+msgstr "Nos Solutions Télématiques"
+
+msgid ""
+"Conçues pour les transporteurs, sociétés de logistique, entreprises de "
+"location et gestionnaires de parc."
+msgstr ""
+"Conçues pour les transporteurs, sociétés de logistique, entreprises de "
+"location et gestionnaires de parc."
+
+msgid "En savoir plus"
+msgstr "En savoir plus"
+
+msgid "Aucun service trouvé."
+msgstr "Aucun service trouvé."
+
+msgid "Notre Gamme de Traceurs & Capteurs GPS"
+msgstr "Notre Gamme de Traceurs & Capteurs GPS"
+
+msgid ""
+"Du matériel certifié, étanche et éprouvé dans les conditions routières les "
+"plus exigeantes."
+msgstr ""
+"Du matériel certifié, étanche et éprouvé dans les conditions routières les "
+"plus exigeantes."
+
+msgid "Garantie 1 an"
+msgstr "Garantie 1 an"
+
+msgid "Spécifications :"
+msgstr "Spécifications :"
+
+msgid ""
+"Merci pour votre intérêt. Notre équipe commerciale B2B analysera votre "
+"demande et vous contactera dans les plus brefs délais."
+msgstr ""
+"Merci pour votre intérêt. Notre équipe commerciale B2B analysera votre "
+"demande et vous contactera dans les plus brefs délais."
+
+msgid ""
+"Une solution logicielle complète, évolutive et personnalisable pour la "
+"gestion de flotte et le tracking GPS."
+msgstr ""
+"Une solution logicielle complète, évolutive et personnalisable pour la "
+"gestion de flotte et le tracking GPS."
+
+msgid "Une Plateforme Puissante et Polyvalente"
+msgstr "Une Plateforme Puissante et Polyvalente"
+
+msgid ""
+"Notre système a été développé pour répondre aux exigences des professionnels"
+" de la télématique, avec une architecture robuste capable de gérer des "
+"milliers de véhicules simultanément."
+msgstr ""
+"Notre système a été développé pour répondre aux exigences des professionnels"
+" de la télématique, avec une architecture robuste capable de gérer des "
+"milliers de véhicules simultanément."
+
+msgid "Suivi en Temps Réel"
+msgstr "Suivi en Temps Réel"
+
+msgid "Position GPS précise sur carte, actualisation instantanée."
+msgstr "Position GPS précise sur carte, actualisation instantanée."
+
+msgid "Vitesse, arrêts, kilométrage, consommation de carburant."
+msgstr "Vitesse, arrêts, kilométrage, consommation de carburant."
+
+msgid "Vue d'ensemble pour la gestion quotidienne de votre parc."
+msgstr "Vue d'ensemble pour la gestion quotidienne de votre parc."
+
+msgid ""
+"Intégration native des sondes de niveau de carburant et capteurs de "
+"température."
+msgstr ""
+"Intégration native des sondes de niveau de carburant et capteurs de "
+"température."
+
+msgid "Gérez votre flotte en déplacement depuis votre smartphone."
+msgstr "Gérez votre flotte en déplacement depuis votre smartphone."
+
+msgid "Connectez facilement nos données avec vos logiciels métiers."
+msgstr "Connectez facilement nos données avec vos logiciels métiers."
+
+msgid ""
+"Une interface moderne, rapide et responsive conçue pour les professionnels."
+msgstr ""
+"Une interface moderne, rapide et responsive conçue pour les professionnels."
+
+msgid "Options d'Acquisition"
+msgstr "Options d'Acquisition"
+
+msgid ""
+"Nous proposons plusieurs modèles adaptés à vos besoins et votre budget."
+msgstr ""
+"Nous proposons plusieurs modèles adaptés à vos besoins et votre budget."
+
+msgid "Location SaaS"
+msgstr "Location SaaS"
+
+msgid "La solution la plus simple. Abonnement mensuel ou annuel par véhicule."
+msgstr ""
+"La solution la plus simple. Abonnement mensuel ou annuel par véhicule."
+
+msgid "Support technique"
+msgstr "Support technique"
+
+msgid "Licence on-premise hébergée sur vos propres serveurs."
+msgstr "Licence on-premise hébergée sur vos propres serveurs."
+
+msgid "La plateforme entièrement personnalisée à votre image."
+msgstr "La plateforme entièrement personnalisée à votre image."
+
+msgid "Fonctionnalités et intégrations spécifiques à votre métier."
+msgstr "Fonctionnalités et intégrations spécifiques à votre métier."
+
+msgid "Rapports personnalisés"
+msgstr "Rapports personnalisés"
+
+msgid "Demande de Renseignements Plateforme"
+msgstr "Demande de Renseignements Plateforme"
+
+msgid "Nom de la Société"
+msgstr "Nom de la Société"
+
+msgid "Personne de Contact"
+msgstr "Personne de Contact"
+
+msgid "Ville"
+msgstr "Ville"
+
+msgid "Taille de la Flotte"
+msgstr "Taille de la Flotte"
+
+msgid "Mode d'Acquisition Souhaité"
+msgstr "Mode d'Acquisition Souhaité"
+
+msgid "Détails du Projet"
+msgstr "Détails du Projet"
+
+msgid "Devenir Revendeur M2web"
+msgstr "Devenir Revendeur M2web"
+
+msgid ""
+"Développez votre activité en proposant nos solutions de géolocalisation GPS "
+"professionnelles."
+msgstr ""
+"Développez votre activité en proposant nos solutions de géolocalisation GPS "
+"professionnelles."
+
+msgid ""
+"Bénéficiez de remises allant jusqu'à 35% sur le matériel et les abonnements."
+msgstr ""
+"Bénéficiez de remises allant jusqu'à 35% sur le matériel et les abonnements."
+
+msgid ""
+"Matériel toujours disponible dans notre dépôt à Fès, expédition rapide "
+"partout au Maroc."
+msgstr ""
+"Matériel toujours disponible dans notre dépôt à Fès, expédition rapide "
+"partout au Maroc."
+
+msgid ""
+"Formation technique gratuite, assistance à l'installation et support client "
+"prioritaire."
+msgstr ""
+"Formation technique gratuite, assistance à l'installation et support client "
+"prioritaire."
+
+msgid ""
+"Possibilité de personnaliser la plateforme avec votre propre logo, domaine "
+"et couleurs."
+msgstr ""
+"Possibilité de personnaliser la plateforme avec votre propre logo, domaine "
+"et couleurs."
+
+msgid ""
+"Brochures, fiches techniques et supports de communication fournis pour vous "
+"aider à vendre."
+msgstr ""
+"Brochures, fiches techniques et supports de communication fournis pour vous "
+"aider à vendre."
+
+msgid ""
+"Un responsable de compte unique pour répondre à toutes vos demandes "
+"commerciales et techniques."
+msgstr ""
+"Un responsable de compte unique pour répondre à toutes vos demandes "
+"commerciales et techniques."
+
+msgid "Téléphone / WhatsApp"
+msgstr "Téléphone / WhatsApp"
+
+msgid "Secteur d'Activité"
+msgstr "Secteur d'Activité"
+
+msgid "Volume Mensuel Estimé"
+msgstr "Volume Mensuel Estimé"
+
+msgid "Avez-vous déjà installé des traceurs GPS ?"
+msgstr "Avez-vous déjà installé des traceurs GPS ?"
+
+msgid "Intéressé par la plateforme en Marque Blanche ?"
+msgstr "Intéressé par la plateforme en Marque Blanche ?"
+
+msgid "Message ou Questions Complémentaires"
+msgstr "Message ou Questions Complémentaires"
+
+msgid "Vous préférez en discuter de vive voix ?"
+msgstr "Vous préférez en discuter de vive voix ?"
+
+msgid "Vente en Gros & Espace B2B"
+msgstr "Vente en Gros & Espace B2B"
+
+msgid "PROGRAMME PARTENAIRES & REVENDEURS"
+msgstr "PROGRAMME PARTENAIRES & REVENDEURS"
+
+msgid ""
+"Accédez à nos tarifs grossistes préférentiels, à un stock permanent à Fès et"
+" à un accompagnement technique d'experts au Maroc."
+msgstr ""
+"Accédez à nos tarifs grossistes préférentiels, à un stock permanent à Fès et"
+" à un accompagnement technique d'experts au Maroc."
+
+msgid "Espace B2B"
+msgstr "Espace B2B"
+
+msgid "Marges Dégressives"
+msgstr "Marges Dégressives"
+
+msgid "Tarifs dégressifs dès 10 unités pour maximiser votre rentabilité."
+msgstr "Tarifs dégressifs dès 10 unités pour maximiser votre rentabilité."
+
+msgid "Stock Immédiat à Fès"
+msgstr "Stock Immédiat à Fès"
+
+msgid "Disponibilité garantie en magasin et expédition 24h partout au Maroc."
+msgstr "Disponibilité garantie en magasin et expédition 24h partout au Maroc."
+
+msgid "API & Marque Blanche"
+msgstr "API & Marque Blanche"
+
+msgid "Intégration serveur fluide et possibilité de plateforme personnalisée."
+msgstr ""
+"Intégration serveur fluide et possibilité de plateforme personnalisée."
+
+msgid "Support Technique Dédié"
+msgstr "Support Technique Dédié"
+
+msgid ""
+"Hotline directe pour configurer vos balises et assister vos techniciens."
+msgstr ""
+"Hotline directe pour configurer vos balises et assister vos techniciens."
+
+msgid "Demande de Compte Revendeur"
+msgstr "Demande de Compte Revendeur"
+
+msgid ""
+"Remplissez le formulaire ci-dessous pour recevoir notre grille tarifaire "
+"grossiste et ouvrir votre compte partenaire."
+msgstr ""
+"Remplissez le formulaire ci-dessous pour recevoir notre grille tarifaire "
+"grossiste et ouvrir votre compte partenaire."
+
+msgid "Nom de l'entreprise"
+msgstr "Nom de l'entreprise"
+
+msgid "Personne de contact"
+msgstr "Personne de contact"
+
+msgid "Email professionnel"
+msgstr "Email professionnel"
+
+msgid "Téléphone direct"
+msgstr "Téléphone direct"
+
+msgid "Volume mensuel estimé"
+msgstr "Volume mensuel estimé"
+
+msgid "Types de matériel recherchés"
+msgstr "Types de matériel recherchés"
+
+msgid "Message ou besoins spécifiques"
+msgstr "Message ou besoins spécifiques"
+
+msgid ""
+"Besoin d'un devis urgent pour un appel d'offres ? Contactez directement "
+"notre responsable B2B sur WhatsApp :"
+msgstr ""
+"Besoin d'un devis urgent pour un appel d'offres ? Contactez directement "
+"notre responsable B2B sur WhatsApp :"
