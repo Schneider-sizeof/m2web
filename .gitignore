@@ -32,5 +32,9 @@ desktop.ini
 # 2FA QR code secrets
 media/2fa_qr_*.png
 
+# Databases
+*.sqlite3
+db.sqlite3
+
 # Scratch directory
 scratch/
