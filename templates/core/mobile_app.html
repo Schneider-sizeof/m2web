@@ -170,7 +170,12 @@
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8 animate-on-scroll">
                 <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden border border-2 border-warning" style="box-shadow: 0 20px 60px rgba(45, 27, 61, 0.25) !important;">
-                    <iframe src="{{ app.get_promo_video_embed_url }}" title="{% trans 'Vidéo de présentation M2web GPS' %}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 0;"></iframe>
+                    <iframe src="{{ app.get_promo_video_embed_url }}" title="{% trans 'Vidéo de présentation M2web GPS' %}" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 0;"></iframe>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="{{ app.promo_video_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-plum rounded-pill px-3 py-2">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> {% trans 'Ouvrir la vidéo sur YouTube' %}
+                    </a>
                 </div>
             </div>
         </div>

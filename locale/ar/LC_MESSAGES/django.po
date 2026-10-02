@@ -1783,3 +1783,6 @@ msgstr "فيديو تقديمي لتطبيق M2web GPS"
 
 msgid "Voir la Démo Vidéo"
 msgstr "مشاهدة العرض التوضيحي"
+
+msgid "Ouvrir la vidéo sur YouTube"
+msgstr "فتح الفيديو على يوتيوب"

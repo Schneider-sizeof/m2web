@@ -459,6 +459,12 @@ new_translations = [
         'en': 'Watch Demo Video',
         'ar': 'مشاهدة العرض التوضيحي',
         'fr': 'Voir la Démo Vidéo'
+    },
+    {
+        'msgid': 'Ouvrir la vidéo sur YouTube',
+        'en': 'Open video on YouTube',
+        'ar': 'فتح الفيديو على يوتيوب',
+        'fr': 'Ouvrir la vidéo sur YouTube'
     }
 ]
 

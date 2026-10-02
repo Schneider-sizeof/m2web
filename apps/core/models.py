@@ -246,24 +246,30 @@ class MobileApp(models.Model):
         if not self.promo_video_url:
             return ''
         url = self.promo_video_url.strip()
+        video_id = None
         if 'youtu.be/' in url:
             video_id = url.split('youtu.be/')[1].split('?')[0].split('&')[0]
-            return f"https://www.youtube.com/embed/{video_id}"
-        if 'youtube.com/watch' in url:
+        elif 'youtube.com/watch' in url:
             import urllib.parse
             parsed = urllib.parse.urlparse(url)
             params = urllib.parse.parse_qs(parsed.query)
             if 'v' in params and params['v']:
-                return f"https://www.youtube.com/embed/{params['v'][0]}"
-        if 'youtube.com/shorts/' in url:
+                video_id = params['v'][0]
+        elif 'youtube.com/shorts/' in url:
             video_id = url.split('youtube.com/shorts/')[1].split('?')[0].split('&')[0]
-            return f"https://www.youtube.com/embed/{video_id}"
-        if 'youtube.com/embed/' in url:
-            return url
+        elif 'youtube.com/embed/' in url:
+            video_id = url.split('youtube.com/embed/')[1].split('?')[0].split('&')[0]
+        elif 'youtube-nocookie.com/embed/' in url:
+            video_id = url.split('youtube-nocookie.com/embed/')[1].split('?')[0].split('&')[0]
+
+        if video_id:
+            return f"https://www.youtube-nocookie.com/embed/{video_id}?rel=0&enablejsapi=1"
+
         if 'vimeo.com/' in url and 'player.vimeo.com' not in url:
-            video_id = url.split('vimeo.com/')[1].split('?')[0].split('&')[0]
-            return f"https://player.vimeo.com/video/{video_id}"
+            v_id = url.split('vimeo.com/')[1].split('?')[0].split('&')[0]
+            return f"https://player.vimeo.com/video/{v_id}"
         return url
+
 
     def __str__(self):
         return self.app_name
