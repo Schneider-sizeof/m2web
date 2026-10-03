@@ -116,56 +116,247 @@
             </div>
         </div>
 
+        <style>
+            /* Scoped Ultra-Clean Pricing Cards */
+            .pricing-grid-card {
+                background: #ffffff !important;
+                border: 1.5px solid #e2e8f0 !important;
+                border-radius: 18px !important;
+                padding: 2.25rem 1.75rem 2rem !important;
+                box-shadow: 0 10px 30px -5px rgba(30, 16, 40, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.02) !important;
+                transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+                display: flex !important;
+                flex-direction: column !important;
+                height: 100% !important;
+                position: relative !important;
+            }
+            .pricing-grid-card:hover {
+                transform: translateY(-8px) !important;
+                box-shadow: 0 20px 45px rgba(30, 16, 40, 0.12) !important;
+                border-color: rgba(245, 166, 35, 0.45) !important;
+            }
+            .pricing-grid-card.featured-card {
+                border: 2.5px solid #F5A623 !important;
+                box-shadow: 0 16px 45px rgba(245, 166, 35, 0.22) !important;
+                background: #ffffff !important;
+            }
+            .pricing-grid-card.featured-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 5px;
+                background: linear-gradient(90deg, #F5A623 0%, #FFC04D 100%);
+                border-radius: 18px 18px 0 0;
+            }
+            .pricing-card-icon-wrap {
+                width: 52px;
+                height: 52px;
+                border-radius: 14px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                background: #f8fafc;
+                color: #1E1028;
+                border: 1.5px solid #e2e8f0;
+                transition: transform 0.25s ease;
+                flex-shrink: 0;
+            }
+            .pricing-grid-card:hover .pricing-card-icon-wrap {
+                transform: scale(1.08);
+            }
+            .pricing-card-icon-wrap.amber-icon {
+                background: #F5A623 !important;
+                color: #1E1028 !important;
+                border-color: #F5A623 !important;
+                box-shadow: 0 4px 14px rgba(245, 166, 35, 0.4) !important;
+            }
+            .pricing-pill-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 0.72rem;
+                font-weight: 700;
+                padding: 0.35rem 0.85rem;
+                border-radius: 50px;
+                letter-spacing: 0.4px;
+                text-transform: uppercase;
+                background: #f1f5f9;
+                color: #475569;
+                border: 1px solid #e2e8f0;
+            }
+            .pricing-pill-badge.popular-badge {
+                background: linear-gradient(135deg, #F5A623, #FFCA65) !important;
+                color: #1E1028 !important;
+                font-weight: 800 !important;
+                border: none !important;
+                box-shadow: 0 2px 10px rgba(245, 166, 35, 0.35);
+            }
+            .pricing-title-text {
+                font-size: 1.45rem !important;
+                font-weight: 800 !important;
+                color: #1E1028 !important;
+                margin-top: 1rem !important;
+                margin-bottom: 0.35rem !important;
+            }
+            .pricing-desc-text {
+                font-size: 0.86rem !important;
+                color: #64748b !important;
+                min-height: 44px !important;
+                display: flex !important;
+                align-items: center !important;
+                line-height: 1.4 !important;
+                margin-bottom: 1.15rem !important;
+            }
+            .pricing-box-container {
+                background: #f8fafc !important;
+                border: 1.5px solid #e2e8f0 !important;
+                border-radius: 14px !important;
+                padding: 1.15rem 0.85rem !important;
+                text-align: center !important;
+                margin-bottom: 1.35rem !important;
+            }
+            .pricing-grid-card.featured-card .pricing-box-container {
+                background: rgba(245, 166, 35, 0.08) !important;
+                border-color: rgba(245, 166, 35, 0.35) !important;
+            }
+            .pricing-val-number {
+                font-size: 2.45rem !important;
+                font-weight: 900 !important;
+                color: #1E1028 !important;
+                line-height: 1 !important;
+                letter-spacing: -0.5px;
+            }
+            .pricing-val-curr {
+                font-size: 1.05rem !important;
+                font-weight: 800 !important;
+                color: #F5A623 !important;
+                margin-left: 0.25rem !important;
+            }
+            .pricing-period-label {
+                font-size: 0.8rem !important;
+                font-weight: 600 !important;
+                color: #64748b !important;
+                margin-top: 0.4rem !important;
+                line-height: 1.25 !important;
+            }
+            .pricing-line-sep {
+                height: 1px !important;
+                background: #e2e8f0 !important;
+                width: 100% !important;
+                margin: 0 0 1.25rem 0 !important;
+                border: none !important;
+            }
+            .pricing-feature-row {
+                display: flex !important;
+                align-items: flex-start !important;
+                gap: 0.65rem !important;
+                font-size: 0.86rem !important;
+                color: #334155 !important;
+                margin-bottom: 0.75rem !important;
+                line-height: 1.45 !important;
+            }
+            .pricing-feature-row i {
+                font-size: 1rem !important;
+                color: #F5A623 !important;
+                margin-top: 1px !important;
+                flex-shrink: 0 !important;
+            }
+            .pricing-cta-btn {
+                height: 46px !important;
+                border-radius: 10px !important;
+                font-weight: 800 !important;
+                font-size: 0.92rem !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 8px !important;
+                width: 100% !important;
+                text-decoration: none !important;
+                transition: all 0.25s ease !important;
+                margin-top: auto !important;
+                box-sizing: border-box !important;
+            }
+            .pricing-cta-outline {
+                border: 2px solid #1E1028 !important;
+                color: #1E1028 !important;
+                background: transparent !important;
+            }
+            .pricing-cta-outline:hover {
+                background: #1E1028 !important;
+                color: #ffffff !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 6px 18px rgba(30, 16, 40, 0.25) !important;
+            }
+            .pricing-cta-amber {
+                border: 2px solid #F5A623 !important;
+                background: #F5A623 !important;
+                color: #1E1028 !important;
+                box-shadow: 0 4px 16px rgba(245, 166, 35, 0.4) !important;
+            }
+            .pricing-cta-amber:hover {
+                background: #ffb842 !important;
+                border-color: #ffb842 !important;
+                color: #1E1028 !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 8px 22px rgba(245, 166, 35, 0.5) !important;
+            }
+        </style>
+
         <div class="row g-4 mb-5">
             <!-- SaaS Card -->
             <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
-                <div class="pricing-card w-100">
+                <div class="pricing-grid-card w-100">
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <div class="pricing-icon icon-light">
+                        <div class="pricing-card-icon-wrap">
                             <i class="bi bi-cloud-arrow-up"></i>
                         </div>
-                        <span class="pricing-badge">{% trans 'Flottes & PME' %}</span>
+                        <span class="pricing-pill-badge">{% trans 'Flottes & PME' %}</span>
                     </div>
 
-                    <h3 class="pricing-card-title">{% trans 'Location SaaS' %}</h3>
-                    <p class="pricing-card-desc">{% trans 'Abonnement mensuel tout compris par véhicule' %}</p>
+                    <h3 class="pricing-title-text">{% trans 'Location SaaS' %}</h3>
+                    <p class="pricing-desc-text">{% trans 'Abonnement mensuel tout compris par véhicule' %}</p>
                     
-                    <div class="pricing-price-box">
+                    <div class="pricing-box-container">
                         <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="pricing-price-val">29</span>
-                            <span class="pricing-price-currency">DH</span>
+                            <span class="pricing-val-number">29</span>
+                            <span class="pricing-val-curr">DH</span>
                         </div>
-                        <div class="pricing-price-period">{% trans '/ mois / véhicule (HT)' %}</div>
+                        <div class="pricing-period-label">{% trans '/ mois / véhicule (HT)' %}</div>
                     </div>
+
+                    <div class="pricing-line-sep"></div>
 
                     <ul class="list-unstyled mb-4 flex-grow-1">
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Hébergement Cloud 99.9% inclus' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Suivi temps réel & Historique 90 jours' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Application Android & Web incluses' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Alertes illimitées (SMS, Email, Push)' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Mises à jour & support technique' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Sans engagement de durée' %}</span>
                         </li>
                     </ul>
 
-                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('rent_saas')" class="btn btn-outline-plum w-100 py-2 fw-bold mt-auto">
+                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('rent_saas')" class="pricing-cta-btn pricing-cta-outline">
                         {% trans 'Choisir le SaaS' %}
                     </a>
                 </div>
@@ -173,55 +364,57 @@
 
             <!-- Marque Blanche Card (Featured) -->
             <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
-                <div class="pricing-card featured w-100">
+                <div class="pricing-grid-card featured-card w-100">
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <div class="pricing-icon icon-amber">
+                        <div class="pricing-card-icon-wrap amber-icon">
                             <i class="bi bi-building"></i>
                         </div>
-                        <span class="pricing-badge popular">
+                        <span class="pricing-pill-badge popular-badge">
                             <i class="bi bi-star-fill me-1"></i>{% trans 'Le Plus Choisi • Revendeurs' %}
                         </span>
                     </div>
 
-                    <h3 class="pricing-card-title">{% trans 'Marque Blanche' %}</h3>
-                    <p class="pricing-card-desc">{% trans 'Votre propre marque de télématique à 100%' %}</p>
+                    <h3 class="pricing-title-text">{% trans 'Marque Blanche' %}</h3>
+                    <p class="pricing-desc-text">{% trans 'Votre propre marque de télématique à 100%' %}</p>
                     
-                    <div class="pricing-price-box" style="background: rgba(245, 166, 35, 0.08); border-color: rgba(245, 166, 35, 0.3);">
+                    <div class="pricing-box-container">
                         <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="pricing-price-val amber">1 490</span>
-                            <span class="pricing-price-currency">DH</span>
+                            <span class="pricing-val-number text-amber">1 490</span>
+                            <span class="pricing-val-curr">DH</span>
                         </div>
-                        <div class="pricing-price-period">{% trans '/ mois (Serveur mutualisé PRO)' %}</div>
+                        <div class="pricing-period-label">{% trans '/ mois (Serveur mutualisé PRO)' %}</div>
                     </div>
 
+                    <div class="pricing-line-sep"></div>
+
                     <ul class="list-unstyled mb-4 flex-grow-1">
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Votre nom de domaine & logo personnalisés' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Charte graphique adaptée à votre marque' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Application Android & Web à votre marque' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Gestion multi-clients illimitée' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Remises grossistes sur le matériel GPS' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Support technique prioritaire N2' %}</span>
                         </li>
                     </ul>
 
-                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('whitelabel')" class="btn btn-amber fw-bold w-100 py-2 mt-auto shadow-sm">
+                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('whitelabel')" class="pricing-cta-btn pricing-cta-amber">
                         {% trans 'Lancer ma Marque' %}
                     </a>
                 </div>
@@ -229,53 +422,55 @@
 
             <!-- Server Purchase Card -->
             <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
-                <div class="pricing-card w-100">
+                <div class="pricing-grid-card w-100">
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <div class="pricing-icon icon-light">
+                        <div class="pricing-card-icon-wrap">
                             <i class="bi bi-server"></i>
                         </div>
-                        <span class="pricing-badge">{% trans 'Souveraineté des Données' %}</span>
+                        <span class="pricing-pill-badge">{% trans 'Souveraineté des Données' %}</span>
                     </div>
 
-                    <h3 class="pricing-card-title">{% trans 'Licence Serveur' %}</h3>
-                    <p class="pricing-card-desc">{% trans 'Licence on-premise sur vos propres infrastructures' %}</p>
+                    <h3 class="pricing-title-text">{% trans 'Licence Serveur' %}</h3>
+                    <p class="pricing-desc-text">{% trans 'Licence on-premise sur vos propres infrastructures' %}</p>
                     
-                    <div class="pricing-price-box">
+                    <div class="pricing-box-container">
                         <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="pricing-price-val">14 900</span>
-                            <span class="pricing-price-currency">DH</span>
+                            <span class="pricing-val-number">14 900</span>
+                            <span class="pricing-val-curr">DH</span>
                         </div>
-                        <div class="pricing-price-period">{% trans '/ licence unique à vie' %}</div>
+                        <div class="pricing-period-label">{% trans '/ licence unique à vie' %}</div>
                     </div>
+
+                    <div class="pricing-line-sep"></div>
 
                     <ul class="list-unstyled mb-4 flex-grow-1">
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Paiement unique sans abonnement récurrent' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Hébergé sur vos propres serveurs' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Nombre illimité de véhicules & comptes' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Contrôle absolu & sécurité interne' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'API & accès direct à la base de données' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans '1 an de mises à jour & support inclus' %}</span>
                         </li>
                     </ul>
 
-                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('buy_server')" class="btn btn-outline-plum w-100 py-2 fw-bold mt-auto">
+                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('buy_server')" class="pricing-cta-btn pricing-cta-outline">
                         {% trans 'Acheter la Licence' %}
                     </a>
                 </div>
@@ -283,52 +478,54 @@
 
             <!-- Custom Dev Card -->
             <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
-                <div class="pricing-card w-100">
+                <div class="pricing-grid-card w-100">
                     <div class="d-flex justify-content-between align-items-start mb-2">
-                        <div class="pricing-icon icon-light">
+                        <div class="pricing-card-icon-wrap">
                             <i class="bi bi-code-square"></i>
                         </div>
-                        <span class="pricing-badge">{% trans 'Grands Comptes & Projets' %}</span>
+                        <span class="pricing-pill-badge">{% trans 'Grands Comptes & Projets' %}</span>
                     </div>
 
-                    <h3 class="pricing-card-title">{% trans 'Sur Mesure' %}</h3>
-                    <p class="pricing-card-desc">{% trans 'Développement spécifique & intégration ERP' %}</p>
+                    <h3 class="pricing-title-text">{% trans 'Sur Mesure' %}</h3>
+                    <p class="pricing-desc-text">{% trans 'Développement spécifique & intégration ERP' %}</p>
                     
-                    <div class="pricing-price-box">
+                    <div class="pricing-box-container">
                         <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="pricing-price-val" style="font-size: 1.75rem;">{% trans 'Sur Devis' %}</span>
+                            <span class="pricing-val-number" style="font-size: 1.85rem;">{% trans 'Sur Devis' %}</span>
                         </div>
-                        <div class="pricing-price-period">{% trans '/ cahier des charges personnalisé' %}</div>
+                        <div class="pricing-period-label">{% trans '/ cahier des charges personnalisé' %}</div>
                     </div>
+
+                    <div class="pricing-line-sep"></div>
 
                     <ul class="list-unstyled mb-4 flex-grow-1">
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Intégration ERP & CRM (SAP, Sage, Odoo)' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Rapports télématiques personnalisés' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Intégration capteurs métier spécifiques' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Protocoles télématiques propriétaires' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'SLA de support garanti & chef de projet' %}</span>
                         </li>
-                        <li class="pricing-feature-item">
-                            <i class="bi bi-check-circle-fill text-amber"></i>
+                        <li class="pricing-feature-row">
+                            <i class="bi bi-check-circle-fill"></i>
                             <span>{% trans 'Formation technique sur mesure' %}</span>
                         </li>
                     </ul>
 
-                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('custom')" class="btn btn-outline-plum w-100 py-2 fw-bold mt-auto">
+                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('custom')" class="pricing-cta-btn pricing-cta-outline">
                         {% trans 'Étudier mon Projet' %}
                     </a>
                 </div>
