@@ -3,63 +3,115 @@
 {% block title %}{{ app.hero_title|default:"Application Mobile GPS" }} | M2web Maroc{% endblock %}
 {% block content %}
 
+<style>
+    .mobile-hero-header {
+        padding: 5.5rem 0 4.5rem !important;
+        min-height: 600px !important;
+        position: relative !important;
+    }
+    .mobile-hero-header h1 {
+        font-size: clamp(2rem, 3.8vw, 3rem) !important;
+        line-height: 1.2 !important;
+        font-weight: 800 !important;
+    }
+    .mobile-hero-header .btn-lg {
+        border-radius: 12px !important;
+        transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+    }
+    .mobile-hero-header .btn-lg:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+    }
+    .app-phone-placeholder .phone-frame {
+        width: 300px !important;
+        margin: 0 auto !important;
+        background: linear-gradient(145deg, #2d1a3f, #150921) !important;
+        border-radius: 40px !important;
+        padding: 14px !important;
+        border: 3.5px solid rgba(245, 166, 35, 0.45) !important;
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 30px rgba(245, 166, 35, 0.15) !important;
+    }
+    .app-phone-placeholder .phone-notch {
+        width: 130px !important;
+        height: 24px !important;
+        background: #11051b !important;
+        border-radius: 0 0 16px 16px !important;
+        margin: 0 auto 12px !important;
+    }
+    .app-phone-placeholder .phone-screen {
+        background: linear-gradient(180deg, #1b0d2b 0%, #0d0517 100%) !important;
+        border-radius: 28px !important;
+        min-height: 480px !important;
+        overflow: hidden !important;
+    }
+    html[dir='rtl'] .mobile-hero-header .text-start {
+        text-align: right !important;
+    }
+    html[dir='rtl'] .app-phone-placeholder .text-start {
+        text-align: right !important;
+    }
+</style>
+
 <!-- Hero Section -->
-<section class="page-header" style="padding: 4rem 0 3rem; margin-bottom: 0;">
+<section class="page-header mobile-hero-header text-white" style="padding: 5.5rem 0 4.5rem; margin-bottom: 0; min-height: 600px; position: relative;">
     {% if company.page_header_bg %}
     <div class="page-header-bg">
         <img src="{{ company.page_header_bg.url }}" alt="" loading="eager">
     </div>
     <div class="page-header-overlay"></div>
     {% endif %}
-    <div class="container">
+    <div class="container position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
-            <div class="col-lg-6 text-white animate-on-scroll">
-                <span class="badge bg-amber text-plum fw-bold px-3 py-2 mb-3 rounded-pill">
-                    <i class="bi bi-phone me-1"></i> {% trans 'Application Mobile' %}
+            <div class="col-lg-6 text-start text-white animate-on-scroll">
+                <span class="badge bg-amber text-plum fw-bold px-3 py-2 mb-3 rounded-pill d-inline-flex align-items-center gap-1 shadow-sm">
+                    <i class="bi bi-phone"></i> {% trans 'Application Mobile' %}
                 </span>
-                <h1 class="display-5 fw-bold mb-3">{{ app.hero_title }}</h1>
-                <p class="lead mb-4 text-white-50">{{ app.hero_subtitle }}</p>
-                <p class="mb-4">{{ app.description }}</p>
+                <h1 class="display-5 fw-bold mb-3 text-white">{{ app.hero_title|default:_("Application Mobile GPS") }}</h1>
+                <p class="lead mb-4 text-white-50">{{ app.hero_subtitle|default:_("Téléchargez notre application de suivi GPS et gardez un œil sur vos véhicules 24/7, où que vous soyez.") }}</p>
+                <p class="mb-4 text-white" style="opacity: 0.9; line-height: 1.6;">{{ app.description|default:_("Notre application mobile M2web GPS Tracker vous offre un contrôle total sur votre flotte depuis votre smartphone Android. Interface intuitive, notifications en temps réel, et rapports détaillés à portée de main.") }}</p>
                 
+                <div class="d-flex flex-wrap gap-3 mb-4">
                     {% if app.android_available %}
-                    <a href="{{ app.android_url|default:'https://play.google.com/store/apps/details?id=com.m2web.gps' }}" target="_blank" class="btn btn-amber btn-lg d-flex align-items-center gap-2">
-                        <i class="bi bi-google-play fs-4"></i>
+                    <a href="{{ app.android_url|default:'https://play.google.com/store/apps/details?id=com.m2web.gps' }}" target="_blank" class="btn btn-amber btn-lg d-inline-flex align-items-center gap-3 px-4 py-2 shadow-sm rounded-3">
+                        <i class="bi bi-google-play fs-2 flex-shrink-0"></i>
                         <div class="text-start">
-                            <small class="d-block" style="font-size:0.65rem;line-height:1;">{% trans 'Télécharger sur' %}</small>
-                            <span class="fw-bold">Google Play</span>
+                            <small class="d-block text-uppercase" style="font-size:0.65rem;line-height:1.1;letter-spacing:0.5px;opacity:0.85;">{% trans 'Télécharger sur' %}</small>
+                            <span class="fw-bold fs-6">Google Play</span>
                         </div>
                     </a>
                     {% endif %}
-                    <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg d-flex align-items-center gap-2">
-                        <i class="bi bi-laptop fs-4 text-amber"></i>
+                    
+                    <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-3 px-4 py-2 shadow-sm rounded-3">
+                        <i class="bi bi-laptop fs-2 text-amber flex-shrink-0"></i>
                         <div class="text-start">
-                            <small class="d-block" style="font-size:0.65rem;line-height:1;">{% trans 'Accès Navigateur' %}</small>
-                            <span class="fw-bold">{% trans 'Plateforme Web' %}</span>
+                            <small class="d-block text-uppercase" style="font-size:0.65rem;line-height:1.1;letter-spacing:0.5px;opacity:0.85;">{% trans 'Accès Navigateur' %}</small>
+                            <span class="fw-bold fs-6">{% trans 'Plateforme Web' %}</span>
                         </div>
                     </a>
+
                     {% if app.promo_video_url or company.promo_video_url %}
-                    <a href="#promoVideoSection" class="btn btn-outline-light btn-lg d-flex align-items-center gap-2">
-                        <i class="bi bi-play-circle-fill text-amber fs-4"></i>
+                    <a href="#promoVideoSection" class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-3 px-4 py-2 shadow-sm rounded-3">
+                        <i class="bi bi-play-circle-fill fs-2 text-amber flex-shrink-0"></i>
                         <div class="text-start">
-                            <small class="d-block" style="font-size:0.65rem;line-height:1;">{% trans 'Vidéo Démo' %}</small>
-                            <span class="fw-bold">{% trans 'Voir la vidéo' %}</span>
+                            <small class="d-block text-uppercase" style="font-size:0.65rem;line-height:1.1;letter-spacing:0.5px;opacity:0.85;">{% trans 'Vidéo Démo' %}</small>
+                            <span class="fw-bold fs-6">{% trans 'Voir la vidéo' %}</span>
                         </div>
                     </a>
                     {% endif %}
                 </div>
                 
-                <div class="d-flex flex-wrap gap-4">
+                <div class="d-flex flex-wrap gap-4 pt-3 border-top border-white border-opacity-15">
                     <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-patch-check-fill text-amber"></i>
-                        <small class="text-white-50">{% trans '100% Marocain' %}</small>
+                        <i class="bi bi-patch-check-fill text-amber fs-5"></i>
+                        <span class="text-white-50 small fw-semibold">{% trans '100% Marocain' %}</span>
                     </div>
                     <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-shield-check text-amber"></i>
-                        <small class="text-white-50">{% trans 'Données Sécurisées' %}</small>
+                        <i class="bi bi-shield-check text-amber fs-5"></i>
+                        <span class="text-white-50 small fw-semibold">{% trans 'Données Sécurisées' %}</span>
                     </div>
                     <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-headset text-amber"></i>
-                        <small class="text-white-50">{% trans 'Support Local' %}</small>
+                        <i class="bi bi-headset text-amber fs-5"></i>
+                        <span class="text-white-50 small fw-semibold">{% trans 'Support Local' %}</span>
                     </div>
                 </div>
             </div>
@@ -423,6 +475,7 @@
                 {% endif %}
                 <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="btn btn-outline-light btn-lg">
                     <i class="bi bi-whatsapp me-2"></i> {% trans 'Demander une Démo' %}
+                </a>
             </div>
             
             <p class="text-white-50 small">
