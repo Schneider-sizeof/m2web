@@ -483,19 +483,27 @@
         <div class="row g-3 justify-content-center align-items-center animate-on-scroll">
             {% for partner in partners %}
             <div class="col-6 col-md-3">
+                {% if partner.website_url %}
+                <a href="{{ partner.website_url }}" target="_blank" rel="noopener noreferrer" class="partner-card-box text-decoration-none" title="{{ partner.name }}">
+                {% else %}
                 <div class="partner-card-box">
+                {% endif %}
                     {% if partner.logo %}
                         <img src="{{ partner.logo.url }}" alt="{{ partner.name }}">
                     {% else %}
                         <span class="fw-bold text-plum fs-5">{{ partner.name }}</span>
                     {% endif %}
+                {% if partner.website_url %}
+                </a>
+                {% else %}
                 </div>
+                {% endif %}
             </div>
             {% empty %}
-            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">TRANSPORT ATLAS</span></div></div>
-            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">MAROC EXPRESS</span></div></div>
-            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">FÈS LOCATION</span></div></div>
-            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">NORD FRIGO</span></div></div>
+            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">ORANGE</span></div></div>
+            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">COCA-COLA</span></div></div>
+            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">SOCIÉTÉ BELMEKI</span></div></div>
+            <div class="col-6 col-md-3"><div class="partner-card-box"><span class="fw-bold text-plum">STAR SODA</span></div></div>
             {% endfor %}
         </div>
     </div>

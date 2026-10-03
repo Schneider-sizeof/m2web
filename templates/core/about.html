@@ -317,14 +317,22 @@
         </div>
         <div class="row g-3 justify-content-center align-items-center">
             {% for partner in partners %}
-            <div class="col-6 col-md-3 col-lg-2 text-center animate-on-scroll">
+            <div class="col-6 col-md-3 col-lg-3 text-center animate-on-scroll">
+                {% if partner.website_url %}
+                <a href="{{ partner.website_url }}" target="_blank" rel="noopener noreferrer" class="partner-card-box text-decoration-none" title="{{ partner.name }}">
+                {% else %}
                 <div class="partner-card-box">
+                {% endif %}
                     {% if partner.logo %}
                         <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" class="img-fluid" style="max-height: 48px; filter: grayscale(100%); opacity: 0.75;">
                     {% else %}
                         <span class="fw-bold text-muted">{{ partner.name }}</span>
                     {% endif %}
+                {% if partner.website_url %}
+                </a>
+                {% else %}
                 </div>
+                {% endif %}
             </div>
             {% endfor %}
         </div>

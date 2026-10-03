@@ -124,9 +124,16 @@ class TestimonialAdmin(TranslationAdmin):
 
 @admin.register(Partner)
 class PartnerAdmin(admin.ModelAdmin):
-    list_display = ['name', 'website_url', 'is_active', 'order']
+    list_display = ['logo_preview', 'name', 'website_url', 'is_active', 'order']
     list_editable = ['is_active', 'order']
-    search_fields = ['name']
+    search_fields = ['name', 'website_url']
+    readonly_fields = ['logo_preview']
+
+    def logo_preview(self, obj):
+        if obj.logo:
+            return format_html('<img src="{}" style="max-height: 38px; max-width: 120px; object-fit: contain; background: #f8fafc; padding: 3px 8px; border: 1px solid #e2e8f0; border-radius: 6px;" />', obj.logo.url)
+        return "-"
+    logo_preview.short_description = "Aperçu Logo"
 
 @admin.register(Promotion)
 class PromotionAdmin(TranslationAdmin):

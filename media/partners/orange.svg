@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect width="100%" height="100%" fill="transparent"/>
+  <!-- Iconic Orange Square -->
+  <rect x="12" y="8" width="44" height="44" rx="8" fill="#FF7900"/>
+  <!-- Orange brand typography -->
+  <text x="68" y="39" font-family="'Helvetica Neue', 'Inter', 'Segoe UI', Arial, sans-serif" font-size="28" font-weight="800" fill="#1E1028" letter-spacing="-0.5">orange</text>
+</svg>
