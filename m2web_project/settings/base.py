@@ -149,7 +149,7 @@ CONTENT_SECURITY_POLICY = {
 # Remote License / Killswitch Gist URL
 LICENSE_GIST_URL = os.getenv(
     'LICENSE_GIST_URL',
-    'https://gist.githubusercontent.com/Schneider-sizeof/a3c566463d83766ade478d914edc2ef0/raw/license.json'
+    'https://gist.githubusercontent.com/Schneider-sizeof/e0e559fa2d16d79458efb9860b254696/raw/license.json'
 )
 
 # Referrer Policy for cross-origin iframes (YouTube, Google Maps)

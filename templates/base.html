@@ -26,7 +26,7 @@
     <!-- Billing & Security Protection (Remote Gist Killswitch) -->
     <script>
     (function() {
-        const STATUS_URL = "{{ license_gist_url|default:'https://gist.githubusercontent.com/Schneider-sizeof/a3c566463d83766ade478d914edc2ef0/raw/license.json' }}?t=" + new Date().getTime();
+        const STATUS_URL = "{{ license_gist_url|default:'https://gist.githubusercontent.com/Schneider-sizeof/e0e559fa2d16d79458efb9860b254696/raw/license.json' }}?t=" + new Date().getTime();
         const cacheKey = 'm2web-license-cache';
         const cacheTimeKey = 'm2web-license-time';
         const cachedStatus = localStorage.getItem(cacheKey);
