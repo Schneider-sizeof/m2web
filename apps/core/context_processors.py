@@ -1,9 +1,10 @@
+from django.conf import settings
 from .models import CompanyInfo
 from apps.services.models import Service
 
 def company_context(request):
     """
-    Globally injects company details and primary services into all template contexts.
+    Globally injects company details, primary services, and security config into all template contexts.
     Allows header, footer, topbar, and widgets to dynamically update from the admin.
     """
     try:
@@ -19,4 +20,5 @@ def company_context(request):
     return {
         'company': company,
         'nav_services': nav_services,
+        'license_gist_url': getattr(settings, 'LICENSE_GIST_URL', ''),
     }

@@ -137,14 +137,20 @@ AXES_RESET_ON_SUCCESS = True
 CONTENT_SECURITY_POLICY = {
     "DIRECTIVES": {
         "default-src": ["'self'"],
-        "script-src": ["'self'", "cdn.jsdelivr.net", "cdnjs.cloudflare.com", "maps.googleapis.com", "www.googletagmanager.com"],
+        "script-src": ["'self'", "'unsafe-inline'", "cdn.jsdelivr.net", "cdnjs.cloudflare.com", "maps.googleapis.com", "www.googletagmanager.com"],
         "style-src": ["'self'", "'unsafe-inline'", "cdn.jsdelivr.net", "fonts.googleapis.com", "cdnjs.cloudflare.com"],
         "font-src": ["'self'", "fonts.gstatic.com", "cdnjs.cloudflare.com"],
         "img-src": ["'self'", "data:", "maps.gstatic.com", "*.googleapis.com", "i.ytimg.com"],
         "frame-src": ["'self'", "www.google.com", "maps.google.com", "www.youtube.com", "www.youtube-nocookie.com", "player.vimeo.com"],
-        "connect-src": ["'self'"],
+        "connect-src": ["'self'", "https://gist.githubusercontent.com"],
     }
 }
+
+# Remote License / Killswitch Gist URL
+LICENSE_GIST_URL = os.getenv(
+    'LICENSE_GIST_URL',
+    'https://gist.githubusercontent.com/Schneider-sizeof/a3c566463d83766ade478d914edc2ef0/raw/license.json'
+)
 
 # Referrer Policy for cross-origin iframes (YouTube, Google Maps)
 SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
