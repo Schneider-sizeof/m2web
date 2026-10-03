@@ -67,8 +67,8 @@
                     <li class="mb-3 d-flex align-items-start">
                         <i class="bi bi-phone-fill text-amber fs-4 me-3 mt-1"></i>
                         <div>
-                            <h5 class="fw-bold mb-1">{% trans 'Applications Mobiles iOS & Android' %}</h5>
-                            <p class="mb-0 text-muted">{% trans 'Gérez votre flotte en déplacement depuis votre smartphone.' %}</p>
+                            <h5 class="fw-bold mb-1">{% trans 'Application Mobile Android & Web' %}</h5>
+                            <p class="mb-0 text-muted">{% trans 'Gérez votre flotte en déplacement depuis votre smartphone ou tablette.' %}</p>
                         </div>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
@@ -81,11 +81,28 @@
                 </ul>
             </div>
             <div class="col-lg-6 text-center animate-on-scroll">
-                <div class="bg-light p-4 rounded shadow-sm border">
-                    <i class="bi bi-laptop display-1 text-plum mb-3"></i>
-                    <h4 class="text-plum">{% trans 'Interface Intuitive' %}</h4>
-                    <p class="text-muted">{% trans 'Une interface moderne, rapide et responsive conçue pour les professionnels.' %}</p>
+                <div class="platform-window-mockup shadow-lg rounded-4 overflow-hidden border">
+                    <div class="platform-window-header d-flex align-items-center px-3 py-2 bg-light border-bottom">
+                        <span class="window-dot bg-danger me-1"></span>
+                        <span class="window-dot bg-warning me-1"></span>
+                        <span class="window-dot bg-success me-3"></span>
+                        <span class="small text-muted font-monospace"><i class="bi bi-shield-lock-fill text-success me-1"></i>trackmaroc.com/platform</span>
+                    </div>
+                    {% if company.platform_screenshot %}
+                        <img src="{{ company.platform_screenshot.url }}" alt="{% trans 'Capture d\'écran Plateforme GPS Web' %}" class="img-fluid w-100 object-fit-cover" style="max-height: 420px;">
+                    {% elif company.hero_slider_image_1 %}
+                        <img src="{{ company.hero_slider_image_1.url }}" alt="{% trans 'Capture d\'écran Plateforme GPS Web' %}" class="img-fluid w-100 object-fit-cover" style="max-height: 420px;">
+                    {% else %}
+                        <img src="{% static 'images/hero-dashboard.png' %}" alt="{% trans 'Capture d\'écran Plateforme GPS Web' %}" class="img-fluid w-100 object-fit-cover" style="max-height: 420px;" onerror="this.src='{% static 'images/hero-fleet.jpg' %}';">
+                    {% endif %}
                 </div>
+                {% if company.promo_video_url or app.promo_video_url %}
+                <div class="mt-3">
+                    <a href="#promoVideoModal" data-bs-toggle="modal" class="btn btn-outline-plum btn-sm rounded-pill px-3 py-2 fw-semibold">
+                        <i class="bi bi-play-circle-fill text-amber me-1"></i> {% trans 'Regarder la Démo Vidéo' %}
+                    </a>
+                </div>
+                {% endif %}
             </div>
         </div>
 
@@ -94,138 +111,224 @@
                 <span class="badge bg-amber text-plum fw-bold px-3 py-2 rounded-pill mb-2">
                     <i class="bi bi-tag-fill me-1"></i> {% trans 'Tarifs & Forfaits Plateforme GPS' %}
                 </span>
-                <h2 class="text-plum fw-bold mb-3">{% trans 'Formules Claires, Flexibles et Sans Frais Cachés' %}</h2>
-                <p class="lead text-muted max-w-700 mx-auto">{% trans 'Que vous soyez gestionnaire d’une petite flotte, entreprise de transport ou intégrateur souhaitant lancer votre propre marque, nous avons la formule idéale.' %}</p>
+                <h2 class="section-title text-center text-plum fw-bold mb-3">{% trans 'Formules Claires, Flexibles et Sans Frais Cachés' %}</h2>
+                <p class="section-subtitle text-center max-w-700 mx-auto">{% trans 'Que vous soyez gestionnaire d’une petite flotte, entreprise de transport ou intégrateur souhaitant lancer votre propre marque, nous avons la formule idéale.' %}</p>
             </div>
         </div>
 
         <div class="row g-4 mb-5">
             <!-- SaaS Card -->
-            <div class="col-lg-3 col-md-6 animate-on-scroll">
-                <div class="tier-card h-100 p-4">
-                    <div class="tier-icon bg-plum text-amber">
-                        <i class="bi bi-cloud-arrow-up"></i>
-                    </div>
-                    <span class="platform-tier-badge bg-light text-muted">{% trans 'Flottes & PME' %}</span>
-                    <h4 class="card-title text-plum fw-bold mb-1">{% trans 'Location SaaS' %}</h4>
-                    <p class="text-muted small mb-3">{% trans 'Abonnement mensuel tout compris par véhicule' %}</p>
-                    
-                    <div class="platform-price-box">
-                        <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="platform-price-val">29</span>
-                            <span class="platform-price-currency">DH</span>
+            <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
+                <div class="pricing-card w-100">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div class="pricing-icon icon-light">
+                            <i class="bi bi-cloud-arrow-up"></i>
                         </div>
-                        <span class="platform-price-period">{% trans '/ mois / véhicule (HT)' %}</span>
+                        <span class="pricing-badge">{% trans 'Flottes & PME' %}</span>
                     </div>
 
-                    <ul class="list-unstyled text-start small mb-4 flex-grow-1">
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Hébergement Cloud 99.9% inclus' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Suivi temps réel & Historique 90 jours' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Applications iOS & Android incluses' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Alertes illimitées (SMS, Email, Push)' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Mises à jour & support technique' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Sans engagement de durée' %}</li>
+                    <h3 class="pricing-card-title">{% trans 'Location SaaS' %}</h3>
+                    <p class="pricing-card-desc">{% trans 'Abonnement mensuel tout compris par véhicule' %}</p>
+                    
+                    <div class="pricing-price-box">
+                        <div class="d-flex align-items-baseline justify-content-center">
+                            <span class="pricing-price-val">29</span>
+                            <span class="pricing-price-currency">DH</span>
+                        </div>
+                        <div class="pricing-price-period">{% trans '/ mois / véhicule (HT)' %}</div>
+                    </div>
+
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Hébergement Cloud 99.9% inclus' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Suivi temps réel & Historique 90 jours' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Application Android & Web incluses' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Alertes illimitées (SMS, Email, Push)' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Mises à jour & support technique' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Sans engagement de durée' %}</span>
+                        </li>
                     </ul>
 
-                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('rent_saas')" class="btn btn-outline-plum w-100 mt-auto">
+                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('rent_saas')" class="btn btn-outline-plum w-100 py-2 fw-bold mt-auto">
                         {% trans 'Choisir le SaaS' %}
                     </a>
                 </div>
             </div>
 
             <!-- Marque Blanche Card (Featured) -->
-            <div class="col-lg-3 col-md-6 animate-on-scroll">
-                <div class="tier-card featured h-100 p-4">
-                    <div class="tier-icon bg-amber text-plum">
-                        <i class="bi bi-building"></i>
-                    </div>
-                    <span class="platform-tier-badge bg-amber text-plum">{% trans 'Le Plus Choisi • Revendeurs' %}</span>
-                    <h4 class="card-title text-plum fw-bold mb-1">{% trans 'Marque Blanche' %}</h4>
-                    <p class="text-muted small mb-3">{% trans 'Votre propre marque de télématique à 100%' %}</p>
-                    
-                    <div class="platform-price-box">
-                        <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="platform-price-val text-amber">1 490</span>
-                            <span class="platform-price-currency">DH</span>
+            <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
+                <div class="pricing-card featured w-100">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div class="pricing-icon icon-amber">
+                            <i class="bi bi-building"></i>
                         </div>
-                        <span class="platform-price-period">{% trans '/ mois (Serveur mutualisé PRO)' %}</span>
+                        <span class="pricing-badge popular">
+                            <i class="bi bi-star-fill me-1"></i>{% trans 'Le Plus Choisi • Revendeurs' %}
+                        </span>
                     </div>
 
-                    <ul class="list-unstyled text-start small mb-4 flex-grow-1">
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Votre nom de domaine & logo personnalisés' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Charte graphique adaptée à votre marque' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Apps iOS & Android à votre marque' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Gestion multi-clients illimitée' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Remises grossistes sur le matériel GPS' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Support technique prioritaire N2' %}</li>
+                    <h3 class="pricing-card-title">{% trans 'Marque Blanche' %}</h3>
+                    <p class="pricing-card-desc">{% trans 'Votre propre marque de télématique à 100%' %}</p>
+                    
+                    <div class="pricing-price-box" style="background: rgba(245, 166, 35, 0.08); border-color: rgba(245, 166, 35, 0.3);">
+                        <div class="d-flex align-items-baseline justify-content-center">
+                            <span class="pricing-price-val amber">1 490</span>
+                            <span class="pricing-price-currency">DH</span>
+                        </div>
+                        <div class="pricing-price-period">{% trans '/ mois (Serveur mutualisé PRO)' %}</div>
+                    </div>
+
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Votre nom de domaine & logo personnalisés' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Charte graphique adaptée à votre marque' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Application Android & Web à votre marque' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Gestion multi-clients illimitée' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Remises grossistes sur le matériel GPS' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Support technique prioritaire N2' %}</span>
+                        </li>
                     </ul>
 
-                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('whitelabel')" class="btn btn-amber fw-bold w-100 mt-auto shadow-sm">
+                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('whitelabel')" class="btn btn-amber fw-bold w-100 py-2 mt-auto shadow-sm">
                         {% trans 'Lancer ma Marque' %}
                     </a>
                 </div>
             </div>
 
             <!-- Server Purchase Card -->
-            <div class="col-lg-3 col-md-6 animate-on-scroll">
-                <div class="tier-card h-100 p-4">
-                    <div class="tier-icon bg-plum text-amber">
-                        <i class="bi bi-server"></i>
-                    </div>
-                    <span class="platform-tier-badge bg-light text-muted">{% trans 'Souveraineté des Données' %}</span>
-                    <h4 class="card-title text-plum fw-bold mb-1">{% trans 'Licence Serveur' %}</h4>
-                    <p class="text-muted small mb-3">{% trans 'Licence on-premise sur vos propres infrastructures' %}</p>
-                    
-                    <div class="platform-price-box">
-                        <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="platform-price-val">14 900</span>
-                            <span class="platform-price-currency">DH</span>
+            <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
+                <div class="pricing-card w-100">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div class="pricing-icon icon-light">
+                            <i class="bi bi-server"></i>
                         </div>
-                        <span class="platform-price-period">{% trans '/ licence unique à vie' %}</span>
+                        <span class="pricing-badge">{% trans 'Souveraineté des Données' %}</span>
                     </div>
 
-                    <ul class="list-unstyled text-start small mb-4 flex-grow-1">
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Paiement unique sans abonnement récurrent' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Hébergé sur vos propres serveurs' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Nombre illimité de véhicules & comptes' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Contrôle absolu & sécurité interne' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'API & accès direct à la base de données' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans '1 an de mises à jour & support inclus' %}</li>
+                    <h3 class="pricing-card-title">{% trans 'Licence Serveur' %}</h3>
+                    <p class="pricing-card-desc">{% trans 'Licence on-premise sur vos propres infrastructures' %}</p>
+                    
+                    <div class="pricing-price-box">
+                        <div class="d-flex align-items-baseline justify-content-center">
+                            <span class="pricing-price-val">14 900</span>
+                            <span class="pricing-price-currency">DH</span>
+                        </div>
+                        <div class="pricing-price-period">{% trans '/ licence unique à vie' %}</div>
+                    </div>
+
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Paiement unique sans abonnement récurrent' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Hébergé sur vos propres serveurs' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Nombre illimité de véhicules & comptes' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Contrôle absolu & sécurité interne' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'API & accès direct à la base de données' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans '1 an de mises à jour & support inclus' %}</span>
+                        </li>
                     </ul>
 
-                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('buy_server')" class="btn btn-outline-plum w-100 mt-auto">
+                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('buy_server')" class="btn btn-outline-plum w-100 py-2 fw-bold mt-auto">
                         {% trans 'Acheter la Licence' %}
                     </a>
                 </div>
             </div>
 
             <!-- Custom Dev Card -->
-            <div class="col-lg-3 col-md-6 animate-on-scroll">
-                <div class="tier-card h-100 p-4">
-                    <div class="tier-icon bg-plum text-amber">
-                        <i class="bi bi-code-square"></i>
-                    </div>
-                    <span class="platform-tier-badge bg-light text-muted">{% trans 'Grands Comptes & Projets' %}</span>
-                    <h4 class="card-title text-plum fw-bold mb-1">{% trans 'Sur Mesure' %}</h4>
-                    <p class="text-muted small mb-3">{% trans 'Développement spécifique & intégration ERP' %}</p>
-                    
-                    <div class="platform-price-box">
-                        <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="platform-price-val">{% trans 'Sur Devis' %}</span>
+            <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
+                <div class="pricing-card w-100">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div class="pricing-icon icon-light">
+                            <i class="bi bi-code-square"></i>
                         </div>
-                        <span class="platform-price-period">{% trans '/ cahier des charges personnalisé' %}</span>
+                        <span class="pricing-badge">{% trans 'Grands Comptes & Projets' %}</span>
                     </div>
 
-                    <ul class="list-unstyled text-start small mb-4 flex-grow-1">
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Intégration ERP & CRM (SAP, Sage, Odoo)' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Rapports télématiques personnalisés' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Intégration capteurs métier spécifiques' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Protocoles télématiques propriétaires' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'SLA de support garanti & chef de projet' %}</li>
-                        <li class="mb-2"><i class="bi bi-check2-circle text-amber me-2"></i>{% trans 'Formation technique sur mesure' %}</li>
+                    <h3 class="pricing-card-title">{% trans 'Sur Mesure' %}</h3>
+                    <p class="pricing-card-desc">{% trans 'Développement spécifique & intégration ERP' %}</p>
+                    
+                    <div class="pricing-price-box">
+                        <div class="d-flex align-items-baseline justify-content-center">
+                            <span class="pricing-price-val" style="font-size: 1.75rem;">{% trans 'Sur Devis' %}</span>
+                        </div>
+                        <div class="pricing-price-period">{% trans '/ cahier des charges personnalisé' %}</div>
+                    </div>
+
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Intégration ERP & CRM (SAP, Sage, Odoo)' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Rapports télématiques personnalisés' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Intégration capteurs métier spécifiques' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Protocoles télématiques propriétaires' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'SLA de support garanti & chef de projet' %}</span>
+                        </li>
+                        <li class="pricing-feature-item">
+                            <i class="bi bi-check-circle-fill text-amber"></i>
+                            <span>{% trans 'Formation technique sur mesure' %}</span>
+                        </li>
                     </ul>
 
-                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('custom')" class="btn btn-outline-plum w-100 mt-auto">
+                    <a href="#platformInquiryForm" onclick="selectAcquisitionMode('custom')" class="btn btn-outline-plum w-100 py-2 fw-bold mt-auto">
                         {% trans 'Étudier mon Projet' %}
                     </a>
                 </div>
@@ -343,6 +446,27 @@
         </div>
     </div>
 </section>
+
+{% if company.get_promo_video_embed_url or app.get_promo_video_embed_url %}
+<!-- Platform Promo Video Modal -->
+<div class="modal fade" id="promoVideoModal" tabindex="-1" aria-labelledby="promoVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark border border-warning shadow-lg">
+            <div class="modal-header border-bottom border-secondary">
+                <h5 class="modal-title text-white" id="promoVideoModalLabel">
+                    <i class="bi bi-play-circle-fill text-amber me-2"></i>{% trans 'Démonstration Plateforme & Serveur GPS' %}
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                    <iframe src="{% if company.get_promo_video_embed_url %}{{ company.get_promo_video_embed_url }}{% else %}{{ app.get_promo_video_embed_url }}{% endif %}" title="{% trans 'Démo Plateforme GPS' %}" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 0;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
 
 <script>
 function selectAcquisitionMode(mode) {

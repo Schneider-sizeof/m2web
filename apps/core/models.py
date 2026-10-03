@@ -59,7 +59,10 @@ class CompanyInfo(models.Model):
 
     # Brand Media & Images
     logo = models.ImageField(upload_to='company/', blank=True, null=True, verbose_name='Logo principal du site', help_text='Logo affiché dans la barre de navigation et le pied de page.')
+    favicon = models.ImageField(upload_to='company/', blank=True, null=True, verbose_name='Favicon du site (.ico / .png)', help_text='Icône affichée dans l\'onglet du navigateur.')
     about_image = models.ImageField(upload_to='company/', blank=True, null=True, verbose_name='Photo page À Propos', help_text='Image représentant l\'équipe ou les locaux sur la page À Propos. Recommandé: 800x600px')
+    platform_screenshot = models.ImageField(upload_to='platform/', blank=True, null=True, verbose_name='Capture d\'écran Plateforme GPS Web', help_text='Capture d\'écran de la plateforme web affichée sur la page Plateforme & Serveur GPS.')
+    promo_video_url = models.URLField(blank=True, verbose_name='URL Vidéo Promotionnelle (YouTube/Vimeo)', help_text='Lien vidéo de présentation affiché sur le site web.')
     hero_slider_image_1 = models.ImageField(upload_to='hero/', blank=True, null=True, verbose_name='Slide Hero 1 (Plateforme & Dashboard)', help_text='Image affichée sur le 1er slide du hero d\'accueil.')
     hero_slider_image_2 = models.ImageField(upload_to='hero/', blank=True, null=True, verbose_name='Slide Hero 2 (Suivi de Flotte)', help_text='Image affichée sur le 2ème slide du hero d\'accueil.')
     hero_slider_image_3 = models.ImageField(upload_to='hero/', blank=True, null=True, verbose_name='Slide Hero 3 (App Mobile & Rapports)', help_text='Image affichée sur le 3ème slide du hero d\'accueil.')
@@ -98,6 +101,41 @@ class CompanyInfo(models.Model):
     @property
     def name(self):
         return self.company_name
+
+    def get_promo_video_embed_url(self):
+        """Converts YouTube or other video URLs into an embeddable iframe URL."""
+        url = (self.promo_video_url or '').strip()
+        if not url:
+            try:
+                ma = MobileApp.objects.first()
+                if ma and ma.promo_video_url:
+                    return ma.get_promo_video_embed_url()
+            except Exception:
+                pass
+            return ''
+        video_id = None
+        if 'youtu.be/' in url:
+            video_id = url.split('youtu.be/')[1].split('?')[0].split('&')[0]
+        elif 'youtube.com/watch' in url:
+            import urllib.parse
+            parsed = urllib.parse.urlparse(url)
+            params = urllib.parse.parse_qs(parsed.query)
+            if 'v' in params and params['v']:
+                video_id = params['v'][0]
+        elif 'youtube.com/shorts/' in url:
+            video_id = url.split('youtube.com/shorts/')[1].split('?')[0].split('&')[0]
+        elif 'youtube.com/embed/' in url:
+            video_id = url.split('youtube.com/embed/')[1].split('?')[0].split('&')[0]
+        elif 'youtube-nocookie.com/embed/' in url:
+            video_id = url.split('youtube-nocookie.com/embed/')[1].split('?')[0].split('&')[0]
+
+        if video_id:
+            return f"https://www.youtube-nocookie.com/embed/{video_id}?rel=0&enablejsapi=1"
+
+        if 'vimeo.com/' in url and 'player.vimeo.com' not in url:
+            v_id = url.split('vimeo.com/')[1].split('?')[0].split('&')[0]
+            return f"https://player.vimeo.com/video/{v_id}"
+        return url
 
     def __str__(self):
         return self.company_name
@@ -231,7 +269,7 @@ class MobileApp(models.Model):
     android_available = models.BooleanField(default=True, verbose_name='Disponible sur Android')
     ios_url = models.URLField(blank=True, verbose_name='Lien App Store (iOS)')
     ios_available = models.BooleanField(default=False, verbose_name='Disponible sur iOS')
-    ios_coming_soon = models.BooleanField(default=True, verbose_name='iOS bientôt disponible')
+    ios_coming_soon = models.BooleanField(default=False, verbose_name='iOS bientôt disponible')
     
     # Media
     hero_image = models.ImageField(upload_to='app/', blank=True, null=True, verbose_name='Image principale (mockup téléphone)', help_text='Image de mockup du téléphone avec l\'app. Taille recommandée: 600x800px')

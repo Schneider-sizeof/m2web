@@ -257,7 +257,7 @@ msgid "Support & Formation"
 msgstr "دعم وتدريب"
 
 msgid "Marque Blanche"
-msgstr "علامة بيضاء"
+msgstr "العلامة البيضاء المخصصة"
 
 msgid "Support Marketing"
 msgstr "دعم تسويقي"
@@ -718,7 +718,7 @@ msgid "Location / Abonnement SaaS (Par véhicule / mois ou an)"
 msgstr "اشتراك SaaS (لكل مركبة / شهري أو سنوي)"
 
 msgid "Location SaaS"
-msgstr "اشتراك SaaS"
+msgstr "اشتراك سحابي SaaS"
 
 msgid "Loueur de véhicules / Agence de transport"
 msgstr "مؤجر مركبات / وكالة نقل"
@@ -1025,7 +1025,7 @@ msgid "Samedi :"
 msgstr "السبت:"
 
 msgid "Sans engagement de durée"
-msgstr "بدون التزام بالمدة"
+msgstr "بدون أي التزام زمني"
 
 msgid "Secteur d'Activité"
 msgstr "قطاع النشاط"
@@ -1926,141 +1926,141 @@ msgid "Demander un Devis Gratuit"
 msgstr "طلب مقايسة أسعار مجانية"
 
 msgid "Tarifs & Forfaits Plateforme GPS"
-msgstr "أسعار وباقات منصة GPS"
+msgstr "أسعار وباقات منصة التتبع GPS"
 
 msgid "Formules Claires, Flexibles et Sans Frais Cachés"
-msgstr "باقات واضحة ومرنة بدون أي رسوم خفية"
+msgstr "خطط واضحة ومرنة وبدون أي رسوم خفية"
 
 msgid ""
 "Que vous soyez gestionnaire d’une petite flotte, entreprise de transport ou "
 "intégrateur souhaitant lancer votre propre marque, nous avons la formule "
 "idéale."
 msgstr ""
-"سواء كنت تدير أسطولاً صغيراً، أو شركة نقل كبرى، أو موزعا ترغب في إطلاق "
-"علامتك الخاصة، لدينا الباقة المثالية لك."
+"سواء كنت تدير أسطولاً صغيراً، شركة نقل كبرى، أو ترغب في إطلاق علامتك "
+"التجارية الخاصة، فلدينا الباقة المثالية لك."
 
 msgid "Flottes & PME"
-msgstr "الأساطيل والمقاولات الصغرى والمتوسطة"
+msgstr "الأساطيل والشركات الصغرى والمتوسطة"
 
 msgid "Abonnement mensuel tout compris par véhicule"
 msgstr "اشتراك شهري شامل لكل مركبة"
 
 msgid "/ mois / véhicule (HT)"
-msgstr "/ شهر / مركبة (دون احتساب الرسوم)"
+msgstr "/ شهر / مركبة (دون احتساب الضريبة)"
 
 msgid "Hébergement Cloud 99.9% inclus"
-msgstr "استضافة سحابية بنسبة جاهزية 99.9% مشمولة"
+msgstr "استضافة سحابية بنسبة توافر 99.9% مشمولة"
 
 msgid "Suivi temps réel & Historique 90 jours"
-msgstr "تتبع فوري مع سجل مسارات لمدة 90 يوماً"
+msgstr "تتبع في الوقت الفعلي وسجل رحلات لمدة 90 يوماً"
 
 msgid "Applications iOS & Android incluses"
 msgstr "تطبيقات iOS وأندرويد مشمولة"
 
 msgid "Alertes illimitées (SMS, Email, Push)"
-msgstr "تنبيهات غير محدودة (رسائل SMS، بريد إلكتروني، إشعارات فورية)"
+msgstr "تنبيهات غير محدودة (رسائل SMS، بريد إلكتروني، إشعارات)"
 
 msgid "Mises à jour & support technique"
-msgstr "تحديثات مستمرة ودعم فني"
+msgstr "تحديثات مستمرة ودعم فني متخصص"
 
 msgid "Choisir le SaaS"
-msgstr "اختيار باقة SaaS"
+msgstr "اختيار الاشتراك السحابي"
 
 msgid "Le Plus Choisi • Revendeurs"
 msgstr "الأكثر طلباً • للموزعين"
 
 msgid "Votre propre marque de télématique à 100%"
-msgstr "علامتك التجارية الخاصة بالتليماتيك 100%"
+msgstr "منصتك الخاصة للتتبع والتليماتيك 100% بهويتك التجارية"
 
 msgid "/ mois (Serveur mutualisé PRO)"
 msgstr "/ شهر (خادم مشترك احترافي)"
 
 msgid "Votre nom de domaine & logo personnalisés"
-msgstr "اسم النطاق والشعار الخاص بك"
+msgstr "اسم النطاق وشعارك الخاص بالكامل"
 
 msgid "Charte graphique adaptée à votre marque"
-msgstr "هوية بصرية وألوان متوافقة مع علامتك التجارية"
+msgstr "هوية بصرية مخصصة لألوان علامتك التجارية"
 
 msgid "Apps iOS & Android à votre marque"
 msgstr "تطبيقات iOS وأندرويد باسم علامتك التجارية"
 
 msgid "Gestion multi-clients illimitée"
-msgstr "إدارة غير محدودة لحسابات الزبائن"
+msgstr "إدارة غير محدودة لحسابات متعددة العملاء"
 
 msgid "Remises grossistes sur le matériel GPS"
-msgstr "خصومات الجملة على أجهزة تتبع GPS"
+msgstr "تخفيضات تجارية بالجملة على أجهزة التتبع"
 
 msgid "Support technique prioritaire N2"
-msgstr "دعم فني ذو أولوية من المستوى الثاني"
+msgstr "دعم فني من المستوى الثاني ذو أولوية"
 
 msgid "Lancer ma Marque"
 msgstr "إطلاق علامتي التجارية"
 
 msgid "Souveraineté des Données"
-msgstr "سيادة وأمان البيانات"
+msgstr "السيادة الكاملة على البيانات"
 
 msgid "Licence Serveur"
-msgstr "ترخيص الخادم"
+msgstr "ترخيص الخادم الخاص"
 
 msgid "Licence on-premise sur vos propres infrastructures"
-msgstr "ترخيص محلي على خوادمك وبنيتك التحتية الخاصة"
+msgstr "ترخيص تثبيت محلي على خوادمك وبنيتك التحتية الخاصة"
 
 msgid "/ licence unique à vie"
-msgstr "/ ترخيص دائم لمرة واحدة"
+msgstr "/ ترخيص دائم مدى الحياة لمرة واحدة"
 
 msgid "Paiement unique sans abonnement récurrent"
-msgstr "دفع لمرة واحدة بدون أي اشتراك دوري"
+msgstr "دفعة واحدة بدون أي اشتراك شهري متكرر"
 
 msgid "Hébergé sur vos propres serveurs"
-msgstr "مستضاف على خوادمك الخاصة"
+msgstr "مثبت ومستضاف على خوادمك الخاصة"
 
 msgid "Nombre illimité de véhicules & comptes"
-msgstr "عدد غير محدود من المركبات والحسابات"
+msgstr "عدد غير محدود من المركبات وحسابات المستخدمين"
 
 msgid "Contrôle absolu & sécurité interne"
-msgstr "تحكم مطلق وأمان داخلي كامل"
+msgstr "تحكم وأمان داخلي مطلق للبيانات"
 
 msgid "API & accès direct à la base de données"
-msgstr "واجهة برمجة التطبيقات (API) ووصول مباشر لقاعدة البيانات"
+msgstr "واجهة برمجة تطبيقات API ووصول مباشر لقاعدة البيانات"
 
 msgid "1 an de mises à jour & support inclus"
-msgstr "سنة واحدة من التحديثات والدعم مشمولة"
+msgstr "سنة كاملة من التحديثات والدعم الفني مشمولة"
 
 msgid "Acheter la Licence"
 msgstr "شراء الترخيص"
 
 msgid "Grands Comptes & Projets"
-msgstr "المشاريع الكبرى والشركات الضخمة"
+msgstr "المشاريع الكبرى وحسابات الشركات"
 
 msgid "Sur Mesure"
-msgstr "حل مخصص"
+msgstr "حلول مخصصة حسب الطلب"
 
 msgid "Développement spécifique & intégration ERP"
-msgstr "تطوير خاص وربط متكامل مع أنظمة ERP"
+msgstr "تطوير برمجي خاص وتكامل مع أنظمة ERP"
 
 msgid "Sur Devis"
-msgstr "حسب المقايسة"
+msgstr "حسب التقدير"
 
 msgid "/ cahier des charges personnalisé"
-msgstr "/ حسب دفتر التحملات المخصص"
+msgstr "/ وفق دفتر التحملات المخصص"
 
 msgid "Intégration ERP & CRM (SAP, Sage, Odoo)"
-msgstr "ربط مع أنظمة ERP و CRM (مثل SAP، Sage، Odoo)"
+msgstr "ربط وتكامل مع أنظمة ERP و CRM (SAP, Sage, Odoo)"
 
 msgid "Rapports télématiques personnalisés"
-msgstr "تقارير تليماتيك مخصصة"
+msgstr "تقارير تليماتيكية وإحصائيات مخصصة"
 
 msgid "Intégration capteurs métier spécifiques"
-msgstr "ربط حساسات صناعية خاصة"
+msgstr "دمج مستشعرات صناعية وحساسات متخصصة"
 
 msgid "Protocoles télématiques propriétaires"
-msgstr "بروتوكولات اتصال تليماتيك خاصة"
+msgstr "بروتوكولات اتصال تليماتيكية خاصة"
 
 msgid "SLA de support garanti & chef de projet"
-msgstr "اتفاقية مستوى خدمة (SLA) مضمونة ومدير مشروع مخصص"
+msgstr "اتفاقية مستوى خدمة SLA مضمونة ومدير مشروع مخصص"
 
 msgid "Formation technique sur mesure"
-msgstr "تدريب تقني مخصص"
+msgstr "تدريب تقني مخصص لفرق العمل"
 
 msgid "Étudier mon Projet"
 msgstr "دراسة مشروعي"
@@ -2071,3 +2071,39 @@ msgid ""
 msgstr ""
 "جميع الأسعار معروضة بالدرهم المغربي (DH) دون احتساب الرسوم. تخفيضات تفضيلية "
 "حسب حجم الأسطول."
+
+msgid "App Android & Web"
+msgstr "تطبيق أندرويد والويب"
+
+msgid "Application Mobile Android & Web"
+msgstr "تطبيق الهاتف أندرويد ومنصة الويب"
+
+msgid "Application Android & Web incluses"
+msgstr "تطبيقات أندرويد ومنصة الويب مشمولة"
+
+msgid "Application Android & Web à votre marque"
+msgstr "تطبيقات أندرويد والويب بعلامتك التجارية"
+
+msgid "Capture d'écran Plateforme GPS Web"
+msgstr "لقطة شاشة لمنصة التتبع GPS على الويب"
+
+msgid "Regarder la Démo Vidéo"
+msgstr "مشاهدة الفيديو التوضيحي"
+
+msgid "Démonstration Plateforme & Serveur GPS"
+msgstr "عرض توضيحي لمنصة وخادم التتبع GPS"
+
+msgid "Démo Plateforme GPS"
+msgstr "عرض منصة التتبع GPS"
+
+msgid "Accès Navigateur"
+msgstr "دخول عبر المتصفح"
+
+msgid "Plateforme Web"
+msgstr "منصة الويب"
+
+msgid "Accéder à la Plateforme Web"
+msgstr "الدخول إلى منصة الويب"
+
+msgid "Gérez votre flotte en déplacement depuis votre smartphone ou tablette."
+msgstr "قم بإدارة أسطولك أثناء التنقل من هاتفك الذكي أو جهازك اللوحي."

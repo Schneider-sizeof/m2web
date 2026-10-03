@@ -3448,6 +3448,183 @@ html[dir='rtl'] .whatsapp-tooltip::after {
 /* ==========================================================================
    27. Platform & Server Pricing Enhancements
    ========================================================================== */
+.platform-window-mockup {
+    background: #ffffff;
+    border: 1px solid rgba(45, 27, 61, 0.12) !important;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform-window-mockup:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(45, 27, 61, 0.16) !important;
+}
+
+.platform-window-header {
+    background: linear-gradient(180deg, #f8f9fa 0%, #eceef1 100%);
+}
+
+.window-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pricing-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 2.25rem 1.75rem 2rem;
+    border: 1px solid rgba(45, 27, 61, 0.08);
+    box-shadow: 0 6px 24px rgba(45, 27, 61, 0.05);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 48px rgba(45, 27, 61, 0.12);
+    border-color: rgba(245, 166, 35, 0.3);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--secondary-color) !important;
+    box-shadow: 0 16px 45px rgba(245, 166, 35, 0.18) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-amber);
+}
+
+.pricing-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+    background: #f4f2f6;
+    color: var(--primary-color);
+    border: 1px solid rgba(45, 27, 61, 0.08);
+}
+
+.pricing-badge.popular {
+    background: var(--gradient-amber) !important;
+    color: var(--primary-color) !important;
+    border: none !important;
+    box-shadow: 0 2px 8px rgba(245, 166, 35, 0.3);
+}
+
+.pricing-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    margin-bottom: 1rem;
+    transition: transform 0.25s ease;
+}
+
+.pricing-card:hover .pricing-icon {
+    transform: scale(1.08);
+}
+
+.pricing-icon.icon-light {
+    background: rgba(45, 27, 61, 0.05);
+    color: var(--primary-color);
+    border: 1px solid rgba(45, 27, 61, 0.08);
+}
+
+.pricing-icon.icon-amber {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 4px 14px rgba(245, 166, 35, 0.35);
+}
+
+.pricing-card-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.35rem;
+}
+
+.pricing-card-desc {
+    font-size: 0.84rem;
+    color: #6c757d;
+    min-height: 42px;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+.pricing-price-box {
+    background: #fbf9fc;
+    border: 1px solid rgba(45, 27, 61, 0.06);
+    border-radius: 12px;
+    padding: 0.95rem 0.75rem;
+    text-align: center;
+    margin-bottom: 1.35rem;
+}
+
+.pricing-price-val {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.pricing-price-val.amber {
+    color: #e59312;
+}
+
+.pricing-price-currency {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-left: 0.25rem;
+}
+
+.pricing-price-period {
+    font-size: 0.78rem;
+    color: #7a7a7a;
+    margin-top: 0.35rem;
+    line-height: 1.25;
+}
+
+.pricing-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.85rem;
+    color: #3e3e3e;
+    margin-bottom: 0.65rem;
+    line-height: 1.45;
+}
+
+.pricing-feature-item i {
+    font-size: 0.95rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* Fallback for legacy tier-card classes */
 .platform-price-box {
     margin-bottom: 1.25rem;
     padding-bottom: 1.25rem;

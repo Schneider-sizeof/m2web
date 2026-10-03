@@ -1069,7 +1069,7 @@ msgid "Samedi :"
 msgstr "Saturday:"
 
 msgid "Sans engagement de durée"
-msgstr "No time commitment"
+msgstr "No long-term commitment"
 
 msgid "Secteur d'Activité"
 msgstr "Business Sector"
@@ -1996,7 +1996,7 @@ msgid "Demander un Devis Gratuit"
 msgstr "Request a Free Quote"
 
 msgid "Tarifs & Forfaits Plateforme GPS"
-msgstr "GPS Platform Plans & Pricing"
+msgstr "GPS Platform Pricing & Plans"
 
 msgid "Formules Claires, Flexibles et Sans Frais Cachés"
 msgstr "Clear, Flexible Plans with No Hidden Fees"
@@ -2006,8 +2006,8 @@ msgid ""
 "intégrateur souhaitant lancer votre propre marque, nous avons la formule "
 "idéale."
 msgstr ""
-"Whether you manage a small fleet, run a transport company, or are an "
-"integrator wanting to launch your own brand, we have the ideal plan."
+"Whether you manage a small fleet, run a transport enterprise, or want to "
+"launch your own white-label brand, we have the ideal plan."
 
 msgid "Flottes & PME"
 msgstr "Fleets & SMBs"
@@ -2040,7 +2040,7 @@ msgid "Le Plus Choisi • Revendeurs"
 msgstr "Most Popular • Resellers"
 
 msgid "Votre propre marque de télématique à 100%"
-msgstr "Your 100% own telematics brand"
+msgstr "Your 100% custom-branded telematics platform"
 
 msgid "/ mois (Serveur mutualisé PRO)"
 msgstr "/ month (PRO Shared Server)"
@@ -2049,7 +2049,7 @@ msgid "Votre nom de domaine & logo personnalisés"
 msgstr "Your custom domain name & logo"
 
 msgid "Charte graphique adaptée à votre marque"
-msgstr "Custom color palette matched to your brand"
+msgstr "Color scheme matched to your brand"
 
 msgid "Apps iOS & Android à votre marque"
 msgstr "iOS & Android apps with your branding"
@@ -2061,7 +2061,7 @@ msgid "Remises grossistes sur le matériel GPS"
 msgstr "Wholesale hardware discounts"
 
 msgid "Support technique prioritaire N2"
-msgstr "Priority Level 2 technical support"
+msgstr "Priority Tier-2 technical support"
 
 msgid "Lancer ma Marque"
 msgstr "Launch My Brand"
@@ -2130,10 +2130,10 @@ msgid "SLA de support garanti & chef de projet"
 msgstr "Guaranteed support SLA & dedicated project manager"
 
 msgid "Formation technique sur mesure"
-msgstr "Tailored technical training"
+msgstr "Custom technical training"
 
 msgid "Étudier mon Projet"
-msgstr "Submit My Project"
+msgstr "Review My Project"
 
 msgid ""
 "Tous nos prix sont exprimés en Dirhams marocains (DH) hors taxes. Remises "
@@ -2141,3 +2141,39 @@ msgid ""
 msgstr ""
 "All prices are quoted in Moroccan Dirhams (DH) excluding VAT. Tiered volume "
 "discounts available."
+
+msgid "App Android & Web"
+msgstr "Android & Web App"
+
+msgid "Application Mobile Android & Web"
+msgstr "Android & Web Mobile App"
+
+msgid "Application Android & Web incluses"
+msgstr "Android app & Web platform included"
+
+msgid "Application Android & Web à votre marque"
+msgstr "Android app & Web platform with your branding"
+
+msgid "Capture d'écran Plateforme GPS Web"
+msgstr "GPS Web Platform Screenshot"
+
+msgid "Regarder la Démo Vidéo"
+msgstr "Watch Video Demo"
+
+msgid "Démonstration Plateforme & Serveur GPS"
+msgstr "GPS Platform & Server Demo"
+
+msgid "Démo Plateforme GPS"
+msgstr "GPS Platform Demo"
+
+msgid "Accès Navigateur"
+msgstr "Browser Access"
+
+msgid "Plateforme Web"
+msgstr "Web Platform"
+
+msgid "Accéder à la Plateforme Web"
+msgstr "Access Web Platform"
+
+msgid "Gérez votre flotte en déplacement depuis votre smartphone ou tablette."
+msgstr "Manage your fleet on the move from your smartphone or tablet."

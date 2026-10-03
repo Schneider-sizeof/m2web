@@ -21,9 +21,8 @@
                 <p class="lead mb-4 text-white-50">{{ app.hero_subtitle }}</p>
                 <p class="mb-4">{{ app.description }}</p>
                 
-                <div class="d-flex flex-wrap gap-3 mb-4">
                     {% if app.android_available %}
-                    <a href="{{ app.android_url }}" target="_blank" class="btn btn-amber btn-lg d-flex align-items-center gap-2">
+                    <a href="{{ app.android_url|default:'https://play.google.com/store/apps/details?id=com.m2web.gps' }}" target="_blank" class="btn btn-amber btn-lg d-flex align-items-center gap-2">
                         <i class="bi bi-google-play fs-4"></i>
                         <div class="text-start">
                             <small class="d-block" style="font-size:0.65rem;line-height:1;">{% trans 'Télécharger sur' %}</small>
@@ -31,24 +30,14 @@
                         </div>
                     </a>
                     {% endif %}
-                    {% if app.ios_available %}
-                    <a href="{{ app.ios_url }}" target="_blank" class="btn btn-outline-light btn-lg d-flex align-items-center gap-2">
-                        <i class="bi bi-apple fs-4"></i>
+                    <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg d-flex align-items-center gap-2">
+                        <i class="bi bi-laptop fs-4 text-amber"></i>
                         <div class="text-start">
-                            <small class="d-block" style="font-size:0.65rem;line-height:1;">{% trans 'Télécharger sur' %}</small>
-                            <span class="fw-bold">App Store</span>
+                            <small class="d-block" style="font-size:0.65rem;line-height:1;">{% trans 'Accès Navigateur' %}</small>
+                            <span class="fw-bold">{% trans 'Plateforme Web' %}</span>
                         </div>
                     </a>
-                    {% elif app.ios_coming_soon %}
-                    <div class="btn btn-outline-light btn-lg d-flex align-items-center gap-2 disabled" style="opacity:0.7;">
-                        <i class="bi bi-apple fs-4"></i>
-                        <div class="text-start">
-                            <small class="d-block" style="font-size:0.65rem;line-height:1;">iOS</small>
-                            <span class="fw-bold">{% trans 'Bientôt disponible' %}</span>
-                        </div>
-                    </div>
-                    {% endif %}
-                    {% if app.promo_video_url %}
+                    {% if app.promo_video_url or company.promo_video_url %}
                     <a href="#promoVideoSection" class="btn btn-outline-light btn-lg d-flex align-items-center gap-2">
                         <i class="bi bi-play-circle-fill text-amber fs-4"></i>
                         <div class="text-start">
@@ -157,7 +146,7 @@
 </section>
 
 <!-- Promotional Video Section -->
-{% if app.promo_video_url %}
+{% if app.promo_video_url or company.promo_video_url %}
 <section id="promoVideoSection" class="section-padding bg-light-soft border-top border-bottom">
     <div class="container">
         <div class="text-center mb-5 animate-on-scroll">
@@ -170,10 +159,10 @@
         <div class="row justify-content-center">
             <div class="col-lg-10 col-xl-8 animate-on-scroll">
                 <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden border border-2 border-warning" style="box-shadow: 0 20px 60px rgba(45, 27, 61, 0.25) !important;">
-                    <iframe src="{{ app.get_promo_video_embed_url }}" title="{% trans 'Vidéo de présentation M2web GPS' %}" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 0;"></iframe>
+                    <iframe src="{% if company.get_promo_video_embed_url %}{{ company.get_promo_video_embed_url }}{% else %}{{ app.get_promo_video_embed_url }}{% endif %}" title="{% trans 'Vidéo de présentation M2web GPS' %}" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 0;"></iframe>
                 </div>
                 <div class="text-center mt-3">
-                    <a href="{{ app.promo_video_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-plum rounded-pill px-3 py-2">
+                    <a href="{% if company.promo_video_url %}{{ company.promo_video_url }}{% else %}{{ app.promo_video_url }}{% endif %}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-plum rounded-pill px-3 py-2">
                         <i class="bi bi-box-arrow-up-right me-1"></i> {% trans 'Ouvrir la vidéo sur YouTube' %}
                     </a>
                 </div>
@@ -411,30 +400,6 @@
 </section>
 {% endif %}
 
-<!-- iOS Coming Soon -->
-{% if app.ios_coming_soon %}
-<section class="py-4" style="background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-8">
-                <div class="d-flex align-items-center gap-3">
-                    <i class="bi bi-apple text-white" style="font-size: 2.5rem;"></i>
-                    <div>
-                        <h5 class="text-white fw-bold mb-1">{% trans 'Version iOS bientôt disponible' %}</h5>
-                        <p class="text-white-50 mb-0 small">{% trans "Nous travaillons activement sur la version iPhone. Inscrivez-vous pour être notifié dès sa sortie." %}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                <a href="{% url 'contact:contact' %}" class="btn btn-outline-light">
-                    <i class="bi bi-bell me-1"></i> {% trans 'Me notifier' %}
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-{% endif %}
-
 <!-- CTA Section -->
 <section class="section-padding bg-plum">
     <div class="container text-center">
@@ -444,18 +409,20 @@
             
             <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
                 {% if app.android_available %}
-                <a href="{{ app.android_url }}" target="_blank" class="btn btn-amber btn-lg">
+                <a href="{{ app.android_url|default:'https://play.google.com/store/apps/details?id=com.m2web.gps' }}" target="_blank" class="btn btn-amber btn-lg">
                     <i class="bi bi-google-play me-2"></i> {% trans 'Télécharger sur Google Play' %}
                 </a>
                 {% endif %}
-                {% if app.promo_video_url %}
+                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-laptop me-2 text-amber"></i> {% trans 'Accéder à la Plateforme Web' %}
+                </a>
+                {% if app.promo_video_url or company.promo_video_url %}
                 <a href="#promoVideoSection" class="btn btn-outline-light btn-lg">
                     <i class="bi bi-play-circle me-2"></i> {% trans 'Voir la Démo Vidéo' %}
                 </a>
                 {% endif %}
                 <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="btn btn-outline-light btn-lg">
                     <i class="bi bi-whatsapp me-2"></i> {% trans 'Demander une Démo' %}
-                </a>
             </div>
             
             <p class="text-white-50 small">

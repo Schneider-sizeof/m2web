@@ -15,9 +15,16 @@ class CompanyInfoAdmin(admin.ModelAdmin):
                 'whatsapp_number', 'email', 'address', 'city', 'country', 'google_maps_url', 'google_maps_embed_url'
             )
         }),
-        ('Logos & Médias Principaux (Tableau de Bord)', {
-            'description': 'Logo officiel, image À Propos et diapositives du carrousel de la page d\'accueil',
-            'fields': ('logo', 'about_image', 'hero_slider_image_1', 'hero_slider_image_2', 'hero_slider_image_3')
+        ('Logos, Vidéo & Médias Principaux (Tableau de Bord)', {
+            'description': 'Logo officiel, favicon, capture plateforme GPS, vidéo de présentation, photo À Propos et diapositives d\'accueil',
+            'fields': (
+                ('logo', 'logo_preview'),
+                ('favicon', 'favicon_preview'),
+                ('platform_screenshot', 'platform_screenshot_preview'),
+                'promo_video_url',
+                ('about_image', 'about_image_preview'),
+                'hero_slider_image_1', 'hero_slider_image_2', 'hero_slider_image_3'
+            )
         }),
         ('Barre Supérieure & En-tête (Topbar)', {
             'description': 'Textes et badges affichés tout en haut du site web',
@@ -61,6 +68,36 @@ class CompanyInfoAdmin(admin.ModelAdmin):
             'fields': ('meta_description', 'analytics_id')
         }),
     )
+
+    readonly_fields = ['logo_preview', 'favicon_preview', 'about_image_preview', 'platform_screenshot_preview']
+
+    def logo_preview(self, obj):
+        if obj and obj.logo:
+            from django.utils.html import format_html
+            return format_html('<img src="{}" style="max-height: 48px; max-width: 180px; background: #1E1028; padding: 4px; border-radius: 4px;" />', obj.logo.url)
+        return "Aucun logo téléversé (logo par défaut actif)"
+    logo_preview.short_description = "Aperçu Logo"
+
+    def favicon_preview(self, obj):
+        if obj and obj.favicon:
+            from django.utils.html import format_html
+            return format_html('<img src="{}" style="max-height: 32px; max-width: 32px;" />', obj.favicon.url)
+        return "Favicon par défaut actif"
+    favicon_preview.short_description = "Aperçu Favicon"
+
+    def about_image_preview(self, obj):
+        if obj and obj.about_image:
+            from django.utils.html import format_html
+            return format_html('<img src="{}" style="max-height: 120px; max-width: 200px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />', obj.about_image.url)
+        return "Aucune image personnalisée (image par défaut active)"
+    about_image_preview.short_description = "Aperçu Photo À Propos"
+
+    def platform_screenshot_preview(self, obj):
+        if obj and obj.platform_screenshot:
+            from django.utils.html import format_html
+            return format_html('<img src="{}" style="max-height: 120px; max-width: 200px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />', obj.platform_screenshot.url)
+        return "Aucune capture personnalisée (tableau de bord par défaut actif)"
+    platform_screenshot_preview.short_description = "Aperçu Capture Plateforme"
 
     def has_add_permission(self, request):
         if CompanyInfo.objects.exists():
@@ -116,8 +153,8 @@ class MobileAppAdmin(TranslationAdmin):
         ('Identité de l\'Application', {
             'fields': ('app_name', 'tagline', 'hero_title', 'hero_subtitle', 'description', 'is_active')
         }),
-        ('Liens de Téléchargement', {
-            'fields': ('android_url', 'android_available', 'ios_url', 'ios_available', 'ios_coming_soon')
+        ('Téléchargement & Disponibilité', {
+            'fields': ('android_url', 'android_available')
         }),
         ('Médias', {
             'fields': ('hero_image', 'promo_video_url')

@@ -1861,3 +1861,40 @@ msgid ""
 msgstr ""
 "Tous nos prix sont exprimés en Dirhams marocains (DH) hors taxes. Remises "
 "dégressives disponibles selon volume de flotte."
+
+msgid "App Android & Web"
+msgstr "App Android & Web"
+
+msgid "Application Mobile Android & Web"
+msgstr "Application Mobile Android & Web"
+
+msgid "Application Android & Web incluses"
+msgstr "Application Android & Web incluses"
+
+msgid "Application Android & Web à votre marque"
+msgstr "Application Android & Web à votre marque"
+
+msgid "Capture d'écran Plateforme GPS Web"
+msgstr "Capture d'écran Plateforme GPS Web"
+
+msgid "Regarder la Démo Vidéo"
+msgstr "Regarder la Démo Vidéo"
+
+msgid "Démonstration Plateforme & Serveur GPS"
+msgstr "Démonstration Plateforme & Serveur GPS"
+
+msgid "Démo Plateforme GPS"
+msgstr "Démo Plateforme GPS"
+
+msgid "Accès Navigateur"
+msgstr "Accès Navigateur"
+
+msgid "Plateforme Web"
+msgstr "Plateforme Web"
+
+msgid "Accéder à la Plateforme Web"
+msgstr "Accéder à la Plateforme Web"
+
+msgid "Gérez votre flotte en déplacement depuis votre smartphone ou tablette."
+msgstr ""
+"Gérez votre flotte en déplacement depuis votre smartphone ou tablette."
