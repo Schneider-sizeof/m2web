@@ -38,7 +38,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav mx-xl-auto ms-lg-auto me-lg-2 me-xl-0 mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto me-2 me-xl-3 mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.app_name == 'core' and request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'core:home' %}">{% trans 'Accueil' %}</a>
                 </li>
@@ -73,11 +73,11 @@
 
             <div class="d-flex align-items-center gap-2 flex-shrink-0">
                 {% include 'includes/language_switcher.html' %}
-                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-nav-login d-none d-lg-inline-flex align-items-center gap-2 flex-shrink-0" title="{% trans 'Connexion Plateforme Trackmaroc' %}" style="color: #ffffff !important; border: 1.5px solid #F5A623 !important; background: rgba(255, 255, 255, 0.12) !important; font-weight: 700 !important;">
-                    <i class="bi bi-box-arrow-in-right text-amber fs-6"></i> <span>{% trans 'Connexion' %}</span>
+                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn-nav-login d-none d-lg-inline-flex" title="{% trans 'Connexion Plateforme Trackmaroc' %}">
+                    <i class="bi bi-box-arrow-in-right text-amber"></i> <span>{% trans 'Connexion' %}</span>
                 </a>
-                <a href="{% url 'contact:contact' %}" class="btn btn-amber btn-nav-quote d-none d-lg-inline-flex flex-shrink-0">
-                    <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
+                <a href="{% url 'contact:contact' %}" class="btn-nav-quote d-none d-lg-inline-flex">
+                    <i class="bi bi-file-earmark-text"></i> <span>{% trans 'Demander un Devis' %}</span>
                 </a>
             </div>
 

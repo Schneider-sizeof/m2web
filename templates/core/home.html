@@ -172,57 +172,42 @@
             {% if pillars %}
                 {% for pillar in pillars %}
                 <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
-                    <a href="{{ pillar.get_link_url }}" class="pillar-card w-100 d-flex flex-column">
+                    <a href="{{ pillar.get_link_url }}" class="pillar-card w-100 d-flex flex-column text-decoration-none">
                         <div class="pillar-icon">
                             <i class="{{ pillar.icon_class|default:'bi bi-broadcast-pin' }}"></i>
                         </div>
                         <h4 class="fw-bold mb-3 fs-5">{{ pillar.title }}</h4>
-                        <p class="text-muted small mb-4 flex-grow-1">{{ pillar.description }}</p>
-                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1 mt-auto">
-                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
-                        </span>
+                        <p class="text-muted small mb-0">{{ pillar.description }}</p>
                     </a>
                 </div>
                 {% endfor %}
             {% else %}
                 <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
-                    <a href="{% url 'services:list' %}" class="pillar-card w-100 d-flex flex-column">
+                    <a href="{% url 'services:list' %}" class="pillar-card w-100 d-flex flex-column text-decoration-none">
                         <div class="pillar-icon"><i class="bi bi-broadcast-pin"></i></div>
                         <h4 class="fw-bold mb-3 fs-5">{% trans 'Réseau 4G Multi-Opérateur' %}</h4>
-                        <p class="text-muted small mb-4 flex-grow-1">{% trans 'Connectivité permanente via cartes SIM M2M multi-opérateurs compatibles Maroc Telecom, Orange et Inwi.' %}</p>
-                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1 mt-auto">
-                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
-                        </span>
+                        <p class="text-muted small mb-0">{% trans 'Connectivité permanente via cartes SIM M2M multi-opérateurs compatibles Maroc Telecom, Orange et Inwi.' %}</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
-                    <a href="{% url 'core:mobile_app' %}" class="pillar-card w-100 d-flex flex-column">
+                    <a href="{% url 'core:mobile_app' %}" class="pillar-card w-100 d-flex flex-column text-decoration-none">
                         <div class="pillar-icon"><i class="bi bi-phone"></i></div>
                         <h4 class="fw-bold mb-3 fs-5">{% trans 'Application Mobile & Web' %}</h4>
-                        <p class="text-muted small mb-4 flex-grow-1">{% trans 'Suivi en temps réel sur smartphone & PC avec notifications push instantanées et alertes intelligentes.' %}</p>
-                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1 mt-auto">
-                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
-                        </span>
+                        <p class="text-muted small mb-0">{% trans 'Suivi en temps réel sur smartphone & PC avec notifications push instantanées et alertes intelligentes.' %}</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
-                    <a href="/services/controle-carburant-eco-conduite/" class="pillar-card w-100 d-flex flex-column">
+                    <a href="/services/controle-carburant-eco-conduite/" class="pillar-card w-100 d-flex flex-column text-decoration-none">
                         <div class="pillar-icon"><i class="bi bi-fuel-pump"></i></div>
                         <h4 class="fw-bold mb-3 fs-5">{% trans 'Contrôle Carburant Anti-Vol' %}</h4>
-                        <p class="text-muted small mb-4 flex-grow-1">{% trans 'Sondes capacitives haute précision pour détecter les siphonnages et analyser les consommations.' %}</p>
-                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1 mt-auto">
-                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
-                        </span>
+                        <p class="text-muted small mb-0">{% trans 'Sondes capacitives haute précision pour détecter les siphonnages et analyser les consommations.' %}</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 animate-on-scroll d-flex">
-                    <a href="{% url 'contact:contact' %}" class="pillar-card w-100 d-flex flex-column">
+                    <a href="{% url 'contact:contact' %}" class="pillar-card w-100 d-flex flex-column text-decoration-none">
                         <div class="pillar-icon"><i class="bi bi-tools"></i></div>
                         <h4 class="fw-bold mb-3 fs-5">{% trans 'Installation & Support à Fès' %}</h4>
-                        <p class="text-muted small mb-4 flex-grow-1">{% trans 'Atelier technique et techniciens certifiés pour équiper vos parcs partout au Maroc avec support direct.' %}</p>
-                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1 mt-auto">
-                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
-                        </span>
+                        <p class="text-muted small mb-0">{% trans 'Atelier technique et techniciens certifiés pour équiper vos parcs partout au Maroc avec support direct.' %}</p>
                     </a>
                 </div>
             {% endif %}

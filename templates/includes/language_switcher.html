@@ -3,7 +3,7 @@
 
 <!-- Desktop Dropdown (d-none d-lg-block) -->
 <div class="dropdown lang-switcher d-none d-lg-block">
-    <button class="btn btn-sm text-white dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         {% if CURRENT_LANG == 'fr' %}
             <img src="{% static 'images/flags/fr.svg' %}" width="18" height="12" class="me-1 rounded-1 align-baseline" alt="FR"> FR
         {% elif CURRENT_LANG == 'ar' %}
