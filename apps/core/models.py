@@ -57,6 +57,13 @@ class CompanyInfo(models.Model):
     about_lead = models.TextField(default='Basée à Fès, M2web Maroc est une entreprise technologique spécialisée dans les solutions de géolocalisation et la gestion de flotte.')
     about_text = models.TextField(default="Depuis notre création, nous nous sommes engagés à fournir à nos clients des outils fiables, précis et faciles à utiliser pour optimiser leurs opérations logistiques. Notre mission est d'accompagner les entreprises marocaines dans leur transformation numérique en leur offrant une visibilité totale sur leurs actifs mobiles.")
 
+    # Brand Media & Images
+    logo = models.ImageField(upload_to='company/', blank=True, null=True, verbose_name='Logo principal du site', help_text='Logo affiché dans la barre de navigation et le pied de page.')
+    about_image = models.ImageField(upload_to='company/', blank=True, null=True, verbose_name='Photo page À Propos', help_text='Image représentant l\'équipe ou les locaux sur la page À Propos. Recommandé: 800x600px')
+    hero_slider_image_1 = models.ImageField(upload_to='hero/', blank=True, null=True, verbose_name='Slide Hero 1 (Plateforme & Dashboard)', help_text='Image affichée sur le 1er slide du hero d\'accueil.')
+    hero_slider_image_2 = models.ImageField(upload_to='hero/', blank=True, null=True, verbose_name='Slide Hero 2 (Suivi de Flotte)', help_text='Image affichée sur le 2ème slide du hero d\'accueil.')
+    hero_slider_image_3 = models.ImageField(upload_to='hero/', blank=True, null=True, verbose_name='Slide Hero 3 (App Mobile & Rapports)', help_text='Image affichée sur le 3ème slide du hero d\'accueil.')
+
     # Hero Background Media
     hero_bg_video = models.FileField(upload_to='hero/', blank=True, null=True, verbose_name='Vidéo de fond Hero (MP4)', help_text='Vidéo de fond pour le hero de la page d\'accueil. Format MP4, max 10MB recommandé.')
     hero_bg_image = models.ImageField(upload_to='hero/', blank=True, null=True, verbose_name='Image de fond Hero', help_text='Image de fond alternative si pas de vidéo. Taille recommandée: 1920x1080px')
@@ -100,6 +107,7 @@ class WhyChooseUsPillar(models.Model):
     title = models.CharField(max_length=200, verbose_name='Titre')
     description = models.TextField(verbose_name='Description')
     icon_class = models.CharField(max_length=100, default='bi bi-broadcast-pin', help_text='Classe Bootstrap Icons (ex: bi bi-broadcast-pin, bi bi-phone, bi bi-fuel-pump, bi bi-tools)')
+    link_url = models.CharField(max_length=255, blank=True, verbose_name='Lien de redirection', help_text='URL interne (ex: /services/ ou /mobile-app/ ou /wholesale/) ou externe. Si vide, redirige automatiquement vers la solution correspondante.')
     order = models.PositiveIntegerField(default=0, verbose_name='Ordre d\'affichage')
     is_active = models.BooleanField(default=True, verbose_name='Actif')
 
@@ -107,6 +115,20 @@ class WhyChooseUsPillar(models.Model):
         ordering = ['order']
         verbose_name = 'Pourquoi Nous Choisir (Pilier)'
         verbose_name_plural = 'Pourquoi Nous Choisir (Piliers)'
+
+    def get_link_url(self):
+        if self.link_url:
+            return self.link_url
+        t = (self.title or '').lower()
+        if 'carburant' in t or 'fuel' in t or 'sonde' in t:
+            return '/services/controle-carburant-eco-conduite/'
+        elif 'mobile' in t or 'app' in t or 'web' in t:
+            return '/mobile-app/'
+        elif '4g' in t or 'multi' in t or 'réseau' in t or 'network' in t:
+            return '/services/'
+        elif 'install' in t or 'support' in t or 'fès' in t or 'fez' in t:
+            return '/contact/'
+        return '/services/'
 
     def __str__(self):
         return self.title

@@ -5,7 +5,11 @@
             <!-- Brand -->
             <div class="col-lg-3 col-md-6 footer-brand-col">
                 <div class="footer-brand mb-3">
-                    <img src="{% static 'images/logo-navbar.png' %}" alt="M2WEB Maroc" height="48" class="rounded-2">
+                    {% if company.logo %}
+                        <img src="{{ company.logo.url }}" alt="{{ company.company_name|default:'M2WEB Maroc' }}" height="48" class="rounded-2">
+                    {% else %}
+                        <img src="{% static 'images/logo-navbar.png' %}" alt="M2WEB Maroc" height="48" class="rounded-2">
+                    {% endif %}
                 </div>
                 <p class="footer-desc">{{ company.tagline|default:_("Votre partenaire de confiance pour le suivi GPS et la gestion de flotte au Maroc. Des solutions innovantes pour optimiser vos opérations.") }}</p>
                 <div class="social-icons">

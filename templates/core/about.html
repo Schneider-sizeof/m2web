@@ -13,7 +13,7 @@
     <div class="page-header-overlay"></div>
     {% endif %}
     <div class="container page-header-content">
-        <h1>{% trans 'À Propos de' %} {{ company.company_name|default:"M2web" }}</h1>
+        <h1>{% trans 'À Propos de' %} {{ company.company_name|default:"M2web Maroc" }}</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{% url 'core:home' %}">{% trans 'Accueil' %}</a></li>
@@ -23,29 +23,267 @@
     </div>
 </section>
 
+<!-- Company Presentation -->
 <section class="section-padding bg-white">
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-6 animate-on-scroll">
-                <h2 class="section-title">{{ company.about_story_title|default:_("Notre Histoire & Mission") }}</h2>
+                <span class="badge bg-amber text-plum fw-bold px-3 py-2 rounded-pill mb-2">
+                    <i class="bi bi-building-check me-1"></i> {% trans 'Entreprise Marocaine de Télématique' %}
+                </span>
+                <h2 class="section-title mt-2">{{ company.about_story_title|default:_("Notre Histoire & Mission") }}</h2>
                 <p class="lead text-muted mb-4">
                     {{ company.about_lead|default:_("Basée à Fès, M2web Maroc est une entreprise technologique spécialisée dans les solutions de géolocalisation et la gestion de flotte.") }}
                 </p>
                 <p class="text-muted mb-4">
                     {{ company.about_text|default:_("Depuis notre création, nous nous sommes engagés à fournir à nos clients des outils fiables, précis et faciles à utiliser pour optimiser leurs opérations logistiques. Notre mission est d'accompagner les entreprises marocaines dans leur transformation numérique en leur offrant une visibilité totale sur leurs actifs mobiles.") }}
                 </p>
-                <div class="d-flex gap-3">
+
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-patch-check-fill text-amber fs-5"></i>
+                            <span class="fw-semibold text-plum small">{% trans 'Installation certifiée partout au Maroc' %}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-patch-check-fill text-amber fs-5"></i>
+                            <span class="fw-semibold text-plum small">{% trans 'Cartes SIM M2M multi-opérateurs' %}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-patch-check-fill text-amber fs-5"></i>
+                            <span class="fw-semibold text-plum small">{% trans 'Support technique local et réactif' %}</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-patch-check-fill text-amber fs-5"></i>
+                            <span class="fw-semibold text-plum small">{% trans 'Plateforme SaaS et serveurs dédiés' %}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-3">
                     <a href="{% url 'services:list' %}" class="btn btn-amber">{% trans 'Découvrir nos services' %} <i class="bi bi-arrow-right"></i></a>
-                    <a href="{% url 'contact:contact' %}" class="btn btn-outline-amber">{% trans 'Contactez-nous' %}</a>
+                    <a href="{% url 'contact:contact' %}" class="btn btn-outline-plum">{% trans 'Contactez-nous' %}</a>
                 </div>
             </div>
             <div class="col-lg-6 animate-on-scroll">
-                <img src="{% static 'images/about-team.jpg' %}" alt="Team M2web" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="min-height: 400px;" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%232D1B3D%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2224%22%20font-family%3D%22Outfit%2C%20sans-serif%22%20fill%3D%22%23F5A623%22%3EM2WEB%20TEAM%20%26%20FACILITIES%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <div class="position-relative">
+                    {% if company.about_image %}
+                        <img src="{{ company.about_image.url }}" alt="{{ company.company_name|default:'M2web Maroc' }}" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="min-height: 420px; max-height: 520px;">
+                    {% else %}
+                        <img src="{% static 'images/about-team.jpg' %}" alt="Team M2web" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="min-height: 420px;" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%232D1B3D%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-size%3D%2224%22%20font-family%3D%22Outfit%2C%20sans-serif%22%20fill%3D%22%23F5A623%22%3EM2WEB%20TEAM%20%26%20FACILITIES%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                    {% endif %}
+                    
+                    <!-- Floating Experience Badge -->
+                    <div class="position-absolute bottom-0 end-0 bg-plum text-white p-3 p-md-4 rounded-4 shadow-lg m-3 border border-warning" style="max-width: 240px;">
+                        <div class="display-6 fw-bold text-amber mb-0">{{ company.stat_experience_count|default:"10+" }}</div>
+                        <span class="small fw-semibold text-white-50">{% trans "Années d'excellence en tracking GPS au Maroc" %}</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <div class="col-6 col-md-3 stat-item">
+                <div class="stat-number">{{ company.stat_trackers_count|default:"5,000+" }}</div>
+                <div class="stat-label">{{ company.stat_trackers_label|default:_("Véhicules Équipés") }}</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <div class="stat-number">{{ company.stat_fleets_count|default:"350+" }}</div>
+                <div class="stat-label">{{ company.stat_fleets_label|default:_("Flottes Entreprises") }}</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <div class="stat-number">{{ company.stat_uptime_count|default:"99.9%" }}</div>
+                <div class="stat-label">{{ company.stat_uptime_label|default:_("Disponibilité Serveurs") }}</div>
+            </div>
+            <div class="col-6 col-md-3 stat-item">
+                <div class="stat-number">{{ company.stat_experience_count|default:"10+" }}</div>
+                <div class="stat-label">{{ company.stat_experience_label|default:_("Années d'Expérience") }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Explore Our Ecosystem / Redirection Hub (Requested by User) -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <span class="badge bg-amber text-plum fw-bold px-3 py-2 rounded-pill mb-2">
+                <i class="bi bi-compass-fill me-1"></i> {% trans 'Navigation & Univers M2web' %}
+            </span>
+            <h2 class="section-title text-center">{% trans 'Explorez Toutes Nos Solutions' %}</h2>
+            <p class="section-subtitle text-center max-w-700 mx-auto">{% trans 'Accédez facilement aux différentes sections de notre plateforme selon votre profil et vos exigences télématiques.' %}</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Hub Card 1: Services -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <a href="{% url 'services:list' %}" class="hub-card">
+                    <div class="hub-card-icon">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+                    <h3 class="hub-card-title">{% trans 'Services & Matériel GPS' %}</h3>
+                    <p class="hub-card-desc">{% trans 'Découvrez nos traceurs 4G, sondes de carburant anti-vol, capteurs de température et coupe-circuit à distance certifiés.' %}</p>
+                    <span class="hub-card-link">
+                        {% trans 'Catalogue & Services' %} <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Hub Card 2: Mobile App -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <a href="{% url 'core:mobile_app' %}" class="hub-card">
+                    <div class="hub-card-icon">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h3 class="hub-card-title">{% trans 'Application Mobile Dédiée' %}</h3>
+                    <p class="hub-card-desc">{% trans 'Suivez votre flotte en temps réel sur smartphone. Alertes push, arrêt moteur d’urgence et historique détaillé de vos trajets.' %}</p>
+                    <span class="hub-card-link">
+                        {% trans 'Découvrir l’Application' %} <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Hub Card 3: Wholesale & B2B -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <a href="{% url 'wholesale:inquiry' %}" class="hub-card">
+                    <div class="hub-card-icon">
+                        <i class="bi bi-boxes"></i>
+                    </div>
+                    <h3 class="hub-card-title">{% trans 'Vente en Gros & Espace Revendeurs' %}</h3>
+                    <p class="hub-card-desc">{% trans 'Tarifs distributeurs exclusifs pour revendeurs, électriciens auto et installateurs de géolocalisation partout au Maroc.' %}</p>
+                    <span class="hub-card-link">
+                        {% trans 'Rejoindre le Réseau PRO' %} <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Hub Card 4: Platform & Server -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <a href="{% url 'wholesale:platform' %}" class="hub-card">
+                    <div class="hub-card-icon">
+                        <i class="bi bi-hdd-stack"></i>
+                    </div>
+                    <h3 class="hub-card-title">{% trans 'Plateforme & Serveur GPS' %}</h3>
+                    <p class="hub-card-desc">{% trans 'Solutions Cloud SaaS dès 29 DH/mois, serveurs dédiés on-premise et personnalisation complète en Marque Blanche.' %}</p>
+                    <span class="hub-card-link">
+                        {% trans 'Voir les Formules & Tarifs' %} <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Hub Card 5: Promotions -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <a href="{% url 'core:promotions' %}" class="hub-card">
+                    <div class="hub-card-icon">
+                        <i class="bi bi-tags"></i>
+                    </div>
+                    <h3 class="hub-card-title">{% trans 'Promotions & Offres Spéciales' %}</h3>
+                    <p class="hub-card-desc">{% trans 'Profitez de remises exclusives et de packs complets équipement + carte SIM + installation pour booster votre rentabilité.' %}</p>
+                    <span class="hub-card-link">
+                        {% trans 'Consulter les Packs Promo' %} <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Hub Card 6: Blog -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <a href="{% url 'blog:list' %}" class="hub-card">
+                    <div class="hub-card-icon">
+                        <i class="bi bi-newspaper"></i>
+                    </div>
+                    <h3 class="hub-card-title">{% trans 'Blog & Actualités Télématiques' %}</h3>
+                    <p class="hub-card-desc">{% trans 'Guides pratiques, conseils pour réduire la facture carburant, réglementations transport et innovations du secteur au Maroc.' %}</p>
+                    <span class="hub-card-link">
+                        {% trans 'Lire nos Derniers Articles' %} <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Pillars -->
+<section class="section-padding bg-white">
+    <div class="container">
+        <div class="text-center mb-5 animate-on-scroll">
+            <h2 class="section-title text-center">{% trans 'Nos Piliers Technologiques' %}</h2>
+            <p class="section-subtitle text-center">{% trans 'Pourquoi les professionnels font confiance à M2web pour sécuriser et gérer leurs flottes.' %}</p>
+        </div>
+
+        <div class="row g-4">
+            {% if pillars %}
+                {% for pillar in pillars %}
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <a href="{{ pillar.get_link_url }}" class="pillar-card">
+                        <div class="pillar-icon">
+                            <i class="{{ pillar.icon_class|default:'bi bi-broadcast-pin' }}"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 fs-5">{{ pillar.title }}</h4>
+                        <p class="text-muted small mb-3">{{ pillar.description }}</p>
+                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1">
+                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <a href="{% url 'services:list' %}" class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-broadcast-pin"></i></div>
+                        <h4 class="fw-bold mb-3 fs-5">{% trans 'Réseau 4G Multi-Opérateur' %}</h4>
+                        <p class="text-muted small mb-3">{% trans 'Connectivité permanente via cartes SIM M2M multi-opérateurs compatibles Maroc Telecom, Orange et Inwi.' %}</p>
+                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1">
+                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <a href="{% url 'core:mobile_app' %}" class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-phone"></i></div>
+                        <h4 class="fw-bold mb-3 fs-5">{% trans 'Application Mobile & Web' %}</h4>
+                        <p class="text-muted small mb-3">{% trans 'Suivi en temps réel sur smartphone & PC avec notifications push instantanées et alertes intelligentes.' %}</p>
+                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1">
+                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <a href="/services/controle-carburant-eco-conduite/" class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-fuel-pump"></i></div>
+                        <h4 class="fw-bold mb-3 fs-5">{% trans 'Contrôle Carburant Anti-Vol' %}</h4>
+                        <p class="text-muted small mb-3">{% trans 'Sondes capacitives haute précision pour détecter les siphonnages et analyser les consommations.' %}</p>
+                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1">
+                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 animate-on-scroll">
+                    <a href="{% url 'contact:contact' %}" class="pillar-card">
+                        <div class="pillar-icon"><i class="bi bi-tools"></i></div>
+                        <h4 class="fw-bold mb-3 fs-5">{% trans 'Installation & Support à Fès' %}</h4>
+                        <p class="text-muted small mb-3">{% trans 'Atelier technique et techniciens certifiés pour équiper vos parcs partout au Maroc avec support direct.' %}</p>
+                        <span class="pillar-link fw-semibold small d-inline-flex align-items-center gap-1">
+                            {% trans 'Découvrir la solution' %} <i class="bi bi-arrow-right"></i>
+                        </span>
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
 <section class="section-padding bg-light">
     <div class="container">
         <div class="text-center mb-5 animate-on-scroll">
@@ -80,6 +318,47 @@
                     <p>{% trans "Notre équipe locale basée à Fès garantit une réactivité immédiate et un accompagnement sur-mesure pour chacun de vos projets." %}</p>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners Section -->
+{% if partners %}
+<section class="section-padding bg-white border-top">
+    <div class="container">
+        <div class="text-center mb-4 animate-on-scroll">
+            <h3 class="fw-bold text-plum">{% trans 'Constructeurs & Partenaires Technologiques' %}</h3>
+            <p class="text-muted small">{% trans 'Nous collaborons avec les leaders mondiaux de l’électronique et des télécommunications.' %}</p>
+        </div>
+        <div class="row g-3 justify-content-center align-items-center">
+            {% for partner in partners %}
+            <div class="col-6 col-md-3 col-lg-2 text-center animate-on-scroll">
+                <div class="partner-card-box">
+                    {% if partner.logo %}
+                        <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" class="img-fluid" style="max-height: 48px; filter: grayscale(100%); opacity: 0.75;">
+                    {% else %}
+                        <span class="fw-bold text-muted">{{ partner.name }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- CTA Section -->
+<section class="section-padding bg-plum text-white text-center">
+    <div class="container animate-on-scroll">
+        <h2 class="display-6 fw-bold mb-3">{% trans 'Prêt à Transformer la Gestion de Votre Flotte ?' %}</h2>
+        <p class="lead text-white-50 mb-4 max-w-700 mx-auto">{% trans 'Contactez nos conseillers basés à Fès pour obtenir une démonstration sur mesure ou un devis personnalisé sans engagement.' %}</p>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="{% url 'contact:contact' %}" class="btn btn-amber btn-lg px-4 fw-bold">
+                <i class="bi bi-file-earmark-text me-2"></i>{% trans 'Demander un Devis Gratuit' %}
+            </a>
+            <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-whatsapp me-2 text-success"></i>WhatsApp Direct
+            </a>
         </div>
     </div>
 </section>

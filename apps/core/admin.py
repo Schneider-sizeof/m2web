@@ -15,6 +15,10 @@ class CompanyInfoAdmin(admin.ModelAdmin):
                 'whatsapp_number', 'email', 'address', 'city', 'country', 'google_maps_url', 'google_maps_embed_url'
             )
         }),
+        ('Logos & Médias Principaux (Tableau de Bord)', {
+            'description': 'Logo officiel, image À Propos et diapositives du carrousel de la page d\'accueil',
+            'fields': ('logo', 'about_image', 'hero_slider_image_1', 'hero_slider_image_2', 'hero_slider_image_3')
+        }),
         ('Barre Supérieure & En-tête (Topbar)', {
             'description': 'Textes et badges affichés tout en haut du site web',
             'fields': ('topbar_badge', 'topbar_warranty')
@@ -68,10 +72,10 @@ class CompanyInfoAdmin(admin.ModelAdmin):
 
 @admin.register(WhyChooseUsPillar)
 class WhyChooseUsPillarAdmin(TranslationAdmin):
-    list_display = ['order', 'title', 'icon_class', 'is_active']
-    list_editable = ['title', 'icon_class', 'is_active']
+    list_display = ['order', 'title', 'icon_class', 'link_url', 'is_active']
+    list_editable = ['title', 'icon_class', 'link_url', 'is_active']
     list_display_links = ['order']
-    search_fields = ['title', 'description']
+    search_fields = ['title', 'description', 'link_url']
     ordering = ['order']
 
 @admin.register(Testimonial)

@@ -1853,3 +1853,291 @@ msgstr "Watch Demo Video"
 
 msgid "Ouvrir la vidéo sur YouTube"
 msgstr "Open video on YouTube"
+
+msgid "Connexion"
+msgstr "Sign In"
+
+msgid "Connexion Plateforme Trackmaroc"
+msgstr "Sign in to Trackmaroc Platform"
+
+msgid "Entreprise Marocaine de Télématique"
+msgstr "Moroccan Telematics Company"
+
+msgid "Installation certifiée partout au Maroc"
+msgstr "Certified installation across Morocco"
+
+msgid "Cartes SIM M2M multi-opérateurs"
+msgstr "Multi-operator M2M SIM cards"
+
+msgid "Support technique local et réactif"
+msgstr "Local and responsive technical support"
+
+msgid "Plateforme SaaS et serveurs dédiés"
+msgstr "SaaS platform and dedicated servers"
+
+msgid "Années d'excellence en tracking GPS au Maroc"
+msgstr "Years of excellence in GPS tracking in Morocco"
+
+msgid "Navigation & Univers M2web"
+msgstr "Navigation & M2web Ecosystem"
+
+msgid "Explorez Toutes Nos Solutions"
+msgstr "Explore All Our Solutions"
+
+msgid ""
+"Accédez facilement aux différentes sections de notre plateforme selon votre "
+"profil et vos exigences télématiques."
+msgstr ""
+"Easily access different sections of our platform according to your profile "
+"and telematics requirements."
+
+msgid "Services & Matériel GPS"
+msgstr "GPS Services & Hardware"
+
+msgid ""
+"Découvrez nos traceurs 4G, sondes de carburant anti-vol, capteurs de "
+"température et coupe-circuit à distance certifiés."
+msgstr ""
+"Discover our 4G trackers, anti-theft fuel sensors, temperature sensors and "
+"certified remote engine cutoff."
+
+msgid "Catalogue & Services"
+msgstr "Catalog & Services"
+
+msgid "Application Mobile Dédiée"
+msgstr "Dedicated Mobile App"
+
+msgid ""
+"Suivez votre flotte en temps réel sur smartphone. Alertes push, arrêt moteur"
+" d’urgence et historique détaillé de vos trajets."
+msgstr ""
+"Track your fleet in real time on your smartphone. Push alerts, emergency "
+"engine cutoff, and detailed trip history."
+
+msgid "Découvrir l’Application"
+msgstr "Discover the App"
+
+msgid "Vente en Gros & Espace Revendeurs"
+msgstr "Wholesale & Reseller Portal"
+
+msgid ""
+"Tarifs distributeurs exclusifs pour revendeurs, électriciens auto et "
+"installateurs de géolocalisation partout au Maroc."
+msgstr ""
+"Exclusive distributor prices for resellers, auto electricians, and GPS "
+"installers across Morocco."
+
+msgid "Rejoindre le Réseau PRO"
+msgstr "Join the PRO Network"
+
+msgid ""
+"Solutions Cloud SaaS dès 29 DH/mois, serveurs dédiés on-premise et "
+"personnalisation complète en Marque Blanche."
+msgstr ""
+"Cloud SaaS solutions from 29 DH/month, dedicated on-premise servers, and "
+"full White Label customization."
+
+msgid "Voir les Formules & Tarifs"
+msgstr "View Plans & Pricing"
+
+msgid ""
+"Profitez de remises exclusives et de packs complets équipement + carte SIM +"
+" installation pour booster votre rentabilité."
+msgstr ""
+"Enjoy exclusive discounts and complete packs (device + SIM card + "
+"installation) to maximize your profitability."
+
+msgid "Consulter les Packs Promo"
+msgstr "View Promo Packs"
+
+msgid "Blog & Actualités Télématiques"
+msgstr "Blog & Telematics News"
+
+msgid ""
+"Guides pratiques, conseils pour réduire la facture carburant, "
+"réglementations transport et innovations du secteur au Maroc."
+msgstr ""
+"Practical guides, fuel-saving tips, transport regulations, and industry "
+"innovations in Morocco."
+
+msgid "Lire nos Derniers Articles"
+msgstr "Read Latest Articles"
+
+msgid "Nos Piliers Technologiques"
+msgstr "Our Technological Pillars"
+
+msgid ""
+"Pourquoi les professionnels font confiance à M2web pour sécuriser et gérer "
+"leurs flottes."
+msgstr ""
+"Why businesses and professionals trust M2web to secure and manage their "
+"fleets."
+
+msgid "Constructeurs & Partenaires Technologiques"
+msgstr "Manufacturers & Technology Partners"
+
+msgid ""
+"Nous collaborons avec les leaders mondiaux de l’électronique et des "
+"télécommunications."
+msgstr ""
+"We collaborate with global leaders in electronics and telecommunications."
+
+msgid "Prêt à Transformer la Gestion de Votre Flotte ?"
+msgstr "Ready to Transform Your Fleet Management?"
+
+msgid ""
+"Contactez nos conseillers basés à Fès pour obtenir une démonstration sur "
+"mesure ou un devis personnalisé sans engagement."
+msgstr ""
+"Contact our advisors based in Fez for a tailored demonstration or a free "
+"custom quote."
+
+msgid "Demander un Devis Gratuit"
+msgstr "Request a Free Quote"
+
+msgid "Tarifs & Forfaits Plateforme GPS"
+msgstr "GPS Platform Plans & Pricing"
+
+msgid "Formules Claires, Flexibles et Sans Frais Cachés"
+msgstr "Clear, Flexible Plans with No Hidden Fees"
+
+msgid ""
+"Que vous soyez gestionnaire d’une petite flotte, entreprise de transport ou "
+"intégrateur souhaitant lancer votre propre marque, nous avons la formule "
+"idéale."
+msgstr ""
+"Whether you manage a small fleet, run a transport company, or are an "
+"integrator wanting to launch your own brand, we have the ideal plan."
+
+msgid "Flottes & PME"
+msgstr "Fleets & SMBs"
+
+msgid "Abonnement mensuel tout compris par véhicule"
+msgstr "All-inclusive monthly subscription per vehicle"
+
+msgid "/ mois / véhicule (HT)"
+msgstr "/ month / vehicle (excl. VAT)"
+
+msgid "Hébergement Cloud 99.9% inclus"
+msgstr "99.9% Cloud hosting included"
+
+msgid "Suivi temps réel & Historique 90 jours"
+msgstr "Real-time tracking & 90-day history"
+
+msgid "Applications iOS & Android incluses"
+msgstr "iOS & Android apps included"
+
+msgid "Alertes illimitées (SMS, Email, Push)"
+msgstr "Unlimited alerts (SMS, Email, Push)"
+
+msgid "Mises à jour & support technique"
+msgstr "Updates & technical support"
+
+msgid "Choisir le SaaS"
+msgstr "Choose SaaS"
+
+msgid "Le Plus Choisi • Revendeurs"
+msgstr "Most Popular • Resellers"
+
+msgid "Votre propre marque de télématique à 100%"
+msgstr "Your 100% own telematics brand"
+
+msgid "/ mois (Serveur mutualisé PRO)"
+msgstr "/ month (PRO Shared Server)"
+
+msgid "Votre nom de domaine & logo personnalisés"
+msgstr "Your custom domain name & logo"
+
+msgid "Charte graphique adaptée à votre marque"
+msgstr "Custom color palette matched to your brand"
+
+msgid "Apps iOS & Android à votre marque"
+msgstr "iOS & Android apps with your branding"
+
+msgid "Gestion multi-clients illimitée"
+msgstr "Unlimited multi-client management"
+
+msgid "Remises grossistes sur le matériel GPS"
+msgstr "Wholesale hardware discounts"
+
+msgid "Support technique prioritaire N2"
+msgstr "Priority Level 2 technical support"
+
+msgid "Lancer ma Marque"
+msgstr "Launch My Brand"
+
+msgid "Souveraineté des Données"
+msgstr "Data Sovereignty"
+
+msgid "Licence Serveur"
+msgstr "Server License"
+
+msgid "Licence on-premise sur vos propres infrastructures"
+msgstr "On-premise license on your own infrastructure"
+
+msgid "/ licence unique à vie"
+msgstr "/ one-time lifetime license"
+
+msgid "Paiement unique sans abonnement récurrent"
+msgstr "One-time payment with no recurring subscription"
+
+msgid "Hébergé sur vos propres serveurs"
+msgstr "Hosted on your own servers"
+
+msgid "Nombre illimité de véhicules & comptes"
+msgstr "Unlimited vehicles and accounts"
+
+msgid "Contrôle absolu & sécurité interne"
+msgstr "Absolute control & internal security"
+
+msgid "API & accès direct à la base de données"
+msgstr "API & direct database access"
+
+msgid "1 an de mises à jour & support inclus"
+msgstr "1 year of updates & support included"
+
+msgid "Acheter la Licence"
+msgstr "Purchase License"
+
+msgid "Grands Comptes & Projets"
+msgstr "Enterprise & Key Accounts"
+
+msgid "Sur Mesure"
+msgstr "Custom Solution"
+
+msgid "Développement spécifique & intégration ERP"
+msgstr "Custom development & ERP integration"
+
+msgid "Sur Devis"
+msgstr "On Quote"
+
+msgid "/ cahier des charges personnalisé"
+msgstr "/ custom specification sheet"
+
+msgid "Intégration ERP & CRM (SAP, Sage, Odoo)"
+msgstr "ERP & CRM integration (SAP, Sage, Odoo)"
+
+msgid "Rapports télématiques personnalisés"
+msgstr "Custom telematics reports"
+
+msgid "Intégration capteurs métier spécifiques"
+msgstr "Specialized industrial sensor integration"
+
+msgid "Protocoles télématiques propriétaires"
+msgstr "Proprietary telematics protocols"
+
+msgid "SLA de support garanti & chef de projet"
+msgstr "Guaranteed support SLA & dedicated project manager"
+
+msgid "Formation technique sur mesure"
+msgstr "Tailored technical training"
+
+msgid "Étudier mon Projet"
+msgstr "Submit My Project"
+
+msgid ""
+"Tous nos prix sont exprimés en Dirhams marocains (DH) hors taxes. Remises "
+"dégressives disponibles selon volume de flotte."
+msgstr ""
+"All prices are quoted in Moroccan Dirhams (DH) excluding VAT. Tiered volume "
+"discounts available."

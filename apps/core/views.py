@@ -27,8 +27,14 @@ def home_view(request):
     return render(request, 'core/home.html', context)
 
 def about_view(request):
+    pillars = WhyChooseUsPillar.objects.filter(is_active=True).order_by('order')[:4]
+    partners = Partner.objects.filter(is_active=True)
+    app = MobileApp.get_instance()
     context = {
         'company': CompanyInfo.get_instance(),
+        'pillars': pillars,
+        'partners': partners,
+        'app': app,
         'page_title': 'À Propos',
     }
     return render(request, 'core/about.html', context)

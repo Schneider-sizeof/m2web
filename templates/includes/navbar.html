@@ -26,7 +26,11 @@
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid px-3 px-lg-4 px-xl-4 header-container">
         <a class="brand-logo-wrapper" href="{% url 'core:home' %}">
-            <img src="{% static 'images/logo-navbar.png' %}" alt="M2WEB Maroc" class="brand-logo-img" height="38">
+            {% if company.logo %}
+                <img src="{{ company.logo.url }}" alt="{{ company.company_name|default:'M2WEB Maroc' }}" class="brand-logo-img" height="38">
+            {% else %}
+                <img src="{% static 'images/logo-navbar.png' %}" alt="M2WEB Maroc" class="brand-logo-img" height="38">
+            {% endif %}
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
@@ -69,13 +73,19 @@
 
             <div class="d-flex align-items-center gap-2 flex-shrink-0">
                 {% include 'includes/language_switcher.html' %}
+                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-nav-login d-none d-lg-inline-flex flex-shrink-0" title="{% trans 'Connexion Plateforme Trackmaroc' %}">
+                    <i class="bi bi-box-arrow-in-right"></i> {% trans 'Connexion' %}
+                </a>
                 <a href="{% url 'contact:contact' %}" class="btn btn-amber btn-nav-quote d-none d-lg-inline-flex flex-shrink-0">
                     <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
                 </a>
             </div>
 
-            <!-- Mobile Quote Button (d-lg-none) -->
-            <div class="d-lg-none mt-2">
+            <!-- Mobile Action Buttons (d-lg-none) -->
+            <div class="d-lg-none mt-3 pt-2 border-top border-secondary border-opacity-25 d-flex flex-column gap-2">
+                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light w-100 py-2 fw-semibold d-flex align-items-center justify-content-center gap-2">
+                    <i class="bi bi-box-arrow-in-right text-amber"></i> {% trans 'Connexion' %}
+                </a>
                 <a href="{% url 'contact:contact' %}" class="btn btn-amber w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm">
                     <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
                 </a>

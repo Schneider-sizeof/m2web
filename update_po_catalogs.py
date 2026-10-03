@@ -465,6 +465,498 @@ new_translations = [
         'en': 'Open video on YouTube',
         'ar': 'فتح الفيديو على يوتيوب',
         'fr': 'Ouvrir la vidéo sur YouTube'
+    },
+    {
+        'msgid': 'Connexion',
+        'en': 'Sign In',
+        'ar': 'تسجيل الدخول',
+        'fr': 'Connexion'
+    },
+    {
+        'msgid': 'Connexion Plateforme Trackmaroc',
+        'en': 'Sign in to Trackmaroc Platform',
+        'ar': 'تسجيل الدخول إلى منصة تراك ماروك',
+        'fr': 'Connexion Plateforme Trackmaroc'
+    },
+    {
+        'msgid': 'Entreprise Marocaine de Télématique',
+        'en': 'Moroccan Telematics Company',
+        'ar': 'شركة مغربية رائدة في حلول التليماتيك',
+        'fr': 'Entreprise Marocaine de Télématique'
+    },
+    {
+        'msgid': 'Installation certifiée partout au Maroc',
+        'en': 'Certified installation across Morocco',
+        'ar': 'تركيب معتمد في جميع أنحاء المغرب',
+        'fr': 'Installation certifiée partout au Maroc'
+    },
+    {
+        'msgid': 'Cartes SIM M2M multi-opérateurs',
+        'en': 'Multi-operator M2M SIM cards',
+        'ar': 'شرائح M2M متعددة المشغلين',
+        'fr': 'Cartes SIM M2M multi-opérateurs'
+    },
+    {
+        'msgid': 'Support technique local et réactif',
+        'en': 'Local and responsive technical support',
+        'ar': 'دعم فني محلي وسريع الاستجابة',
+        'fr': 'Support technique local et réactif'
+    },
+    {
+        'msgid': 'Plateforme SaaS et serveurs dédiés',
+        'en': 'SaaS platform and dedicated servers',
+        'ar': 'منصة سحابية SaaS وخوادم مخصصة',
+        'fr': 'Plateforme SaaS et serveurs dédiés'
+    },
+    {
+        'msgid': "Années d'excellence en tracking GPS au Maroc",
+        'en': 'Years of excellence in GPS tracking in Morocco',
+        'ar': 'سنوات من التميز في التتبع عبر GPS بالمغرب',
+        'fr': "Années d'excellence en tracking GPS au Maroc"
+    },
+    {
+        'msgid': 'Navigation & Univers M2web',
+        'en': 'Navigation & M2web Ecosystem',
+        'ar': 'استكشف منظومة M2web',
+        'fr': 'Navigation & Univers M2web'
+    },
+    {
+        'msgid': 'Explorez Toutes Nos Solutions',
+        'en': 'Explore All Our Solutions',
+        'ar': 'استكشف جميع حلولنا',
+        'fr': 'Explorez Toutes Nos Solutions'
+    },
+    {
+        'msgid': 'Accédez facilement aux différentes sections de notre plateforme selon votre profil et vos exigences télématiques.',
+        'en': 'Easily access different sections of our platform according to your profile and telematics requirements.',
+        'ar': 'الوصول بسهولة إلى مختلف أقسام منصتنا وفقًا لاحتياجاتك ومتطلبات التليماتيك الخاصة بك.',
+        'fr': 'Accédez facilement aux différentes sections de notre plateforme selon votre profil et vos exigences télématiques.'
+    },
+    {
+        'msgid': 'Services & Matériel GPS',
+        'en': 'GPS Services & Hardware',
+        'ar': 'خدمات وأجهزة تتبع GPS',
+        'fr': 'Services & Matériel GPS'
+    },
+    {
+        'msgid': 'Découvrez nos traceurs 4G, sondes de carburant anti-vol, capteurs de température et coupe-circuit à distance certifiés.',
+        'en': 'Discover our 4G trackers, anti-theft fuel sensors, temperature sensors and certified remote engine cutoff.',
+        'ar': 'اكتشف أجهزة التتبع 4G وحساسات الوقود المضادة للسرقة وحساسات الحرارة وقواطع المحرك عن بعد المعتمدة.',
+        'fr': 'Découvrez nos traceurs 4G, sondes de carburant anti-vol, capteurs de température et coupe-circuit à distance certifiés.'
+    },
+    {
+        'msgid': 'Catalogue & Services',
+        'en': 'Catalog & Services',
+        'ar': 'الكتالوج والخدمات',
+        'fr': 'Catalogue & Services'
+    },
+    {
+        'msgid': 'Application Mobile Dédiée',
+        'en': 'Dedicated Mobile App',
+        'ar': 'تطبيق الهاتف المخصص',
+        'fr': 'Application Mobile Dédiée'
+    },
+    {
+        'msgid': 'Suivez votre flotte en temps réel sur smartphone. Alertes push, arrêt moteur d’urgence et historique détaillé de vos trajets.',
+        'en': 'Track your fleet in real time on your smartphone. Push alerts, emergency engine cutoff, and detailed trip history.',
+        'ar': 'تتبع أسطولك في الوقت الفعلي على هاتفك الذكي مع تنبيهات فورية، وإيقاف المحرك عن بعد، وسجل مفصل للرحلات.',
+        'fr': 'Suivez votre flotte en temps réel sur smartphone. Alertes push, arrêt moteur d’urgence et historique détaillé de vos trajets.'
+    },
+    {
+        'msgid': 'Découvrir l’Application',
+        'en': 'Discover the App',
+        'ar': 'اكتشف التطبيق',
+        'fr': 'Découvrir l’Application'
+    },
+    {
+        'msgid': 'Vente en Gros & Espace Revendeurs',
+        'en': 'Wholesale & Reseller Portal',
+        'ar': 'البيع بالجملة ومساحة الموزعين',
+        'fr': 'Vente en Gros & Espace Revendeurs'
+    },
+    {
+        'msgid': 'Tarifs distributeurs exclusifs pour revendeurs, électriciens auto et installateurs de géolocalisation partout au Maroc.',
+        'en': 'Exclusive distributor prices for resellers, auto electricians, and GPS installers across Morocco.',
+        'ar': 'أسعار خاصة للموزعين وكهربائيي السيارات ومركبي أجهزة التتبع في جميع مدن المغرب.',
+        'fr': 'Tarifs distributeurs exclusifs pour revendeurs, électriciens auto et installateurs de géolocalisation partout au Maroc.'
+    },
+    {
+        'msgid': 'Rejoindre le Réseau PRO',
+        'en': 'Join the PRO Network',
+        'ar': 'الانضمام إلى شبكة المحترفين',
+        'fr': 'Rejoindre le Réseau PRO'
+    },
+    {
+        'msgid': 'Plateforme & Serveur GPS',
+        'en': 'GPS Platform & Server',
+        'ar': 'منصة وخادم GPS',
+        'fr': 'Plateforme & Serveur GPS'
+    },
+    {
+        'msgid': 'Solutions Cloud SaaS dès 29 DH/mois, serveurs dédiés on-premise et personnalisation complète en Marque Blanche.',
+        'en': 'Cloud SaaS solutions from 29 DH/month, dedicated on-premise servers, and full White Label customization.',
+        'ar': 'حلول سحابية SaaS ابتداءً من 29 درهم/شهرياً، وخوادم خاصة، وعلامة تجارية بيضاء مخصصة بالكامل.',
+        'fr': 'Solutions Cloud SaaS dès 29 DH/mois, serveurs dédiés on-premise et personnalisation complète en Marque Blanche.'
+    },
+    {
+        'msgid': 'Voir les Formules & Tarifs',
+        'en': 'View Plans & Pricing',
+        'ar': 'عرض الباقات والأسعار',
+        'fr': 'Voir les Formules & Tarifs'
+    },
+    {
+        'msgid': 'Promotions & Offres Spéciales',
+        'en': 'Promotions & Special Offers',
+        'ar': 'عروض وتخفيضات خاصة',
+        'fr': 'Promotions & Offres Spéciales'
+    },
+    {
+        'msgid': 'Profitez de remises exclusives et de packs complets équipement + carte SIM + installation pour booster votre rentabilité.',
+        'en': 'Enjoy exclusive discounts and complete packs (device + SIM card + installation) to maximize your profitability.',
+        'ar': 'استفد من خصومات حصرية وحزم متكاملة تشمل الأجهزة وبطاقة SIM والتركيب لتعزيز مردوديتك.',
+        'fr': 'Profitez de remises exclusives et de packs complets équipement + carte SIM + installation pour booster votre rentabilité.'
+    },
+    {
+        'msgid': 'Consulter les Packs Promo',
+        'en': 'View Promo Packs',
+        'ar': 'تصفح باقات العروض',
+        'fr': 'Consulter les Packs Promo'
+    },
+    {
+        'msgid': 'Blog & Actualités Télématiques',
+        'en': 'Blog & Telematics News',
+        'ar': 'المدونة وأخبار التليماتيك',
+        'fr': 'Blog & Actualités Télématiques'
+    },
+    {
+        'msgid': 'Guides pratiques, conseils pour réduire la facture carburant, réglementations transport et innovations du secteur au Maroc.',
+        'en': 'Practical guides, fuel-saving tips, transport regulations, and industry innovations in Morocco.',
+        'ar': 'أدلة عملية، ونصائح لتقليل استهلاك الوقود، وقوانين النقل والابتكارات التكنولوجية في المغرب.',
+        'fr': 'Guides pratiques, conseils pour réduire la facture carburant, réglementations transport et innovations du secteur au Maroc.'
+    },
+    {
+        'msgid': 'Lire nos Derniers Articles',
+        'en': 'Read Latest Articles',
+        'ar': 'قراءة أحدث المقالات',
+        'fr': 'Lire nos Derniers Articles'
+    },
+    {
+        'msgid': 'Nos Piliers Technologiques',
+        'en': 'Our Technological Pillars',
+        'ar': 'ركائزنا التكنولوجية',
+        'fr': 'Nos Piliers Technologiques'
+    },
+    {
+        'msgid': 'Pourquoi les professionnels font confiance à M2web pour sécuriser et gérer leurs flottes.',
+        'en': 'Why businesses and professionals trust M2web to secure and manage their fleets.',
+        'ar': 'لماذا يثق المحترفون في M2web لتأمين وإدارة أساطيلهم.',
+        'fr': 'Pourquoi les professionnels font confiance à M2web pour sécuriser et gérer leurs flottes.'
+    },
+    {
+        'msgid': 'Constructeurs & Partenaires Technologiques',
+        'en': 'Manufacturers & Technology Partners',
+        'ar': 'المصنعون والشركاء التكنولوجيون',
+        'fr': 'Constructeurs & Partenaires Technologiques'
+    },
+    {
+        'msgid': 'Nous collaborons avec les leaders mondiaux de l’électronique et des télécommunications.',
+        'en': 'We collaborate with global leaders in electronics and telecommunications.',
+        'ar': 'نتعاون مع رواد العالم في مجالات الإلكترونيات والاتصالات.',
+        'fr': 'Nous collaborons avec les leaders mondiaux de l’électronique et des télécommunications.'
+    },
+    {
+        'msgid': 'Prêt à Transformer la Gestion de Votre Flotte ?',
+        'en': 'Ready to Transform Your Fleet Management?',
+        'ar': 'هل أنت جاهز لتطوير إدارة أسطولك؟',
+        'fr': 'Prêt à Transformer la Gestion de Votre Flotte ?'
+    },
+    {
+        'msgid': 'Contactez nos conseillers basés à Fès pour obtenir une démonstration sur mesure ou un devis personnalisé sans engagement.',
+        'en': 'Contact our advisors based in Fez for a tailored demonstration or a free custom quote.',
+        'ar': 'تواصل مع مستشارينا في فاس للحصول على عرض توضيحي مخصص أو مقايسة أسعار بدون أي التزام.',
+        'fr': 'Contactez nos conseillers basés à Fès pour obtenir une démonstration sur mesure ou un devis personnalisé sans engagement.'
+    },
+    {
+        'msgid': 'Demander un Devis Gratuit',
+        'en': 'Request a Free Quote',
+        'ar': 'طلب مقايسة أسعار مجانية',
+        'fr': 'Demander un Devis Gratuit'
+    },
+    {
+        'msgid': 'Tarifs & Forfaits Plateforme GPS',
+        'en': 'GPS Platform Plans & Pricing',
+        'ar': 'أسعار وباقات منصة GPS',
+        'fr': 'Tarifs & Forfaits Plateforme GPS'
+    },
+    {
+        'msgid': 'Formules Claires, Flexibles et Sans Frais Cachés',
+        'en': 'Clear, Flexible Plans with No Hidden Fees',
+        'ar': 'باقات واضحة ومرنة بدون أي رسوم خفية',
+        'fr': 'Formules Claires, Flexibles et Sans Frais Cachés'
+    },
+    {
+        'msgid': 'Que vous soyez gestionnaire d’une petite flotte, entreprise de transport ou intégrateur souhaitant lancer votre propre marque, nous avons la formule idéale.',
+        'en': 'Whether you manage a small fleet, run a transport company, or are an integrator wanting to launch your own brand, we have the ideal plan.',
+        'ar': 'سواء كنت تدير أسطولاً صغيراً، أو شركة نقل كبرى، أو موزعا ترغب في إطلاق علامتك الخاصة، لدينا الباقة المثالية لك.',
+        'fr': 'Que vous soyez gestionnaire d’une petite flotte, entreprise de transport ou intégrateur souhaitant lancer votre propre marque, nous avons la formule idéale.'
+    },
+    {
+        'msgid': 'Flottes & PME',
+        'en': 'Fleets & SMBs',
+        'ar': 'الأساطيل والمقاولات الصغرى والمتوسطة',
+        'fr': 'Flottes & PME'
+    },
+    {
+        'msgid': 'Abonnement mensuel tout compris par véhicule',
+        'en': 'All-inclusive monthly subscription per vehicle',
+        'ar': 'اشتراك شهري شامل لكل مركبة',
+        'fr': 'Abonnement mensuel tout compris par véhicule'
+    },
+    {
+        'msgid': '/ mois / véhicule (HT)',
+        'en': '/ month / vehicle (excl. VAT)',
+        'ar': '/ شهر / مركبة (دون احتساب الرسوم)',
+        'fr': '/ mois / véhicule (HT)'
+    },
+    {
+        'msgid': 'Hébergement Cloud 99.9% inclus',
+        'en': '99.9% Cloud hosting included',
+        'ar': 'استضافة سحابية بنسبة جاهزية 99.9% مشمولة',
+        'fr': 'Hébergement Cloud 99.9% inclus'
+    },
+    {
+        'msgid': 'Suivi temps réel & Historique 90 jours',
+        'en': 'Real-time tracking & 90-day history',
+        'ar': 'تتبع فوري مع سجل مسارات لمدة 90 يوماً',
+        'fr': 'Suivi temps réel & Historique 90 jours'
+    },
+    {
+        'msgid': 'Applications iOS & Android incluses',
+        'en': 'iOS & Android apps included',
+        'ar': 'تطبيقات iOS وأندرويد مشمولة',
+        'fr': 'Applications iOS & Android incluses'
+    },
+    {
+        'msgid': 'Alertes illimitées (SMS, Email, Push)',
+        'en': 'Unlimited alerts (SMS, Email, Push)',
+        'ar': 'تنبيهات غير محدودة (رسائل SMS، بريد إلكتروني، إشعارات فورية)',
+        'fr': 'Alertes illimitées (SMS, Email, Push)'
+    },
+    {
+        'msgid': 'Mises à jour & support technique',
+        'en': 'Updates & technical support',
+        'ar': 'تحديثات مستمرة ودعم فني',
+        'fr': 'Mises à jour & support technique'
+    },
+    {
+        'msgid': 'Choisir le SaaS',
+        'en': 'Choose SaaS',
+        'ar': 'اختيار باقة SaaS',
+        'fr': 'Choisir le SaaS'
+    },
+    {
+        'msgid': 'Le Plus Choisi • Revendeurs',
+        'en': 'Most Popular • Resellers',
+        'ar': 'الأكثر طلباً • للموزعين',
+        'fr': 'Le Plus Choisi • Revendeurs'
+    },
+    {
+        'msgid': 'Votre propre marque de télématique à 100%',
+        'en': 'Your 100% own telematics brand',
+        'ar': 'علامتك التجارية الخاصة بالتليماتيك 100%',
+        'fr': 'Votre propre marque de télématique à 100%'
+    },
+    {
+        'msgid': '/ mois (Serveur mutualisé PRO)',
+        'en': '/ month (PRO Shared Server)',
+        'ar': '/ شهر (خادم مشترك احترافي)',
+        'fr': '/ mois (Serveur mutualisé PRO)'
+    },
+    {
+        'msgid': 'Votre nom de domaine & logo personnalisés',
+        'en': 'Your custom domain name & logo',
+        'ar': 'اسم النطاق والشعار الخاص بك',
+        'fr': 'Votre nom de domaine & logo personnalisés'
+    },
+    {
+        'msgid': 'Charte graphique adaptée à votre marque',
+        'en': 'Custom color palette matched to your brand',
+        'ar': 'هوية بصرية وألوان متوافقة مع علامتك التجارية',
+        'fr': 'Charte graphique adaptée à votre marque'
+    },
+    {
+        'msgid': 'Apps iOS & Android à votre marque',
+        'en': 'iOS & Android apps with your branding',
+        'ar': 'تطبيقات iOS وأندرويد باسم علامتك التجارية',
+        'fr': 'Apps iOS & Android à votre marque'
+    },
+    {
+        'msgid': 'Gestion multi-clients illimitée',
+        'en': 'Unlimited multi-client management',
+        'ar': 'إدارة غير محدودة لحسابات الزبائن',
+        'fr': 'Gestion multi-clients illimitée'
+    },
+    {
+        'msgid': 'Remises grossistes sur le matériel GPS',
+        'en': 'Wholesale hardware discounts',
+        'ar': 'خصومات الجملة على أجهزة تتبع GPS',
+        'fr': 'Remises grossistes sur le matériel GPS'
+    },
+    {
+        'msgid': 'Support technique prioritaire N2',
+        'en': 'Priority Level 2 technical support',
+        'ar': 'دعم فني ذو أولوية من المستوى الثاني',
+        'fr': 'Support technique prioritaire N2'
+    },
+    {
+        'msgid': 'Lancer ma Marque',
+        'en': 'Launch My Brand',
+        'ar': 'إطلاق علامتي التجارية',
+        'fr': 'Lancer ma Marque'
+    },
+    {
+        'msgid': 'Souveraineté des Données',
+        'en': 'Data Sovereignty',
+        'ar': 'سيادة وأمان البيانات',
+        'fr': 'Souveraineté des Données'
+    },
+    {
+        'msgid': 'Licence Serveur',
+        'en': 'Server License',
+        'ar': 'ترخيص الخادم',
+        'fr': 'Licence Serveur'
+    },
+    {
+        'msgid': 'Licence on-premise sur vos propres infrastructures',
+        'en': 'On-premise license on your own infrastructure',
+        'ar': 'ترخيص محلي على خوادمك وبنيتك التحتية الخاصة',
+        'fr': 'Licence on-premise sur vos propres infrastructures'
+    },
+    {
+        'msgid': '/ licence unique à vie',
+        'en': '/ one-time lifetime license',
+        'ar': '/ ترخيص دائم لمرة واحدة',
+        'fr': '/ licence unique à vie'
+    },
+    {
+        'msgid': 'Paiement unique sans abonnement récurrent',
+        'en': 'One-time payment with no recurring subscription',
+        'ar': 'دفع لمرة واحدة بدون أي اشتراك دوري',
+        'fr': 'Paiement unique sans abonnement récurrent'
+    },
+    {
+        'msgid': 'Hébergé sur vos propres serveurs',
+        'en': 'Hosted on your own servers',
+        'ar': 'مستضاف على خوادمك الخاصة',
+        'fr': 'Hébergé sur vos propres serveurs'
+    },
+    {
+        'msgid': 'Nombre illimité de véhicules & comptes',
+        'en': 'Unlimited vehicles and accounts',
+        'ar': 'عدد غير محدود من المركبات والحسابات',
+        'fr': 'Nombre illimité de véhicules & comptes'
+    },
+    {
+        'msgid': 'Contrôle absolu & sécurité interne',
+        'en': 'Absolute control & internal security',
+        'ar': 'تحكم مطلق وأمان داخلي كامل',
+        'fr': 'Contrôle absolu & sécurité interne'
+    },
+    {
+        'msgid': 'API & accès direct à la base de données',
+        'en': 'API & direct database access',
+        'ar': 'واجهة برمجة التطبيقات (API) ووصول مباشر لقاعدة البيانات',
+        'fr': 'API & accès direct à la base de données'
+    },
+    {
+        'msgid': '1 an de mises à jour & support inclus',
+        'en': '1 year of updates & support included',
+        'ar': 'سنة واحدة من التحديثات والدعم مشمولة',
+        'fr': '1 an de mises à jour & support inclus'
+    },
+    {
+        'msgid': 'Acheter la Licence',
+        'en': 'Purchase License',
+        'ar': 'شراء الترخيص',
+        'fr': 'Acheter la Licence'
+    },
+    {
+        'msgid': 'Grands Comptes & Projets',
+        'en': 'Enterprise & Key Accounts',
+        'ar': 'المشاريع الكبرى والشركات الضخمة',
+        'fr': 'Grands Comptes & Projets'
+    },
+    {
+        'msgid': 'Sur Mesure',
+        'en': 'Custom Solution',
+        'ar': 'حل مخصص',
+        'fr': 'Sur Mesure'
+    },
+    {
+        'msgid': 'Développement spécifique & intégration ERP',
+        'en': 'Custom development & ERP integration',
+        'ar': 'تطوير خاص وربط متكامل مع أنظمة ERP',
+        'fr': 'Développement spécifique & intégration ERP'
+    },
+    {
+        'msgid': 'Sur Devis',
+        'en': 'On Quote',
+        'ar': 'حسب المقايسة',
+        'fr': 'Sur Devis'
+    },
+    {
+        'msgid': '/ cahier des charges personnalisé',
+        'en': '/ custom specification sheet',
+        'ar': '/ حسب دفتر التحملات المخصص',
+        'fr': '/ cahier des charges personnalisé'
+    },
+    {
+        'msgid': 'Intégration ERP & CRM (SAP, Sage, Odoo)',
+        'en': 'ERP & CRM integration (SAP, Sage, Odoo)',
+        'ar': 'ربط مع أنظمة ERP و CRM (مثل SAP، Sage، Odoo)',
+        'fr': 'Intégration ERP & CRM (SAP, Sage, Odoo)'
+    },
+    {
+        'msgid': 'Rapports télématiques personnalisés',
+        'en': 'Custom telematics reports',
+        'ar': 'تقارير تليماتيك مخصصة',
+        'fr': 'Rapports télématiques personnalisés'
+    },
+    {
+        'msgid': 'Intégration capteurs métier spécifiques',
+        'en': 'Specialized industrial sensor integration',
+        'ar': 'ربط حساسات صناعية خاصة',
+        'fr': 'Intégration capteurs métier spécifiques'
+    },
+    {
+        'msgid': 'Protocoles télématiques propriétaires',
+        'en': 'Proprietary telematics protocols',
+        'ar': 'بروتوكولات اتصال تليماتيك خاصة',
+        'fr': 'Protocoles télématiques propriétaires'
+    },
+    {
+        'msgid': 'SLA de support garanti & chef de projet',
+        'en': 'Guaranteed support SLA & dedicated project manager',
+        'ar': 'اتفاقية مستوى خدمة (SLA) مضمونة ومدير مشروع مخصص',
+        'fr': 'SLA de support garanti & chef de projet'
+    },
+    {
+        'msgid': 'Formation technique sur mesure',
+        'en': 'Tailored technical training',
+        'ar': 'تدريب تقني مخصص',
+        'fr': 'Formation technique sur mesure'
+    },
+    {
+        'msgid': 'Étudier mon Projet',
+        'en': 'Submit My Project',
+        'ar': 'دراسة مشروعي',
+        'fr': 'Étudier mon Projet'
+    },
+    {
+        'msgid': 'Tous nos prix sont exprimés en Dirhams marocains (DH) hors taxes. Remises dégressives disponibles selon volume de flotte.',
+        'en': 'All prices are quoted in Moroccan Dirhams (DH) excluding VAT. Tiered volume discounts available.',
+        'ar': 'جميع الأسعار معروضة بالدرهم المغربي (DH) دون احتساب الرسوم. تخفيضات تفضيلية حسب حجم الأسطول.',
+        'fr': 'Tous nos prix sont exprimés en Dirhams marocains (DH) hors taxes. Remises dégressives disponibles selon volume de flotte.'
     }
 ]
 
