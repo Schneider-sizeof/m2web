@@ -2115,3 +2115,18 @@ msgid ""
 msgstr ""
 "أنت مسجل الدخول باسم {{ username }}، ولكن ليس لديك صلاحية الوصول إلى هذه "
 "الصفحة. هل ترغب في تسجيل الدخول بحساب آخر؟"
+
+msgid "Consommation 45L • Carburant 39%%"
+msgstr "استهلاك 45 لتر • وقود 39%%"
+
+msgid "Réservoir: 78%%"
+msgstr "الخزان: 78%%"
+
+msgid "Précision capacitive à 99%%"
+msgstr "دقة سعوية تصل إلى 99%%"
+
+msgid "Hébergement Cloud 99.9%% inclus"
+msgstr "استضافة سحابية بنسبة توافر 99.9%% مشمولة"
+
+msgid "Votre propre marque de télématique à 100%%"
+msgstr "منصتك الخاصة للتتبع والتليماتيك 100%% بهويتك التجارية"

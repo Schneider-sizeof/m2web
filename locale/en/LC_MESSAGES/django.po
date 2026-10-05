@@ -2185,3 +2185,18 @@ msgid ""
 msgstr ""
 "You are authenticated as {{ username }}, but are not authorized to access "
 "this page. Would you like to login to a different account?"
+
+msgid "Consommation 45L • Carburant 39%%"
+msgstr "Consumption 45L • Fuel 39%%"
+
+msgid "Réservoir: 78%%"
+msgstr "Tank: 78%%"
+
+msgid "Précision capacitive à 99%%"
+msgstr "99%% capacitive accuracy"
+
+msgid "Hébergement Cloud 99.9%% inclus"
+msgstr "99.9%% Cloud hosting included"
+
+msgid "Votre propre marque de télématique à 100%%"
+msgstr "Your 100%% custom-branded telematics platform"

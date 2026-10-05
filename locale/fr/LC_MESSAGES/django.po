@@ -2218,3 +2218,18 @@ msgstr "Remise maximale (jusqu'à 35%%)"
 
 msgid "100%% Marocain"
 msgstr "100%% Marocain"
+
+msgid "Consommation 45L • Carburant 39%%"
+msgstr "Consommation 45L • Carburant 39%%"
+
+msgid "Réservoir: 78%%"
+msgstr "Réservoir: 78%%"
+
+msgid "Précision capacitive à 99%%"
+msgstr "Précision capacitive à 99%%"
+
+msgid "Hébergement Cloud 99.9%% inclus"
+msgstr "Hébergement Cloud 99.9%% inclus"
+
+msgid "Votre propre marque de télématique à 100%%"
+msgstr "Votre propre marque de télématique à 100%%"
