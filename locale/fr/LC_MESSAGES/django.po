@@ -1898,3 +1898,323 @@ msgstr "Accéder à la Plateforme Web"
 msgid "Gérez votre flotte en déplacement depuis votre smartphone ou tablette."
 msgstr ""
 "Gérez votre flotte en déplacement depuis votre smartphone ou tablette."
+
+#: templates/otp/admin111/login.html:1
+msgid ""
+"You are authenticated as {{ username }}, but are not authorized to access "
+"this page. Would you like to login to a different account?"
+msgstr ""
+"Vous êtes connecté en tant que {{ username }}, mais vous n'êtes pas autorisé"
+" à accéder à cette page. Souhaitez-vous vous connecter avec un autre compte "
+"?"
+
+msgid "1 à 10 véhicules"
+msgstr "1 à 10 véhicules"
+
+msgid "11 à 50 véhicules"
+msgstr "11 à 50 véhicules"
+
+msgid "51 à 200 véhicules"
+msgstr "51 à 200 véhicules"
+
+msgid "Achat de Serveur / Licence Définitive On-Premise"
+msgstr "Achat de Serveur / Licence Définitive On-Premise"
+
+msgid "Adresse email"
+msgstr "Adresse email"
+
+msgid "Aucune promotion en cours"
+msgstr "Aucune promotion en cours"
+
+msgid "Auteur"
+msgstr "Auteur"
+
+msgid "Autre professionnel"
+msgstr "Autre professionnel"
+
+msgid "Besoin de contrôle carburant / sondes"
+msgstr "Besoin de contrôle carburant / sondes"
+
+msgid "Besoin de rapports avancés & statistiques"
+msgstr "Besoin de rapports avancés & statistiques"
+
+msgid "Catégorie"
+msgstr "Catégorie"
+
+msgid "Date d'envoi"
+msgstr "Date d'envoi"
+
+msgid "Date de candidature"
+msgstr "Date de candidature"
+
+msgid "Date de création"
+msgstr "Date de création"
+
+msgid "Date de demande"
+msgstr "Date de demande"
+
+msgid "Date de publication"
+msgstr "Date de publication"
+
+msgid "Dernière modification"
+msgstr "Dernière modification"
+
+msgid "Description"
+msgstr "Description"
+
+msgid ""
+"Découvrez nos offres exclusives sur les traceurs GPS et solutions de gestion"
+" de flotte."
+msgstr ""
+"Découvrez nos offres exclusives sur les traceurs GPS et solutions de gestion"
+" de flotte."
+
+msgid ""
+"Décrivez votre zone d'intervention, votre équipement ou vos besoins "
+"spécifiques..."
+msgstr ""
+"Décrivez votre zone d'intervention, votre équipement ou vos besoins "
+"spécifiques..."
+
+msgid "Détaillez votre projet..."
+msgstr "Détaillez votre projet..."
+
+msgid "Détails du projet / Questions"
+msgstr "Détails du projet / Questions"
+
+msgid "Développement / Intégration sur-mesure (API / ERP / Télématique)"
+msgstr "Développement / Intégration sur-mesure (API / ERP / Télématique)"
+
+msgid "Ex: Atlas Logistique SARL"
+msgstr "Ex: Atlas Logistique SARL"
+
+msgid "Ex: Atlas Transport & Logistique"
+msgstr "Ex: Atlas Transport & Logistique"
+
+msgid "Ex: Auto Élec Express SARL"
+msgstr "Ex: Auto Élec Express SARL"
+
+msgid "Ex: Traceurs OBD 4G, traceurs filaires avec relais coupure..."
+msgstr "Ex: Traceurs OBD 4G, traceurs filaires avec relais coupure..."
+
+msgid "Extrait"
+msgstr "Extrait"
+
+msgid "Formation technique incluse"
+msgstr "Formation technique incluse"
+
+msgid "Formule souhaitée"
+msgstr "Formule souhaitée"
+
+msgid "Fort volume (+50 unités/mois)"
+msgstr "Fort volume (+50 unités/mois)"
+
+msgid "Fès, Casablanca, Tanger, Marrakech..."
+msgstr "Fès, Casablanca, Tanger, Marrakech..."
+
+msgid "Fès, Casablanca, Tanger..."
+msgstr "Fès, Casablanca, Tanger..."
+
+msgid "Grossiste / Distributeur commercial"
+msgstr "Grossiste / Distributeur commercial"
+
+msgid "Idéal pour démarrer"
+msgstr "Idéal pour démarrer"
+
+msgid "Image mise en avant"
+msgstr "Image mise en avant"
+
+msgid "Intéressé par une plateforme en Marque Blanche"
+msgstr "Intéressé par une plateforme en Marque Blanche"
+
+msgid "Location / Abonnement SaaS (Par véhicule / mois ou an)"
+msgstr "Location / Abonnement SaaS (Par véhicule / mois ou an)"
+
+msgid "Loueur de véhicules / Agence de transport"
+msgstr "Loueur de véhicules / Agence de transport"
+
+msgid "Lu"
+msgstr "Lu"
+
+msgid "Marque Blanche gratuite"
+msgstr "Marque Blanche gratuite"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Message / Besoins particuliers"
+msgstr "Message / Besoins particuliers"
+
+msgid "Méta description"
+msgstr "Méta description"
+
+msgid "Nom"
+msgstr "Nom"
+
+msgid "Nom & Prénom"
+msgstr "Nom & Prénom"
+
+msgid "Nom & Prénom du responsable"
+msgstr "Nom & Prénom du responsable"
+
+msgid "Nom de l'entreprise / Atelier"
+msgstr "Nom de l'entreprise / Atelier"
+
+msgid "Nom de l'entreprise / Organisation"
+msgstr "Nom de l'entreprise / Organisation"
+
+msgid "Nom de votre société (optionnel)"
+msgstr "Nom de votre société (optionnel)"
+
+msgid "Nom du responsable"
+msgstr "Nom du responsable"
+
+msgid "Nom du responsable flotte / DSI"
+msgstr "Nom du responsable flotte / DSI"
+
+msgid "Nos Promotions & Offres"
+msgstr "Nos Promotions & Offres"
+
+msgid "Objet de votre demande"
+msgstr "Objet de votre demande"
+
+msgid "Option Marque Blanche possible"
+msgstr "Option Marque Blanche possible"
+
+msgid "Petite quantité (1-10 unités)"
+msgstr "Petite quantité (1-10 unités)"
+
+msgid "Plateforme Serveur en Marque Blanche Complète (Logo + Domaine + App)"
+msgstr "Plateforme Serveur en Marque Blanche Complète (Logo + Domaine + App)"
+
+msgid "Plus de 200 véhicules"
+msgstr "Plus de 200 véhicules"
+
+msgid "Pour les grands comptes"
+msgstr "Pour les grands comptes"
+
+msgid "Pour les professionnels"
+msgstr "Pour les professionnels"
+
+msgid ""
+"Précisez vos besoins : type de véhicules, besoin d'API ERP, marque blanche, "
+"nombre d'utilisateurs..."
+msgstr ""
+"Précisez vos besoins : type de véhicules, besoin d'API ERP, marque blanche, "
+"nombre d'utilisateurs..."
+
+msgid "Présentation de vos activités et besoins..."
+msgstr "Présentation de vos activités et besoins..."
+
+msgid "Publié"
+msgstr "Publié"
+
+msgid "Rapports et statistiques GPS"
+msgstr "Rapports et statistiques GPS"
+
+msgid "Remise de base"
+msgstr "Remise de base"
+
+msgid "Remise maximale (jusqu'à 35%)"
+msgstr "Remise maximale (jusqu'à 35%)"
+
+msgid "Remise supérieure"
+msgstr "Remise supérieure"
+
+msgid "Revendeur informatique & télécom"
+msgstr "Revendeur informatique & télécom"
+
+msgid "Revenez bientôt pour découvrir nos nouvelles offres exceptionnelles."
+msgstr "Revenez bientôt pour découvrir nos nouvelles offres exceptionnelles."
+
+msgid "Secteur d'activité"
+msgstr "Secteur d'activité"
+
+msgid "Session de vérification expirée. Veuillez réessayer."
+msgstr "Session de vérification expirée. Veuillez réessayer."
+
+msgid "Short summary for listing pages"
+msgstr "Short summary for listing pages"
+
+msgid "Société de sécurité / Gardiennage"
+msgstr "Société de sécurité / Gardiennage"
+
+msgid "Spam detected."
+msgstr "Spam detected."
+
+msgid "Taille de la flotte"
+msgstr "Taille de la flotte"
+
+msgid "Titre"
+msgstr "Titre"
+
+msgid "Traité"
+msgstr "Traité"
+
+msgid "Types d'équipements souhaités"
+msgstr "Types d'équipements souhaités"
+
+msgid "Types of GPS trackers needed"
+msgstr "Types of GPS trackers needed"
+
+msgid "Ville d'activité"
+msgstr "Ville d'activité"
+
+msgid "Volume mensuel"
+msgstr "Volume mensuel"
+
+msgid "Volume régulier (10-50 unités/mois)"
+msgstr "Volume régulier (10-50 unités/mois)"
+
+msgid ""
+"Votre candidature a été envoyée avec succès. Nous vous contacterons sous "
+"48h."
+msgstr ""
+"Votre candidature a été envoyée avec succès. Nous vous contacterons sous "
+"48h."
+
+msgid ""
+"Votre demande a été envoyée avec succès. Nous vous contacterons sous 24h."
+msgstr ""
+"Votre demande a été envoyée avec succès. Nous vous contacterons sous 24h."
+
+msgid ""
+"Votre demande a été envoyée avec succès. Un expert vous contactera "
+"prochainement."
+msgstr ""
+"Votre demande a été envoyée avec succès. Un expert vous contactera "
+"prochainement."
+
+msgid ""
+"Votre message a été envoyé avec succès. Nous vous répondrons rapidement."
+msgstr ""
+"Votre message a été envoyé avec succès. Nous vous répondrons rapidement."
+
+msgid "Votre nom complet"
+msgstr "Votre nom complet"
+
+msgid "Vérification invalide. Veuillez réessayer."
+msgstr "Vérification invalide. Veuillez réessayer."
+
+msgid "Électricien auto / Installateur"
+msgstr "Électricien auto / Installateur"
+
+msgid ""
+"Application gratuite • Aucune carte bancaire requise • Support en français "
+"et arabe"
+msgstr ""
+"Application gratuite • Aucune carte bancaire requise • Support en français "
+"et arabe"
+
+msgid ""
+"Bénéficiez de remises allant jusqu'à 35%% sur le matériel et les "
+"abonnements."
+msgstr ""
+"Bénéficiez de remises allant jusqu'à 35%% sur le matériel et les "
+"abonnements."
+
+msgid "Remise maximale (jusqu'à 35%%)"
+msgstr "Remise maximale (jusqu'à 35%%)"
+
+msgid "100%% Marocain"
+msgstr "100%% Marocain"

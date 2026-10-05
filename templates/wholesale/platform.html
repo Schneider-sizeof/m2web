@@ -222,18 +222,39 @@
                 background: rgba(245, 166, 35, 0.08) !important;
                 border-color: rgba(245, 166, 35, 0.35) !important;
             }
+            .pricing-val-row {
+                direction: ltr !important;
+                unicode-bidi: isolate !important;
+                display: inline-flex !important;
+                align-items: baseline !important;
+                justify-content: center !important;
+            }
             .pricing-val-number {
                 font-size: 2.45rem !important;
                 font-weight: 900 !important;
                 color: #1E1028 !important;
                 line-height: 1 !important;
                 letter-spacing: -0.5px;
+                direction: ltr !important;
+                unicode-bidi: isolate !important;
+                font-variant-numeric: tabular-nums !important;
             }
             .pricing-val-curr {
                 font-size: 1.05rem !important;
                 font-weight: 800 !important;
                 color: #F5A623 !important;
-                margin-left: 0.25rem !important;
+                margin-left: 0.35rem !important;
+                margin-right: 0 !important;
+                direction: ltr !important;
+                unicode-bidi: isolate !important;
+            }
+            html[dir="rtl"] .pricing-val-row {
+                direction: ltr !important;
+                unicode-bidi: isolate !important;
+            }
+            html[dir="rtl"] .pricing-val-curr {
+                margin-left: 0.35rem !important;
+                margin-right: 0 !important;
             }
             .pricing-period-label {
                 font-size: 0.8rem !important;
@@ -320,9 +341,9 @@
                     <p class="pricing-desc-text">{% trans 'Abonnement mensuel tout compris par véhicule' %}</p>
                     
                     <div class="pricing-box-container">
-                        <div class="d-flex align-items-baseline justify-content-center">
+                        <div class="pricing-val-row d-flex align-items-baseline justify-content-center" dir="ltr">
                             <span class="pricing-val-number">29</span>
-                            <span class="pricing-val-curr">DH</span>
+                            <span class="pricing-val-curr">{% trans 'DH' %}</span>
                         </div>
                         <div class="pricing-period-label">{% trans '/ mois / véhicule (HT)' %}</div>
                     </div>
@@ -378,9 +399,9 @@
                     <p class="pricing-desc-text">{% trans 'Votre propre marque de télématique à 100%' %}</p>
                     
                     <div class="pricing-box-container">
-                        <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="pricing-val-number text-amber">1 490</span>
-                            <span class="pricing-val-curr">DH</span>
+                        <div class="pricing-val-row d-flex align-items-baseline justify-content-center" dir="ltr">
+                            <span class="pricing-val-number text-amber">1&nbsp;490</span>
+                            <span class="pricing-val-curr">{% trans 'DH' %}</span>
                         </div>
                         <div class="pricing-period-label">{% trans '/ mois (Serveur mutualisé PRO)' %}</div>
                     </div>
@@ -434,9 +455,9 @@
                     <p class="pricing-desc-text">{% trans 'Licence on-premise sur vos propres infrastructures' %}</p>
                     
                     <div class="pricing-box-container">
-                        <div class="d-flex align-items-baseline justify-content-center">
-                            <span class="pricing-val-number">14 900</span>
-                            <span class="pricing-val-curr">DH</span>
+                        <div class="pricing-val-row d-flex align-items-baseline justify-content-center" dir="ltr">
+                            <span class="pricing-val-number">14&nbsp;900</span>
+                            <span class="pricing-val-curr">{% trans 'DH' %}</span>
                         </div>
                         <div class="pricing-period-label">{% trans '/ licence unique à vie' %}</div>
                     </div>

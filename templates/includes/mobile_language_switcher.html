@@ -1,0 +1,49 @@
+{% load static i18n %}
+{% get_current_language as CURRENT_LANG %}
+
+<!-- Mobile Segmented Language Strip -->
+<div class="mobile-lang-strip w-100">
+    <div class="d-flex align-items-center justify-content-between mb-2 px-1">
+        <span class="text-white-50 small fw-semibold">
+            <i class="bi bi-translate text-amber me-1"></i>{% trans 'Langue' %}
+        </span>
+        <span class="badge border border-amber border-opacity-25 text-amber text-uppercase" style="background: rgba(245, 166, 35, 0.12); font-size: 0.68rem; letter-spacing: 0.5px;">
+            {{ CURRENT_LANG }}
+        </span>
+    </div>
+    <div class="row g-2 w-100 m-0">
+        <div class="col-4 p-1">
+            <form action="{% url 'set_language' %}" method="post" class="m-0 w-100">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                <input name="language" type="hidden" value="fr">
+                <button type="submit" class="btn btn-sm w-100 py-2 d-flex align-items-center justify-content-center gap-1 text-nowrap {% if CURRENT_LANG == 'fr' %}btn-amber fw-bold shadow-sm{% else %}btn-mobile-lang text-white border border-white border-opacity-15{% endif %}">
+                    <img src="{% static 'images/flags/fr.svg' %}" width="16" height="11" class="rounded-1 flex-shrink-0" alt="FR">
+                    <span class="mobile-lang-text">Français</span>
+                </button>
+            </form>
+        </div>
+        <div class="col-4 p-1">
+            <form action="{% url 'set_language' %}" method="post" class="m-0 w-100">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                <input name="language" type="hidden" value="ar">
+                <button type="submit" class="btn btn-sm w-100 py-2 d-flex align-items-center justify-content-center gap-1 text-nowrap {% if CURRENT_LANG == 'ar' %}btn-amber fw-bold shadow-sm{% else %}btn-mobile-lang text-white border border-white border-opacity-15{% endif %}">
+                    <img src="{% static 'images/flags/ma.svg' %}" width="16" height="11" class="rounded-1 flex-shrink-0" alt="AR">
+                    <span class="mobile-lang-text">العربية</span>
+                </button>
+            </form>
+        </div>
+        <div class="col-4 p-1">
+            <form action="{% url 'set_language' %}" method="post" class="m-0 w-100">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                <input name="language" type="hidden" value="en">
+                <button type="submit" class="btn btn-sm w-100 py-2 d-flex align-items-center justify-content-center gap-1 text-nowrap {% if CURRENT_LANG == 'en' %}btn-amber fw-bold shadow-sm{% else %}btn-mobile-lang text-white border border-white border-opacity-15{% endif %}">
+                    <img src="{% static 'images/flags/gb.svg' %}" width="16" height="11" class="rounded-1 flex-shrink-0" alt="EN">
+                    <span class="mobile-lang-text">English</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -2177,3 +2177,11 @@ msgstr "Access Web Platform"
 
 msgid "Gérez votre flotte en déplacement depuis votre smartphone ou tablette."
 msgstr "Manage your fleet on the move from your smartphone or tablet."
+
+#: templates/otp/admin111/login.html:1
+msgid ""
+"You are authenticated as {{ username }}, but are not authorized to access "
+"this page. Would you like to login to a different account?"
+msgstr ""
+"You are authenticated as {{ username }}, but are not authorized to access "
+"this page. Would you like to login to a different account?"

@@ -71,24 +71,31 @@
                 </li>
             </ul>
 
-            <div class="d-flex align-items-center gap-2 flex-shrink-0">
+            <!-- Desktop Action Group (Hidden on Mobile) -->
+            <div class="d-none d-lg-flex align-items-center gap-2 flex-shrink-0">
                 {% include 'includes/language_switcher.html' %}
-                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn-nav-login d-none d-lg-inline-flex" title="{% trans 'Connexion Plateforme Trackmaroc' %}">
+                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn-nav-login" title="{% trans 'Connexion Plateforme Trackmaroc' %}">
                     <i class="bi bi-box-arrow-in-right text-amber"></i> <span>{% trans 'Connexion' %}</span>
                 </a>
-                <a href="{% url 'contact:contact' %}" class="btn-nav-quote d-none d-lg-inline-flex">
+                <a href="{% url 'contact:contact' %}" class="btn-nav-quote">
                     <i class="bi bi-file-earmark-text"></i> <span>{% trans 'Demander un Devis' %}</span>
                 </a>
             </div>
 
-            <!-- Mobile Action Buttons (d-lg-none) -->
-            <div class="d-lg-none mt-3 pt-2 border-top border-secondary border-opacity-25 d-flex flex-column gap-2">
-                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning text-white w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm" style="border-color: #F5A623 !important; background: rgba(255, 255, 255, 0.08) !important;">
-                    <i class="bi bi-box-arrow-in-right text-amber"></i> {% trans 'Connexion' %}
-                </a>
-                <a href="{% url 'contact:contact' %}" class="btn btn-amber w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm">
-                    <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
-                </a>
+            <!-- Mobile Drawer Bottom Actions (Language Switcher + Action Buttons) -->
+            <div class="mobile-nav-drawer-footer d-lg-none mt-3 pt-3 border-top border-white border-opacity-10 w-100">
+                <!-- Mobile Language Selector Strip -->
+                {% include 'includes/mobile_language_switcher.html' %}
+
+                <!-- Mobile Action Buttons -->
+                <div class="mobile-action-buttons d-flex flex-column gap-2 mt-3">
+                    <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning text-white w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm" style="border-color: #F5A623 !important; background: rgba(255, 255, 255, 0.08) !important;">
+                        <i class="bi bi-box-arrow-in-right text-amber"></i> {% trans 'Connexion' %}
+                    </a>
+                    <a href="{% url 'contact:contact' %}" class="btn btn-amber w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm">
+                        <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
+                    </a>
+                </div>
             </div>
         </div>
     </div>

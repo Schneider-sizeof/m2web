@@ -2107,3 +2107,11 @@ msgstr "الدخول إلى منصة الويب"
 
 msgid "Gérez votre flotte en déplacement depuis votre smartphone ou tablette."
 msgstr "قم بإدارة أسطولك أثناء التنقل من هاتفك الذكي أو جهازك اللوحي."
+
+#: templates/otp/admin111/login.html:1
+msgid ""
+"You are authenticated as {{ username }}, but are not authorized to access "
+"this page. Would you like to login to a different account?"
+msgstr ""
+"أنت مسجل الدخول باسم {{ username }}، ولكن ليس لديك صلاحية الوصول إلى هذه "
+"الصفحة. هل ترغب في تسجيل الدخول بحساب آخر؟"

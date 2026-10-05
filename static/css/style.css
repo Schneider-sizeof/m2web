@@ -350,7 +350,7 @@ img {
     min-height: 38px !important;
     max-height: 38px !important;
     box-sizing: border-box !important;
-    display: inline-flex !important;
+    display: inline-flex;
     align-items: center !important;
     justify-content: center !important;
     line-height: 1 !important;
@@ -1985,6 +1985,35 @@ html[dir='rtl'] .whatsapp-tooltip::after {
     border-color: transparent var(--primary-color) transparent transparent;
 }
 
+/* RTL Price & Number Isolation — prevents Arabic number reversal */
+html[dir='rtl'] .pricing-val-number,
+html[dir='rtl'] .pricing-val-curr,
+html[dir='rtl'] .pricing-val-row,
+html[dir='rtl'] .product-price,
+html[dir='rtl'] [dir='ltr'] {
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+}
+
+html[dir='rtl'] .pricing-val-curr {
+    margin-left: 0.35rem !important;
+    margin-right: 0 !important;
+}
+
+html[dir='rtl'] .pricing-box-container {
+    text-align: center !important;
+}
+
+/* Mobile Nav Drawer Footer */
+.mobile-nav-drawer-footer {
+    width: 100%;
+}
+
+.mobile-nav-drawer-footer .mobile-action-buttons .btn {
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
 /* ==========================================================================
    19. Responsive Media Queries
    ========================================================================== */
@@ -2080,11 +2109,26 @@ html[dir='rtl'] .whatsapp-tooltip::after {
         margin-top: 0.75rem;
         box-shadow: var(--shadow-lg);
         border: 1px solid rgba(255,255,255,0.08);
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0 !important;
+        width: 100%;
+        text-align: center;
     }
     
     .nav-link {
-        padding: 0.65rem 0 !important;
+        padding: 0.75rem 0.5rem !important;
         border-bottom: 1px solid rgba(255,255,255,0.06);
+        display: block;
+        width: 100%;
+        font-size: 0.92rem !important;
     }
     
     .nav-link::after { display: none; }
@@ -2103,14 +2147,53 @@ html[dir='rtl'] .whatsapp-tooltip::after {
         font-size: 0.86rem;
         border-radius: 6px;
     }
+
+    /* Strictly hide desktop action buttons on mobile */
+    .btn-nav-login,
+    .btn-nav-quote {
+        display: none !important;
+    }
     
     .btn-submit { width: 100%; text-align: center; }
-    .btn-nav-quote { width: 100%; margin-top: 0.5rem; }
     
     .stat-divider { display: none; }
     
     .b2b-banner { text-align: center; }
     .b2b-image { margin-top: 2rem; text-align: center; }
+}
+
+/* Mobile Drawer Language Strip & Actions */
+.mobile-lang-strip {
+    width: 100%;
+}
+
+.btn-mobile-lang {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-mobile-lang:hover,
+.btn-mobile-lang:focus {
+    background: rgba(245, 166, 35, 0.18);
+    border-color: rgba(245, 166, 35, 0.5) !important;
+    color: #FFFFFF;
+}
+
+.mobile-lang-strip .btn-amber {
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
+    font-size: 0.82rem;
+    border-radius: 8px;
+}
+
+.mobile-lang-text {
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 @media (max-width: 767px) {

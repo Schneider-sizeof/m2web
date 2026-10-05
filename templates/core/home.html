@@ -303,7 +303,7 @@
                         <div class="product-footer pt-3 mt-auto border-top d-flex justify-content-between align-items-center">
                             <div>
                                 <span class="text-muted small d-block" style="font-size: 0.75rem;">{% trans 'Tarif indicatif' %}</span>
-                                <span class="product-price fs-5 text-plum fw-bold">
+                                <span class="product-price fs-5 text-plum fw-bold" dir="ltr">
                                     {% if product.price_range %}
                                         {{ product.price_range }}
                                     {% else %}
@@ -371,9 +371,9 @@
                     <!-- Price Block -->
                     <div class="bg-light-soft p-3 rounded-3 mb-3 text-center border">
                         {% if promo.original_price %}
-                        <div class="text-decoration-line-through text-muted small mb-1">{{ promo.original_price|floatformat:0 }} {% trans 'DH' %}</div>
+                        <div class="text-decoration-line-through text-muted small mb-1" dir="ltr">{{ promo.original_price|floatformat:0 }} {% trans 'DH' %}</div>
                         {% endif %}
-                        <div class="d-flex align-items-baseline justify-content-center gap-1">
+                        <div class="d-flex align-items-baseline justify-content-center gap-1" dir="ltr">
                             <span class="display-6 fw-bold text-plum">{{ promo.promo_price|floatformat:0 }}</span>
                             <span class="fw-bold text-amber">{% trans 'DH' %}</span>
                             {% if promo.price_unit %}
