@@ -100,3 +100,41 @@ class PlatformInquiry(models.Model):
 
     def __str__(self):
         return f"[Plateforme] {self.company_name} ({self.get_acquisition_mode_display()})"
+
+
+class ResellerTier(models.Model):
+    BADGE_STYLE_CHOICES = [
+        ('light', 'Light'),
+        ('amber', 'Amber'),
+        ('plum', 'Plum'),
+    ]
+
+    title = models.CharField(max_length=100, verbose_name=_('Titre'))
+    description = models.TextField(verbose_name=_('Description'))
+    badge_text = models.CharField(max_length=50, blank=True, verbose_name=_('Texte du badge'))
+    icon_class = models.CharField(max_length=50, blank=True, verbose_name=_('Classe de l\'icône (ex: bi-star)'))
+    badge_style = models.CharField(max_length=20, choices=BADGE_STYLE_CHOICES, default='light', verbose_name=_('Style du badge'))
+    
+    volume_min = models.IntegerField(default=0, verbose_name=_('Volume minimum'))
+    volume_max = models.IntegerField(default=0, help_text=_('0 pour "et plus"'), verbose_name=_('Volume maximum'))
+    volume_label = models.CharField(max_length=50, verbose_name=_('Label du volume'))
+    discount_text = models.CharField(max_length=100, verbose_name=_('Texte de la remise'))
+    features = models.TextField(help_text=_('Une fonctionnalité par ligne'), verbose_name=_('Fonctionnalités'))
+    
+    cta_text = models.CharField(max_length=100, verbose_name=_('Texte du bouton'))
+    cta_url = models.CharField(max_length=200, default="#resellerFormSection", verbose_name=_('Lien du bouton'))
+    
+    is_featured = models.BooleanField(default=False, verbose_name=_('Mis en avant'))
+    is_active = models.BooleanField(default=True, verbose_name=_('Actif'))
+    order = models.IntegerField(default=0, verbose_name=_('Ordre d\'affichage'))
+
+    class Meta:
+        ordering = ['order']
+        verbose_name = 'Niveau Revendeur'
+        verbose_name_plural = 'Niveaux Revendeur'
+
+    def __str__(self):
+        return self.title
+
+    def get_features_list(self):
+        return [f.strip() for f in self.features.split('\n') if f.strip()]

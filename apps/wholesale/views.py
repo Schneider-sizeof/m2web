@@ -74,10 +74,15 @@ def reseller_view(request):
             return redirect('wholesale:success')
     else:
         form = ResellerInquiryForm()
+        
+    from .models import ResellerTier
+    tiers = ResellerTier.objects.filter(is_active=True)
+    
     context = {
         'form': form,
         'company': company,
         'page_title': 'Devenir Revendeur',
+        'tiers': tiers,
     }
     return render(request, 'wholesale/reseller.html', context)
 
