@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% load static i18n %}
+{% block title %}M2web Maroc | {% trans 'GPS Géolocalisation & Gestion de Flotte au Maroc' %}{% endblock %}
+{% block meta_description %}{{ company.meta_description|default:_('M2web Maroc — Leader de la géolocalisation GPS 4G au Maroc. Traceurs certifiés, suivi de flotte en temps réel, contrôle carburant, sécurité véhicules. Installation à Fès et partout au Maroc. Support 24/7.') }}{% endblock %}
+{% block meta_keywords %}traceur GPS Maroc, géolocalisation Fès, suivi de flotte temps réel, GPS 4G Maroc, contrôle carburant GPS, M2web, télématique Maroc, balise GPS voiture, traceur GPS véhicule Maroc, plateforme GPS Maroc, GPS Casablanca, sonde carburant{% endblock %}
 
 {% block content %}
 <!-- Hero Section (Spectacular Modern Tech) -->

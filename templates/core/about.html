@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 
-{% block title %}{% trans 'À Propos' %} | {{ company.company_name|default:"M2web" }}{% endblock %}
+{% block title %}{% trans 'À Propos' %} | {{ company.company_name|default:"M2web" }} — {% trans 'GPS Géolocalisation Maroc' %}{% endblock %}
+{% block meta_description %}{% trans 'Découvrez M2web Maroc, leader de la géolocalisation GPS et télématique à Fès. Plus de 10 ans d expertise, 5000+ traceurs installés, équipe technique certifiée.' %}{% endblock %}
+{% block og_title %}{% trans 'À Propos' %} | {{ company.company_name|default:"M2web" }}{% endblock %}
 
 {% block content %}
 <!-- Page Header -->

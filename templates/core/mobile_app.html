@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 {% block title %}{{ app.hero_title|default:"Application Mobile GPS" }} | M2web Maroc{% endblock %}
+{% block meta_description %}{{ app.description|default:_('Application mobile GPS M2web pour Android \u2014 Suivi de flotte en temps r\u00e9el, contr\u00f4le carburant, alertes et rapports. T\u00e9l\u00e9chargement gratuit sur Google Play.') }}{% endblock %}
+{% block meta_keywords %}application GPS Maroc, app suivi v\u00e9hicule, application g\u00e9olocalisation Android, M2web app mobile, suivi flotte smartphone, GPS tracker app Maroc{% endblock %}
+{% block og_title %}{{ app.hero_title|default:"Application Mobile GPS" }} | M2web Maroc{% endblock %}
+{% block og_description %}{{ app.hero_subtitle|default:_('T\u00e9l\u00e9chargez notre application mobile GPS pour suivre vos v\u00e9hicules en temps r\u00e9el sur votre smartphone Android.') }}{% endblock %}
 {% block content %}
 
 <style>
@@ -49,6 +53,22 @@
     }
     html[dir='rtl'] .app-phone-placeholder .text-start {
         text-align: right !important;
+    }
+    html[dir='rtl'] .app-phone-placeholder .phone-screen .d-flex.justify-content-between {
+        direction: rtl;
+    }
+    html[dir='rtl'] #screenshotCarousel .phone-screen {
+        direction: rtl;
+    }
+    html[dir='rtl'] #screenshotCarousel .phone-screen .text-start {
+        text-align: right !important;
+    }
+    @media (max-width: 575px) {
+        html[dir='rtl'] #screenshotCarousel .carousel-control-prev,
+        html[dir='rtl'] #screenshotCarousel .carousel-control-next {
+            width: 36px;
+            height: 36px;
+        }
     }
 </style>
 

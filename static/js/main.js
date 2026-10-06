@@ -229,29 +229,37 @@
             });
         };
 
-        // 9. Testimonial Touch Swipe Support (Basic implementation)
-        const initTestimonialSwipe = () => {
-            const carousel = document.querySelector('#testimonialCarousel');
-            if (!carousel || !window.bootstrap || !bootstrap.Carousel) return;
+        // 9. Universal Touch Swipe Support for All Carousels (RTL-aware)
+        const initCarouselSwipe = () => {
+            const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+            const carouselIds = ['#testimonialCarousel', '#heroCarousel', '#screenshotCarousel'];
             
-            const bsCarousel = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            carousel.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, {passive: true});
-            
-            carousel.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, {passive: true});
-            
-            const handleSwipe = () => {
-                const threshold = 50;
-                if (touchEndX < touchStartX - threshold) bsCarousel.next();
-                if (touchEndX > touchStartX + threshold) bsCarousel.prev();
-            }
+            carouselIds.forEach(id => {
+                const carousel = document.querySelector(id);
+                if (!carousel || !window.bootstrap || !bootstrap.Carousel) return;
+                
+                const bsCarousel = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
+                let touchStartX = 0;
+                let touchEndX = 0;
+                
+                carousel.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, {passive: true});
+                
+                carousel.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    const threshold = 50;
+                    const diff = touchEndX - touchStartX;
+                    if (isRtl) {
+                        // In RTL, swipe directions are reversed
+                        if (diff > threshold) bsCarousel.next();
+                        if (diff < -threshold) bsCarousel.prev();
+                    } else {
+                        if (diff < -threshold) bsCarousel.next();
+                        if (diff > threshold) bsCarousel.prev();
+                    }
+                }, {passive: true});
+            });
         };
 
         // 10. Mobile menu auto-close on link click (exclude dropdown toggles)
@@ -289,7 +297,7 @@
         initFormValidation();
         initLazyLoading();
         highlightActiveNav();
-        initTestimonialSwipe();
+        initCarouselSwipe();
         initMobileMenuClose();
 
     });
