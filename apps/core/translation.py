@@ -28,6 +28,9 @@ class CompanyInfoTranslationOptions(TranslationOptions):
         'about_story_title',
         'about_lead',
         'about_text',
+        'login_button_text',
+        'login_button_title',
+        'quote_button_text',
     )
 
 class WhyChooseUsPillarTranslationOptions(TranslationOptions):

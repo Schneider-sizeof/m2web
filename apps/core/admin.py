@@ -62,6 +62,10 @@ class CompanyInfoAdmin(admin.ModelAdmin):
         ('Horaires d\'Ouverture Showroom & Support', {
             'fields': ('operating_hours_weekday', 'operating_hours_saturday', 'operating_hours_sunday')
         }),
+        ('Boutons de la Barre de Navigation', {
+            'description': 'Personnalisez le bouton Connexion et le bouton Devis dans la barre de navigation',
+            'fields': ('login_button_url', 'login_button_text', 'login_button_title', 'quote_button_text')
+        }),
         ('Réseaux Sociaux', {
             'fields': ('linkedin_url', 'facebook_url', 'instagram_url', 'youtube_url')
         }),

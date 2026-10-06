@@ -70,11 +70,11 @@
             <!-- Desktop Action Group (Hidden on Mobile) -->
             <div class="d-none d-lg-flex align-items-center gap-2 flex-shrink-0">
                 {% include 'includes/language_switcher.html' %}
-                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn-nav-login" title="{% trans 'Connexion Plateforme Trackmaroc' %}">
-                    <i class="bi bi-box-arrow-in-right text-amber"></i> <span>{% trans 'Connexion' %}</span>
+                <a href="{{ company.login_button_url|default:'https://trackmaroc.com' }}" target="_blank" rel="noopener noreferrer" class="btn-nav-login" title="{{ company.login_button_title|default:_('Connexion Plateforme Trackmaroc') }}">
+                    <i class="bi bi-box-arrow-in-right text-amber"></i> <span>{{ company.login_button_text|default:_('Connexion') }}</span>
                 </a>
                 <a href="{% url 'contact:contact' %}" class="btn-nav-quote">
-                    <i class="bi bi-file-earmark-text"></i> <span>{% trans 'Demander un Devis' %}</span>
+                    <i class="bi bi-file-earmark-text"></i> <span>{{ company.quote_button_text|default:_('Demander un Devis') }}</span>
                 </a>
             </div>
 
@@ -85,11 +85,11 @@
 
                 <!-- Mobile Action Buttons -->
                 <div class="mobile-action-buttons d-flex flex-column gap-2 mt-3">
-                    <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning text-white w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm" style="border-color: #F5A623 !important; background: rgba(255, 255, 255, 0.08) !important;">
-                        <i class="bi bi-box-arrow-in-right text-amber"></i> {% trans 'Connexion' %}
+                    <a href="{{ company.login_button_url|default:'https://trackmaroc.com' }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning text-white w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm" style="border-color: #F5A623 !important; background: rgba(255, 255, 255, 0.08) !important;">
+                        <i class="bi bi-box-arrow-in-right text-amber"></i> {{ company.login_button_text|default:_('Connexion') }}
                     </a>
                     <a href="{% url 'contact:contact' %}" class="btn btn-amber w-100 py-2 fw-bold d-flex align-items-center justify-content-center gap-2 shadow-sm">
-                        <i class="bi bi-file-earmark-text"></i> {% trans 'Demander un Devis' %}
+                        <i class="bi bi-file-earmark-text"></i> {{ company.quote_button_text|default:_('Demander un Devis') }}
                     </a>
                 </div>
             </div>

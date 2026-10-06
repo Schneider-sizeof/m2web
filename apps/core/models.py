@@ -82,6 +82,28 @@ class CompanyInfo(models.Model):
     analytics_id = models.CharField(max_length=50, blank=True)
     meta_description = models.TextField(blank=True)
 
+    # Navbar Action Buttons (Customizable from Admin)
+    login_button_url = models.URLField(
+        default='https://trackmaroc.com', blank=True,
+        verbose_name='Lien du bouton Connexion',
+        help_text='URL de redirection du bouton "Connexion" dans la barre de navigation (ex: https://trackmaroc.com).'
+    )
+    login_button_text = models.CharField(
+        max_length=50, default='Connexion', blank=True,
+        verbose_name='Texte du bouton Connexion',
+        help_text='Texte affiché sur le bouton (ex: Connexion, Sign In, Se connecter).'
+    )
+    login_button_title = models.CharField(
+        max_length=150, default='Connexion Plateforme Trackmaroc', blank=True,
+        verbose_name='Infobulle du bouton Connexion (alt/title)',
+        help_text='Texte affiché au survol du bouton (tooltip/alt text).'
+    )
+    quote_button_text = models.CharField(
+        max_length=50, default='Demander un Devis', blank=True,
+        verbose_name='Texte du bouton Devis',
+        help_text='Texte affiché sur le bouton devis (ex: Demander un Devis, Request a Quote).'
+    )
+
     class Meta:
         verbose_name = 'Configuration Générale & Société'
         verbose_name_plural = 'Configuration Générale & Société'
