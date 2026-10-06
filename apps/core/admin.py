@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.html import format_html
 from modeltranslation.admin import TranslationAdmin
 from .models import CompanyInfo, WhyChooseUsPillar, Testimonial, Partner, Promotion, MobileApp, AppFeature, AppScreenshot, AppPlan, AppInquiry
 
@@ -72,30 +73,38 @@ class CompanyInfoAdmin(admin.ModelAdmin):
     readonly_fields = ['logo_preview', 'favicon_preview', 'about_image_preview', 'platform_screenshot_preview']
 
     def logo_preview(self, obj):
-        if obj and obj.logo:
-            from django.utils.html import format_html
-            return format_html('<img src="{}" style="max-height: 48px; max-width: 180px; background: #1E1028; padding: 4px; border-radius: 4px;" />', obj.logo.url)
+        try:
+            if obj and obj.logo:
+                return format_html('<img src="{}" style="max-height: 48px; max-width: 180px; background: #1E1028; padding: 4px; border-radius: 4px;" />', obj.logo.url)
+        except Exception:
+            pass
         return "Aucun logo téléversé (logo par défaut actif)"
     logo_preview.short_description = "Aperçu Logo"
 
     def favicon_preview(self, obj):
-        if obj and obj.favicon:
-            from django.utils.html import format_html
-            return format_html('<img src="{}" style="max-height: 32px; max-width: 32px;" />', obj.favicon.url)
+        try:
+            if obj and obj.favicon:
+                return format_html('<img src="{}" style="max-height: 32px; max-width: 32px;" />', obj.favicon.url)
+        except Exception:
+            pass
         return "Favicon par défaut actif"
     favicon_preview.short_description = "Aperçu Favicon"
 
     def about_image_preview(self, obj):
-        if obj and obj.about_image:
-            from django.utils.html import format_html
-            return format_html('<img src="{}" style="max-height: 120px; max-width: 200px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />', obj.about_image.url)
+        try:
+            if obj and obj.about_image:
+                return format_html('<img src="{}" style="max-height: 120px; max-width: 200px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />', obj.about_image.url)
+        except Exception:
+            pass
         return "Aucune image personnalisée (image par défaut active)"
     about_image_preview.short_description = "Aperçu Photo À Propos"
 
     def platform_screenshot_preview(self, obj):
-        if obj and obj.platform_screenshot:
-            from django.utils.html import format_html
-            return format_html('<img src="{}" style="max-height: 120px; max-width: 200px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />', obj.platform_screenshot.url)
+        try:
+            if obj and obj.platform_screenshot:
+                return format_html('<img src="{}" style="max-height: 120px; max-width: 200px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" />', obj.platform_screenshot.url)
+        except Exception:
+            pass
         return "Aucune capture personnalisée (tableau de bord par défaut actif)"
     platform_screenshot_preview.short_description = "Aperçu Capture Plateforme"
 
@@ -130,8 +139,11 @@ class PartnerAdmin(admin.ModelAdmin):
     readonly_fields = ['logo_preview']
 
     def logo_preview(self, obj):
-        if obj.logo:
-            return format_html('<img src="{}" style="max-height: 38px; max-width: 120px; object-fit: contain; background: #f8fafc; padding: 3px 8px; border: 1px solid #e2e8f0; border-radius: 6px;" />', obj.logo.url)
+        try:
+            if obj and obj.logo:
+                return format_html('<img src="{}" style="max-height: 38px; max-width: 120px; object-fit: contain; background: #f8fafc; padding: 3px 8px; border: 1px solid #e2e8f0; border-radius: 6px;" />', obj.logo.url)
+        except Exception:
+            pass
         return "-"
     logo_preview.short_description = "Aperçu Logo"
 
