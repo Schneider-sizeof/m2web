@@ -83,9 +83,14 @@
     <div class="container position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
             <div class="col-lg-6 text-start text-white animate-on-scroll">
-                <span class="badge bg-amber text-plum fw-bold px-3 py-2 mb-3 rounded-pill d-inline-flex align-items-center gap-1 shadow-sm">
-                    <i class="bi bi-phone"></i> {% trans 'Application Mobile' %}
-                </span>
+                <div class="d-flex flex-wrap gap-2 align-items-center mb-3">
+                    <span class="badge bg-amber text-plum fw-bold px-3 py-2 rounded-pill d-inline-flex align-items-center gap-1 shadow-sm">
+                        <i class="bi bi-phone"></i> {% trans 'Application Mobile' %}
+                    </span>
+                    <span class="badge bg-white bg-opacity-10 text-white fw-semibold px-3 py-2 rounded-pill d-inline-flex align-items-center gap-1 border border-white border-opacity-20 shadow-sm">
+                        <i class="bi bi-apple text-amber"></i> App Store (iOS) : <span class="text-amber">{% trans 'Bientôt disponible' %}</span>
+                    </span>
+                </div>
                 <h1 class="display-5 fw-bold mb-3 text-white">{{ app.hero_title|default:_("Application Mobile GPS") }}</h1>
                 <p class="lead mb-4 text-white-50">{{ app.hero_subtitle|default:_("Téléchargez notre application de suivi GPS et gardez un œil sur vos véhicules 24/7, où que vous soyez.") }}</p>
                 <p class="mb-4 text-white" style="opacity: 0.9; line-height: 1.6;">{{ app.description|default:_("Notre application mobile M2web GPS Tracker vous offre un contrôle total sur votre flotte depuis votre smartphone Android. Interface intuitive, notifications en temps réel, et rapports détaillés à portée de main.") }}</p>
@@ -100,6 +105,17 @@
                         </div>
                     </a>
                     {% endif %}
+
+                    <!-- iOS App Store (Coming Soon) -->
+                    <div class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-3 px-4 py-2 shadow-sm rounded-3 position-relative" style="opacity: 0.9; cursor: default; border-color: rgba(255, 255, 255, 0.35);" title="{% trans 'Version iOS en cours de développement' %}">
+                        <i class="bi bi-apple fs-2 text-white flex-shrink-0"></i>
+                        <div class="text-start">
+                            <small class="d-block text-uppercase text-white-50" style="font-size:0.65rem;line-height:1.1;letter-spacing:0.5px;">App Store (iOS)</small>
+                            <span class="fw-bold fs-6 text-amber d-inline-flex align-items-center gap-1">
+                                <i class="bi bi-clock-history" style="font-size:0.75rem;"></i> {% trans 'Bientôt disponible' %}
+                            </span>
+                        </div>
+                    </div>
                     
                     <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-3 px-4 py-2 shadow-sm rounded-3">
                         <i class="bi bi-laptop fs-2 text-amber flex-shrink-0"></i>
@@ -132,6 +148,10 @@
                     <div class="d-flex align-items-center gap-2">
                         <i class="bi bi-headset text-amber fs-5"></i>
                         <span class="text-white-50 small fw-semibold">{% trans 'Support Local' %}</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-apple text-amber fs-5"></i>
+                        <span class="text-white-50 small fw-semibold">iOS : <span class="text-amber">{% trans 'Bientôt disponible' %}</span></span>
                     </div>
                 </div>
             </div>
@@ -485,6 +505,10 @@
                     <i class="bi bi-google-play me-2"></i> {% trans 'Télécharger sur Google Play' %}
                 </a>
                 {% endif %}
+                <div class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-2" style="opacity: 0.9; cursor: default; border-color: rgba(255, 255, 255, 0.35);">
+                    <i class="bi bi-apple me-1"></i>
+                    <span>App Store (iOS) — <strong class="text-amber">{% trans 'Bientôt disponible' %}</strong></span>
+                </div>
                 <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg">
                     <i class="bi bi-laptop me-2 text-amber"></i> {% trans 'Accéder à la Plateforme Web' %}
                 </a>
