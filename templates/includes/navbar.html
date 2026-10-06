@@ -26,11 +26,7 @@
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid px-3 px-lg-4 px-xl-4 header-container">
         <a class="brand-logo-wrapper" href="{% url 'core:home' %}">
-            {% if company.logo %}
-                <img src="{{ company.logo.url }}" alt="{{ company.company_name|default:'M2WEB Maroc' }}" class="brand-logo-img" height="38">
-            {% else %}
-                <img src="{% static 'images/logo-navbar.png' %}" alt="M2WEB Maroc" class="brand-logo-img" height="38">
-            {% endif %}
+            <img src="{% static 'images/logo-navbar.png' %}" alt="{{ company.company_name|default:'M2WEB Maroc' }}" class="brand-logo-img" height="38">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="{% trans 'Toggle navigation' %}">
