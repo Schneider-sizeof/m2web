@@ -54,6 +54,9 @@ admin.site.login_form = FlexibleOTPAdminAuthenticationForm
 urlpatterns = [
     path('i18n/setlang/', set_language, name='set_language'),
     path('ckeditor5/', include('django_ckeditor_5.urls')),
+    path('mobile-app/', RedirectView.as_view(pattern_name='core:mobile_app', permanent=False)),
+    path('application-mobile/', RedirectView.as_view(pattern_name='core:mobile_app', permanent=False)),
+    path('app/', RedirectView.as_view(pattern_name='core:mobile_app', permanent=False)),
 ]
 
 urlpatterns += i18n_patterns(

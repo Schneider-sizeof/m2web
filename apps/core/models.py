@@ -155,18 +155,51 @@ class WhyChooseUsPillar(models.Model):
         verbose_name_plural = 'Pourquoi Nous Choisir (Piliers)'
 
     def get_link_url(self):
+        from django.urls import reverse
         if self.link_url:
+            clean = self.link_url.strip().strip('/')
+            if clean in ('mobile-app', 'application-mobile', 'app'):
+                try:
+                    return reverse('core:mobile_app')
+                except Exception:
+                    pass
+            elif clean == 'services':
+                try:
+                    return reverse('services:list')
+                except Exception:
+                    pass
+            elif clean == 'contact':
+                try:
+                    return reverse('contact:contact')
+                except Exception:
+                    pass
+            elif clean in ('a-propos', 'about'):
+                try:
+                    return reverse('core:about')
+                except Exception:
+                    pass
             return self.link_url
-        t = (self.title or '').lower()
-        if 'carburant' in t or 'fuel' in t or 'sonde' in t:
-            return '/services/controle-carburant-eco-conduite/'
-        elif 'mobile' in t or 'app' in t or 'web' in t:
-            return '/mobile-app/'
-        elif '4g' in t or 'multi' in t or 'réseau' in t or 'network' in t:
-            return '/services/'
-        elif 'install' in t or 'support' in t or 'fès' in t or 'fez' in t:
-            return '/contact/'
-        return '/services/'
+
+        titles = [
+            getattr(self, 'title_fr', None) or '',
+            getattr(self, 'title_en', None) or '',
+            getattr(self, 'title_ar', None) or '',
+            self.title or ''
+        ]
+        t = ' '.join(titles).lower()
+
+        try:
+            if any(k in t for k in ['carburant', 'fuel', 'sonde', 'وقود']):
+                return reverse('services:detail', kwargs={'slug': 'controle-carburant-eco-conduite'})
+            elif any(k in t for k in ['mobile', 'app', 'web', 'تطبيق', 'هاتف']):
+                return reverse('core:mobile_app')
+            elif any(k in t for k in ['4g', 'multi', 'réseau', 'network', 'شبكة']):
+                return reverse('services:list')
+            elif any(k in t for k in ['install', 'support', 'fès', 'fez', 'تركيب', 'دعم']):
+                return reverse('contact:contact')
+            return reverse('services:list')
+        except Exception:
+            return reverse('core:home')
 
     def __str__(self):
         return self.title
