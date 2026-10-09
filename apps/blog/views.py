@@ -32,10 +32,14 @@ def blog_list(request, category_slug=None):
 def blog_detail(request, slug):
     post = get_object_or_404(BlogPost, slug=slug, is_published=True)
     related_posts = BlogPost.objects.filter(category=post.category, is_published=True).exclude(id=post.id)[:3]
+    recent_posts = BlogPost.objects.filter(is_published=True).exclude(id=post.id)[:4]
+    categories = Category.objects.all()
     
     context = {
         'post': post,
         'related_posts': related_posts,
+        'recent_posts': recent_posts,
+        'categories': categories,
         'page_title': post.title,
         'company': CompanyInfo.get_instance(),
     }

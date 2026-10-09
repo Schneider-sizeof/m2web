@@ -14,133 +14,569 @@
 {% block twitter_description %}{{ post.meta_description|default:post.excerpt|default:post.title }}{% endblock %}
 {% block twitter_image %}{% if post.image %}{{ request.scheme }}://{{ request.get_host }}{{ post.image.url }}{% else %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}?v=4{% endif %}{% endblock %}
 
+{% block extra_css %}
+<style>
+/* Scoped Blog Detail Styling — Ensures immediate rendering with zero spacing bloat */
+.blog-detail-wrapper {
+    background-color: #fbfbfd;
+    padding: 1.75rem 0 3.5rem;
+}
+.blog-breadcrumb-nav {
+    margin-bottom: 1rem;
+    font-size: 0.84rem;
+}
+.blog-breadcrumb-nav .breadcrumb-item a {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.blog-breadcrumb-nav .breadcrumb-item a:hover {
+    color: #F5A623;
+}
+.blog-article-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem 2.25rem;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+@media (max-width: 768px) {
+    .blog-article-card {
+        padding: 1.25rem 1.15rem;
+        border-radius: 12px;
+    }
+    .blog-detail-wrapper {
+        padding: 1rem 0 2.5rem;
+    }
+}
+.blog-article-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(245, 166, 35, 0.12);
+    color: #d97706;
+    border: 1px solid rgba(245, 166, 35, 0.3);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+.blog-article-title {
+    font-family: var(--font-heading, system-ui);
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.3;
+    color: #1E1028;
+    margin-bottom: 0.85rem;
+    letter-spacing: -0.015em;
+}
+.blog-article-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.15rem;
+    color: #64748b;
+    font-size: 0.86rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+.blog-article-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.blog-article-meta-item i {
+    color: #F5A623;
+}
+.blog-main-image-wrap {
+    margin-bottom: 1.75rem;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #f8fafc;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.blog-main-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+}
+.blog-key-points-box {
+    background: linear-gradient(135deg, rgba(245, 166, 35, 0.08) 0%, rgba(30, 16, 40, 0.04) 100%);
+    border: 1px solid rgba(245, 166, 35, 0.25);
+    border-left: 4px solid #F5A623;
+    border-radius: 10px;
+    padding: 1.15rem 1.35rem;
+    margin-bottom: 1.75rem;
+}
+html[dir='rtl'] .blog-key-points-box {
+    border-left: 1px solid rgba(245, 166, 35, 0.25);
+    border-right: 4px solid #F5A623;
+}
+.blog-key-points-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1E1028;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.blog-key-points-desc {
+    font-size: 0.92rem;
+    color: #475569;
+    margin-bottom: 0;
+    line-height: 1.55;
+}
+.blog-content-body {
+    font-family: var(--font-body, system-ui);
+    font-size: 1.05rem;
+    line-height: 1.76;
+    color: #334155;
+    word-break: break-word;
+}
+.blog-content-body > *:first-child {
+    margin-top: 0 !important;
+}
+.blog-content-body p {
+    margin-bottom: 1.1rem;
+}
+.blog-content-body h2 {
+    font-family: var(--font-heading, system-ui);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1E1028;
+    margin-top: 1.75rem;
+    margin-bottom: 0.65rem;
+    border-left: 3.5px solid #F5A623;
+    padding-left: 12px;
+    line-height: 1.35;
+}
+html[dir='rtl'] .blog-content-body h2 {
+    border-left: none;
+    border-right: 3.5px solid #F5A623;
+    padding-left: 0;
+    padding-right: 12px;
+}
+.blog-content-body h3 {
+    font-family: var(--font-heading, system-ui);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1E1028;
+    margin-top: 1.35rem;
+    margin-bottom: 0.5rem;
+}
+.blog-content-body h4 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #1E1028;
+    margin-top: 1.15rem;
+    margin-bottom: 0.4rem;
+}
+.blog-content-body ul,
+.blog-content-body ol {
+    margin-top: 0.25rem;
+    margin-bottom: 1.15rem;
+    padding-left: 1.4rem;
+}
+html[dir='rtl'] .blog-content-body ul,
+html[dir='rtl'] .blog-content-body ol {
+    padding-left: 0;
+    padding-right: 1.4rem;
+}
+.blog-content-body li {
+    margin-bottom: 0.35rem;
+}
+.blog-content-body strong,
+.blog-content-body b {
+    color: #0f172a;
+    font-weight: 600;
+}
+.blog-content-body blockquote {
+    border-left: 4px solid #F5A623;
+    background: rgba(30, 16, 40, 0.03);
+    padding: 1rem 1.25rem;
+    border-radius: 0 10px 10px 0;
+    margin: 1.35rem 0;
+    font-style: italic;
+    color: #1E1028;
+}
+html[dir='rtl'] .blog-content-body blockquote {
+    border-left: none;
+    border-right: 4px solid #F5A623;
+    border-radius: 10px 0 0 10px;
+}
+.blog-content-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 1.25rem auto;
+    display: block;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+.blog-author-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.15rem 1.35rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.blog-author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #1E1028;
+    color: #F5A623;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+.blog-inline-cta {
+    background: linear-gradient(135deg, #1E1028 0%, #2D1438 100%);
+    border-radius: 14px;
+    padding: 1.6rem 1.85rem;
+    margin-top: 2rem;
+    color: #ffffff;
+    border: 1px solid rgba(245, 166, 35, 0.25);
+    box-shadow: 0 8px 25px rgba(30, 16, 40, 0.12);
+}
+.blog-share-strip {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0.9rem 1.25rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+.blog-sidebar-sticky {
+    position: sticky;
+    top: 90px;
+}
+.blog-widget-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.35rem 1.45rem;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
+    margin-bottom: 1.35rem;
+}
+.blog-widget-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1E1028;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(245, 166, 35, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.blog-widget-card-b2b {
+    background: linear-gradient(135deg, #1E1028 0%, #281232 100%);
+    color: #ffffff;
+    border: 1px solid rgba(245, 166, 35, 0.3);
+}
+.blog-recent-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+}
+.blog-recent-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.blog-recent-thumb {
+    width: 58px;
+    height: 58px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.blog-recent-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1E1028;
+    line-height: 1.3;
+    margin-bottom: 2px;
+    transition: color 0.2s;
+}
+.blog-recent-item:hover .blog-recent-title {
+    color: #F5A623;
+}
+.blog-cat-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #334155;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+.blog-cat-link:hover {
+    background: rgba(245, 166, 35, 0.1);
+    color: #d97706;
+}
+</style>
+{% endblock %}
+
 {% block content %}
-<article class="blog-detail-section">
+<div class="blog-detail-wrapper">
     <div class="container">
-        <div class="blog-detail-container">
-            <!-- Breadcrumb Trail -->
-            <nav aria-label="breadcrumb" class="blog-breadcrumb">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="{% url 'core:home' %}" class="text-decoration-none">{% trans 'Accueil' %}</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'blog:list' %}" class="text-decoration-none">{% trans 'Blog' %}</a></li>
-                    {% if post.category %}
-                    <li class="breadcrumb-item"><a href="{% url 'blog:category' post.category.slug %}" class="text-decoration-none">{{ post.category.name }}</a></li>
-                    {% endif %}
-                    <li class="breadcrumb-item active text-truncate" style="max-width: 260px;" aria-current="page">{{ post.title }}</li>
-                </ol>
-            </nav>
-            
-            <!-- Article Header -->
-            <header class="blog-detail-header">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="blog-breadcrumb-nav">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="{% url 'core:home' %}">{% trans 'Accueil' %}</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'blog:list' %}">{% trans 'Blog' %}</a></li>
                 {% if post.category %}
-                <a href="{% url 'blog:category' post.category.slug %}" class="blog-detail-badge text-decoration-none">
-                    <i class="bi bi-tag-fill"></i> {{ post.category.name }}
-                </a>
+                <li class="breadcrumb-item"><a href="{% url 'blog:category' post.category.slug %}">{{ post.category.name }}</a></li>
                 {% endif %}
-                <h1 class="blog-detail-title">{{ post.title }}</h1>
-                <div class="blog-detail-meta">
-                    <span class="blog-detail-meta-item">
-                        <i class="bi bi-calendar3"></i> {{ post.published_date|default:post.created_at|date:"d F Y" }}
-                    </span>
-                    <span class="blog-detail-meta-item">
-                        <i class="bi bi-clock-history"></i> {{ post.reading_time_minutes }} {% trans 'min de lecture' %}
-                    </span>
-                    <span class="blog-detail-meta-item">
-                        <i class="bi bi-building"></i> M2web Maroc
-                    </span>
-                </div>
-            </header>
-            
-            <!-- Featured Image -->
-            {% if post.image %}
-            <div class="blog-featured-img-wrap">
-                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-featured-img">
-            </div>
-            {% endif %}
-            
-            <!-- Article Content (Clean HTML without extra blank paragraphs) -->
-            <div class="blog-content">
-                {{ post.content|safe }}
+                <li class="breadcrumb-item active text-truncate" style="max-width: 280px;" aria-current="page">{{ post.title }}</li>
+            </ol>
+        </nav>
+
+        <div class="row g-4 g-xl-5">
+            <!-- Main Article Column (8 cols) -->
+            <div class="col-lg-8">
+                <article class="blog-article-card">
+                    <!-- Header -->
+                    <header>
+                        {% if post.category %}
+                        <a href="{% url 'blog:category' post.category.slug %}" class="blog-article-badge text-decoration-none">
+                            <i class="bi bi-tag-fill"></i> {{ post.category.name }}
+                        </a>
+                        {% endif %}
+                        <h1 class="blog-article-title">{{ post.title }}</h1>
+                        <div class="blog-article-meta">
+                            <span class="blog-article-meta-item">
+                                <i class="bi bi-calendar3"></i> {{ post.published_date|default:post.created_at|date:"d F Y" }}
+                            </span>
+                            <span class="blog-article-meta-item">
+                                <i class="bi bi-clock-history"></i> {{ post.reading_time_minutes }} {% trans 'min de lecture' %}
+                            </span>
+                            <span class="blog-article-meta-item">
+                                <i class="bi bi-shield-check"></i> {% trans 'Vérifié par Expert GPS' %}
+                            </span>
+                        </div>
+                    </header>
+
+                    <!-- Featured Image -->
+                    {% if post.image %}
+                    <div class="blog-main-image-wrap">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-main-image">
+                    </div>
+                    {% endif %}
+
+                    <!-- Key Takeaways / Points Clés Summary Box -->
+                    {% if post.excerpt %}
+                    <div class="blog-key-points-box">
+                        <div class="blog-key-points-title">
+                            <i class="bi bi-lightbulb-fill text-amber"></i> {% trans 'En résumé :' %}
+                        </div>
+                        <p class="blog-key-points-desc">{{ post.excerpt }}</p>
+                    </div>
+                    {% endif %}
+
+                    <!-- Main Article Content (Rendered cleanly without unwanted blank lines) -->
+                    <div class="blog-content-body">
+                        {{ post.content|safe }}
+                    </div>
+
+                    <!-- In-Article High Converting Banner -->
+                    <div class="blog-inline-cta">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                            <div>
+                                <h4 class="fw-bold mb-1 fs-5 text-white">
+                                    <i class="bi bi-truck text-amber me-2"></i>{% trans 'Équipez vos véhicules avec M2web' %}
+                                </h4>
+                                <p class="text-white-50 small mb-0">
+                                    {% trans 'Traceurs GPS 4G certifiés, surveillance carburant et support direct 24/7 partout au Maroc.' %}
+                                </p>
+                            </div>
+                            <div class="d-flex gap-2 flex-shrink-0">
+                                <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}?text=Bonjour,%20je%20souhaite%20des%20informations%20suite%20%C3%A0%20l'article%20{{ post.title|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-amber fw-bold btn-sm px-3 py-2 d-inline-flex align-items-center gap-2">
+                                    <i class="bi bi-whatsapp"></i> WhatsApp
+                                </a>
+                                <a href="{% url 'contact:contact' %}" class="btn btn-outline-light fw-bold btn-sm px-3 py-2">
+                                    {% trans 'Devis Express' %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Author Box -->
+                    <div class="blog-author-box">
+                        <div class="blog-author-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-plum small mb-1">M2web Maroc — {% trans 'Équipe Technique' %}</div>
+                            <p class="text-muted small mb-0" style="line-height: 1.45;">
+                                {% trans 'Fournisseur de solutions de géolocalisation GPS et de gestion de flotte à Fès et dans tout le Maroc.' %}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Share Strip -->
+                    <div class="blog-share-strip">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-share-fill text-amber"></i>
+                            <span class="fw-semibold text-dark small">{% trans 'Partager cet article :' %}</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <a href="https://api.whatsapp.com/send?text={{ post.title|urlencode }}%20{{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" title="WhatsApp">
+                                <i class="bi bi-whatsapp text-success"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" title="LinkedIn">
+                                <i class="bi bi-linkedin text-primary"></i>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?text={{ post.title|urlencode }}&url={{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" title="X (Twitter)">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" title="Facebook">
+                                <i class="bi bi-facebook text-primary"></i>
+                            </a>
+                            <button type="button" class="btn btn-sm btn-outline-warning rounded-circle d-inline-flex align-items-center justify-content-center text-dark" style="width: 36px; height: 36px;" title="{% trans 'Copier le lien' %}" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.innerHTML='<i class=\'bi bi-check-lg text-success\'></i>'; setTimeout(()=>{this.innerHTML='<i class=\'bi bi-link-45deg\'></i>';}, 2000);})">
+                                <i class="bi bi-link-45deg"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
             </div>
 
-            <!-- In-Article Action Banner -->
-            <div class="blog-cta-banner">
-                <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
-                    <div>
-                        <h4 class="blog-cta-title"><i class="bi bi-geo-alt-fill text-amber me-2"></i>{% trans 'Optimisez la gestion de votre flotte dès aujourd’hui' %}</h4>
-                        <p class="blog-cta-text">{% trans 'Traceurs GPS 4G certifiés, contrôle du carburant et accompagnement personnalisé partout au Maroc.' %}</p>
+            <!-- Sticky Sidebar Column (4 cols) -->
+            <div class="col-lg-4">
+                <aside class="blog-sidebar-sticky">
+                    <!-- Widget 1: Direct Support / Consultation Card -->
+                    <div class="blog-widget-card blog-widget-card-b2b">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-headset text-amber fs-4"></i>
+                            <h5 class="fw-bold text-white mb-0 fs-6">{% trans 'Conseil & Devis Gratuit' %}</h5>
+                        </div>
+                        <p class="text-white-50 small mb-3">
+                            {% trans 'Nos experts GPS vous accompagnent pour choisir le traceur adapté à votre activité.' %}
+                        </p>
+                        <div class="d-grid gap-2">
+                            <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" rel="noopener noreferrer" class="btn btn-amber fw-bold btn-sm py-2 d-flex align-items-center justify-content-center gap-2 shadow-sm">
+                                <i class="bi bi-whatsapp"></i> {% trans 'Discuter sur WhatsApp' %}
+                            </a>
+                            <a href="tel:{{ company.phone|default:'+212661761489' }}" class="btn btn-outline-light fw-bold btn-sm py-2 d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-telephone"></i> {{ company.phone_display|default:company.phone|default:'06 61 76 14 89' }}
+                            </a>
+                        </div>
+                        <div class="mt-3 pt-2 border-top border-white border-opacity-15 text-white-50 small text-center">
+                            <i class="bi bi-geo-alt text-amber me-1"></i> Fès & partout au Maroc
+                        </div>
                     </div>
-                    <div class="d-flex gap-2 flex-shrink-0">
-                        <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" rel="noopener noreferrer" class="btn btn-amber fw-bold d-inline-flex align-items-center gap-2 px-3 py-2">
-                            <i class="bi bi-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="{% url 'contact:contact' %}" class="btn btn-outline-light fw-bold d-inline-flex align-items-center gap-2 px-3 py-2">
-                            <i class="bi bi-envelope"></i> {% trans 'Devis Gratuit' %}
-                        </a>
+
+                    <!-- Widget 2: Recent Articles -->
+                    {% if recent_posts %}
+                    <div class="blog-widget-card">
+                        <h5 class="blog-widget-title">
+                            <i class="bi bi-newspaper text-amber"></i> {% trans 'Derniers Articles' %}
+                        </h5>
+                        <div>
+                            {% for r in recent_posts %}
+                            <a href="{{ r.get_absolute_url }}" class="blog-recent-item">
+                                {% if r.image %}
+                                <img src="{{ r.image.url }}" alt="{{ r.title }}" class="blog-recent-thumb">
+                                {% else %}
+                                <div class="blog-recent-thumb bg-light d-flex align-items-center justify-content-center text-muted">
+                                    <i class="bi bi-image"></i>
+                                </div>
+                                {% endif %}
+                                <div>
+                                    <div class="blog-recent-title">{{ r.title|truncatechars:55 }}</div>
+                                    <small class="text-muted" style="font-size:0.75rem;">
+                                        <i class="bi bi-calendar3 me-1"></i> {{ r.published_date|default:r.created_at|date:"d M Y" }}
+                                    </small>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Share Bar -->
-            <div class="blog-share-card">
-                <div class="d-flex align-items-center gap-2">
-                    <i class="bi bi-share-fill text-amber"></i>
-                    <span class="fw-semibold text-dark small">{% trans 'Partager cet article :' %}</span>
-                </div>
-                <div class="blog-share-buttons">
-                    <a href="https://api.whatsapp.com/send?text={{ post.title|urlencode }}%20{{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn-share share-whatsapp" title="WhatsApp">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn-share share-linkedin" title="LinkedIn">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a href="https://twitter.com/intent/tweet?text={{ post.title|urlencode }}&url={{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn-share share-x" title="X (Twitter)">
-                        <i class="bi bi-twitter-x"></i>
-                    </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn-share share-fb" title="Facebook">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-                    <button type="button" class="btn-share share-copy" id="btnCopyBlogLink" title="{% trans 'Copier le lien' %}" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.innerHTML='<i class=\'bi bi-check2 text-success\'></i>'; setTimeout(()=>{this.innerHTML='<i class=\'bi bi-link-45deg\'></i>';}, 2000);})">
-                        <i class="bi bi-link-45deg"></i>
-                    </button>
-                </div>
+                    {% endif %}
+
+                    <!-- Widget 3: Categories -->
+                    {% if categories %}
+                    <div class="blog-widget-card">
+                        <h5 class="blog-widget-title">
+                            <i class="bi bi-folder2-open text-amber"></i> {% trans 'Catégories' %}
+                        </h5>
+                        <div class="d-flex flex-column gap-1">
+                            {% for cat in categories %}
+                            <a href="{% url 'blog:category' cat.slug %}" class="blog-cat-link">
+                                <span><i class="bi bi-chevron-right text-amber me-1 small"></i> {{ cat.name }}</span>
+                                <span class="badge bg-light text-muted rounded-pill">{{ cat.posts.count }}</span>
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </aside>
             </div>
         </div>
     </div>
-</article>
+</div>
 
-<!-- Related Posts -->
+<!-- Related Posts Section (if any) -->
 {% if related_posts %}
-<section class="related-posts-section">
+<section class="py-5 bg-white border-top">
     <div class="container">
-        <div class="blog-detail-container">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-                <h3 class="h4 fw-bold text-plum mb-0">{% trans 'Articles Similaires' %}</h3>
-                <a href="{% url 'blog:list' %}" class="small text-amber fw-semibold text-decoration-none">
-                    {% trans 'Voir tous les articles' %} <i class="bi bi-arrow-right"></i>
-                </a>
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <div>
+                <h3 class="fw-bold text-plum mb-1 fs-4">{% trans 'Articles Similaires' %}</h3>
+                <p class="text-muted small mb-0">{% trans 'Découvrez d’autres guides et analyses sur la géolocalisation' %}</p>
             </div>
-            <div class="row g-3">
-                {% for related in related_posts|slice:":3" %}
-                <div class="col-md-4">
-                    <article class="related-post-card">
-                        {% if related.image %}
-                        <a href="{{ related.get_absolute_url }}">
-                            <img src="{{ related.image.url }}" alt="{{ related.title }}" class="related-post-img">
+            <a href="{% url 'blog:list' %}" class="btn btn-outline-warning btn-sm fw-bold text-plum d-inline-flex align-items-center gap-1">
+                {% trans 'Tout le blog' %} <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+        <div class="row g-4">
+            {% for related in related_posts|slice:":3" %}
+            <div class="col-md-4">
+                <article class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    {% if related.image %}
+                    <a href="{{ related.get_absolute_url }}">
+                        <img src="{{ related.image.url }}" alt="{{ related.title }}" class="card-img-top object-fit-cover" style="height: 180px;">
+                    </a>
+                    {% endif %}
+                    <div class="card-body p-3 d-flex flex-column">
+                        <small class="text-muted mb-1">
+                            <i class="bi bi-calendar3 text-amber me-1"></i> {{ related.published_date|default:related.created_at|date:"d M Y" }}
+                        </small>
+                        <h5 class="card-title fw-bold fs-6 mb-2">
+                            <a href="{{ related.get_absolute_url }}" class="text-decoration-none text-plum">
+                                {{ related.title|truncatechars:65 }}
+                            </a>
+                        </h5>
+                        <a href="{{ related.get_absolute_url }}" class="mt-auto small fw-bold text-amber text-decoration-none d-inline-flex align-items-center gap-1">
+                            {% trans 'Lire la suite' %} <i class="bi bi-arrow-right"></i>
                         </a>
-                        {% endif %}
-                        <div class="related-post-body">
-                            <span class="text-muted small mb-1">
-                                <i class="bi bi-calendar3 me-1 text-amber"></i> {{ related.published_date|default:related.created_at|date:"d M Y" }}
-                            </span>
-                            <h5 class="related-post-title">
-                                <a href="{{ related.get_absolute_url }}">{{ related.title|truncatechars:65 }}</a>
-                            </h5>
-                        </div>
-                    </article>
-                </div>
-                {% endfor %}
+                    </div>
+                </article>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
