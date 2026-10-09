@@ -3,75 +3,144 @@
 
 {% block title %}{{ post.title }} | M2web Blog{% endblock %}
 
+{% block meta_description %}{{ post.meta_description|default:post.excerpt|default:post.title }}{% endblock %}
+
+{% block og_title %}{{ post.title }} | M2web Maroc{% endblock %}
+{% block og_description %}{{ post.meta_description|default:post.excerpt|default:post.title }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_image %}{% if post.image %}{{ request.scheme }}://{{ request.get_host }}{{ post.image.url }}{% else %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}?v=4{% endif %}{% endblock %}
+
+{% block twitter_title %}{{ post.title }} | M2web Maroc{% endblock %}
+{% block twitter_description %}{{ post.meta_description|default:post.excerpt|default:post.title }}{% endblock %}
+{% block twitter_image %}{% if post.image %}{{ request.scheme }}://{{ request.get_host }}{{ post.image.url }}{% else %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}?v=4{% endif %}{% endblock %}
+
 {% block content %}
-<section class="section-padding bg-white">
+<article class="blog-detail-section">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <!-- Breadcrumb -->
-                <nav aria-label="breadcrumb" class="mb-4">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{% url 'core:home' %}" class="text-decoration-none text-muted">{% trans 'Accueil' %}</a></li>
-                        <li class="breadcrumb-item"><a href="{% url 'blog:list' %}" class="text-decoration-none text-muted">{% trans 'Blog' %}</a></li>
-                        {% if post.category %}
-                        <li class="breadcrumb-item"><a href="{% url 'blog:category' post.category.slug %}" class="text-decoration-none text-muted">{{ post.category.name }}</a></li>
-                        {% endif %}
-                        <li class="breadcrumb-item active" aria-current="page">{{ post.title|truncatechars:30 }}</li>
-                    </ol>
-                </nav>
-                
-                <!-- Article Header -->
-                <header class="mb-5 text-center">
+        <div class="blog-detail-container">
+            <!-- Breadcrumb Trail -->
+            <nav aria-label="breadcrumb" class="blog-breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="{% url 'core:home' %}" class="text-decoration-none">{% trans 'Accueil' %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'blog:list' %}" class="text-decoration-none">{% trans 'Blog' %}</a></li>
                     {% if post.category %}
-                    <span class="badge bg-amber mb-3 px-3 py-2 rounded-pill text-plum fw-bold">{{ post.category.name }}</span>
+                    <li class="breadcrumb-item"><a href="{% url 'blog:category' post.category.slug %}" class="text-decoration-none">{{ post.category.name }}</a></li>
                     {% endif %}
-                    <h1 class="fw-bold mb-3 text-plum">{{ post.title }}</h1>
-                    <div class="d-flex align-items-center justify-content-center gap-3 text-muted small">
-                        <span><i class="bi bi-calendar-event me-1"></i> {{ post.created_at|date:"d M Y" }}</span>
-                    </div>
-                </header>
-                
-                <!-- Featured Image -->
-                {% if post.image %}
-                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid rounded-4 shadow-sm w-100 mb-5 object-fit-cover" style="max-height: 500px;">
+                    <li class="breadcrumb-item active text-truncate" style="max-width: 260px;" aria-current="page">{{ post.title }}</li>
+                </ol>
+            </nav>
+            
+            <!-- Article Header -->
+            <header class="blog-detail-header">
+                {% if post.category %}
+                <a href="{% url 'blog:category' post.category.slug %}" class="blog-detail-badge text-decoration-none">
+                    <i class="bi bi-tag-fill"></i> {{ post.category.name }}
+                </a>
                 {% endif %}
-                
-                <!-- Article Content -->
-                <article class="blog-content lh-lg fs-5 text-dark" style="font-family: 'Inter', sans-serif;">
-                    {{ post.content|safe|linebreaks }}
-                </article>
-                
-                <!-- Share -->
-                <div class="d-flex align-items-center gap-3 mt-5 pt-4 border-top">
-                    <span class="fw-medium text-muted">{% trans 'Partager :' %}</span>
-                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"><i class="bi bi-linkedin"></i></a>
+                <h1 class="blog-detail-title">{{ post.title }}</h1>
+                <div class="blog-detail-meta">
+                    <span class="blog-detail-meta-item">
+                        <i class="bi bi-calendar3"></i> {{ post.published_date|default:post.created_at|date:"d F Y" }}
+                    </span>
+                    <span class="blog-detail-meta-item">
+                        <i class="bi bi-clock-history"></i> {{ post.reading_time_minutes }} {% trans 'min de lecture' %}
+                    </span>
+                    <span class="blog-detail-meta-item">
+                        <i class="bi bi-building"></i> M2web Maroc
+                    </span>
+                </div>
+            </header>
+            
+            <!-- Featured Image -->
+            {% if post.image %}
+            <div class="blog-featured-img-wrap">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-featured-img">
+            </div>
+            {% endif %}
+            
+            <!-- Article Content (Clean HTML without extra blank paragraphs) -->
+            <div class="blog-content">
+                {{ post.content|safe }}
+            </div>
+
+            <!-- In-Article Action Banner -->
+            <div class="blog-cta-banner">
+                <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                    <div>
+                        <h4 class="blog-cta-title"><i class="bi bi-geo-alt-fill text-amber me-2"></i>{% trans 'Optimisez la gestion de votre flotte dès aujourd’hui' %}</h4>
+                        <p class="blog-cta-text">{% trans 'Traceurs GPS 4G certifiés, contrôle du carburant et accompagnement personnalisé partout au Maroc.' %}</p>
+                    </div>
+                    <div class="d-flex gap-2 flex-shrink-0">
+                        <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" rel="noopener noreferrer" class="btn btn-amber fw-bold d-inline-flex align-items-center gap-2 px-3 py-2">
+                            <i class="bi bi-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="{% url 'contact:contact' %}" class="btn btn-outline-light fw-bold d-inline-flex align-items-center gap-2 px-3 py-2">
+                            <i class="bi bi-envelope"></i> {% trans 'Devis Gratuit' %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Share Bar -->
+            <div class="blog-share-card">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-share-fill text-amber"></i>
+                    <span class="fw-semibold text-dark small">{% trans 'Partager cet article :' %}</span>
+                </div>
+                <div class="blog-share-buttons">
+                    <a href="https://api.whatsapp.com/send?text={{ post.title|urlencode }}%20{{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn-share share-whatsapp" title="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn-share share-linkedin" title="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text={{ post.title|urlencode }}&url={{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn-share share-x" title="X (Twitter)">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn-share share-fb" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <button type="button" class="btn-share share-copy" id="btnCopyBlogLink" title="{% trans 'Copier le lien' %}" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.innerHTML='<i class=\'bi bi-check2 text-success\'></i>'; setTimeout(()=>{this.innerHTML='<i class=\'bi bi-link-45deg\'></i>';}, 2000);})">
+                        <i class="bi bi-link-45deg"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</article>
 
 <!-- Related Posts -->
 {% if related_posts %}
-<section class="section-padding bg-light">
+<section class="related-posts-section">
     <div class="container">
-        <h3 class="section-title text-center mb-5">{% trans 'Articles Similaires' %}</h3>
-        <div class="row justify-content-center g-4">
-            {% for related in related_posts|slice:":2" %}
-            <div class="col-md-5">
-                <article class="blog-card">
-                    {% if related.image %}
-                    <img src="{{ related.image.url }}" class="blog-card-img" style="height: 180px;">
-                    {% endif %}
-                    <div class="blog-card-body">
-                        <h5 class="blog-title fw-bold mb-2"><a href="{{ related.get_absolute_url }}">{{ related.title }}</a></h5>
-                        <p class="blog-excerpt text-muted small mb-0">{{ related.excerpt|default:related.content|striptags|truncatewords:15 }}</p>
-                    </div>
-                </article>
+        <div class="blog-detail-container">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h3 class="h4 fw-bold text-plum mb-0">{% trans 'Articles Similaires' %}</h3>
+                <a href="{% url 'blog:list' %}" class="small text-amber fw-semibold text-decoration-none">
+                    {% trans 'Voir tous les articles' %} <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
-            {% endfor %}
+            <div class="row g-3">
+                {% for related in related_posts|slice:":3" %}
+                <div class="col-md-4">
+                    <article class="related-post-card">
+                        {% if related.image %}
+                        <a href="{{ related.get_absolute_url }}">
+                            <img src="{{ related.image.url }}" alt="{{ related.title }}" class="related-post-img">
+                        </a>
+                        {% endif %}
+                        <div class="related-post-body">
+                            <span class="text-muted small mb-1">
+                                <i class="bi bi-calendar3 me-1 text-amber"></i> {{ related.published_date|default:related.created_at|date:"d M Y" }}
+                            </span>
+                            <h5 class="related-post-title">
+                                <a href="{{ related.get_absolute_url }}">{{ related.title|truncatechars:65 }}</a>
+                            </h5>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>

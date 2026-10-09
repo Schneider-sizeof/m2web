@@ -15,16 +15,16 @@
 <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}/fr{{ request.path }}">
 
 <!-- Favicons & App Icons (Transparent Vector/PNG) -->
-<link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}?v=3">
-<link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}?v=3">
-<link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}?v=3">
-<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}?v=3">
-<link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}?v=3">
-<link rel="icon" type="image/png" sizes="192x192" href="{% static 'images/android-chrome-192x192.png' %}?v=3">
-<link rel="icon" type="image/png" sizes="512x512" href="{% static 'images/android-chrome-512x512.png' %}?v=3">
+<link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}?v=4">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}?v=4">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}?v=4">
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}?v=4">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}?v=4">
+<link rel="icon" type="image/png" sizes="192x192" href="{% static 'images/android-chrome-192x192.png' %}?v=4">
+<link rel="icon" type="image/png" sizes="512x512" href="{% static 'images/android-chrome-512x512.png' %}?v=4">
 <meta name="theme-color" content="#1E1028">
 <meta name="msapplication-TileColor" content="#1E1028">
-<meta name="msapplication-TileImage" content="{% static 'images/android-chrome-192x192.png' %}">
+<meta name="msapplication-TileImage" content="{% static 'images/android-chrome-192x192.png' %}?v=4">
 <meta name="apple-mobile-web-app-title" content="M2web GPS">
 <meta name="application-name" content="M2web GPS">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,8 +36,8 @@
 <meta property="og:url" content="{{ request.build_absolute_uri }}">
 <meta property="og:title" content="{% block og_title %}{% if page_title %}{{ page_title }} | {% endif %}M2web Maroc — {% trans 'GPS Géolocalisation & Télématique' %}{% endblock %}">
 <meta property="og:description" content="{% block og_description %}{{ company.hero_subtitle|default:_('Solutions professionnelles de géolocalisation GPS 4G et gestion de flotte à Fès et au Maroc. Traceurs certifiés, contrôle carburant, sécurité véhicules et support direct 24/7.') }}{% endblock %}">
-<meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}{% endblock %}">
-<meta property="og:image:secure_url" content="{% block og_image_secure %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}{% endblock %}">
+<meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}?v=4{% endblock %}">
+<meta property="og:image:secure_url" content="{% block og_image_secure %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}?v=4{% endblock %}">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -54,7 +54,7 @@
 <meta name="twitter:url" content="{{ request.build_absolute_uri }}">
 <meta name="twitter:title" content="{% block twitter_title %}{% if page_title %}{{ page_title }} | {% endif %}M2web Maroc — {% trans 'GPS Géolocalisation & Télématique' %}{% endblock %}">
 <meta name="twitter:description" content="{% block twitter_description %}{{ company.hero_subtitle|default:_('Solutions professionnelles de géolocalisation GPS 4G et gestion de flotte à Fès et au Maroc. Traceurs certifiés, contrôle carburant, sécurité véhicules et support direct 24/7.') }}{% endblock %}">
-<meta name="twitter:image" content="{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}{% endblock %}">
+<meta name="twitter:image" content="{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'images/og-image.jpg' %}?v=4{% endblock %}">
 <meta name="twitter:image:alt" content="M2web Maroc — GPS Géolocalisation & Télématique au Maroc">
 
 <!-- Schema.org JSON-LD Structured Data -->

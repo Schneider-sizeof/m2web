@@ -44,6 +44,13 @@ class BlogPost(models.Model):
     def image(self):
         return self.featured_image
 
+    @property
+    def reading_time_minutes(self):
+        import re
+        text = re.sub(r'<[^>]+>', ' ', self.content or '')
+        words = len(re.findall(r'\b\w+\b', text))
+        return max(1, round(words / 200))
+
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'slug': self.slug})
 
