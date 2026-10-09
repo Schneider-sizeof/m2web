@@ -229,25 +229,19 @@ img {
     margin-right: auto;
 }
 
-.navbar {
+.navbar,
+.navbar.scrolled {
     position: sticky;
     top: 0;
-    background: rgba(30, 16, 40, 0.97);
+    background: rgba(30, 16, 40, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    padding: 0.5rem 0;
-    min-height: 72px;
-    border-bottom: 1px solid rgba(245, 166, 35, 0.12);
+    padding: 0.4rem 0 !important;
+    min-height: 62px !important;
+    border-bottom: 1px solid rgba(245, 166, 35, 0.16);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     z-index: 1040;
-}
-
-.navbar.scrolled {
-    background: rgba(20, 10, 27, 0.98);
-    padding: 0.5rem 0;
-    min-height: 72px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-    border-bottom: 1px solid rgba(245, 166, 35, 0.22);
+    transition: none !important;
 }
 
 .navbar-brand {
@@ -2770,8 +2764,8 @@ html[dir='rtl'] .pricing-box-container {
 
 .brand-logo-img,
 .navbar.scrolled .brand-logo-img {
-    height: 50px;
-    max-height: 50px;
+    height: 46px !important;
+    max-height: 46px !important;
     width: auto;
     object-fit: contain;
     border-radius: 6px;
@@ -2781,8 +2775,8 @@ html[dir='rtl'] .pricing-box-container {
 @media (max-width: 768px) {
     .brand-logo-img,
     .navbar.scrolled .brand-logo-img {
-        height: 44px;
-        max-height: 44px;
+        height: 40px !important;
+        max-height: 40px !important;
     }
 }
 
