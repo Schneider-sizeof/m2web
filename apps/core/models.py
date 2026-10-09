@@ -124,6 +124,54 @@ class CompanyInfo(models.Model):
     def name(self):
         return self.company_name
 
+    @property
+    def get_login_button_text(self):
+        from django.utils.translation import get_language, gettext as _
+        lang = (get_language() or 'fr')[:2]
+        if lang == 'ar':
+            val = (getattr(self, 'login_button_text_ar', None) or '').strip()
+            if val and val != 'Connexion':
+                return val
+            return _('Connexion')
+        elif lang == 'en':
+            val = (getattr(self, 'login_button_text_en', None) or '').strip()
+            if val and val != 'Connexion':
+                return val
+            return _('Connexion')
+        return getattr(self, 'login_button_text_fr', None) or getattr(self, 'login_button_text', None) or _('Connexion')
+
+    @property
+    def get_quote_button_text(self):
+        from django.utils.translation import get_language, gettext as _
+        lang = (get_language() or 'fr')[:2]
+        if lang == 'ar':
+            val = (getattr(self, 'quote_button_text_ar', None) or '').strip()
+            if val and val != 'Demander un Devis':
+                return val
+            return _('Demander un Devis')
+        elif lang == 'en':
+            val = (getattr(self, 'quote_button_text_en', None) or '').strip()
+            if val and val != 'Demander un Devis':
+                return val
+            return _('Demander un Devis')
+        return getattr(self, 'quote_button_text_fr', None) or getattr(self, 'quote_button_text', None) or _('Demander un Devis')
+
+    @property
+    def get_login_button_title(self):
+        from django.utils.translation import get_language, gettext as _
+        lang = (get_language() or 'fr')[:2]
+        if lang == 'ar':
+            val = (getattr(self, 'login_button_title_ar', None) or '').strip()
+            if val and val != 'Connexion Plateforme Trackmaroc':
+                return val
+            return _('Connexion Plateforme Trackmaroc')
+        elif lang == 'en':
+            val = (getattr(self, 'login_button_title_en', None) or '').strip()
+            if val and val != 'Connexion Plateforme Trackmaroc':
+                return val
+            return _('Connexion Plateforme Trackmaroc')
+        return getattr(self, 'login_button_title_fr', None) or getattr(self, 'login_button_title', None) or _('Connexion Plateforme Trackmaroc')
+
     def get_promo_video_embed_url(self):
         """Converts YouTube or other video URLs into an embeddable iframe URL."""
         url = (self.promo_video_url or '').strip()
