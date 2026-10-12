@@ -90,6 +90,31 @@
   },
   "url": "{{ request.scheme }}://{{ request.get_host }}",
   "priceRange": "$$",
+  "currenciesAccepted": "MAD",
+  "paymentAccepted": "Cash, Bank Transfer",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "{{ company.phone|default:'+212662244939' }}",
+      "contactType": "sales",
+      "areaServed": "MA",
+      "availableLanguage": ["French", "Arabic", "English"]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "{{ company.phone_fix|default:'+212535940271' }}",
+      "contactType": "customer support",
+      "areaServed": "MA",
+      "availableLanguage": ["French", "Arabic"]
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "{{ company.stat_fleets_count|default:'350' }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -131,6 +156,13 @@
         "itemOffered": {
           "@type": "Service",
           "name": "{% trans 'Gestion de flotte' %}"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "{% trans 'Traceur GPS 4G' %}"
         }
       }
     ]

@@ -540,7 +540,7 @@
                     <div class="contact-icon-box whatsapp"><i class="bi bi-whatsapp"></i></div>
                     <div class="contact-details">
                         <h5>{% trans 'WhatsApp Support Client' %}</h5>
-                        <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
+                        <p><a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}?text={% filter urlencode %}{% trans 'Bonjour M2web, je souhaite des informations sur vos solutions GPS.' %}{% endfilter %}" target="_blank" class="fw-bold text-success">{{ company.whatsapp_number }}</a></p>
                     </div>
                 </div>
                 

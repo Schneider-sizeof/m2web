@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     
-                    <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-3 px-4 py-2 shadow-sm rounded-3">
+                    <a href="{{ company.login_button_url|default:'https://trackmaroc.com' }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-3 px-4 py-2 shadow-sm rounded-3">
                         <i class="bi bi-laptop fs-2 text-amber flex-shrink-0"></i>
                         <div class="text-start">
                             <small class="d-block text-uppercase" style="font-size:0.65rem;line-height:1.1;letter-spacing:0.5px;opacity:0.85;">{% trans 'Accès Navigateur' %}</small>
@@ -509,7 +509,7 @@
                     <i class="bi bi-apple me-1"></i>
                     <span>App Store (iOS) — <strong class="text-amber">{% trans 'Bientôt disponible' %}</strong></span>
                 </div>
-                <a href="https://trackmaroc.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg">
+                <a href="{{ company.login_button_url|default:'https://trackmaroc.com' }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light btn-lg">
                     <i class="bi bi-laptop me-2 text-amber"></i> {% trans 'Accéder à la Plateforme Web' %}
                 </a>
                 {% if app.promo_video_url or company.promo_video_url %}
@@ -517,7 +517,7 @@
                     <i class="bi bi-play-circle me-2"></i> {% trans 'Voir la Démo Vidéo' %}
                 </a>
                 {% endif %}
-                <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" target="_blank" class="btn btn-outline-light btn-lg">
+                <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}?text={% filter urlencode %}{% trans 'Bonjour, je souhaite une démonstration de l application mobile M2web GPS Tracker.' %}{% endfilter %}" target="_blank" class="btn btn-outline-light btn-lg">
                     <i class="bi bi-whatsapp me-2"></i> {% trans 'Demander une Démo' %}
                 </a>
             </div>

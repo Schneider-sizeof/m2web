@@ -351,7 +351,7 @@
             <a href="{% url 'contact:contact' %}" class="btn btn-amber btn-lg px-4 fw-bold">
                 <i class="bi bi-file-earmark-text me-2"></i>{% trans 'Demander un Devis Gratuit' %}
             </a>
-            <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/{{ company.whatsapp_number|cut:'+'|cut:' '|default:'212661761489' }}?text={% filter urlencode %}{% trans 'Bonjour, je souhaite en savoir plus sur M2web et vos solutions GPS au Maroc.' %}{% endfilter %}" class="btn btn-outline-light btn-lg px-4" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-whatsapp me-2 text-success"></i>WhatsApp Direct
             </a>
         </div>
