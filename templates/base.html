@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if company.analytics_id %}
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ company.analytics_id }}"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ company.analytics_id }}');</script>
+    {% endif %}
     {% include 'includes/seo_meta.html' %}
     <title>{% block title %}M2web Maroc | {% trans 'GPS Géolocalisation & Gestion de Flotte au Maroc' %}{% endblock %}</title>
     
