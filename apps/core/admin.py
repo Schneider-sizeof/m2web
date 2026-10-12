@@ -8,7 +8,7 @@ admin.site.site_title = 'M2web Admin'
 admin.site.index_title = 'Tableau de Bord & Gestion de Contenu'
 
 @admin.register(CompanyInfo)
-class CompanyInfoAdmin(admin.ModelAdmin):
+class CompanyInfoAdmin(TranslationAdmin):
     fieldsets = (
         ('Identité & Coordonnées Principales', {
             'fields': (
