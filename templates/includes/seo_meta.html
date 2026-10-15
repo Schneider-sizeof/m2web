@@ -1,7 +1,7 @@
 {% load static i18n seo_tags %}
 <!-- Core SEO Meta -->
 <meta name="description" content="{% block meta_description %}{{ company.meta_description|default:_('M2web Maroc — Fournisseur N°1 de traceurs GPS 4G et solutions avancées de gestion de flotte à Fès et partout au Maroc. Suivi en temps réel, contrôle carburant, sécurité véhicules et support 24/7.') }}{% endblock %}">
-<meta name="keywords" content="{% block meta_keywords %}traceur GPS Maroc, géolocalisation Fès, suivi de flotte Maroc, GPS 4G Maroc, contrôle carburant, M2web Maroc, télématique, gestion véhicules, balise GPS Fès, traceur GPS Casablanca, GPS voiture Maroc, sonde carburant GPS, géolocalisation véhicule Maroc, plateforme GPS Maroc, application GPS Maroc, suivi véhicule temps réel{% endblock %}">
+<meta name="keywords" content="{% block meta_keywords %}traceur GPS Maroc, géolocalisation Fès, traceur GPS Fès, suivi de flotte Maroc, GPS 4G Maroc, traceur GPS voiture Maroc, traceur GPS moto Maroc, traceur GPS camion Maroc, balise GPS Fès, installation traceur GPS Fès, traceur GPS Casablanca, traceur GPS Rabat, traceur GPS Tanger, traceur GPS Marrakech, traceur GPS Meknès, contrôle carburant Maroc, sonde carburant capacitive, antivol voiture Maroc, coupure moteur à distance, plateforme GPS Maroc, application GPS Android iOS, suivi véhicule temps réel Maroc, balise magnétique autonome, traceur OBD Maroc, GPS location de voiture Maroc, M2web Maroc, télématique Maroc, gestion carburant flotte, جهاز تتبع السيارات المغرب, جي بي اس فاس, تتبع السيارات عن بعد, حماية السيارات من السرقة المغرب, مراقبة الوقود الشاحنات, افضل جهاز تتبع في المغرب{% endblock %}">
 <meta name="author" content="M2web Maroc - GPS Géolocalisation">
 <meta name="robots" content="{% block meta_robots %}index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1{% endblock %}">
 <meta name="googlebot" content="{% block meta_googlebot %}index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1{% endblock %}">
@@ -129,40 +129,92 @@
       "closes": "13:30"
     }
   ],
-  "areaServed": {
-    "@type": "Country",
-    "name": "Morocco"
-  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Fès"
+    },
+    {
+      "@type": "City",
+      "name": "Meknès"
+    },
+    {
+      "@type": "City",
+      "name": "Casablanca"
+    },
+    {
+      "@type": "City",
+      "name": "Rabat"
+    },
+    {
+      "@type": "City",
+      "name": "Tanger"
+    },
+    {
+      "@type": "City",
+      "name": "Marrakech"
+    },
+    {
+      "@type": "Country",
+      "name": "Morocco"
+    }
+  ],
+  "knowsAbout": [
+    "GPS Géolocalisation Maroc",
+    "Traceur GPS Fès",
+    "Gestion de Flotte Automobile en Temps Réel",
+    "Traceur GPS 4G pour Voiture Camion et Moto",
+    "Contrôle de Carburant et Sonde Capacitive Anti-Vol",
+    "Coupure Moteur à Distance et Sécurité Véhicule",
+    "Plateforme de Tracking GPS et Application Mobile",
+    "Solutions GPS pour Agences de Location de Voitures",
+    "جهاز تتبع السيارات جي بي اس المغرب",
+    "تتبع أسطول السيارات والشاحنات فاس"
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "GPS Tracking Solutions",
+    "name": "GPS Tracking & Fleet Management Solutions",
     "itemListElement": [
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "{% trans 'Suivi GPS en temps réel' %}"
+          "name": "{% trans 'Suivi GPS en temps réel & Géolocalisation de Flotte' %}"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "{% trans 'Contrôle carburant' %}"
+          "name": "{% trans 'Contrôle carburant, Détection de vol & Sonde capacitive' %}"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "{% trans 'Gestion de flotte' %}"
+          "name": "{% trans 'Sécurité antivol & Coupure moteur à distance' %}"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "{% trans 'Fourniture & Installation Traceurs GPS 4G' %}"
+          "name": "{% trans 'Fourniture & Installation de Traceurs GPS 4G à Fès et au Maroc' %}"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "{% trans 'Plateforme Web & Application Mobile de Tracking GPS' %}"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "{% trans 'Solutions GPS pour Agences de Location de Voitures (Rent a Car)' %}"
         }
       }
     ]
