@@ -4,10 +4,12 @@ from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
 from django.views.i18n import set_language
-from django.views.generic import RedirectView
+from django.views.generic import RedirectView, TemplateView
+from django.contrib.sitemaps.views import sitemap
 from django.contrib.admin import AdminSite
 from django_otp import user_has_device
 from django_otp.admin import OTPAdminSite, OTPAdminAuthenticationForm
+from apps.core.sitemaps import sitemaps
 
 
 class FlexibleOTPAdminAuthenticationForm(OTPAdminAuthenticationForm):
@@ -55,11 +57,13 @@ admin.site.__class__ = FlexibleOTPAdminSite
 admin.site.login_form = FlexibleOTPAdminAuthenticationForm
 
 urlpatterns = [
+    path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('i18n/setlang/', set_language, name='set_language'),
     path('ckeditor5/', include('django_ckeditor_5.urls')),
-    path('mobile-app/', RedirectView.as_view(pattern_name='core:mobile_app', permanent=False)),
-    path('application-mobile/', RedirectView.as_view(pattern_name='core:mobile_app', permanent=False)),
-    path('app/', RedirectView.as_view(pattern_name='core:mobile_app', permanent=False)),
+    path('mobile-app/', RedirectView.as_view(pattern_name='core:mobile_app', permanent=True)),
+    path('application-mobile/', RedirectView.as_view(pattern_name='core:mobile_app', permanent=True)),
+    path('app/', RedirectView.as_view(pattern_name='core:mobile_app', permanent=True)),
 ]
 
 urlpatterns += i18n_patterns(
@@ -67,7 +71,7 @@ urlpatterns += i18n_patterns(
     path('', include('apps.core.urls')),
     path('services/', include('apps.services.urls')),
     path('vente-en-gros/', include('apps.wholesale.urls')),
-    path('wholesale/', RedirectView.as_view(pattern_name='wholesale:inquiry', permanent=False)),
+    path('wholesale/', RedirectView.as_view(pattern_name='wholesale:inquiry', permanent=True)),
     path('blog/', include('apps.blog.urls')),
     path('contact/', include('apps.contact.urls')),
     prefix_default_language=True,

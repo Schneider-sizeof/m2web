@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /fr/admin/
+Disallow: /ar/admin/
+Disallow: /en/admin/
+Disallow: /ckeditor5/
+Disallow: /i18n/
+Disallow: /*/succes/
+Disallow: /contact/succes/
+Disallow: /vente-en-gros/succes/
+Disallow: /wholesale/succes/
+
+# Allow Google Image Bot and standard crawlers to access static assets
+User-agent: Googlebot-Image
+Allow: /media/
+Allow: /static/
+
+# Multi-language Sitemap
+Sitemap: https://m2webmaroc.com/sitemap.xml
