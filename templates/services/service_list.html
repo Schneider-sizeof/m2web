@@ -3,7 +3,7 @@
 
 {% block title %}{% trans 'Traceurs GPS 4G & Solutions de Télématique au Maroc' %} | M2web{% endblock %}
 {% block meta_description %}{% trans 'Découvrez nos traceurs GPS 4G certifiés, sondes carburant, capteurs de température et solutions de gestion de flotte à Fès et au Maroc. Devis gratuit et installation rapide.' %}{% endblock %}
-{% block meta_keywords %}traceur GPS 4G Maroc, balise GPS Fès, sonde carburant capacitive, traceur OBD Maroc, traceur magnétique autonome, antivol véhicule Maroc, installation GPS Fès, prix traceur GPS Maroc, أجهزة تتبع السيارات بالمغرب, شراء جهاز جي بي اس فاس{% endblock %}
+{% block meta_keywords %}{% if LANGUAGE_CODE == 'ar' %}أجهزة تتبع السيارات بالمغرب, شراء جهاز جي بي اس فاس, حساس قياس الوقود, جهاز تتبع مغناطيسي لاسلكي, جهاز تتبع obd المغرب, اسعار اجهزة التتبع في المغرب, تركيب جي بي اس فاس, حساسات درجات الحرارة والشاحنات{% elif LANGUAGE_CODE == 'en' %}4G GPS tracker Morocco, GPS tracker Fez, capacitive fuel level sensor, OBD tracker Morocco, magnetic asset tracker Morocco, anti-theft vehicle device, GPS installation Fez, GPS tracker price Morocco, temperature monitoring cold chain{% else %}traceur GPS 4G Maroc, balise GPS Fès, sonde carburant capacitive, traceur OBD Maroc, traceur magnétique autonome, antivol véhicule Maroc, installation GPS Fès, prix traceur GPS Maroc, capteur de température chaîne du froid, alarme vol gasoil{% endif %}{% endblock %}
 
 {% block content %}
 <!-- Page Header -->

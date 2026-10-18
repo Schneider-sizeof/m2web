@@ -3,7 +3,7 @@
 
 {% block title %}{% trans 'Contact & Devis Gratuit Traceur GPS à Fès' %} | M2web Maroc{% endblock %}
 {% block meta_description %}{% trans 'Contactez M2web Maroc à Fès pour obtenir votre devis gratuit de traceurs GPS ou une démonstration de gestion de flotte. Support technique direct par téléphone et WhatsApp 24/7.' %}{% endblock %}
-{% block meta_keywords %}devis GPS Fès, contact M2web Maroc, installation traceur GPS Fès, prix géolocalisation Maroc, support GPS Maroc, adresse M2web Fès, رقم هاتف تتبع السيارات فاس, طلب عرض سعر جي بي اس بالمغرب{% endblock %}
+{% block meta_keywords %}{% if LANGUAGE_CODE == 'ar' %}رقم هاتف تتبع السيارات فاس, طلب عرض سعر جي بي اس بالمغرب, عنوان شركة تتبع السيارات فاس, خدمة عملاء ام تو ويب, تركيب جي بي اس في عين المكان فاس{% elif LANGUAGE_CODE == 'en' %}free GPS quote Fez, contact M2web Morocco, GPS tracker installation Fez, GPS tracking price Morocco, M2web Fez address, GPS customer support Morocco{% else %}devis GPS Fès, contact M2web Maroc, installation traceur GPS Fès, prix géolocalisation Maroc, support GPS Maroc, adresse M2web Fès, téléphone M2web{% endif %}{% endblock %}
 
 {% block content %}
 <!-- Page Header -->

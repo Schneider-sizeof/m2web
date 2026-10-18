@@ -2,7 +2,7 @@
 {% load static i18n %}
 {% block title %}{% trans 'Plateforme & Serveur GPS Maroc | Logiciel de Suivi de Flotte' %} | M2web{% endblock %}
 {% block meta_description %}{% trans 'Plateforme SaaS et serveur dédié de géolocalisation GPS au Maroc. Suivi en temps réel, alertes intelligentes, historique des trajets, gestion de carburant et marque blanche pour revendeurs.' %}{% endblock %}
-{% block meta_keywords %}plateforme GPS Maroc, serveur GPS dédié, logiciel suivi de flotte Maroc, TrackMaroc, marque blanche GPS Maroc, logiciel géolocalisation véhicule, plateforme tracking GPS, منصة تتبع السيارات بالمغرب, سيرفر تتبع المركبات{% endblock %}
+{% block meta_keywords %}{% if LANGUAGE_CODE == 'ar' %}منصة تتبع السيارات بالمغرب, سيرفر تتبع المركبات, برنامج إدارة أسطول السيارات, نظام تتبع الشاحنات, وايت ليبل تتبع السيارات, تراك ماروك, برنامج جي بي اس بالمغرب{% elif LANGUAGE_CODE == 'en' %}GPS tracking platform Morocco, dedicated GPS server Morocco, fleet management software Morocco, TrackMaroc, white label GPS tracking Morocco, vehicle tracking SaaS, telematics platform{% else %}plateforme GPS Maroc, serveur GPS dédié, logiciel suivi de flotte Maroc, TrackMaroc, marque blanche GPS Maroc, logiciel géolocalisation véhicule, plateforme tracking GPS, solution SaaS télématique{% endif %}{% endblock %}
 {% block content %}
 <section class="page-header py-5 bg-plum text-white text-center">
     {% if company.page_header_bg %}

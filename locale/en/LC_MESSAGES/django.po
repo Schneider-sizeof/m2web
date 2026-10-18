@@ -2200,3 +2200,84 @@ msgstr "99.9%% Cloud hosting included"
 
 msgid "Votre propre marque de télématique à 100%%"
 msgstr "Your 100%% custom-branded telematics platform"
+
+msgid "Traceur GPS Fès & Géolocalisation de Flotte au Maroc"
+msgstr "GPS Tracker Fez & Fleet Tracking in Morocco"
+
+msgid ""
+"M2web Maroc — Fournisseur N°1 de traceurs GPS 4G à Fès et partout au Maroc. "
+"Suivi de flotte en temps réel, contrôle anti-vol de carburant, coupure "
+"moteur à distance et application mobile. Installation sur site et support "
+"24/7."
+msgstr ""
+"M2web Morocco — Leading provider of 4G GPS trackers in Fez and across "
+"Morocco. Real-time fleet tracking, anti-theft fuel monitoring, remote engine"
+" cutoff and mobile app. On-site installation and 24/7 support."
+
+msgid "Traceurs GPS 4G & Solutions de Télématique au Maroc"
+msgstr "4G GPS Trackers & Telematics Solutions in Morocco"
+
+msgid ""
+"Découvrez nos traceurs GPS 4G certifiés, sondes carburant, capteurs de "
+"température et solutions de gestion de flotte à Fès et au Maroc. Devis "
+"gratuit et installation rapide."
+msgstr ""
+"Discover our certified 4G GPS trackers, fuel level sensors, temperature "
+"sensors and fleet management solutions in Fez and Morocco. Free quote and "
+"fast installation."
+
+msgid "À Propos de M2web Maroc | Expert Traceurs GPS & Flottes à Fès"
+msgstr "About M2web Morocco | GPS Tracking & Fleet Management Expert in Fez"
+
+msgid ""
+"Découvrez M2web Maroc, entreprise spécialisée en géolocalisation GPS et "
+"gestion de flotte basée à Fès. Plus de 10 ans d expertise, 5000+ traceurs "
+"déployés et support 24/7 partout au Maroc."
+msgstr ""
+"Discover M2web Morocco, GPS tracking and fleet management company based in "
+"Fez. Over 10 years of expertise, 5000+ trackers deployed and 24/7 support "
+"across Morocco."
+
+msgid "Plateforme & Serveur GPS Maroc | Logiciel de Suivi de Flotte"
+msgstr "Morocco GPS Server & Platform | Fleet Tracking Software"
+
+msgid ""
+"Plateforme SaaS et serveur dédié de géolocalisation GPS au Maroc. Suivi en "
+"temps réel, alertes intelligentes, historique des trajets, gestion de "
+"carburant et marque blanche pour revendeurs."
+msgstr ""
+"SaaS platform and dedicated GPS tracking server in Morocco. Real-time "
+"tracking, smart alerts, trip history, fuel management and white label for "
+"resellers."
+
+msgid "Contact & Devis Gratuit Traceur GPS à Fès"
+msgstr "Contact & Free Quote for GPS Tracker in Fez"
+
+msgid ""
+"Contactez M2web Maroc à Fès pour obtenir votre devis gratuit de traceurs GPS"
+" ou une démonstration de gestion de flotte. Support technique direct par "
+"téléphone et WhatsApp 24/7."
+msgstr ""
+"Contact M2web Morocco in Fez to get your free GPS tracker quote or a fleet "
+"management live demo. Direct technical support via phone and WhatsApp 24/7."
+
+msgid "Suivi GPS en temps réel & Géolocalisation de Flotte"
+msgstr "Real-time GPS Tracking & Fleet Geolocation"
+
+msgid "Contrôle carburant, Détection de vol & Sonde capacitive"
+msgstr "Fuel Level Monitoring, Fuel Theft Detection & Capacitive Sensor"
+
+msgid "Sécurité antivol & Coupure moteur à distance"
+msgstr "Anti-theft Security & Remote Engine Cutoff"
+
+msgid "Fourniture & Installation de Traceurs GPS 4G à Fès et au Maroc"
+msgstr "Supply & Installation of 4G GPS Trackers in Fez and Morocco"
+
+msgid "Plateforme Web & Application Mobile de Tracking GPS"
+msgstr "Web Platform & Mobile App for GPS Tracking"
+
+msgid "Solutions GPS pour Agences de Location de Voitures (Rent a Car)"
+msgstr "GPS Solutions for Car Rental Agencies (Rent a Car)"
+
+msgid "À Propos de M2web Maroc | Expert Traceurs GPS à Fès"
+msgstr "About M2web Morocco | GPS Tracking Expert in Fez"

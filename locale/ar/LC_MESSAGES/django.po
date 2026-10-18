@@ -2130,3 +2130,83 @@ msgstr "استضافة سحابية بنسبة توافر 99.9%% مشمولة"
 
 msgid "Votre propre marque de télématique à 100%%"
 msgstr "منصتك الخاصة للتتبع والتليماتيك 100%% بهويتك التجارية"
+
+msgid "Traceur GPS Fès & Géolocalisation de Flotte au Maroc"
+msgstr "جهاز تتبع السيارات فاس وتتبع أسطول المركبات في المغرب"
+
+msgid ""
+"M2web Maroc — Fournisseur N°1 de traceurs GPS 4G à Fès et partout au Maroc. "
+"Suivi de flotte en temps réel, contrôle anti-vol de carburant, coupure "
+"moteur à distance et application mobile. Installation sur site et support "
+"24/7."
+msgstr ""
+"إم تو ويب المغرب — المزود الأول لأجهزة تتبع السيارات 4G في فاس والمغرب. تتبع"
+" الأسطول في الوقت الفعلي، مراقبة الوقود ضد السرقة، إيقاف المحرك عن بعد "
+"وتطبيق جوال. تركيب في عين المكان ودعم 24/7."
+
+msgid "Traceurs GPS 4G & Solutions de Télématique au Maroc"
+msgstr "أجهزة تتبع السيارات 4G وحلول التتبع الذكي في المغرب"
+
+msgid ""
+"Découvrez nos traceurs GPS 4G certifiés, sondes carburant, capteurs de "
+"température et solutions de gestion de flotte à Fès et au Maroc. Devis "
+"gratuit et installation rapide."
+msgstr ""
+"اكتشف أجهزة تتبع السيارات 4G المعتمدة، حساسات الوقود، مجسات الحرارة وحلول "
+"إدارة الأساطيل في فاس والمغرب. عرض سعر مجاني وتركيب سريع."
+
+msgid "À Propos de M2web Maroc | Expert Traceurs GPS & Flottes à Fès"
+msgstr "عن إم تو ويب المغرب | خبير أجهزة تتبع السيارات وإدارة الأساطيل في فاس"
+
+msgid ""
+"Découvrez M2web Maroc, entreprise spécialisée en géolocalisation GPS et "
+"gestion de flotte basée à Fès. Plus de 10 ans d expertise, 5000+ traceurs "
+"déployés et support 24/7 partout au Maroc."
+msgstr ""
+"اكتشف شركة إم تو ويب المغرب، المتخصصة في التتبع وتحديد المواقع وإدارة "
+"الأساطيل ومقرها فاس. أكثر من 10 سنوات خبرة، أكثر من 5000 جهاز تم تركيبه ودعم"
+" 24/7 في كل أنحاء المغرب."
+
+msgid "Plateforme & Serveur GPS Maroc | Logiciel de Suivi de Flotte"
+msgstr "منصة وسيرفر تتبع السيارات في المغرب | برنامج تتبع الأسطول"
+
+msgid ""
+"Plateforme SaaS et serveur dédié de géolocalisation GPS au Maroc. Suivi en "
+"temps réel, alertes intelligentes, historique des trajets, gestion de "
+"carburant et marque blanche pour revendeurs."
+msgstr ""
+"منصة سحابية وسيرفر مخصص لتتبع السيارات ونظام تحديد المواقع بالمغرب. تتبع في "
+"الوقت الحقيقي، تنبيهات ذكية، سجل الرحلات، إدارة الوقود وعلامة تجارية مخصصة "
+"للموزعين."
+
+msgid "Contact & Devis Gratuit Traceur GPS à Fès"
+msgstr "اتصل بنا واحصل على عرض سعر مجاني لأجهزة تتبع السيارات في فاس"
+
+msgid ""
+"Contactez M2web Maroc à Fès pour obtenir votre devis gratuit de traceurs GPS"
+" ou une démonstration de gestion de flotte. Support technique direct par "
+"téléphone et WhatsApp 24/7."
+msgstr ""
+"اتصل بشركة إم تو ويب المغرب في فاس للحصول على عرض سعر مجاني لأجهزة التتبع أو"
+" عرض توضيحي لإدارة الأسطول. دعم فني مباشر عبر الهاتف وواتساب 24/7."
+
+msgid "Suivi GPS en temps réel & Géolocalisation de Flotte"
+msgstr "تتبع السيارات في الوقت الفعلي وتحديد موقع الأسطول"
+
+msgid "Contrôle carburant, Détection de vol & Sonde capacitive"
+msgstr "مراقبة الوقود، كشف السرقات وحساس الوقود عالي الدقة"
+
+msgid "Sécurité antivol & Coupure moteur à distance"
+msgstr "الحماية من السرقة وإيقاف تشغيل المحرك عن بعد"
+
+msgid "Fourniture & Installation de Traceurs GPS 4G à Fès et au Maroc"
+msgstr "توريد وتركيب أجهزة تتبع السيارات 4G في فاس والمغرب"
+
+msgid "Plateforme Web & Application Mobile de Tracking GPS"
+msgstr "منصة ويب وتطبيق هاتف ذكي لتتبع المركبات"
+
+msgid "Solutions GPS pour Agences de Location de Voitures (Rent a Car)"
+msgstr "حلول تتبع السيارات لوكالات كراء وتأجير السيارات"
+
+msgid "À Propos de M2web Maroc | Expert Traceurs GPS à Fès"
+msgstr "عن شركة إم تو ويب المغرب | خبير أجهزة التتبع في فاس"

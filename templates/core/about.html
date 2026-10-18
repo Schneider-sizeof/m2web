@@ -3,7 +3,7 @@
 
 {% block title %}{% trans 'À Propos de M2web Maroc | Expert Traceurs GPS & Flottes à Fès' %}{% endblock %}
 {% block meta_description %}{% trans 'Découvrez M2web Maroc, entreprise spécialisée en géolocalisation GPS et gestion de flotte basée à Fès. Plus de 10 ans d expertise, 5000+ traceurs déployés et support 24/7 partout au Maroc.' %}{% endblock %}
-{% block meta_keywords %}M2web Maroc, entreprise GPS Fès, installateur traceur GPS Maroc, société télématique Fès, expert gestion de flotte Maroc, support GPS Maroc, شركة تتبع السيارات فاس المغرب{% endblock %}
+{% block meta_keywords %}{% if LANGUAGE_CODE == 'ar' %}شركة إم تو ويب المغرب, شركة تتبع السيارات فاس المغرب, خبير أجهزة التتبع فاس, تثبيت أجهزة التتبع المغرب, دعم فني جي بي اس فاس, شركة تتبع معتمدة المغرب{% elif LANGUAGE_CODE == 'en' %}M2web Morocco, GPS tracking company Fez Morocco, fleet telematics expert Fez, certified GPS installer Morocco, GPS support Fez, fleet management company Morocco{% else %}M2web Maroc, entreprise GPS Fès, installateur traceur GPS Maroc, société télématique Fès, expert gestion de flotte Maroc, support GPS Maroc, adresse M2web Fès, installateur agréé GPS Maroc{% endif %}{% endblock %}
 {% block og_title %}{% trans 'À Propos de M2web Maroc | Expert Traceurs GPS à Fès' %}{% endblock %}
 
 {% block content %}
